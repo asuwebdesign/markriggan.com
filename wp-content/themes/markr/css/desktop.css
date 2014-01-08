@@ -1,0 +1,203 @@
+/* Show/Hide Elements
+=================================================================================================== */
+
+.header-container nav em { display: block; }
+
+
+
+
+/* Layout
+=================================================================================================== */
+
+.wrapper { width: 960px; padding: 0; margin: 0 auto; }
+
+
+	/* Header
+	-----------------------------------------------------------------------------*/
+	.header-container a { line-height: 1; }
+	
+		/* Navigation */		
+		.header-container nav li:hover { background-position: 50% -25px; }
+		.header-container nav li.current-menu-item { background-position: 50% -88px; }
+		
+		.header-container nav li a { padding-bottom: 32px; }
+		.header-container nav li .sub { display: block; color: #718a94; font: .875em/1.25 "ProximaNovaRegular", Arial, Helvetica, sans-serif; text-align: center; text-transform: none;
+			-moz-transition: .25s linear all; -webkit-transition: .25s linear all; -o-transiiton: .25s linear all; transition: .25s linear all;
+		}
+		.header-container nav li:hover .sub,
+		.header-container nav li.current-menu-item .sub { color: #f1f3f4; }
+		
+			/* Add current to Portfolio single pages */
+			.single-portfolio #menu-item-108 { background-position: 50% -88px; }
+			.single-portfolio #menu-item-108 .sub { color: #f1f3f4; }
+			
+		/* Site Titles */
+		.header-container h1 { padding: 0; font-size: 3.75em; }
+		.header-container h2 { font-size: 1.5em; }
+		
+		/* Awards */
+		#awwwards{ position:fixed; top:20px; right:0px; display: block; z-index:555; }
+		#awwwards a{ width:69px; height:105px; text-indent:-8000px; display:block; background:url('../img/awwwards_nominee_b_right.png') no-repeat; overflow:hidden; }
+		#cssdesign { position: fixed; top: 130px; right: 0; display: block; z-index: 555; }
+		#cssdesign a { width: 68px; height: 96px; text-indent: -8000px; display: block; background: url('../img/css-design-awards-nominee-right-black.png') no-repeat; overflow: hidden; }
+		.csslegend { display: block; background: url("../img/csslegend-badge-right-a.png") no-repeat scroll 0 0 transparent; height: 110px; position: fixed; right: 0; top: 234px; width: 67px; z-index: 999; } 
+		.csslegend a { float: right; height: 110px; line-height: 5000px; overflow: hidden; width: 67px; } 
+		
+
+	/* Main
+	-----------------------------------------------------------------------------*/
+	.main-container { padding-top: 30px; }
+	
+	.entry-header {}
+	.entry-header .entry-figure {  }
+	.entry-header .entry-title { font-size: 3.75em; }
+	.entry-header .entry-subtitle { font-size: 1.5em; }
+
+
+	/* Footer
+	-----------------------------------------------------------------------------*/
+	.footer-container { padding: 2em 0; }
+	
+		/* Contact Callout */
+		.contact-callout { padding: 1.5em 1.875em; overflow: hidden; }
+		.contact-callout hgroup { float: left; width: 462px; text-align: left; }
+			.contact-callout h2 {}
+			.contact-callout h3 {}
+		.contact-callout ul { float: left; width: auto; margin: 1.25em 2em 0 0; }
+		.contact-callout .button { top: .438em; float: left; width: 200px; margin-top: .75em; clear: none; }
+	
+	
+	
+/* Home Page
+=================================================================================================== */
+
+
+	/* Portfolio
+	-----------------------------------------------------------------------------*/
+	.featured-projects { margin-bottom: 4em; }
+	.featured-projects ul { width: 100%; padding: 0; }
+	.featured-projects li { width: 231px; margin: 0 11px 11px 0; }
+	.featured-projects li:nth-child(2n) { margin-right: 12px; }
+	.featured-projects li:nth-child(4n) { margin-right: 0; }
+	
+		/* Toggle Projects */
+		#portfolio-toggle { margin: 2em 0 0; border-top: 1px solid #f1f3f4; text-align: center; }
+		#portfolio-toggle span { position: relative; top: -26px; display: inline-block; padding: .95em 3em .75em; background: #151e21 url('../img/sp_portfolio-toggle.png') no-repeat 95% 11px; color: #fff; font: 1.125em/1 "ProximaNovaBold", Arial, Helvetica, sans-serif; text-align: left; text-transform: uppercase; text-indent: -35px; cursor: pointer;
+			-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;
+			-webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px;
+			-moz-transition: .25s linear background-color; -webkit-transition: .25s linear background-color; transition: .25s linear background-color;
+		}
+			
+			/* Hover & Active */
+			#portfolio-toggle span:hover { background-color: #DF3952; background-position: 95% -139px; }	
+			#portfolio-toggle.active span { background-position: 95% -64px; }
+			#portfolio-toggle.active span:hover { background-position: 95% -214px; }
+	
+	
+	/* Skills
+	-----------------------------------------------------------------------------*/
+	.skillset { position: relative; left: 324px; float: left; width: 312px; margin-right: 12px; border: 0; }
+	.skillset figure { float: none; width: 100%; }
+	.skillset h2 { float: none; width: 100%; }
+	.skillset ul { float: none; width: 100%; }	
+	
+
+	/* Process
+	-----------------------------------------------------------------------------*/
+	.creative-process { position: relative; top: -15px; left: -324px; float: left; width: 312px; padding: 0; margin: 0 12px 0 0; border-bottom: 0; }
+	
+	
+	/* Location
+	-----------------------------------------------------------------------------*/
+	.about-me { float: right; width: 312px; padding: 0; margin: 0; border-bottom: 0; }
+	
+	
+
+	
+/* Portfolio Detail Page
+=================================================================================================== */
+
+.single-portfolio .entry-title { margin-bottom: .5em; line-height: 1; }
+.single-portfolio .entry-content { width: 294px; padding-left: 30px; font-size: .875em; line-height: 1.5; }
+.single-portfolio .entry-content p:first-child { margin-top: 0; }
+.single-portfolio .entry-media { width: 636px; padding-right: 0; }
+
+
+
+
+/* Process Page
+=================================================================================================== */
+
+.page-process .entry-figure { width: 411px; margin-bottom: 2em; }
+.page-process .entry-title { width: 50%; margin-top: 2em; }
+.page-process .entry-subtitle { width: 50%; }
+
+.my-process { margin-left: 81px; }
+.my-process li { width: 393px; padding: 40px; margin-left: 12px; }
+
+	.my-process li h2 { margin: 0 0 1em; }
+		
+		.my-process li.discover h2 { padding: 0 0 0 141px; background-position: -10px 0; line-height: 118px; }
+		.my-process li.plan h2 { padding: 0 0 0 156px; background-position: 0 0; line-height: 112px; }
+		.my-process li.create h2 { padding: 0 0 0 152px; background-position: 0 0; line-height: 105px; }
+		.my-process li.implement h2 { padding: 0 0 0 163px; background-position: 0 0; line-height: 112px; }
+		.my-process li.measure h2 { padding: 0 0 0 165px; background-position: 0 0; line-height: 85px; }
+		.my-process li.evolve h2 { padding: 0 0 0 111px; background-position: 0 0; line-height: 118px; }
+
+
+/* About Page
+=================================================================================================== */
+
+.page-about .entry-figure { width: 393px; }
+.page-about .entry-title { margin: 1.25em 0 .1em; }
+.page-about .entry-subtitle {}
+.page-about .entry-content { float: left; width: 474px; }
+.page-about .entry-subcontent { float: right; width: 393px; }
+
+	/* Focused Skills
+	-----------------------------------------------------------------------------*/
+	.page-about .skills { float: none; width: 100%; }
+	.page-about .skills h2 { padding: 1em 0; margin: 0; background: #3f5056; border-top: 6px solid #222d31; color: #fff; font: normal 1.125em/1 "ProximaNovaSemibold", Arial, Helvetica, sans-serif; text-transform: uppercase; text-align: center; }
+	.page-about .skills h3 { margin-bottom: 0; }
+	.page-about .skills p { margin-top: 0; }
+	.page-about .skills ul { padding: 1em; margin: 0; list-style: none; }
+	.page-about .skills li { padding-left: 70px; }
+		.page-about .skills .design { background: url('../img/i_visual-design.png') no-repeat 0 0; }
+		.page-about .skills .development { background: url('../img/i_development.png') no-repeat 5px 0; }
+		.page-about .skills .ux { background: url('../img/i_userexperience.png') no-repeat 3px 0; }
+		.page-about .skills .mobile { background: url('../img/i_mobile.png') no-repeat 9px 0; }
+
+	/* Selected Awards
+	-----------------------------------------------------------------------------*/
+	.page-about .awards { float: none; width: 100%; }
+	.page-about .awards li { float: left; width: 50%; margin-top: 1em; }
+	
+
+	
+
+/* Contact Page
+=================================================================================================== */
+
+.page-contact .main.wrapper { width: 798px; }
+
+.page-contact .entry-figure { width: 323px; }
+.page-contact .entry-title { width: 54%; margin-top: 1.25em; }
+.page-contact .entry-subtitle { width: 54%; }
+
+.page-contact .field.name, .page-contact .field.email { width: 312px; }
+.page-contact .field.name { margin-right: 12px; }
+
+
+	/* Contact 7 Plugin
+	-----------------------------------------------------------------------------*/
+	.main-container div.wpcf7 { padding: 47px 81px 44px; }
+	
+	
+	/* Social Media
+	-----------------------------------------------------------------------------*/
+	.social-follow { text-align: center; }
+	.social-follow h3 { padding: 0 5%; color: #718a94; font-family: "ProximaNovaRegular", Arial, Helvetica, sans-serif; }
+	.social-follow ul { padding: 0; margin: 0; list-style: none; }
+	.social-follow li { float: left; width: 25%; }
+	.social-follow li a { display: block; color: #718a94; font: normal 1.125em/1 "ProximaNovaSemibold", Arial, Helvetica, sans-serif; text-decoration: none; }
+	.social-follow li em { float: left; }

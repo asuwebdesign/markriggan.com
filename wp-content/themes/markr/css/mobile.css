@@ -1,0 +1,199 @@
+/* Show/Hide Elements
+=================================================================================================== */
+.header-container nav em { display: inline; }
+.header-container h2 { display: block; }
+
+
+
+/* Layout
+=================================================================================================== */
+
+	/* Header
+	-----------------------------------------------------------------------------*/
+	
+		/* Navigation */
+		.header-container nav { position: relative; top: 2.5em; background: none; border-bottom: 0; padding-bottom: 0;
+			-moz-box-shadow: none; -webkit-box-shadow: none; box-shadow: none;
+		}
+		.header-container nav ul { width: 100%; padding: 0; text-align: center; }
+		.header-container nav li { display: inline-block; width: 20%; background-position: 50% -45%; border-top: 0; text-align: center;
+			-moz-transition: .25s linear color; -webkit-transition: .25s linear color; -o-transiiton: .25s linear color; transition: .25s linear color;
+		}
+		.header-container nav li:first-child + li { margin-right: 6%; }
+		.header-container nav li:first-child + li + li { margin-left: 6%; }
+		
+			/* Hover */
+			.header-container nav li:hover { background-position: 50% 33.5%; }
+			
+			/* Current */
+			.header-container nav li.current-menu-item { background-position: 50% 109%; }
+		
+		.header-container nav li a { display: block; padding-bottom: 1.5em;
+			-moz-transition: .25s linear all; -webkit-transition: .25s linear all; -o-transiiton: .25s linear all; transition: .25s linear all;
+		}
+		
+			/* Add current to Portfolio single pages */
+			.single-portfolio #menu-item-108 { background-position: 50% 109%; }
+			
+		
+		/* Site Titles */
+		.site-title a { width: 105px; height: 105px; background-size: 105px auto; }
+		.header-container h1 { margin-bottom: 0; }
+		.header-container h2 { margin: .25em 0 1em; font: 1.125em/1 "ProximaNovaRegular", Arial, Helvetica, sans-serif; }
+	
+
+	/* Main
+	-----------------------------------------------------------------------------*/
+	.main { padding: 4% 6.25%; }
+	
+	.entry-header { overflow: hidden; }
+	.entry-header .entry-figure { float: left; width: 33.646%; padding: 0; margin: 0 0 1em; }
+	.entry-header .entry-title { float: right; width: 54.167%; font-size: 2.25em; text-align: left; }
+	.entry-header .entry-subtitle { float: right; width: 54.167%; font-size: 1.25em; text-align: left; }
+	
+
+	/* Footer
+	-----------------------------------------------------------------------------*/
+	
+		/* Contact Callout */
+		.contact-callout { padding: 3% 0; }
+		.contact-callout hgroup {}
+			.contact-callout h2 { font-size: 2.25em; }
+			.contact-callout h3 { font-size: 1.5em; }
+		.contact-callout ul { display: inline-block; width: 45%; }
+		.contact-callout .button { position: relative; top: .75em; width: 35%; }
+		
+	.footer-container q { font-size: 1.5em; }
+
+
+/* Home Page
+=================================================================================================== */
+
+.main section h2 { text-align: left; }
+
+
+	/* Portfolio
+	-----------------------------------------------------------------------------*/
+	.featured-projects { padding: 0; margin: 0; border-bottom: 0; }
+	.featured-projects ul { letter-spacing: -4px; }
+	.featured-projects li { position: relative; top: 0; display: inline-block; width: 47.5%; margin: 0 4.5% 5% 0;
+		-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+	}
+	.featured-projects li:nth-child(2n) { margin-right: 0; }
+	.featured-projects article a { letter-spacing: normal; }
+	
+		/* Hover */
+		.featured-projects li,
+		.featured-projects li article,
+		.featured-projects li article figure img,
+		.featured-projects li article h3 { -moz-transition: .25s linear all; -webkit-transition: .25s linear all; -o-transition: .25s linear all; transition: .25s linear all; }
+		
+		.featured-projects li:hover article { background: #151e21; }
+		.featured-projects li:hover article figure img { opacity: .75; }
+		.featured-projects li:hover article h3 { border-top-color: #35454C; color: #fff; }
+	
+	
+	/* Skills
+	-----------------------------------------------------------------------------*/
+	.main .skillset h2 { text-align: center; }
+	.skillset { overflow: hidden; }
+	.skillset figure { float: left; width: 48%; }
+	.skillset h2 { float: right; width: 48%; }
+	.skillset ul { float: right; width: 48%; }	
+	
+
+	/* Process
+	-----------------------------------------------------------------------------*/
+	.creative-process { float: left; width: 48%; padding: 0; margin: 0; border-bottom: 0;
+		-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+	}
+	
+	
+	/* Location
+	-----------------------------------------------------------------------------*/
+	.about-me { float: right; width: 48%; padding: 0; margin: 0; border-bottom: 0;
+		-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+	}
+
+
+
+
+/* Latest Projects
+=================================================================================================== */
+
+.main .featured-projects.callout { float: left; width: 100%; margin: 1em 0; clear: both; }
+.main .featured-projects.callout h2 { text-align: center; }	
+
+	
+
+	
+/* Portfolio Detail Page
+=================================================================================================== */
+
+.single-portfolio .entry-title { width: 100%; margin: 0 0 1em; font-size: 3em; line-height: 1; text-align: center; }
+.single-portfolio .entry-content { float: right; width: 45%; padding-left: 4.5%; }
+.single-portfolio .entry-media { float: left; width: 50%; }
+
+
+
+
+/* Process Page
+=================================================================================================== */
+
+.page-process .entry-figure { width: 45%; margin-right: .5em; }
+.page-process .entry-title { width: 45%; margin-top: 2.5em; }
+.page-process .entry-subtitle { width: 45%; }
+
+	@media all and (min-width: 767px) {
+		.my-process { letter-spacing: -4px; }
+		.my-process li { float: left; width: 47.5%; padding: 5%; margin-left: 5%; letter-spacing: normal;
+			-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+		}
+		.my-process li:nth-child(2n+1) { margin-left: 0; clear: left; }				
+	
+	}
+
+
+
+/* About Page
+=================================================================================================== */
+
+	@media all and (min-width: 767px) {
+	
+		.page-about .skills { float: left; width: 47.5%; margin: 0 0 2em; }
+		.page-about .awards { float: right; width: 47.5%; margin: 0 0 2em; }
+	
+	}
+
+
+
+
+/* Contact Page
+=================================================================================================== */
+
+.page-contact {}
+
+.page-contact .entry-header .entry-figure { float: left; width: 40%; padding: 0; margin: 0 0 1em; }
+.page-contact .entry-header .entry-title { float: right; width: 50%; }
+.page-contact .entry-header .entry-subtitle { float: right; width: 50%; }
+
+.page-contact .field.name, .page-contact .field.email { float: left; width: 49.057%;
+	-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+}
+.page-contact .field.name { margin-right: 1.887%; }
+.page-contact .field.email + .field { clear: both; }
+
+
+	/* Contact 7 Plugin
+	-----------------------------------------------------------------------------*/
+	.wpcf7 { padding: 47px 10.15% 44px; }
+
+
+	/* Social Media
+	-----------------------------------------------------------------------------*/
+	.social-follow { text-align: center; }
+	.social-follow li { position: relative; float: left; width: 50%; height: 60px; padding: 1em 0 0 70px; margin: 0 0 1em;
+		-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+	}
+	.social-follow li a { text-align: left; }
+	.social-follow li em { position: absolute; top: 0; left: 0; margin-left: 0; }
