@@ -7,7 +7,6 @@
 	  			
 	  			$contact_callout_heading = ot_get_option( 'contact_callout_heading' );
 	  			$contact_callout_subheading = ot_get_option( 'contact_callout_subheading' );
-	  			$facebook_url = ot_get_option( 'facebook_url' );
 	  			$twitter_url = ot_get_option( 'twitter_url' );
 	  			$dribbble_url = ot_get_option( 'dribbble_url' );
 	  			$linkedin_url = ot_get_option( 'linkedin_url' );
@@ -23,7 +22,6 @@
 						<h3><?php echo $contact_callout_subheading; ?></h3>
 					</hgroup>
 					<ul>
-						<li class="facebook"><a href="<?php echo $facebook_url; ?>" title="Facebook">Facebook</a></li>
 						<li class="twitter"><a href="<?php echo $twitter_url; ?>" title="Twitter">Twitter</a></li>
 						<li class="dribbble"><a href="<?php echo $dribbble_url; ?>" title="Dribbble">Dribbble</a></li>
 						<li class="linkedin"><a href="<?php echo $linkedin_url; ?>" title="LinkedIn">LinkedIn</a></li>

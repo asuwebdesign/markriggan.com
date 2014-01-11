@@ -78,16 +78,16 @@
 			<div class="site-title"><a href="/">Mark Riggan</a></div>
 			
 			<?php if ( is_front_page() ) : ?>			
+			<?php
+			
+				$site_title = ot_get_option( 'site_title' );
+				$site_subtitle = ot_get_option( 'site_subtitle' );
+			
+			?>
 			<hgroup>
-				<h1>I&#8217;m a Creative Web Solutionist</h1>
-				<h2>User-Centric Web Design &amp; Development by Mark Riggan</h2>
+				<h1><?php echo $site_title; ?></h1>
+				<h2><?php echo $site_subtitle; ?></h2>
 			</hgroup>			
-			<?php endif; ?>
-			
-			<!-- Awards -->
-			<div id="awwwards"><a href="http://www.awwwards.com/best-websites/mark-riggan-design" target="_blank">Vote on AWWWARDS</a></div>
-			<div id="cssdesign"><a href="http://www.cssdesignawards.com/css-web-design-award-nominees.php" target="_blank">Vote on CSS Design</a></div>
-			<div class="csslegend"><a href="http://www.csslegend.com/mark-riggan-design/" target="_blank">Mark Riggan Design</a></div>
-			
+			<?php endif; ?>			
 		</header>
 	</div>
