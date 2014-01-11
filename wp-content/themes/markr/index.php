@@ -1,33 +1,41 @@
 <?php get_header(); ?>
 
-	<div class="main-container">
-		<div class="main wrapper clearfix">			
-			
-			<?php if ( have_posts() ) : ?>
+<div class="main-container">
+    <div class="main wrapper clearfix">
 
-				<?php /* Start the Loop */ ?>
-				<?php while ( have_posts() ) : the_post(); ?>
+        <?php if ( have_posts() ) : ?>
 
-					<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-						<header class="entry-header">
-							<h1 class="entry-title"><?php the_title(); ?></h1>
-						</header><!-- .entry-header -->
-					
-						<div class="entry-content">
-							<?php the_content(); ?>
-							<?php wp_link_pages( array( 'before' => '<div class="page-link"><span>' . __( 'Pages:', 'markr' ) . '</span>', 'after' => '</div>' ) ); ?>
-						</div><!-- .entry-content -->
-						<footer class="entry-meta">
-							<?php edit_post_link( __( 'Edit', 'markr' ), '<span class="edit-link">', '</span>' ); ?>
-						</footer><!-- .entry-meta -->
-					</article><!-- #post-<?php the_ID(); ?> -->
+        <?php /* Start the Loop */ ?>
+        <?php while ( have_posts() ) : the_post(); ?>
 
-				<?php endwhile; ?>
+        <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+            <header class="entry-header">
+                <h1 class="entry-title">
+                    <?php the_title(); ?>
+                </h1>
+            </header>
+            <!-- .entry-header -->
 
-			<?php else : ?>
-			<?php endif; ?>
-						
-		</div>
-	</div>
-	
+            <div class="entry-content">
+                <?php the_content(); ?>
+                <?php wp_link_pages( array( 'before'=>'
+                <div class="page-link">
+                    <span>' . __( 'Pages:', 'markr' ) . '</span>', 'after' => '</div>' ) ); ?>
+            </div>
+            <!-- .entry-content -->
+            <footer class="entry-meta">
+                <?php edit_post_link( __( 'Edit', 'markr' ), '<span class="edit-link">', '</span>' ); ?>
+            </footer>
+            <!-- .entry-meta -->
+        </article>
+        <!-- #post-<?php the_ID(); ?> -->
+
+        <?php endwhile; ?>
+
+        <?php else : ?>
+        <?php endif; ?>
+
+    </div>
+</div>
+
 <?php get_footer(); ?>

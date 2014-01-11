@@ -16,10 +16,10 @@
 	  			
 		  			// Get Values Set From OptionTree Plugin
 		  			
-		  			$facebook_url = ot_get_option( 'facebook_url' );
-		  			$twitter_url = ot_get_option( 'twitter_url' );
-		  			$dribbble_url = ot_get_option( 'dribbble_url' );
-		  			$linkedin_url = ot_get_option( 'linkedin_url' );
+		  			$facebook_url  = ot_get_option( 'facebook_url' );
+		  			$twitter_url   = ot_get_option( 'twitter_url' );
+		  			$dribbble_url  = ot_get_option( 'dribbble_url' );
+		  			$linkedin_url  = ot_get_option( 'linkedin_url' );
 		  		
 		  		} ?>
 
