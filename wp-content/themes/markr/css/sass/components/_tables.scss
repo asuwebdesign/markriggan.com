@@ -1,0 +1,44 @@
+/*==================================================================
+ * Tables Partial
+ * Styles for tables and table componenets.
+ * (c) Atlantic BT. All Rights Reserved.
+ *==================================================================*/
+
+
+// Tables
+//==================================================================*/
+table {
+
+
+	// Global
+	//--------------------------------------------------------------*/
+	tr {}
+	th, td {}
+
+
+	// Header Cells
+	//--------------------------------------------------------------*/
+	thead {}
+	thead th {}
+
+
+	// Body Cells
+	//--------------------------------------------------------------*/
+	tbody tr:nth-child(even) {}
+
+		// Hover
+		tbody tr:hover {}
+		tbody tr:nth-child(even):hover {}
+
+
+	// Footer Cells
+	//--------------------------------------------------------------*/
+	tfoot {}
+	tfoot td {}
+
+		// Hover
+		tfoot tr:hover {}
+		tfoot tr:nth-child(even):hover {}
+
+
+}

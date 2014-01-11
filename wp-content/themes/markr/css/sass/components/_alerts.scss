@@ -1,0 +1,24 @@
+/*==================================================================
+ * Alerts Partial
+ * Styles that help communicate success, warnings, failures, etc.
+ * (c) Atlantic BT. All Rights Reserved.
+ *==================================================================*/
+
+// Chrome Frame - for unsupported versions of IE
+//==================================================================*/
+.chromeframe {
+
+	a {}
+
+}
+
+
+// Alerts
+//==================================================================*/
+.alert-box {
+
+	&.info {}
+	&.error {}
+	&.success {}
+
+}

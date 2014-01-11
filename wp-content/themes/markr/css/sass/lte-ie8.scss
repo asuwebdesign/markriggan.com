@@ -1,0 +1,12 @@
+/*==================================================================
+ * Global Stylesheet (IE8 or older)
+ * Fallback Styles for IE8 or older that don't support media queries
+ * (c) Atlantic BT. All Rights Reserved.
+ *==================================================================*/
+
+$breakpoint-no-queries: true;
+$breakpoint-no-query-fallbacks: false;
+
+// Import Configurations
+//==================================================================*/
+@import "imports";
