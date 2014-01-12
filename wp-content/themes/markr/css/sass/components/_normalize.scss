@@ -13,6 +13,12 @@ audio:not([controls]) { display: none; height: 0; }
 [hidden], template { display: none; }
 
 
+/* Browser Highlighting
+====================================================================*/
+::-moz-selection { background: #DF3952; color: #fff; text-shadow: none; }
+::selection { background: #DF3952; color: #fff; text-shadow: none; }
+
+
 /* Base
 ====================================================================*/
 html { font-family: sans-serif; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; }

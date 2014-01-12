@@ -14,6 +14,10 @@ figure {
 
 }
 
+img { max-width: 100%; border: 0; -ms-interpolation-mode: bicubic; vertical-align: middle; }	
+svg:not(:root) { overflow: hidden; }	
+figure { margin: 0; }
+
 
 // Videos
 //==================================================================*/

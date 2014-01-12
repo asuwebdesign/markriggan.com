@@ -4,6 +4,69 @@
  * (c) Atlantic BT. All Rights Reserved.
  *==================================================================*/
 
+/* Custom Fonts
+//==================================================================*/
+/*
+ * Web Fonts from fontspring.com
+ *
+ * All OpenType features and all extended glyphs have been removed.
+ * Fully installable fonts can be purchased at http://www.fontspring.com
+ *
+ * The fonts included in this stylesheet are subject to the End User License you purchased
+ * from Fontspring. The fonts are protected under domestic and international trademark and 
+ * copyright law. You are prohibited from modifying, reverse engineering, duplicating, or
+ * distributing this font software.
+ *
+ * (c) 2010-2011 Fontspring
+ *
+ * The fonts included are copyrighted by the vendor listed below.
+ *
+ * Vendor:      Mark Simonson Studio
+ * License URL: http://www.fontspring.com/fflicense/mark-simonson-studio
+ *
+ */
+
+@font-face {
+    font-family: 'ProximaNovaThin';
+    src: url('../fonts/ProximaNova-Thin-webfont.eot');
+    src: url('../fonts/ProximaNova-Thin-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/ProximaNova-Thin-webfont.woff') format('woff'),
+         url('../fonts/ProximaNova-Thin-webfont.ttf') format('truetype'),
+         url('../fonts/ProximaNova-Thin-webfont.svg#ProximaNovaThin') format('svg');
+    font-weight: normal;
+    font-style: normal;	
+}
+@font-face {
+    font-family: 'ProximaNovaRegular';
+    src: url('../fonts/ProximaNova-Reg-webfont.eot');
+    src: url('../fonts/ProximaNova-Reg-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/ProximaNova-Reg-webfont.woff') format('woff'),
+         url('../fonts/ProximaNova-Reg-webfont.ttf') format('truetype'),
+         url('../fonts/ProximaNova-Reg-webfont.svg#ProximaNovaRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'ProximaNovaSemibold';
+    src: url('../fonts/ProximaNova-Sbold-webfont.eot');
+    src: url('../fonts/ProximaNova-Sbold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/ProximaNova-Sbold-webfont.woff') format('woff'),
+         url('../fonts/ProximaNova-Sbold-webfont.ttf') format('truetype'),
+         url('../fonts/ProximaNova-Sbold-webfont.svg#ProximaNovaSemibold') format('svg');
+    font-weight: normal;
+    font-style: normal;	
+}
+@font-face {
+    font-family: 'ProximaNovaBold';
+    src: url('../fonts/ProximaNova-Bold-webfont.eot');
+    src: url('../fonts/ProximaNova-Bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/ProximaNova-Bold-webfont.woff') format('woff'),
+         url('../fonts/ProximaNova-Bold-webfont.ttf') format('truetype'),
+         url('../fonts/ProximaNova-Bold-webfont.svg#ProximaNovaBold') format('svg');
+    font-weight: normal;
+    font-style: normal;	
+}
+
 
 // Global
 //==================================================================*/
@@ -13,13 +76,10 @@ hr {}
 
 // Headings
 //==================================================================*/
-h1, h2, h3, h4, h5, h6 {}
-	h1 {}
-	h2 {}
-	h3 {}
-	h4 {}
-	h5 {}
-	h6 {}
+h1, h2, h3, h4, h5, h6 { color: #35454c; font: 1em/1.286 "ProximaNovaSemibold", Arial, Helvetica, sans-serif; }
+	h1 { font: 2em/1.333 "ProximaNovaBold", Arial, Helvetica, sans-serif; }
+	h2 { font: 1.5em/1.333 "ProximaNovaBold", Arial, Helvetica, sans-serif; }
+	h3 { font: 1.125em/1.333 "ProximaNovaBold", Arial, Helvetica, sans-serif; }
 
 
 // Paragraphs
@@ -29,12 +89,18 @@ p {}
 
 // Links
 //==================================================================*/
-a {}
+a { color: #00e; }
+a:visited { color: #551a8b; }
+a:hover { color: #06e; }
+a:focus { outline: thin dotted; }
+a:hover, a:active { outline: 0; }
 
 
 // Lists
 //==================================================================*/
-ul, ol, dl {}
+ul, ol { margin: 1em 0; padding: 0 0 0 40px; }
+	dd { margin: 0 0 0 40px; }
+	nav ul, nav ol { list-style: none; list-style-image: none; margin: 0; padding: 0; }
 
 
 	// Unordered
