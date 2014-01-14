@@ -1,0 +1,152 @@
+/*==================================================================
+ * Home Page Partial
+ * Styles for the Home Page
+ * (c) Atlantic BT. All Rights Reserved.
+ *==================================================================*/
+
+/* Home Page
+=================================================================================================== */
+
+.home .site-title { margin-bottom: 0; }
+.main section h2 { font-size: 1.375em; line-height: 1; text-transform: uppercase; text-align: center; }
+
+
+	/* Portfolio
+	-----------------------------------------------------------------------------*/
+	.featured-projects { padding: 0 0 2em; margin: 0 0 2em; border-bottom: .071em solid #f1f3f4; }
+	.featured-projects ul { width: 94%; padding: 0 3%; margin: 0; list-style: none; }
+	.featured-projects li { margin: 0 0 1em; border: .063em solid #f4f4f4;
+		-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+	}
+	.featured-projects article { background: #f1f3f4; font-size: 1em; }
+	.featured-projects article a { display: block; color: #718a94; text-decoration: none; }
+	.featured-projects article figure { width: 100%; background: #35454C; /*border-bottom: .188em solid #fff;*/
+		-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+	}
+	.featured-projects article h3 { padding: 1.25em .938em; padding-bottom: 0; margin: 0 0 .438em; border-top: .375em solid #e2e5e9; font-size: 1em; line-height: 1; }
+	.featured-projects article h3 + p { padding: 1.25em 1.071em; padding-top: 0; margin: 0; font-size: .875em; line-height: 1; }
+	
+	
+	/* Skills
+	-----------------------------------------------------------------------------*/
+	.skillset { padding: 0 0 2em; margin: 0 0 2em; border-bottom: .071em solid #f1f3f4; }
+	.skillset ul { width: 100%; padding: 0; margin: 0; background: #fff; border: 1px solid #ddd; list-style: none; text-align: center;
+		-moz-border-radius: 10px; -webkit-border-radius: 10px; border-radius: 10px;
+		-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+	}
+	.skillset li { display: inline-block; width: 50%; padding: 7%; margin-left: -4px; color: #222d31; font-size: .875em; line-height: 1; text-transform: uppercase;
+		-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+	}
+	.skillset li span { display: block; }
+	
+
+	/* Process
+	-----------------------------------------------------------------------------*/
+	.creative-process { padding: 0 0 2em; margin: 0 0 2em; border-bottom: .071em solid #f1f3f4; }
+	.creative-process a { display: inline-block; padding: 5px 30px 0 0; background: url(../img/i_right-arrow.png) no-repeat 100% 50%; color: #35454c; font: 1.125em/1.389 "ProximaNovaBold", Arial, Helvetica, sans-serif; text-transform: uppercase; }
+	.creative-process a:hover { color: #DF3952; text-decoration: none; }
+
+	
+	/* Location
+	-----------------------------------------------------------------------------*/
+	.about-me {}
+	.about-me a { display: inline-block; padding: 5px 30px 0 0; background: url(../img/i_right-arrow.png) no-repeat 100% 50%; color: #35454c; font: 1.125em/1.389 "ProximaNovaBold", Arial, Helvetica, sans-serif; text-transform: uppercase; }
+	.about-me a:hover { color: #DF3952; text-decoration: none; }
+
+
+
+/* Home Page
+=================================================================================================== */
+
+.main section h2 { text-align: left; }
+
+
+	/* Portfolio
+	-----------------------------------------------------------------------------*/
+	.featured-projects { padding: 0; margin: 0; border-bottom: 0; }
+	.featured-projects ul { letter-spacing: -4px; }
+	.featured-projects li { position: relative; top: 0; display: inline-block; width: 47.5%; margin: 0 4.5% 5% 0;
+		-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+	}
+	.featured-projects li:nth-child(2n) { margin-right: 0; }
+	.featured-projects article a { letter-spacing: normal; }
+	
+		/* Hover */
+		.featured-projects li,
+		.featured-projects li article,
+		.featured-projects li article figure img,
+		.featured-projects li article h3 { -moz-transition: .25s linear all; -webkit-transition: .25s linear all; -o-transition: .25s linear all; transition: .25s linear all; }
+		
+		.featured-projects li:hover article { background: #151e21; }
+		.featured-projects li:hover article figure img { opacity: .75; }
+		.featured-projects li:hover article h3 { border-top-color: #35454C; color: #fff; }
+	
+	
+	/* Skills
+	-----------------------------------------------------------------------------*/
+	.main .skillset h2 { text-align: center; }
+	.skillset { overflow: hidden; }
+	.skillset figure { float: left; width: 48%; }
+	.skillset h2 { float: right; width: 48%; }
+	.skillset ul { float: right; width: 48%; }	
+	
+
+	/* Process
+	-----------------------------------------------------------------------------*/
+	.creative-process { float: left; width: 48%; padding: 0; margin: 0; border-bottom: 0;
+		-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+	}
+	
+	
+	/* Location
+	-----------------------------------------------------------------------------*/
+	.about-me { float: right; width: 48%; padding: 0; margin: 0; border-bottom: 0;
+		-moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+	}
+
+
+
+/* Home Page
+=================================================================================================== */
+
+
+	/* Portfolio
+	-----------------------------------------------------------------------------*/
+	.featured-projects { margin-bottom: 4em; }
+	.featured-projects ul { width: 100%; padding: 0; }
+	.featured-projects li { width: 231px; margin: 0 11px 11px 0; }
+	.featured-projects li:nth-child(2n) { margin-right: 12px; }
+	.featured-projects li:nth-child(4n) { margin-right: 0; }
+	
+		/* Toggle Projects */
+		#portfolio-toggle { margin: 2em 0 0; border-top: 1px solid #f1f3f4; text-align: center; }
+		#portfolio-toggle span { position: relative; top: -26px; display: inline-block; padding: .95em 3em .75em; background: #151e21 url('../img/sp_portfolio-toggle.png') no-repeat 95% 11px; color: #fff; font: 1.125em/1 "ProximaNovaBold", Arial, Helvetica, sans-serif; text-align: left; text-transform: uppercase; text-indent: -35px; cursor: pointer;
+			-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;
+			-webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px;
+			-moz-transition: .25s linear background-color; -webkit-transition: .25s linear background-color; transition: .25s linear background-color;
+		}
+			
+			/* Hover & Active */
+			#portfolio-toggle span:hover { background-color: #DF3952; background-position: 95% -139px; }	
+			#portfolio-toggle.active span { background-position: 95% -64px; }
+			#portfolio-toggle.active span:hover { background-position: 95% -214px; }
+	
+	
+	/* Skills
+	-----------------------------------------------------------------------------*/
+	.skillset { position: relative; left: 324px; float: left; width: 312px; margin-right: 12px; border: 0; }
+	.skillset figure { float: none; width: 100%; }
+	.skillset h2 { float: none; width: 100%; }
+	.skillset ul { float: none; width: 100%; }	
+	
+
+	/* Process
+	-----------------------------------------------------------------------------*/
+	.creative-process { position: relative; top: -15px; left: -324px; float: left; width: 312px; padding: 0; margin: 0 12px 0 0; border-bottom: 0; }
+	
+	
+	/* Location
+	-----------------------------------------------------------------------------*/
+	.about-me { float: right; width: 312px; padding: 0; margin: 0; border-bottom: 0; }
+	
+	

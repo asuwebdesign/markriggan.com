@@ -15,9 +15,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
     <!-- Stylesheets -->
-    <link rel="stylesheet" href="<?php bloginfo( 'template_directory' ); ?>/css/base.css" media="screen, handheld">
+    <?php /*<link rel="stylesheet" href="<?php bloginfo( 'template_directory' ); ?>/css/base.css" media="screen, handheld">
     <link rel="stylesheet" href="<?php bloginfo( 'template_directory' ); ?>/css/mobile.css" media="only screen and (min-width: 481px)">
-    <link rel="stylesheet" href="<?php bloginfo( 'template_directory' ); ?>/css/desktop.css" media="only screen and (min-width: 1025px)">
+    <link rel="stylesheet" href="<?php bloginfo( 'template_directory' ); ?>/css/desktop.css" media="only screen and (min-width: 1025px)"> */?>
 
     <!--[if !IE 8]><!-->
 	<link rel="stylesheet" href="<?php bloginfo( 'template_directory' ); ?>/css/style.css">

@@ -498,20 +498,33 @@ input:invalid, textarea:invalid {
  * Styles for various layouts and wrappers for content.
  * (c) Atlantic BT. All Rights Reserved.
  *==================================================================*/
-/* Show/Hide Elements
-//--------------------------------------------------------------*/
-/* line 25, sass/components/_layouts.scss */
-.header-container nav em,
-.header-container h2 {
-  display: none; }
+/* line 16, sass/components/_layouts.scss */
+.wrapper {
+  max-width: 960px;
+  padding: 0;
+  margin: 0 auto; }
 
-/* line 30, sass/components/_layouts.scss */
+/* line 27, sass/components/_layouts.scss */
 .header-container {
   background: #151e21;
   border-bottom: .571em solid #e8edef;
   text-align: center; }
 
+/* line 29, sass/components/_layouts.scss */
+.header-container nav em,
+.header-container h2 {
+  display: none; }
+
 /* line 32, sass/components/_layouts.scss */
+.header-container nav em {
+  display: inline;
+  display: block; }
+
+/* line 39, sass/components/_layouts.scss */
+.header-container nav em {
+  display: block; }
+
+/* line 51, sass/components/_layouts.scss */
 .header-container a {
   display: block;
   color: #718a94;
@@ -519,12 +532,12 @@ input:invalid, textarea:invalid {
   text-transform: uppercase;
   text-decoration: none; }
 
-/* line 33, sass/components/_layouts.scss */
+/* line 52, sass/components/_layouts.scss */
 .header-container a:hover {
   color: #fff; }
 
 /* Navigation */
-/* line 36, sass/components/_layouts.scss */
+/* line 55, sass/components/_layouts.scss */
 .header-container nav {
   background: #0c1315;
   padding-bottom: 2%;
@@ -534,50 +547,50 @@ input:invalid, textarea:invalid {
   -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.35);
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.35); }
 
-/* line 39, sass/components/_layouts.scss */
+/* line 58, sass/components/_layouts.scss */
 .header-container nav ul {
   padding: 6.25%; }
 
-/* line 40, sass/components/_layouts.scss */
+/* line 59, sass/components/_layouts.scss */
 .header-container nav li {
   background: url(../img/sp_main-nav.png) no-repeat 100% -10%;
   border-top: .071em solid #718a94; }
 
-/* line 41, sass/components/_layouts.scss */
+/* line 60, sass/components/_layouts.scss */
 .header-container nav li:first-child {
   border: 0; }
 
-/* line 43, sass/components/_layouts.scss */
+/* line 62, sass/components/_layouts.scss */
 .header-container nav li:hover {
   background-position: 100% 49.5%; }
 
-/* line 44, sass/components/_layouts.scss */
+/* line 63, sass/components/_layouts.scss */
 .header-container nav li.current-menu-item {
   background-position: 100% 109%; }
 
-/* line 45, sass/components/_layouts.scss */
+/* line 64, sass/components/_layouts.scss */
 .header-container nav li.current-menu-item a {
   color: #fff; }
 
 /* Add current to Portfolio single pages */
-/* line 48, sass/components/_layouts.scss */
+/* line 67, sass/components/_layouts.scss */
 .single-portfolio #menu-item-108 {
   background-position: 100% 109%; }
 
-/* line 49, sass/components/_layouts.scss */
+/* line 68, sass/components/_layouts.scss */
 .single-portfolio #menu-item-108 a {
   color: #fff; }
 
-/* line 51, sass/components/_layouts.scss */
+/* line 70, sass/components/_layouts.scss */
 .header-container nav li .sub {
   display: none; }
 
 /* Site Titles */
-/* line 54, sass/components/_layouts.scss */
+/* line 73, sass/components/_layouts.scss */
 .site-title {
   margin: -2.5em 0 1em; }
 
-/* line 55, sass/components/_layouts.scss */
+/* line 74, sass/components/_layouts.scss */
 .site-title a {
   position: relative;
   display: inline-block;
@@ -588,7 +601,7 @@ input:invalid, textarea:invalid {
   text-indent: -9000em;
   z-index: 1000; }
 
-/* line 56, sass/components/_layouts.scss */
+/* line 75, sass/components/_layouts.scss */
 .header-container h1 {
   padding: 0 10%;
   margin-top: .25em;
@@ -596,12 +609,12 @@ input:invalid, textarea:invalid {
   color: #fff; }
 
 /* Awards */
-/* line 60, sass/components/_layouts.scss */
+/* line 79, sass/components/_layouts.scss */
 #awwwards, #cssdesign, .csslegend {
   display: none; }
 
 /* Menu toggle */
-/* line 65, sass/components/_layouts.scss */
+/* line 84, sass/components/_layouts.scss */
 #nav-toggle {
   position: relative;
   top: -0.71em;
@@ -616,60 +629,304 @@ input:invalid, textarea:invalid {
   -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.35);
   box-shadow: 0 1px 5px rgba(0, 0, 0, 0.35); }
 
-/* line 78, sass/components/_layouts.scss */
+/* Header (tablet)
+	-----------------------------------------------------------------------------*/
+/* Navigation */
+/* line 93, sass/components/_layouts.scss */
+.header-container nav {
+  position: relative;
+  top: 2.5em;
+  background: none;
+  border-bottom: 0;
+  padding-bottom: 0;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none; }
+
+/* line 96, sass/components/_layouts.scss */
+.header-container nav ul {
+  width: 100%;
+  padding: 0;
+  text-align: center; }
+
+/* line 97, sass/components/_layouts.scss */
+.header-container nav li {
+  display: inline-block;
+  width: 20%;
+  background-position: 50% -45%;
+  border-top: 0;
+  text-align: center;
+  -moz-transition: .25s linear color;
+  -webkit-transition: .25s linear color;
+  -o-transiiton: .25s linear color;
+  transition: .25s linear color; }
+
+/* line 100, sass/components/_layouts.scss */
+.header-container nav li:first-child + li {
+  margin-right: 6%; }
+
+/* line 101, sass/components/_layouts.scss */
+.header-container nav li:first-child + li + li {
+  margin-left: 6%; }
+
+/* Hover */
+/* line 104, sass/components/_layouts.scss */
+.header-container nav li:hover {
+  background-position: 50% 33.5%; }
+
+/* Current */
+/* line 107, sass/components/_layouts.scss */
+.header-container nav li.current-menu-item {
+  background-position: 50% 109%; }
+
+/* line 109, sass/components/_layouts.scss */
+.header-container nav li a {
+  display: block;
+  padding-bottom: 1.5em;
+  -moz-transition: .25s linear all;
+  -webkit-transition: .25s linear all;
+  -o-transiiton: .25s linear all;
+  transition: .25s linear all; }
+
+/* Add current to Portfolio single pages */
+/* line 114, sass/components/_layouts.scss */
+.single-portfolio #menu-item-108 {
+  background-position: 50% 109%; }
+
+/* Site Titles */
+/* line 118, sass/components/_layouts.scss */
+.site-title a {
+  width: 105px;
+  height: 105px;
+  background-size: 105px auto; }
+
+/* line 119, sass/components/_layouts.scss */
+.header-container h1 {
+  margin-bottom: 0; }
+
+/* line 120, sass/components/_layouts.scss */
+.header-container h2 {
+  margin: .25em 0 1em;
+  font: 1.125em/1 "ProximaNovaRegular", Arial, Helvetica, sans-serif; }
+
+/* Header (desktop)
+	-----------------------------------------------------------------------------*/
+/* line 127, sass/components/_layouts.scss */
+.header-container a {
+  line-height: 1; }
+
+/* Navigation */
+/* line 130, sass/components/_layouts.scss */
+.header-container nav li:hover {
+  background-position: 50% -25px; }
+
+/* line 131, sass/components/_layouts.scss */
+.header-container nav li.current-menu-item {
+  background-position: 50% -88px; }
+
+/* line 133, sass/components/_layouts.scss */
+.header-container nav li a {
+  padding-bottom: 32px; }
+
+/* line 134, sass/components/_layouts.scss */
+.header-container nav li .sub {
+  display: block;
+  color: #718a94;
+  font: .875em/1.25 "ProximaNovaRegular", Arial, Helvetica, sans-serif;
+  text-align: center;
+  text-transform: none;
+  -moz-transition: .25s linear all;
+  -webkit-transition: .25s linear all;
+  -o-transiiton: .25s linear all;
+  transition: .25s linear all; }
+
+/* line 137, sass/components/_layouts.scss */
+.header-container nav li:hover .sub,
+.header-container nav li.current-menu-item .sub {
+  color: #f1f3f4; }
+
+/* Add current to Portfolio single pages */
+/* line 141, sass/components/_layouts.scss */
+.single-portfolio #menu-item-108 {
+  background-position: 50% -88px; }
+
+/* line 142, sass/components/_layouts.scss */
+.single-portfolio #menu-item-108 .sub {
+  color: #f1f3f4; }
+
+/* Site Titles */
+/* line 145, sass/components/_layouts.scss */
+.header-container h1 {
+  padding: 0;
+  font-size: 3.75em; }
+
+/* line 146, sass/components/_layouts.scss */
+.header-container h2 {
+  font-size: 1.5em; }
+
+/* Awards */
+/* line 149, sass/components/_layouts.scss */
+#awwwards {
+  position: fixed;
+  top: 20px;
+  right: 0px;
+  display: block;
+  z-index: 555; }
+
+/* line 150, sass/components/_layouts.scss */
+#awwwards a {
+  width: 69px;
+  height: 105px;
+  text-indent: -8000px;
+  display: block;
+  background: url("../img/awwwards_nominee_b_right.png") no-repeat;
+  overflow: hidden; }
+
+/* line 151, sass/components/_layouts.scss */
+#cssdesign {
+  position: fixed;
+  top: 130px;
+  right: 0;
+  display: block;
+  z-index: 555; }
+
+/* line 152, sass/components/_layouts.scss */
+#cssdesign a {
+  width: 68px;
+  height: 96px;
+  text-indent: -8000px;
+  display: block;
+  background: url("../img/css-design-awards-nominee-right-black.png") no-repeat;
+  overflow: hidden; }
+
+/* line 153, sass/components/_layouts.scss */
+.csslegend {
+  display: block;
+  background: url("../img/csslegend-badge-right-a.png") no-repeat scroll 0 0 transparent;
+  height: 110px;
+  position: fixed;
+  right: 0;
+  top: 234px;
+  width: 67px;
+  z-index: 999; }
+
+/* line 154, sass/components/_layouts.scss */
+.csslegend a {
+  float: right;
+  height: 110px;
+  line-height: 5000px;
+  overflow: hidden;
+  width: 67px; }
+
+/* line 166, sass/components/_layouts.scss */
 .main {
   padding: 6.25%; }
 
-/* line 81, sass/components/_layouts.scss */
+/* line 169, sass/components/_layouts.scss */
 .entry-header .entry-figure {
   padding: 0 10%;
   margin: 0 0 1em;
   text-align: center; }
 
-/* line 82, sass/components/_layouts.scss */
+/* line 170, sass/components/_layouts.scss */
 .entry-header .entry-title {
   margin: 0;
   font-size: 1.75em;
   line-height: 1;
   text-align: center; }
 
-/* line 83, sass/components/_layouts.scss */
+/* line 171, sass/components/_layouts.scss */
 .entry-header .entry-subtitle {
   margin: 0 0 1em;
   color: #718a94;
   font: normal 1.25em/1.25 "ProximaNovaRegular", Arial, Helvetica, sans-serif;
   text-align: center; }
 
-/* line 91, sass/components/_layouts.scss */
+/* Main (base)
+	-----------------------------------------------------------------------------*/
+/* line 175, sass/components/_layouts.scss */
+.main {
+  padding: 4% 6.25%; }
+
+/* line 177, sass/components/_layouts.scss */
+.entry-header {
+  overflow: hidden; }
+
+/* line 178, sass/components/_layouts.scss */
+.entry-header .entry-figure {
+  float: left;
+  width: 33.646%;
+  padding: 0;
+  margin: 0 0 1em; }
+
+/* line 179, sass/components/_layouts.scss */
+.entry-header .entry-title {
+  float: right;
+  width: 54.167%;
+  font-size: 2.25em;
+  text-align: left; }
+
+/* line 180, sass/components/_layouts.scss */
+.entry-header .entry-subtitle {
+  float: right;
+  width: 54.167%;
+  font-size: 1.25em;
+  text-align: left; }
+
+/* Main (desktop)
+	-----------------------------------------------------------------------------*/
+/* line 185, sass/components/_layouts.scss */
+.main-container {
+  padding-top: 30px; }
+
+/* line 189, sass/components/_layouts.scss */
+.entry-header .entry-title {
+  font-size: 3.75em; }
+
+/* line 190, sass/components/_layouts.scss */
+.entry-header .entry-subtitle {
+  font-size: 1.5em; }
+
+/* line 196, sass/components/_layouts.scss */
 .footer-container {
   padding: 6.25%;
   text-align: center; }
 
 /* Contact Callout */
-/* line 95, sass/components/_layouts.scss */
+/* line 200, sass/components/_layouts.scss */
 .contact-callout {
   padding: 6.25% 0;
   margin: 0 0 1.875em;
   background: #151e21;
-  border-top: .625em solid #e8edef; }
+  border-top: .625em solid #e8edef;
+  padding: 3% 0;
+  padding: 1.5em 1.875em;
+  overflow: hidden; }
 
-/* line 96, sass/components/_layouts.scss */
+/* line 208, sass/components/_layouts.scss */
+.contact-callout hgroup {
+  float: left;
+  width: 462px;
+  text-align: left; }
+
+/* line 213, sass/components/_layouts.scss */
 .contact-callout h2 {
   margin: 0;
-  color: #fff; }
+  color: #fff;
+  font-size: 2.25em; }
 
-/* line 97, sass/components/_layouts.scss */
+/* line 219, sass/components/_layouts.scss */
 .contact-callout h3 {
   margin: 0 0 .5em;
   color: #718a94; }
 
-/* line 98, sass/components/_layouts.scss */
+/* line 220, sass/components/_layouts.scss */
 .contact-callout ul {
   padding: 0;
   margin: 0 0 .5em;
   list-style: none; }
 
-/* line 99, sass/components/_layouts.scss */
+/* line 221, sass/components/_layouts.scss */
 .contact-callout li {
   display: inline-block;
   width: 48px;
@@ -682,50 +939,50 @@ input:invalid, textarea:invalid {
   -webkit-transition: .25s linear background-color;
   transition: .25s linear background-color; }
 
-/* line 104, sass/components/_layouts.scss */
+/* line 226, sass/components/_layouts.scss */
 .contact-callout li.facebook {
   background-position: 0 0; }
 
-/* line 105, sass/components/_layouts.scss */
+/* line 227, sass/components/_layouts.scss */
 .contact-callout li.twitter {
   background-position: 0 -48px; }
 
-/* line 106, sass/components/_layouts.scss */
+/* line 228, sass/components/_layouts.scss */
 .contact-callout li.dribbble {
   background-position: 0 -96px; }
 
-/* line 107, sass/components/_layouts.scss */
+/* line 229, sass/components/_layouts.scss */
 .contact-callout li.linkedin {
   background-position: 0 -144px; }
 
-/* line 109, sass/components/_layouts.scss */
+/* line 231, sass/components/_layouts.scss */
 .contact-callout li.facebook:hover {
   background-color: #3a589c; }
 
-/* line 110, sass/components/_layouts.scss */
+/* line 232, sass/components/_layouts.scss */
 .contact-callout li.twitter:hover {
   background-color: #39bce8; }
 
-/* line 111, sass/components/_layouts.scss */
+/* line 233, sass/components/_layouts.scss */
 .contact-callout li.dribbble:hover {
   background-color: #ff55b1; }
 
-/* line 112, sass/components/_layouts.scss */
+/* line 234, sass/components/_layouts.scss */
 .contact-callout li.linkedin:hover {
   background-color: #3392c5; }
 
-/* line 114, sass/components/_layouts.scss */
+/* line 236, sass/components/_layouts.scss */
 .contact-callout li:hover {
   background-color: #718a94; }
 
-/* line 116, sass/components/_layouts.scss */
+/* line 238, sass/components/_layouts.scss */
 .contact-callout li a {
   display: block;
   width: 100%;
   height: 100%;
   text-indent: -9000em; }
 
-/* line 117, sass/components/_layouts.scss */
+/* line 239, sass/components/_layouts.scss */
 .contact-callout .button {
   display: inline-block;
   width: 71.429%;
@@ -746,30 +1003,30 @@ input:invalid, textarea:invalid {
   -webkit-transition: .25s linear background-color;
   transition: .25s linear background-color; }
 
-/* line 122, sass/components/_layouts.scss */
+/* line 244, sass/components/_layouts.scss */
 .contact-callout .button:hover {
   background-color: #df3952; }
 
-/* line 124, sass/components/_layouts.scss */
+/* line 246, sass/components/_layouts.scss */
 .footer-container q {
   margin: 0 0 2.875em;
   color: #35454c;
   font: 1.2em/1.222 "ProximaNovaThin", Arial, Helvetica, sans-serif; }
 
-/* line 125, sass/components/_layouts.scss */
+/* line 247, sass/components/_layouts.scss */
 .footer-container q + p {
   margin-top: .5em; }
 
-/* line 126, sass/components/_layouts.scss */
+/* line 248, sass/components/_layouts.scss */
 .footer-container small {
   color: #ccc;
   font-size: .875em; }
 
-/* line 127, sass/components/_layouts.scss */
+/* line 249, sass/components/_layouts.scss */
 .footer-container .logo {
   text-align: center; }
 
-/* line 128, sass/components/_layouts.scss */
+/* line 250, sass/components/_layouts.scss */
 .footer-container .logo a {
   display: inline-block;
   width: 51px;
@@ -777,6 +1034,85 @@ input:invalid, textarea:invalid {
   background: url("../img/l_logo-footer.png") no-repeat 0 0;
   text-indent: -9000em; }
 
+/* Footer (tablet)
+	-----------------------------------------------------------------------------*/
+/* Contact Callout */
+/* line 257, sass/components/_layouts.scss */
+.contact-callout h3 {
+  font-size: 1.5em; }
+
+/* line 258, sass/components/_layouts.scss */
+.contact-callout ul {
+  display: inline-block;
+  width: 45%; }
+
+/* line 259, sass/components/_layouts.scss */
+.contact-callout .button {
+  position: relative;
+  top: .75em;
+  width: 35%; }
+
+/* line 261, sass/components/_layouts.scss */
+.footer-container q {
+  font-size: 1.5em; }
+
+/* Footer (desktop)
+	-----------------------------------------------------------------------------*/
+/* line 266, sass/components/_layouts.scss */
+.footer-container {
+  padding: 2em 0; }
+
+/* Contact Callout */
+/* line 270, sass/components/_layouts.scss */
+.contact-callout ul {
+  float: left;
+  width: auto;
+  margin: 1.25em 2em 0 0; }
+
+/* line 271, sass/components/_layouts.scss */
+.contact-callout .button {
+  top: .438em;
+  float: left;
+  width: 200px;
+  margin-top: .75em;
+  clear: none; }
+
+/* Media Queries
+=================================================================================================== */
+@media all and (-webkit-min-device-pixel-ratio: 2) {
+  /* line 280, sass/components/_layouts.scss */
+  .site-title a {
+    background: url("../img/l_logo2x.png"); }
+
+  /* line 281, sass/components/_layouts.scss */
+  .header-container nav li {
+    background-image: url("../img/sp_main-nav2x.png");
+    background-size: 25px auto; }
+
+  /* line 282, sass/components/_layouts.scss */
+  #nav-toggle {
+    background-image: url("../img/i_menu-toggle2x.png");
+    background-size: 19px auto; }
+
+  /* line 283, sass/components/_layouts.scss */
+  .contact-callout li {
+    background-image: url("../img/sp_social-media2x.png");
+    background-size: 48px auto; }
+
+  /* line 284, sass/components/_layouts.scss */
+  .contact-callout .button {
+    background-image: url("../img/bg_contact-arrow2x.png");
+    background-size: 25px auto; }
+
+  /* line 285, sass/components/_layouts.scss */
+  .creative-process a, .about-me a {
+    background-image: url("../img/i_right-arrow2x.png");
+    background-size: 25px auto; }
+
+  /* line 287, sass/components/_layouts.scss */
+  .footer-container .logo a {
+    background-image: url("../img/l_logo-footer2x.png");
+    background-size: 51px auto; } }
 /*==================================================================
  * Navigations Partial
  * Styles for various types of navigation componenets.
@@ -861,3 +1197,1178 @@ img[src*="googleadservices.com"] {
  * Custom keyframed animations to be used in the site/application
  * (c) Atlantic BT. All Rights Reserved.
  *==================================================================*/
+/*==================================================================
+ * Portfolio Partial
+ * Styles for portfolio content.
+ * (c) Atlantic BT. All Rights Reserved.
+ *==================================================================*/
+/* Latest Projects
+=================================================================================================== */
+/* line 10, sass/components/_type-portfolio.scss */
+.main .featured-projects.callout h2 {
+  color: #718a94;
+  text-transform: none; }
+
+/* Portfolio Detail Page
+=================================================================================================== */
+/* line 18, sass/components/_type-portfolio.scss */
+.single-portfolio .entry-content h2 {
+  padding: .25em 0;
+  margin: 0;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  font-size: 1.75em;
+  text-align: center; }
+
+/* line 20, sass/components/_type-portfolio.scss */
+.single-portfolio .entry-media figure {
+  display: block;
+  padding: 0;
+  margin: 0 0 6.25%;
+  background: #fff;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/* line 23, sass/components/_type-portfolio.scss */
+.single-portfolio .entry-media figure img {
+  border: .071em solid #f1f3f4; }
+
+/* line 24, sass/components/_type-portfolio.scss */
+.single-portfolio .entry-media figure figcaption {
+  font-size: .75em;
+  line-height: 4; }
+
+/* Latest Projects
+=================================================================================================== */
+/* line 31, sass/components/_type-portfolio.scss */
+.main .featured-projects.callout {
+  float: left;
+  width: 100%;
+  margin: 1em 0;
+  clear: both; }
+
+/* line 32, sass/components/_type-portfolio.scss */
+.main .featured-projects.callout h2 {
+  text-align: center; }
+
+/* Portfolio Detail Page
+=================================================================================================== */
+/* line 40, sass/components/_type-portfolio.scss */
+.single-portfolio .entry-title {
+  width: 100%;
+  margin: 0 0 1em;
+  font-size: 3em;
+  line-height: 1;
+  text-align: center; }
+
+/* line 41, sass/components/_type-portfolio.scss */
+.single-portfolio .entry-content {
+  float: right;
+  width: 45%;
+  padding-left: 4.5%; }
+
+/* line 42, sass/components/_type-portfolio.scss */
+.single-portfolio .entry-media {
+  float: left;
+  width: 50%; }
+
+/* Portfolio Detail Page
+=================================================================================================== */
+/* line 50, sass/components/_type-portfolio.scss */
+.single-portfolio .entry-title {
+  margin-bottom: .5em;
+  line-height: 1; }
+
+/* line 51, sass/components/_type-portfolio.scss */
+.single-portfolio .entry-content {
+  width: 294px;
+  padding-left: 30px;
+  font-size: .875em;
+  line-height: 1.5; }
+
+/* line 52, sass/components/_type-portfolio.scss */
+.single-portfolio .entry-content p:first-child {
+  margin-top: 0; }
+
+/* line 53, sass/components/_type-portfolio.scss */
+.single-portfolio .entry-media {
+  width: 636px;
+  padding-right: 0; }
+
+/*==================================================================
+ * Home Page Partial
+ * Styles for the Home Page
+ * (c) Atlantic BT. All Rights Reserved.
+ *==================================================================*/
+/* Home Page
+=================================================================================================== */
+/* line 10, sass/components/_page-home.scss */
+.home .site-title {
+  margin-bottom: 0; }
+
+/* line 11, sass/components/_page-home.scss */
+.main section h2 {
+  font-size: 1.375em;
+  line-height: 1;
+  text-transform: uppercase;
+  text-align: center; }
+
+/* Portfolio
+-----------------------------------------------------------------------------*/
+/* line 16, sass/components/_page-home.scss */
+.featured-projects {
+  padding: 0 0 2em;
+  margin: 0 0 2em;
+  border-bottom: .071em solid #f1f3f4; }
+
+/* line 17, sass/components/_page-home.scss */
+.featured-projects ul {
+  width: 94%;
+  padding: 0 3%;
+  margin: 0;
+  list-style: none; }
+
+/* line 18, sass/components/_page-home.scss */
+.featured-projects li {
+  margin: 0 0 1em;
+  border: .063em solid #f4f4f4;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/* line 21, sass/components/_page-home.scss */
+.featured-projects article {
+  background: #f1f3f4;
+  font-size: 1em; }
+
+/* line 22, sass/components/_page-home.scss */
+.featured-projects article a {
+  display: block;
+  color: #718a94;
+  text-decoration: none; }
+
+/* line 23, sass/components/_page-home.scss */
+.featured-projects article figure {
+  width: 100%;
+  background: #35454C;
+  /*border-bottom: .188em solid #fff;*/
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/* line 26, sass/components/_page-home.scss */
+.featured-projects article h3 {
+  padding: 1.25em .938em;
+  padding-bottom: 0;
+  margin: 0 0 .438em;
+  border-top: .375em solid #e2e5e9;
+  font-size: 1em;
+  line-height: 1; }
+
+/* line 27, sass/components/_page-home.scss */
+.featured-projects article h3 + p {
+  padding: 1.25em 1.071em;
+  padding-top: 0;
+  margin: 0;
+  font-size: .875em;
+  line-height: 1; }
+
+/* Skills
+-----------------------------------------------------------------------------*/
+/* line 32, sass/components/_page-home.scss */
+.skillset {
+  padding: 0 0 2em;
+  margin: 0 0 2em;
+  border-bottom: .071em solid #f1f3f4; }
+
+/* line 33, sass/components/_page-home.scss */
+.skillset ul {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  background: #fff;
+  border: 1px solid #ddd;
+  list-style: none;
+  text-align: center;
+  -moz-border-radius: 10px;
+  -webkit-border-radius: 10px;
+  border-radius: 10px;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/* line 37, sass/components/_page-home.scss */
+.skillset li {
+  display: inline-block;
+  width: 50%;
+  padding: 7%;
+  margin-left: -4px;
+  color: #222d31;
+  font-size: .875em;
+  line-height: 1;
+  text-transform: uppercase;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/* line 40, sass/components/_page-home.scss */
+.skillset li span {
+  display: block; }
+
+/* Process
+-----------------------------------------------------------------------------*/
+/* line 45, sass/components/_page-home.scss */
+.creative-process {
+  padding: 0 0 2em;
+  margin: 0 0 2em;
+  border-bottom: .071em solid #f1f3f4; }
+
+/* line 46, sass/components/_page-home.scss */
+.creative-process a {
+  display: inline-block;
+  padding: 5px 30px 0 0;
+  background: url(../img/i_right-arrow.png) no-repeat 100% 50%;
+  color: #35454c;
+  font: 1.125em/1.389 "ProximaNovaBold", Arial, Helvetica, sans-serif;
+  text-transform: uppercase; }
+
+/* line 47, sass/components/_page-home.scss */
+.creative-process a:hover {
+  color: #DF3952;
+  text-decoration: none; }
+
+/* Location
+-----------------------------------------------------------------------------*/
+/* line 53, sass/components/_page-home.scss */
+.about-me a {
+  display: inline-block;
+  padding: 5px 30px 0 0;
+  background: url(../img/i_right-arrow.png) no-repeat 100% 50%;
+  color: #35454c;
+  font: 1.125em/1.389 "ProximaNovaBold", Arial, Helvetica, sans-serif;
+  text-transform: uppercase; }
+
+/* line 54, sass/components/_page-home.scss */
+.about-me a:hover {
+  color: #DF3952;
+  text-decoration: none; }
+
+/* Home Page
+=================================================================================================== */
+/* line 61, sass/components/_page-home.scss */
+.main section h2 {
+  text-align: left; }
+
+/* Portfolio
+-----------------------------------------------------------------------------*/
+/* line 66, sass/components/_page-home.scss */
+.featured-projects {
+  padding: 0;
+  margin: 0;
+  border-bottom: 0; }
+
+/* line 67, sass/components/_page-home.scss */
+.featured-projects ul {
+  letter-spacing: -4px; }
+
+/* line 68, sass/components/_page-home.scss */
+.featured-projects li {
+  position: relative;
+  top: 0;
+  display: inline-block;
+  width: 47.5%;
+  margin: 0 4.5% 5% 0;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/* line 71, sass/components/_page-home.scss */
+.featured-projects li:nth-child(2n) {
+  margin-right: 0; }
+
+/* line 72, sass/components/_page-home.scss */
+.featured-projects article a {
+  letter-spacing: normal; }
+
+/* Hover */
+/* line 75, sass/components/_page-home.scss */
+.featured-projects li,
+.featured-projects li article,
+.featured-projects li article figure img,
+.featured-projects li article h3 {
+  -moz-transition: .25s linear all;
+  -webkit-transition: .25s linear all;
+  -o-transition: .25s linear all;
+  transition: .25s linear all; }
+
+/* line 80, sass/components/_page-home.scss */
+.featured-projects li:hover article {
+  background: #151e21; }
+
+/* line 81, sass/components/_page-home.scss */
+.featured-projects li:hover article figure img {
+  opacity: .75; }
+
+/* line 82, sass/components/_page-home.scss */
+.featured-projects li:hover article h3 {
+  border-top-color: #35454C;
+  color: #fff; }
+
+/* Skills
+-----------------------------------------------------------------------------*/
+/* line 87, sass/components/_page-home.scss */
+.main .skillset h2 {
+  text-align: center; }
+
+/* line 88, sass/components/_page-home.scss */
+.skillset {
+  overflow: hidden; }
+
+/* line 89, sass/components/_page-home.scss */
+.skillset figure {
+  float: left;
+  width: 48%; }
+
+/* line 90, sass/components/_page-home.scss */
+.skillset h2 {
+  float: right;
+  width: 48%; }
+
+/* line 91, sass/components/_page-home.scss */
+.skillset ul {
+  float: right;
+  width: 48%; }
+
+/* Process
+-----------------------------------------------------------------------------*/
+/* line 96, sass/components/_page-home.scss */
+.creative-process {
+  float: left;
+  width: 48%;
+  padding: 0;
+  margin: 0;
+  border-bottom: 0;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/* Location
+-----------------------------------------------------------------------------*/
+/* line 103, sass/components/_page-home.scss */
+.about-me {
+  float: right;
+  width: 48%;
+  padding: 0;
+  margin: 0;
+  border-bottom: 0;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/* Home Page
+=================================================================================================== */
+/* Portfolio
+-----------------------------------------------------------------------------*/
+/* line 115, sass/components/_page-home.scss */
+.featured-projects {
+  margin-bottom: 4em; }
+
+/* line 116, sass/components/_page-home.scss */
+.featured-projects ul {
+  width: 100%;
+  padding: 0; }
+
+/* line 117, sass/components/_page-home.scss */
+.featured-projects li {
+  width: 231px;
+  margin: 0 11px 11px 0; }
+
+/* line 118, sass/components/_page-home.scss */
+.featured-projects li:nth-child(2n) {
+  margin-right: 12px; }
+
+/* line 119, sass/components/_page-home.scss */
+.featured-projects li:nth-child(4n) {
+  margin-right: 0; }
+
+/* Toggle Projects */
+/* line 122, sass/components/_page-home.scss */
+#portfolio-toggle {
+  margin: 2em 0 0;
+  border-top: 1px solid #f1f3f4;
+  text-align: center; }
+
+/* line 123, sass/components/_page-home.scss */
+#portfolio-toggle span {
+  position: relative;
+  top: -26px;
+  display: inline-block;
+  padding: .95em 3em .75em;
+  background: #151e21 url("../img/sp_portfolio-toggle.png") no-repeat 95% 11px;
+  color: #fff;
+  font: 1.125em/1 "ProximaNovaBold", Arial, Helvetica, sans-serif;
+  text-align: left;
+  text-transform: uppercase;
+  text-indent: -35px;
+  cursor: pointer;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -moz-transition: .25s linear background-color;
+  -webkit-transition: .25s linear background-color;
+  transition: .25s linear background-color; }
+
+/* Hover & Active */
+/* line 130, sass/components/_page-home.scss */
+#portfolio-toggle span:hover {
+  background-color: #DF3952;
+  background-position: 95% -139px; }
+
+/* line 131, sass/components/_page-home.scss */
+#portfolio-toggle.active span {
+  background-position: 95% -64px; }
+
+/* line 132, sass/components/_page-home.scss */
+#portfolio-toggle.active span:hover {
+  background-position: 95% -214px; }
+
+/* Skills
+-----------------------------------------------------------------------------*/
+/* line 137, sass/components/_page-home.scss */
+.skillset {
+  position: relative;
+  left: 324px;
+  float: left;
+  width: 312px;
+  margin-right: 12px;
+  border: 0; }
+
+/* line 138, sass/components/_page-home.scss */
+.skillset figure {
+  float: none;
+  width: 100%; }
+
+/* line 139, sass/components/_page-home.scss */
+.skillset h2 {
+  float: none;
+  width: 100%; }
+
+/* line 140, sass/components/_page-home.scss */
+.skillset ul {
+  float: none;
+  width: 100%; }
+
+/* Process
+-----------------------------------------------------------------------------*/
+/* line 145, sass/components/_page-home.scss */
+.creative-process {
+  position: relative;
+  top: -15px;
+  left: -324px;
+  float: left;
+  width: 312px;
+  padding: 0;
+  margin: 0 12px 0 0;
+  border-bottom: 0; }
+
+/* Location
+-----------------------------------------------------------------------------*/
+/* line 150, sass/components/_page-home.scss */
+.about-me {
+  float: right;
+  width: 312px;
+  padding: 0;
+  margin: 0;
+  border-bottom: 0; }
+
+/*==================================================================
+ * Process Page Partial
+ * Styles for the Process Page
+ * (c) Atlantic BT. All Rights Reserved.
+ *==================================================================*/
+/* Process Page
+=================================================================================================== */
+/* line 10, sass/components/_page-process.scss */
+.page-process .entry-title {
+  margin: 0; }
+
+/* line 11, sass/components/_page-process.scss */
+.page-process .entry-subtitle {
+  margin: 0 0 2em;
+  color: #718a94;
+  font: 1.5em/1 "ProximaNovaRegular", Arial, Helvetica, sans-serif;
+  text-align: center; }
+
+/* line 13, sass/components/_page-process.scss */
+.my-process {
+  padding: 0;
+  margin: 0;
+  list-style: none; }
+
+/* line 14, sass/components/_page-process.scss */
+.my-process li {
+  padding: 10%;
+  margin: 1em 0 0;
+  background: #f5f8f9;
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px; }
+
+/* line 17, sass/components/_page-process.scss */
+.my-process li h2 {
+  padding: 0;
+  margin: 0;
+  line-height: 2; }
+
+/* line 19, sass/components/_page-process.scss */
+.my-process li.discover h2 {
+  padding-top: 128px;
+  background: url("../img/bg_discover.jpg") no-repeat 50% 0; }
+
+/* line 20, sass/components/_page-process.scss */
+.my-process li.plan h2 {
+  padding-top: 122px;
+  background: url("../img/bg_strategize.jpg") no-repeat 50% 0; }
+
+/* line 21, sass/components/_page-process.scss */
+.my-process li.create h2 {
+  padding-top: 115px;
+  background: url("../img/bg_create.jpg") no-repeat 50% 0; }
+
+/* line 22, sass/components/_page-process.scss */
+.my-process li.implement h2 {
+  padding-top: 122px;
+  background: url("../img/bg_construct.jpg") no-repeat 50% 0; }
+
+/* line 23, sass/components/_page-process.scss */
+.my-process li.measure h2 {
+  padding-top: 95px;
+  background: url("../img/bg_measure.jpg") no-repeat 50% 0; }
+
+/* line 24, sass/components/_page-process.scss */
+.my-process li.evolve h2 {
+  padding-top: 128px;
+  background: url("../img/bg_evolve.jpg") no-repeat 50% 0; }
+
+/* line 26, sass/components/_page-process.scss */
+.my-process li p {
+  padding: 0;
+  margin: 0; }
+
+/* Process Page
+=================================================================================================== */
+/* line 33, sass/components/_page-process.scss */
+.page-process .entry-figure {
+  width: 45%;
+  margin-right: .5em; }
+
+/* line 34, sass/components/_page-process.scss */
+.page-process .entry-title {
+  width: 45%;
+  margin-top: 2.5em; }
+
+/* line 35, sass/components/_page-process.scss */
+.page-process .entry-subtitle {
+  width: 45%; }
+
+@media all and (min-width: 767px) {
+  /* line 38, sass/components/_page-process.scss */
+  .my-process {
+    letter-spacing: -4px; }
+
+  /* line 39, sass/components/_page-process.scss */
+  .my-process li {
+    float: left;
+    width: 47.5%;
+    padding: 5%;
+    margin-left: 5%;
+    letter-spacing: normal;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box; }
+
+  /* line 42, sass/components/_page-process.scss */
+  .my-process li:nth-child(2n+1) {
+    margin-left: 0;
+    clear: left; } }
+/* Process Page
+=================================================================================================== */
+/* line 51, sass/components/_page-process.scss */
+.page-process .entry-figure {
+  width: 411px;
+  margin-bottom: 2em; }
+
+/* line 52, sass/components/_page-process.scss */
+.page-process .entry-title {
+  width: 50%;
+  margin-top: 2em; }
+
+/* line 53, sass/components/_page-process.scss */
+.page-process .entry-subtitle {
+  width: 50%; }
+
+/* line 55, sass/components/_page-process.scss */
+.my-process {
+  margin-left: 81px; }
+
+/* line 56, sass/components/_page-process.scss */
+.my-process li {
+  width: 393px;
+  padding: 40px;
+  margin-left: 12px; }
+
+/* line 58, sass/components/_page-process.scss */
+.my-process li h2 {
+  margin: 0 0 1em; }
+
+/* line 60, sass/components/_page-process.scss */
+.my-process li.discover h2 {
+  padding: 0 0 0 141px;
+  background-position: -10px 0;
+  line-height: 118px; }
+
+/* line 61, sass/components/_page-process.scss */
+.my-process li.plan h2 {
+  padding: 0 0 0 156px;
+  background-position: 0 0;
+  line-height: 112px; }
+
+/* line 62, sass/components/_page-process.scss */
+.my-process li.create h2 {
+  padding: 0 0 0 152px;
+  background-position: 0 0;
+  line-height: 105px; }
+
+/* line 63, sass/components/_page-process.scss */
+.my-process li.implement h2 {
+  padding: 0 0 0 163px;
+  background-position: 0 0;
+  line-height: 112px; }
+
+/* line 64, sass/components/_page-process.scss */
+.my-process li.measure h2 {
+  padding: 0 0 0 165px;
+  background-position: 0 0;
+  line-height: 85px; }
+
+/* line 65, sass/components/_page-process.scss */
+.my-process li.evolve h2 {
+  padding: 0 0 0 111px;
+  background-position: 0 0;
+  line-height: 118px; }
+
+/* Media Queries
+=================================================================================================== */
+@media all and (-webkit-min-device-pixel-ratio: 2) {
+  /* line 74, sass/components/_page-process.scss */
+  .my-process li.discover h2 {
+    background-image: url("../img/bg_discover2x.jpg");
+    background-size: 131px auto; }
+
+  /* line 75, sass/components/_page-process.scss */
+  .my-process li.plan h2 {
+    background-image: url("../img/bg_strategize2x.jpg");
+    background-size: 136px auto; }
+
+  /* line 76, sass/components/_page-process.scss */
+  .my-process li.create h2 {
+    background-image: url("../img/bg_create2x.jpg");
+    background-size: 132px auto; }
+
+  /* line 77, sass/components/_page-process.scss */
+  .my-process li.implement h2 {
+    background-image: url("../img/bg_construct2x.jpg");
+    background-size: 143px auto; }
+
+  /* line 78, sass/components/_page-process.scss */
+  .my-process li.measure h2 {
+    background-image: url("../img/bg_measure2x.jpg");
+    background-size: 145px auto; }
+
+  /* line 79, sass/components/_page-process.scss */
+  .my-process li.evolve h2 {
+    background-image: url("../img/bg_evolve2x.jpg");
+    background-size: 91px auto; } }
+/*==================================================================
+ * About Page Partial
+ * Styles for the About Page
+ * (c) Atlantic BT. All Rights Reserved.
+ *==================================================================*/
+/* About Page
+=================================================================================================== */
+/* line 10, sass/components/_page-about.scss */
+.page-about .entry-content h2 {
+  text-transform: none; }
+
+/* Focused Skills
+-----------------------------------------------------------------------------*/
+/* line 14, sass/components/_page-about.scss */
+.page-about .skills {
+  margin: 0 0 1em;
+  background: #f4f8f9; }
+
+/* line 15, sass/components/_page-about.scss */
+.page-about .skills h2 {
+  padding: 1em 0;
+  margin: 0;
+  background: #3f5056;
+  border-top: 6px solid #222d31;
+  color: #fff;
+  font: normal 1.125em/1 "ProximaNovaSemibold", Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  text-align: center; }
+
+/* line 16, sass/components/_page-about.scss */
+.page-about .skills h3 {
+  margin-bottom: 0; }
+
+/* line 17, sass/components/_page-about.scss */
+.page-about .skills p {
+  margin-top: 0; }
+
+/* line 18, sass/components/_page-about.scss */
+.page-about .skills ul {
+  padding: 1em;
+  margin: 0;
+  list-style: none; }
+
+/* line 19, sass/components/_page-about.scss */
+.page-about .skills li {
+  padding-left: 70px; }
+
+/* line 20, sass/components/_page-about.scss */
+.page-about .skills .design {
+  background: url("../img/i_visual-design.png") no-repeat 0 0; }
+
+/* line 21, sass/components/_page-about.scss */
+.page-about .skills .development {
+  background: url("../img/i_development.png") no-repeat 5px 0; }
+
+/* line 22, sass/components/_page-about.scss */
+.page-about .skills .ux {
+  background: url("../img/i_userexperience.png") no-repeat 3px 0; }
+
+/* line 23, sass/components/_page-about.scss */
+.page-about .skills .mobile {
+  background: url("../img/i_mobile.png") no-repeat 9px 0; }
+
+/* Selected Awards
+-----------------------------------------------------------------------------*/
+/* line 27, sass/components/_page-about.scss */
+.page-about .awards {
+  margin: 0 0 3em;
+  background: #f4f8f9; }
+
+/* line 28, sass/components/_page-about.scss */
+.page-about .awards h2 {
+  padding: 1em 0;
+  margin: 0;
+  background: #fd7400;
+  border-top: 6px solid #fc5400;
+  color: #fff;
+  font: normal 1.125em/1 "ProximaNovaSemibold", Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  text-align: center; }
+
+/* line 29, sass/components/_page-about.scss */
+.page-about .awards ul {
+  padding: 1em;
+  margin: 0;
+  list-style: none;
+  text-align: center; }
+
+/* line 30, sass/components/_page-about.scss */
+.page-about .awards li {
+  margin-top: 1em; }
+
+/* line 31, sass/components/_page-about.scss */
+.page-about .awards li:first-child {
+  margin: 0; }
+
+/* line 32, sass/components/_page-about.scss */
+.page-about .awards figure {
+  padding: 5% 10%; }
+
+/* About Page
+=================================================================================================== */
+@media all and (min-width: 767px) {
+  /* line 40, sass/components/_page-about.scss */
+  .page-about .skills {
+    float: left;
+    width: 47.5%;
+    margin: 0 0 2em; }
+
+  /* line 41, sass/components/_page-about.scss */
+  .page-about .awards {
+    float: right;
+    width: 47.5%;
+    margin: 0 0 2em; } }
+/* About Page
+=================================================================================================== */
+/* line 50, sass/components/_page-about.scss */
+.page-about .entry-figure {
+  width: 393px; }
+
+/* line 51, sass/components/_page-about.scss */
+.page-about .entry-title {
+  margin: 1.25em 0 .1em; }
+
+/* line 53, sass/components/_page-about.scss */
+.page-about .entry-content {
+  float: left;
+  width: 474px; }
+
+/* line 54, sass/components/_page-about.scss */
+.page-about .entry-subcontent {
+  float: right;
+  width: 393px; }
+
+/* Focused Skills
+-----------------------------------------------------------------------------*/
+/* line 58, sass/components/_page-about.scss */
+.page-about .skills {
+  float: none;
+  width: 100%; }
+
+/* line 59, sass/components/_page-about.scss */
+.page-about .skills h2 {
+  padding: 1em 0;
+  margin: 0;
+  background: #3f5056;
+  border-top: 6px solid #222d31;
+  color: #fff;
+  font: normal 1.125em/1 "ProximaNovaSemibold", Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  text-align: center; }
+
+/* line 60, sass/components/_page-about.scss */
+.page-about .skills h3 {
+  margin-bottom: 0; }
+
+/* line 61, sass/components/_page-about.scss */
+.page-about .skills p {
+  margin-top: 0; }
+
+/* line 62, sass/components/_page-about.scss */
+.page-about .skills ul {
+  padding: 1em;
+  margin: 0;
+  list-style: none; }
+
+/* line 63, sass/components/_page-about.scss */
+.page-about .skills li {
+  padding-left: 70px; }
+
+/* line 64, sass/components/_page-about.scss */
+.page-about .skills .design {
+  background: url("../img/i_visual-design.png") no-repeat 0 0; }
+
+/* line 65, sass/components/_page-about.scss */
+.page-about .skills .development {
+  background: url("../img/i_development.png") no-repeat 5px 0; }
+
+/* line 66, sass/components/_page-about.scss */
+.page-about .skills .ux {
+  background: url("../img/i_userexperience.png") no-repeat 3px 0; }
+
+/* line 67, sass/components/_page-about.scss */
+.page-about .skills .mobile {
+  background: url("../img/i_mobile.png") no-repeat 9px 0; }
+
+/* Selected Awards
+-----------------------------------------------------------------------------*/
+/* line 71, sass/components/_page-about.scss */
+.page-about .awards {
+  float: none;
+  width: 100%; }
+
+/* line 72, sass/components/_page-about.scss */
+.page-about .awards li {
+  float: left;
+  width: 50%;
+  margin-top: 1em; }
+
+/* Media Queries
+=================================================================================================== */
+@media all and (-webkit-min-device-pixel-ratio: 2) {
+  /* line 83, sass/components/_page-about.scss */
+  .page-about .skills .design {
+    background-image: url("../img/i_visual-design2x.png");
+    background-size: 50px auto; }
+
+  /* line 84, sass/components/_page-about.scss */
+  .page-about .skills .development {
+    background-image: url("../img/i_development2x.png");
+    background-size: 38px auto; }
+
+  /* line 85, sass/components/_page-about.scss */
+  .page-about .skills .ux {
+    background-image: url("../img/i_userexperience2x.png");
+    background-size: 41px auto; }
+
+  /* line 86, sass/components/_page-about.scss */
+  .page-about .skills .mobile {
+    background-image: url("../img/i_mobile2x.png");
+    background-size: 30px auto; } }
+/*==================================================================
+ * Contact Page Partial
+ * Styles for the Contact Page
+ * (c) Atlantic BT. All Rights Reserved.
+ *==================================================================*/
+/* Contact Page
+=================================================================================================== */
+/* line 11, sass/components/_page-contact.scss */
+.page-contact input[type="submit"] {
+  -moz-border-radius: 5px;
+  -webkit-border-radius: 5px;
+  border-radius: 5px; }
+
+/* Contact 7 Plugin
+-----------------------------------------------------------------------------*/
+/* line 16, sass/components/_page-contact.scss */
+.wpcf7 {
+  padding: 10% 5% 5%;
+  background: #e5eaec url("../img/bg_contact-form.png") repeat-x 50% 0; }
+
+/* line 17, sass/components/_page-contact.scss */
+.wpcf7 br {
+  display: none; }
+
+/* line 19, sass/components/_page-contact.scss */
+.wpcf7-not-valid-tip-no-ajax,
+.wpcf7-response-output.wpcf7-validation-errors,
+.wpcf7-response-output.wpcf7-mail-sent-ok {
+  display: block;
+  padding: .5em 1em;
+  margin-top: 1em;
+  background: #d24b48;
+  color: #fff;
+  line-height: 1.2;
+  text-align: center; }
+
+/* Warning	*/
+/* line 23, sass/components/_page-contact.scss */
+.wpcf7-response-output.wpcf7-validation-errors {
+  background: #ffb61a; }
+
+/* Error	*/
+/* line 24, sass/components/_page-contact.scss */
+.wpcf7-not-valid-tip-no-ajax {
+  margin-top: 0;
+  background: #d93d23;
+  text-align: left; }
+
+/* Success	*/
+/* line 25, sass/components/_page-contact.scss */
+.wpcf7-response-output.wpcf7-mail-sent-ok {
+  background: #39b54a; }
+
+/* Social Media
+-----------------------------------------------------------------------------*/
+/* line 30, sass/components/_page-contact.scss */
+.social-follow {
+  text-align: center; }
+
+/* line 31, sass/components/_page-contact.scss */
+.social-follow h3 {
+  padding: 0 5%;
+  color: #718a94;
+  font-family: "ProximaNovaRegular", Arial, Helvetica, sans-serif; }
+
+/* line 32, sass/components/_page-contact.scss */
+.social-follow ul {
+  padding: 0;
+  margin: 0;
+  list-style: none; }
+
+/* line 33, sass/components/_page-contact.scss */
+.social-follow li {
+  margin: 0 0 1em; }
+
+/* line 34, sass/components/_page-contact.scss */
+.social-follow li a {
+  display: block;
+  color: #718a94;
+  font: normal 1.125em/1 "ProximaNovaSemibold", Arial, Helvetica, sans-serif;
+  text-decoration: none; }
+
+/* line 35, sass/components/_page-contact.scss */
+.social-follow li a span {
+  display: block;
+  color: #b9c7cd;
+  font-size: .875em;
+  font-family: "ProximaNovaRegular", Arial, Helvetica, sans-serif; }
+
+/* line 36, sass/components/_page-contact.scss */
+.social-follow li em {
+  position: relative;
+  left: 50%;
+  display: block;
+  width: 60px;
+  height: 60px;
+  margin-left: -30px;
+  background: #eef0f1 url("../img/sp_social-follow.png") no-repeat;
+  border: 5px solid #f6f7f7;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -moz-border-radius: 60px;
+  -webkit-border-radius: 60px;
+  border-radius: 60px; }
+
+/* line 40, sass/components/_page-contact.scss */
+.social-follow .facebook em {
+  background-position: 50% -5px; }
+
+/* line 41, sass/components/_page-contact.scss */
+.social-follow .twitter em {
+  background-position: 50% -125px; }
+
+/* line 42, sass/components/_page-contact.scss */
+.social-follow .dribbble em {
+  background-position: 50% -245px; }
+
+/* line 43, sass/components/_page-contact.scss */
+.social-follow .linkedin em {
+  background-position: 50% -365px; }
+
+/* Contact Page
+=================================================================================================== */
+/* line 52, sass/components/_page-contact.scss */
+.page-contact .entry-header .entry-figure {
+  float: left;
+  width: 40%;
+  padding: 0;
+  margin: 0 0 1em; }
+
+/* line 53, sass/components/_page-contact.scss */
+.page-contact .entry-header .entry-title {
+  float: right;
+  width: 50%; }
+
+/* line 54, sass/components/_page-contact.scss */
+.page-contact .entry-header .entry-subtitle {
+  float: right;
+  width: 50%; }
+
+/* line 56, sass/components/_page-contact.scss */
+.page-contact .field.name, .page-contact .field.email {
+  float: left;
+  width: 49.057%;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/* line 59, sass/components/_page-contact.scss */
+.page-contact .field.name {
+  margin-right: 1.887%; }
+
+/* line 60, sass/components/_page-contact.scss */
+.page-contact .field.email + .field {
+  clear: both; }
+
+/* Contact 7 Plugin
+-----------------------------------------------------------------------------*/
+/* line 65, sass/components/_page-contact.scss */
+.wpcf7 {
+  padding: 47px 10.15% 44px; }
+
+/* Social Media
+-----------------------------------------------------------------------------*/
+/* line 70, sass/components/_page-contact.scss */
+.social-follow {
+  text-align: center; }
+
+/* line 71, sass/components/_page-contact.scss */
+.social-follow li {
+  position: relative;
+  float: left;
+  width: 50%;
+  height: 60px;
+  padding: 1em 0 0 70px;
+  margin: 0 0 1em;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/* line 74, sass/components/_page-contact.scss */
+.social-follow li a {
+  text-align: left; }
+
+/* line 75, sass/components/_page-contact.scss */
+.social-follow li em {
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-left: 0; }
+
+/* Contact Page
+=================================================================================================== */
+/* line 81, sass/components/_page-contact.scss */
+.page-contact .main.wrapper {
+  width: 798px; }
+
+/* line 83, sass/components/_page-contact.scss */
+.page-contact .entry-figure {
+  width: 323px; }
+
+/* line 84, sass/components/_page-contact.scss */
+.page-contact .entry-title {
+  width: 54%;
+  margin-top: 1.25em; }
+
+/* line 85, sass/components/_page-contact.scss */
+.page-contact .entry-subtitle {
+  width: 54%; }
+
+/* line 87, sass/components/_page-contact.scss */
+.page-contact .field.name, .page-contact .field.email {
+  width: 312px; }
+
+/* line 88, sass/components/_page-contact.scss */
+.page-contact .field.name {
+  margin-right: 12px; }
+
+/* Contact 7 Plugin
+-----------------------------------------------------------------------------*/
+/* line 93, sass/components/_page-contact.scss */
+.main-container div.wpcf7 {
+  padding: 47px 81px 44px; }
+
+/* Social Media
+-----------------------------------------------------------------------------*/
+/* line 98, sass/components/_page-contact.scss */
+.social-follow {
+  text-align: center; }
+
+/* line 99, sass/components/_page-contact.scss */
+.social-follow h3 {
+  padding: 0 5%;
+  color: #718a94;
+  font-family: "ProximaNovaRegular", Arial, Helvetica, sans-serif; }
+
+/* line 100, sass/components/_page-contact.scss */
+.social-follow ul {
+  padding: 0;
+  margin: 0;
+  list-style: none; }
+
+/* line 101, sass/components/_page-contact.scss */
+.social-follow li {
+  float: left;
+  width: 25%; }
+
+/* line 102, sass/components/_page-contact.scss */
+.social-follow li a {
+  display: block;
+  color: #718a94;
+  font: normal 1.125em/1 "ProximaNovaSemibold", Arial, Helvetica, sans-serif;
+  text-decoration: none; }
+
+/* line 103, sass/components/_page-contact.scss */
+.social-follow li em {
+  float: left; }
