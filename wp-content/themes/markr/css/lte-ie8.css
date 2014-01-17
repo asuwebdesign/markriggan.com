@@ -510,87 +510,11 @@ input:invalid, textarea:invalid {
   border-bottom: .571em solid #e8edef;
   text-align: center; }
 
-/* line 29, sass/components/_layouts.scss */
-.header-container nav em,
-.header-container h2 {
-  display: none; }
-
-/* line 32, sass/components/_layouts.scss */
-.header-container nav em {
-  display: inline;
-  display: block; }
-
-/* line 39, sass/components/_layouts.scss */
-.header-container nav em {
-  display: block; }
-
-/* line 51, sass/components/_layouts.scss */
-.header-container a {
-  display: block;
-  color: #718a94;
-  font: 1em/2.813 "ProximaNovaBold", Arial, Helvetica, sans-serif;
-  text-transform: uppercase;
-  text-decoration: none; }
-
-/* line 52, sass/components/_layouts.scss */
-.header-container a:hover {
-  color: #fff; }
-
-/* Navigation */
-/* line 55, sass/components/_layouts.scss */
-.header-container nav {
-  background: #0c1315;
-  padding-bottom: 2%;
-  border-bottom: .071em solid #263438;
-  text-align: left;
-  -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.35);
-  -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.35);
-  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.35); }
-
-/* line 58, sass/components/_layouts.scss */
-.header-container nav ul {
-  padding: 6.25%; }
-
-/* line 59, sass/components/_layouts.scss */
-.header-container nav li {
-  background: url(../img/sp_main-nav.png) no-repeat 100% -10%;
-  border-top: .071em solid #718a94; }
-
-/* line 60, sass/components/_layouts.scss */
-.header-container nav li:first-child {
-  border: 0; }
-
-/* line 62, sass/components/_layouts.scss */
-.header-container nav li:hover {
-  background-position: 100% 49.5%; }
-
-/* line 63, sass/components/_layouts.scss */
-.header-container nav li.current-menu-item {
-  background-position: 100% 109%; }
-
-/* line 64, sass/components/_layouts.scss */
-.header-container nav li.current-menu-item a {
-  color: #fff; }
-
-/* Add current to Portfolio single pages */
-/* line 67, sass/components/_layouts.scss */
-.single-portfolio #menu-item-108 {
-  background-position: 100% 109%; }
-
-/* line 68, sass/components/_layouts.scss */
-.single-portfolio #menu-item-108 a {
-  color: #fff; }
-
-/* line 70, sass/components/_layouts.scss */
-.header-container nav li .sub {
-  display: none; }
-
-/* Site Titles */
-/* line 73, sass/components/_layouts.scss */
+/* line 31, sass/components/_layouts.scss */
 .site-title {
   margin: -2.5em 0 1em; }
 
-/* line 74, sass/components/_layouts.scss */
+/* line 32, sass/components/_layouts.scss */
 .site-title a {
   position: relative;
   display: inline-block;
@@ -599,301 +523,82 @@ input:invalid, textarea:invalid {
   background: url(../img/l_logo.png) no-repeat 50% 50%;
   background-size: 70px auto;
   text-indent: -9000em;
-  z-index: 1000; }
-
-/* line 75, sass/components/_layouts.scss */
-.header-container h1 {
-  padding: 0 10%;
-  margin-top: .25em;
-  line-height: 1;
-  color: #fff; }
-
-/* Awards */
-/* line 79, sass/components/_layouts.scss */
-#awwwards, #cssdesign, .csslegend {
-  display: none; }
-
-/* Menu toggle */
-/* line 84, sass/components/_layouts.scss */
-#nav-toggle {
-  position: relative;
-  top: -0.71em;
-  width: 12.5%;
-  height: 3.125em;
-  margin-left: 80%;
-  background: #0c1315 url(../img/i_menu-toggle.png) no-repeat 50% 70%;
-  border-bottom: .071em solid #263438;
-  text-indent: -9000em;
-  z-index: 1001;
-  -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.35);
-  -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.35);
-  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.35); }
-
-/* Header (tablet)
-	-----------------------------------------------------------------------------*/
-/* Navigation */
-/* line 93, sass/components/_layouts.scss */
-.header-container nav {
-  position: relative;
-  top: 2.5em;
-  background: none;
-  border-bottom: 0;
-  padding-bottom: 0;
-  -moz-box-shadow: none;
-  -webkit-box-shadow: none;
-  box-shadow: none; }
-
-/* line 96, sass/components/_layouts.scss */
-.header-container nav ul {
-  width: 100%;
-  padding: 0;
-  text-align: center; }
-
-/* line 97, sass/components/_layouts.scss */
-.header-container nav li {
-  display: inline-block;
-  width: 20%;
-  background-position: 50% -45%;
-  border-top: 0;
-  text-align: center;
-  -moz-transition: .25s linear color;
-  -webkit-transition: .25s linear color;
-  -o-transiiton: .25s linear color;
-  transition: .25s linear color; }
-
-/* line 100, sass/components/_layouts.scss */
-.header-container nav li:first-child + li {
-  margin-right: 6%; }
-
-/* line 101, sass/components/_layouts.scss */
-.header-container nav li:first-child + li + li {
-  margin-left: 6%; }
-
-/* Hover */
-/* line 104, sass/components/_layouts.scss */
-.header-container nav li:hover {
-  background-position: 50% 33.5%; }
-
-/* Current */
-/* line 107, sass/components/_layouts.scss */
-.header-container nav li.current-menu-item {
-  background-position: 50% 109%; }
-
-/* line 109, sass/components/_layouts.scss */
-.header-container nav li a {
-  display: block;
-  padding-bottom: 1.5em;
-  -moz-transition: .25s linear all;
-  -webkit-transition: .25s linear all;
-  -o-transiiton: .25s linear all;
-  transition: .25s linear all; }
-
-/* Add current to Portfolio single pages */
-/* line 114, sass/components/_layouts.scss */
-.single-portfolio #menu-item-108 {
-  background-position: 50% 109%; }
-
-/* Site Titles */
-/* line 118, sass/components/_layouts.scss */
-.site-title a {
+  z-index: 1000;
   width: 105px;
   height: 105px;
   background-size: 105px auto; }
 
-/* line 119, sass/components/_layouts.scss */
+/* line 42, sass/components/_layouts.scss */
 .header-container h1 {
-  margin-bottom: 0; }
-
-/* line 120, sass/components/_layouts.scss */
-.header-container h2 {
-  margin: .25em 0 1em;
-  font: 1.125em/1 "ProximaNovaRegular", Arial, Helvetica, sans-serif; }
-
-/* Header (desktop)
-	-----------------------------------------------------------------------------*/
-/* line 127, sass/components/_layouts.scss */
-.header-container a {
-  line-height: 1; }
-
-/* Navigation */
-/* line 130, sass/components/_layouts.scss */
-.header-container nav li:hover {
-  background-position: 50% -25px; }
-
-/* line 131, sass/components/_layouts.scss */
-.header-container nav li.current-menu-item {
-  background-position: 50% -88px; }
-
-/* line 133, sass/components/_layouts.scss */
-.header-container nav li a {
-  padding-bottom: 32px; }
-
-/* line 134, sass/components/_layouts.scss */
-.header-container nav li .sub {
-  display: block;
-  color: #718a94;
-  font: .875em/1.25 "ProximaNovaRegular", Arial, Helvetica, sans-serif;
-  text-align: center;
-  text-transform: none;
-  -moz-transition: .25s linear all;
-  -webkit-transition: .25s linear all;
-  -o-transiiton: .25s linear all;
-  transition: .25s linear all; }
-
-/* line 137, sass/components/_layouts.scss */
-.header-container nav li:hover .sub,
-.header-container nav li.current-menu-item .sub {
-  color: #f1f3f4; }
-
-/* Add current to Portfolio single pages */
-/* line 141, sass/components/_layouts.scss */
-.single-portfolio #menu-item-108 {
-  background-position: 50% -88px; }
-
-/* line 142, sass/components/_layouts.scss */
-.single-portfolio #menu-item-108 .sub {
-  color: #f1f3f4; }
-
-/* Site Titles */
-/* line 145, sass/components/_layouts.scss */
-.header-container h1 {
+  padding: 0 10%;
+  margin-top: .25em;
+  line-height: 1;
+  color: #fff;
+  margin-bottom: 0;
   padding: 0;
   font-size: 3.75em; }
 
-/* line 146, sass/components/_layouts.scss */
+/* line 54, sass/components/_layouts.scss */
 .header-container h2 {
+  display: none;
+  margin: .25em 0 1em;
+  font: 1.125em/1 "ProximaNovaRegular", Arial, Helvetica, sans-serif;
   font-size: 1.5em; }
 
-/* Awards */
-/* line 149, sass/components/_layouts.scss */
-#awwwards {
-  position: fixed;
-  top: 20px;
-  right: 0px;
-  display: block;
-  z-index: 555; }
+/* line 70, sass/components/_layouts.scss */
+.main-container {
+  padding-top: 30px; }
 
-/* line 150, sass/components/_layouts.scss */
-#awwwards a {
-  width: 69px;
-  height: 105px;
-  text-indent: -8000px;
-  display: block;
-  background: url("../img/awwwards_nominee_b_right.png") no-repeat;
-  overflow: hidden; }
-
-/* line 151, sass/components/_layouts.scss */
-#cssdesign {
-  position: fixed;
-  top: 130px;
-  right: 0;
-  display: block;
-  z-index: 555; }
-
-/* line 152, sass/components/_layouts.scss */
-#cssdesign a {
-  width: 68px;
-  height: 96px;
-  text-indent: -8000px;
-  display: block;
-  background: url("../img/css-design-awards-nominee-right-black.png") no-repeat;
-  overflow: hidden; }
-
-/* line 153, sass/components/_layouts.scss */
-.csslegend {
-  display: block;
-  background: url("../img/csslegend-badge-right-a.png") no-repeat scroll 0 0 transparent;
-  height: 110px;
-  position: fixed;
-  right: 0;
-  top: 234px;
-  width: 67px;
-  z-index: 999; }
-
-/* line 154, sass/components/_layouts.scss */
-.csslegend a {
-  float: right;
-  height: 110px;
-  line-height: 5000px;
-  overflow: hidden;
-  width: 67px; }
-
-/* line 166, sass/components/_layouts.scss */
+/* line 76, sass/components/_layouts.scss */
 .main {
-  padding: 6.25%; }
-
-/* line 169, sass/components/_layouts.scss */
-.entry-header .entry-figure {
-  padding: 0 10%;
-  margin: 0 0 1em;
-  text-align: center; }
-
-/* line 170, sass/components/_layouts.scss */
-.entry-header .entry-title {
-  margin: 0;
-  font-size: 1.75em;
-  line-height: 1;
-  text-align: center; }
-
-/* line 171, sass/components/_layouts.scss */
-.entry-header .entry-subtitle {
-  margin: 0 0 1em;
-  color: #718a94;
-  font: normal 1.25em/1.25 "ProximaNovaRegular", Arial, Helvetica, sans-serif;
-  text-align: center; }
-
-/* Main (base)
-	-----------------------------------------------------------------------------*/
-/* line 175, sass/components/_layouts.scss */
-.main {
+  padding: 6.25%;
   padding: 4% 6.25%; }
 
-/* line 177, sass/components/_layouts.scss */
+/* line 84, sass/components/_layouts.scss */
 .entry-header {
   overflow: hidden; }
 
-/* line 178, sass/components/_layouts.scss */
+/* line 90, sass/components/_layouts.scss */
 .entry-header .entry-figure {
+  padding: 0 10%;
+  margin: 0 0 1em;
+  text-align: center;
   float: left;
   width: 33.646%;
   padding: 0;
   margin: 0 0 1em; }
 
-/* line 179, sass/components/_layouts.scss */
+/* line 100, sass/components/_layouts.scss */
 .entry-header .entry-title {
+  margin: 0;
+  font-size: 1.75em;
+  line-height: 1;
+  text-align: center;
   float: right;
   width: 54.167%;
   font-size: 2.25em;
-  text-align: left; }
+  text-align: left;
+  font-size: 3.75em; }
 
-/* line 180, sass/components/_layouts.scss */
+/* line 113, sass/components/_layouts.scss */
 .entry-header .entry-subtitle {
+  margin: 0 0 1em;
+  color: #718a94;
+  font: normal 1.25em/1.25 "ProximaNovaRegular", Arial, Helvetica, sans-serif;
+  text-align: center;
   float: right;
   width: 54.167%;
   font-size: 1.25em;
-  text-align: left; }
-
-/* Main (desktop)
-	-----------------------------------------------------------------------------*/
-/* line 185, sass/components/_layouts.scss */
-.main-container {
-  padding-top: 30px; }
-
-/* line 189, sass/components/_layouts.scss */
-.entry-header .entry-title {
-  font-size: 3.75em; }
-
-/* line 190, sass/components/_layouts.scss */
-.entry-header .entry-subtitle {
+  text-align: left;
   font-size: 1.5em; }
 
-/* line 196, sass/components/_layouts.scss */
+/* line 129, sass/components/_layouts.scss */
 .footer-container {
   padding: 6.25%;
   text-align: center; }
 
 /* Contact Callout */
-/* line 200, sass/components/_layouts.scss */
+/* line 133, sass/components/_layouts.scss */
 .contact-callout {
   padding: 6.25% 0;
   margin: 0 0 1.875em;
@@ -903,30 +608,30 @@ input:invalid, textarea:invalid {
   padding: 1.5em 1.875em;
   overflow: hidden; }
 
-/* line 208, sass/components/_layouts.scss */
+/* line 141, sass/components/_layouts.scss */
 .contact-callout hgroup {
   float: left;
   width: 462px;
   text-align: left; }
 
-/* line 213, sass/components/_layouts.scss */
+/* line 146, sass/components/_layouts.scss */
 .contact-callout h2 {
   margin: 0;
   color: #fff;
   font-size: 2.25em; }
 
-/* line 219, sass/components/_layouts.scss */
+/* line 152, sass/components/_layouts.scss */
 .contact-callout h3 {
   margin: 0 0 .5em;
   color: #718a94; }
 
-/* line 220, sass/components/_layouts.scss */
+/* line 153, sass/components/_layouts.scss */
 .contact-callout ul {
   padding: 0;
   margin: 0 0 .5em;
   list-style: none; }
 
-/* line 221, sass/components/_layouts.scss */
+/* line 154, sass/components/_layouts.scss */
 .contact-callout li {
   display: inline-block;
   width: 48px;
@@ -939,50 +644,50 @@ input:invalid, textarea:invalid {
   -webkit-transition: .25s linear background-color;
   transition: .25s linear background-color; }
 
-/* line 226, sass/components/_layouts.scss */
+/* line 159, sass/components/_layouts.scss */
 .contact-callout li.facebook {
   background-position: 0 0; }
 
-/* line 227, sass/components/_layouts.scss */
+/* line 160, sass/components/_layouts.scss */
 .contact-callout li.twitter {
   background-position: 0 -48px; }
 
-/* line 228, sass/components/_layouts.scss */
+/* line 161, sass/components/_layouts.scss */
 .contact-callout li.dribbble {
   background-position: 0 -96px; }
 
-/* line 229, sass/components/_layouts.scss */
+/* line 162, sass/components/_layouts.scss */
 .contact-callout li.linkedin {
   background-position: 0 -144px; }
 
-/* line 231, sass/components/_layouts.scss */
+/* line 164, sass/components/_layouts.scss */
 .contact-callout li.facebook:hover {
   background-color: #3a589c; }
 
-/* line 232, sass/components/_layouts.scss */
+/* line 165, sass/components/_layouts.scss */
 .contact-callout li.twitter:hover {
   background-color: #39bce8; }
 
-/* line 233, sass/components/_layouts.scss */
+/* line 166, sass/components/_layouts.scss */
 .contact-callout li.dribbble:hover {
   background-color: #ff55b1; }
 
-/* line 234, sass/components/_layouts.scss */
+/* line 167, sass/components/_layouts.scss */
 .contact-callout li.linkedin:hover {
   background-color: #3392c5; }
 
-/* line 236, sass/components/_layouts.scss */
+/* line 169, sass/components/_layouts.scss */
 .contact-callout li:hover {
   background-color: #718a94; }
 
-/* line 238, sass/components/_layouts.scss */
+/* line 171, sass/components/_layouts.scss */
 .contact-callout li a {
   display: block;
   width: 100%;
   height: 100%;
   text-indent: -9000em; }
 
-/* line 239, sass/components/_layouts.scss */
+/* line 172, sass/components/_layouts.scss */
 .contact-callout .button {
   display: inline-block;
   width: 71.429%;
@@ -1003,30 +708,30 @@ input:invalid, textarea:invalid {
   -webkit-transition: .25s linear background-color;
   transition: .25s linear background-color; }
 
-/* line 244, sass/components/_layouts.scss */
+/* line 177, sass/components/_layouts.scss */
 .contact-callout .button:hover {
   background-color: #df3952; }
 
-/* line 246, sass/components/_layouts.scss */
+/* line 179, sass/components/_layouts.scss */
 .footer-container q {
   margin: 0 0 2.875em;
   color: #35454c;
   font: 1.2em/1.222 "ProximaNovaThin", Arial, Helvetica, sans-serif; }
 
-/* line 247, sass/components/_layouts.scss */
+/* line 180, sass/components/_layouts.scss */
 .footer-container q + p {
   margin-top: .5em; }
 
-/* line 248, sass/components/_layouts.scss */
+/* line 181, sass/components/_layouts.scss */
 .footer-container small {
   color: #ccc;
   font-size: .875em; }
 
-/* line 249, sass/components/_layouts.scss */
+/* line 182, sass/components/_layouts.scss */
 .footer-container .logo {
   text-align: center; }
 
-/* line 250, sass/components/_layouts.scss */
+/* line 183, sass/components/_layouts.scss */
 .footer-container .logo a {
   display: inline-block;
   width: 51px;
@@ -1037,39 +742,39 @@ input:invalid, textarea:invalid {
 /* Footer (tablet)
 	-----------------------------------------------------------------------------*/
 /* Contact Callout */
-/* line 257, sass/components/_layouts.scss */
+/* line 190, sass/components/_layouts.scss */
 .contact-callout h3 {
   font-size: 1.5em; }
 
-/* line 258, sass/components/_layouts.scss */
+/* line 191, sass/components/_layouts.scss */
 .contact-callout ul {
   display: inline-block;
   width: 45%; }
 
-/* line 259, sass/components/_layouts.scss */
+/* line 192, sass/components/_layouts.scss */
 .contact-callout .button {
   position: relative;
   top: .75em;
   width: 35%; }
 
-/* line 261, sass/components/_layouts.scss */
+/* line 194, sass/components/_layouts.scss */
 .footer-container q {
   font-size: 1.5em; }
 
 /* Footer (desktop)
 	-----------------------------------------------------------------------------*/
-/* line 266, sass/components/_layouts.scss */
+/* line 199, sass/components/_layouts.scss */
 .footer-container {
   padding: 2em 0; }
 
 /* Contact Callout */
-/* line 270, sass/components/_layouts.scss */
+/* line 203, sass/components/_layouts.scss */
 .contact-callout ul {
   float: left;
   width: auto;
   margin: 1.25em 2em 0 0; }
 
-/* line 271, sass/components/_layouts.scss */
+/* line 204, sass/components/_layouts.scss */
 .contact-callout .button {
   top: .438em;
   float: left;
@@ -1080,36 +785,36 @@ input:invalid, textarea:invalid {
 /* Media Queries
 =================================================================================================== */
 @media all and (-webkit-min-device-pixel-ratio: 2) {
-  /* line 280, sass/components/_layouts.scss */
+  /* line 213, sass/components/_layouts.scss */
   .site-title a {
     background: url("../img/l_logo2x.png"); }
 
-  /* line 281, sass/components/_layouts.scss */
+  /* line 214, sass/components/_layouts.scss */
   .header-container nav li {
     background-image: url("../img/sp_main-nav2x.png");
     background-size: 25px auto; }
 
-  /* line 282, sass/components/_layouts.scss */
+  /* line 215, sass/components/_layouts.scss */
   #nav-toggle {
     background-image: url("../img/i_menu-toggle2x.png");
     background-size: 19px auto; }
 
-  /* line 283, sass/components/_layouts.scss */
+  /* line 216, sass/components/_layouts.scss */
   .contact-callout li {
     background-image: url("../img/sp_social-media2x.png");
     background-size: 48px auto; }
 
-  /* line 284, sass/components/_layouts.scss */
+  /* line 217, sass/components/_layouts.scss */
   .contact-callout .button {
     background-image: url("../img/bg_contact-arrow2x.png");
     background-size: 25px auto; }
 
-  /* line 285, sass/components/_layouts.scss */
+  /* line 218, sass/components/_layouts.scss */
   .creative-process a, .about-me a {
     background-image: url("../img/i_right-arrow2x.png");
     background-size: 25px auto; }
 
-  /* line 287, sass/components/_layouts.scss */
+  /* line 220, sass/components/_layouts.scss */
   .footer-container .logo a {
     background-image: url("../img/l_logo-footer2x.png");
     background-size: 51px auto; } }
@@ -1118,6 +823,131 @@ input:invalid, textarea:invalid {
  * Styles for various types of navigation componenets.
  * (c) Atlantic BT. All Rights Reserved.
  *==================================================================*/
+/* line 10, sass/components/_navigations.scss */
+nav.primary {
+  background: #0c1315;
+  padding-bottom: 2%;
+  border-bottom: .071em solid #263438;
+  text-align: left;
+  -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.35);
+  -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.35);
+  position: relative;
+  top: 2.5em;
+  background: none;
+  border-bottom: 0;
+  padding-bottom: 0;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none; }
+  /* line 20, sass/components/_navigations.scss */
+  nav.primary ul {
+    padding: 6.25%;
+    width: 100%;
+    padding: 0;
+    text-align: center; }
+  /* line 30, sass/components/_navigations.scss */
+  nav.primary li {
+    background: url(../img/sp_main-nav.png) no-repeat 100% -10%;
+    border-top: .071em solid #718a94;
+    display: inline-block;
+    width: 20%;
+    background-position: 50% -45%;
+    border-top: 0;
+    text-align: center;
+    -moz-transition: 0.25s linear color;
+    -o-transition: 0.25s linear color;
+    -webkit-transition: 0.25s linear color;
+    transition: 0.25s linear color; }
+  /* line 41, sass/components/_navigations.scss */
+  nav.primary li:first-child {
+    border: 0; }
+  /* line 43, sass/components/_navigations.scss */
+  nav.primary li:first-child + li {
+    margin-right: 6%; }
+  /* line 49, sass/components/_navigations.scss */
+  nav.primary li:first-child + li + li {
+    margin-left: 6%; }
+  /* line 55, sass/components/_navigations.scss */
+  nav.primary li a {
+    display: block;
+    color: #718a94;
+    font: 1em/2.813 "ProximaNovaBold", Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    text-decoration: none;
+    display: block;
+    padding-bottom: 1.5em;
+    -moz-transition: 0.25s linear all;
+    -o-transition: 0.25s linear all;
+    -webkit-transition: 0.25s linear all;
+    transition: 0.25s linear all;
+    padding-bottom: 32px;
+    line-height: 1; }
+  /* line 69, sass/components/_navigations.scss */
+  nav.primary li em {
+    display: none;
+    display: inline;
+    display: block; }
+  /* line 78, sass/components/_navigations.scss */
+  nav.primary li .sub {
+    display: none;
+    display: block;
+    color: #718a94;
+    font: .875em/1.25 "ProximaNovaRegular", Arial, Helvetica, sans-serif;
+    text-align: center;
+    text-transform: none;
+    -moz-transition: 0.25s linear all;
+    -o-transition: 0.25s linear all;
+    -webkit-transition: 0.25s linear all;
+    transition: 0.25s linear all; }
+  /* line 91, sass/components/_navigations.scss */
+  nav.primary li:hover {
+    background-position: 100% 49.5%;
+    background-position: 50% 33.5%;
+    background-position: 50% -25px; }
+  /* line 100, sass/components/_navigations.scss */
+  nav.primary li a:hover {
+    color: #fff; }
+  /* line 102, sass/components/_navigations.scss */
+  nav.primary li:hover .sub {
+    color: #f1f3f4; }
+  /* line 110, sass/components/_navigations.scss */
+  nav.primary li.current-menu-item {
+    background-position: 100% 109%;
+    background-position: 50% 109%;
+    background-position: 50% -88px; }
+  /* line 119, sass/components/_navigations.scss */
+  nav.primary li.current-menu-item a {
+    color: #fff; }
+  /* line 121, sass/components/_navigations.scss */
+  nav.primary li.current-menu-item .sub {
+    color: #f1f3f4; }
+  /* line 127, sass/components/_navigations.scss */
+  nav.primary .single-portfolio #menu-item-108 {
+    background-position: 100% 109%;
+    background-position: 50% 109%;
+    background-position: 50% -88px;
+    color: #f1f3f4; }
+  /* line 136, sass/components/_navigations.scss */
+  nav.primary .single-portfolio #menu-item-108 a {
+    color: #fff; }
+
+/* line 140, sass/components/_navigations.scss */
+#nav-toggle {
+  position: relative;
+  top: -0.71em;
+  display: block;
+  width: 12.5%;
+  height: 3.125em;
+  margin-left: 80%;
+  background: #0c1315 url(../img/i_menu-toggle.png) no-repeat 50% 70%;
+  border-bottom: .071em solid #263438;
+  text-indent: -9000em;
+  z-index: 1001;
+  -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.35);
+  -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.35);
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.35); }
+
 /*==================================================================
  * Helpers Partial
  * Various classes that will help clean up layouts and styles
@@ -1301,7 +1131,7 @@ img[src*="googleadservices.com"] {
  * Styles for the Home Page
  * (c) Atlantic BT. All Rights Reserved.
  *==================================================================*/
-/* Home Page
+/* Home Page (base)
 =================================================================================================== */
 /* line 10, sass/components/_page-home.scss */
 .home .site-title {
@@ -1454,7 +1284,7 @@ img[src*="googleadservices.com"] {
   color: #DF3952;
   text-decoration: none; }
 
-/* Home Page
+/* Home Page (tablet)
 =================================================================================================== */
 /* line 61, sass/components/_page-home.scss */
 .main section h2 {
@@ -1566,7 +1396,7 @@ img[src*="googleadservices.com"] {
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
-/* Home Page
+/* Home Page (desktop)
 =================================================================================================== */
 /* Portfolio
 -----------------------------------------------------------------------------*/

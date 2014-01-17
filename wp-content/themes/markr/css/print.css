@@ -50,7 +50,6 @@ img {
 
 @page {
   margin: 0.5cm; }
-
 /* line 17, sass/print.scss */
 p, h2, h3 {
   orphans: 3;

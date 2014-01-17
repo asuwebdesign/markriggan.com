@@ -70,7 +70,7 @@
                 $walker = new My_Walker; wp_nav_menu( array(
                     'theme_location'  => 'global-menu',
                     'container'       => 'nav',
-                    'container_class' => '',
+                    'container_class' => 'primary',
                     'items_wrap'      => '<ul>%3$s</ul>',
                     'walker'          => $walker
                 ));

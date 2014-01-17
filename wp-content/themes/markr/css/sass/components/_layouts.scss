@@ -26,169 +26,102 @@ body {}
 //==================================================================*/
 .header-container { background: $brand_primary; border-bottom: .571em solid #e8edef; text-align: center; }
 
-    .header-container nav em,
-    .header-container h2 { display: none; }
-    
-    .header-container nav em {
-
-        @include breakpoint($tablet, $no-query: true) { display:inline; }
-        @include breakpoint($desktop, $no-query: true) { display:block; }
-    
-    }
-    
-    .header-container nav em {
+    // Site Title
+	//--------------------------------------------------------------*/
+    .site-title { margin: -2.5em 0 1em; }
+    .site-title a {
         
-        @include breakpoint($desktop, $no-query: true) { display: block; }
+        position: relative; display: inline-block; width: 70px; height: 70px; background: url(../img/l_logo.png) no-repeat 50% 50%; background-size: 70px auto; text-indent: -9000em; z-index: 1000;
+
+        @include breakpoint($tablet, $no-query: true) { width: 105px; height: 105px; background-size: 105px auto; }
     
     }
+
+    // Headings
+	//--------------------------------------------------------------*/
+    .header-container h1 {
+        
+        padding: 0 10%; margin-top: .25em; line-height: 1; color: #fff;
     
-
-
-
-
-
-	.header-container header {}
-	.header-container a { display: block; color: #718a94; font: 1em/2.813 "ProximaNovaBold", Arial, Helvetica, sans-serif; text-transform: uppercase; text-decoration: none; }
-	.header-container a:hover { color: #fff; }
-		
-		/* Navigation */
-		.header-container nav { background: #0c1315; padding-bottom: 2%; border-bottom: .071em solid #263438; text-align: left;
-			-moz-box-shadow: 0 1px 5px rgba(0,0,0,.35); -webkit-box-shadow: 0 1px 5px rgba(0,0,0,.35); box-shadow: 0 1px 5px rgba(0,0,0,.35);
-		}
-		.header-container nav ul { padding: 6.25%; }
-		.header-container nav li { background: url(../img/sp_main-nav.png) no-repeat 100% -10%; border-top: .071em solid #718a94; }
-		.header-container nav li:first-child { border: 0; }
-		
-		.header-container nav li:hover { background-position: 100% 49.5%; }
-		.header-container nav li.current-menu-item { background-position: 100% 109%; }
-		.header-container nav li.current-menu-item a { color: #fff; }
-		
-			/* Add current to Portfolio single pages */
-			.single-portfolio #menu-item-108 { background-position: 100% 109%; }
-			.single-portfolio #menu-item-108 a { color: #fff; }
-		
-		.header-container nav li .sub { display: none; }
-		
-		/* Site Titles */
-		.site-title { margin: -2.5em 0 1em; }
-		.site-title a { position: relative; display: inline-block; width: 70px; height: 70px; background: url(../img/l_logo.png) no-repeat 50% 50%; background-size: 70px auto; text-indent: -9000em; z-index: 1000; }
-		.header-container h1 { padding: 0 10%; margin-top: .25em; line-height: 1; color: #fff; }
-		
-		
-		/* Awards */
-		#awwwards, #cssdesign, .csslegend { display: none; }
-
-		
-		
-		/* Menu toggle */
-		#nav-toggle { position: relative; top: -0.71em; width: 12.5%; height: 3.125em; margin-left: 80%; background: #0c1315 url(../img/i_menu-toggle.png) no-repeat 50% 70%; border-bottom: .071em solid #263438; text-indent: -9000em; z-index: 1001;
-			-moz-box-shadow: 0 1px 5px rgba(0,0,0,.35); -webkit-box-shadow: 0 1px 5px rgba(0,0,0,.35); box-shadow: 0 1px 5px rgba(0,0,0,.35);
-		}
-
-
-/* Header (tablet)
-	-----------------------------------------------------------------------------*/
-	
-		/* Navigation */
-		.header-container nav { position: relative; top: 2.5em; background: none; border-bottom: 0; padding-bottom: 0;
-			-moz-box-shadow: none; -webkit-box-shadow: none; box-shadow: none;
-		}
-		.header-container nav ul { width: 100%; padding: 0; text-align: center; }
-		.header-container nav li { display: inline-block; width: 20%; background-position: 50% -45%; border-top: 0; text-align: center;
-			-moz-transition: .25s linear color; -webkit-transition: .25s linear color; -o-transiiton: .25s linear color; transition: .25s linear color;
-		}
-		.header-container nav li:first-child + li { margin-right: 6%; }
-		.header-container nav li:first-child + li + li { margin-left: 6%; }
-		
-			/* Hover */
-			.header-container nav li:hover { background-position: 50% 33.5%; }
-			
-			/* Current */
-			.header-container nav li.current-menu-item { background-position: 50% 109%; }
-		
-		.header-container nav li a { display: block; padding-bottom: 1.5em;
-			-moz-transition: .25s linear all; -webkit-transition: .25s linear all; -o-transiiton: .25s linear all; transition: .25s linear all;
-		}
-		
-			/* Add current to Portfolio single pages */
-			.single-portfolio #menu-item-108 { background-position: 50% 109%; }
-			
-		
-		/* Site Titles */
-		.site-title a { width: 105px; height: 105px; background-size: 105px auto; }
-		.header-container h1 { margin-bottom: 0; }
-		.header-container h2 { margin: .25em 0 1em; font: 1.125em/1 "ProximaNovaRegular", Arial, Helvetica, sans-serif; }
-
-
-
-
-/* Header (desktop)
-	-----------------------------------------------------------------------------*/
-	.header-container a { line-height: 1; }
-	
-		/* Navigation */		
-		.header-container nav li:hover { background-position: 50% -25px; }
-		.header-container nav li.current-menu-item { background-position: 50% -88px; }
-		
-		.header-container nav li a { padding-bottom: 32px; }
-		.header-container nav li .sub { display: block; color: #718a94; font: .875em/1.25 "ProximaNovaRegular", Arial, Helvetica, sans-serif; text-align: center; text-transform: none;
-			-moz-transition: .25s linear all; -webkit-transition: .25s linear all; -o-transiiton: .25s linear all; transition: .25s linear all;
-		}
-		.header-container nav li:hover .sub,
-		.header-container nav li.current-menu-item .sub { color: #f1f3f4; }
-		
-			/* Add current to Portfolio single pages */
-			.single-portfolio #menu-item-108 { background-position: 50% -88px; }
-			.single-portfolio #menu-item-108 .sub { color: #f1f3f4; }
-			
-		/* Site Titles */
-		.header-container h1 { padding: 0; font-size: 3.75em; }
-		.header-container h2 { font-size: 1.5em; }
-		
-		/* Awards */
-		#awwwards{ position:fixed; top:20px; right:0px; display: block; z-index:555; }
-		#awwwards a{ width:69px; height:105px; text-indent:-8000px; display:block; background:url('../img/awwwards_nominee_b_right.png') no-repeat; overflow:hidden; }
-		#cssdesign { position: fixed; top: 130px; right: 0; display: block; z-index: 555; }
-		#cssdesign a { width: 68px; height: 96px; text-indent: -8000px; display: block; background: url('../img/css-design-awards-nominee-right-black.png') no-repeat; overflow: hidden; }
-		.csslegend { display: block; background: url("../img/csslegend-badge-right-a.png") no-repeat scroll 0 0 transparent; height: 110px; position: fixed; right: 0; top: 234px; width: 67px; z-index: 999; } 
-		.csslegend a { float: right; height: 110px; line-height: 5000px; overflow: hidden; width: 67px; } 
-
+        @include breakpoint($tablet, $no-query: true) {
+            margin-bottom: 0;
+        }
+        @include breakpoint($desktop, $no-query: true) {
+            padding: 0; font-size: 3.75em;
+        }
+    
+    }
+    .header-container h2 {
+        
+        display: none;
+    
+        @include breakpoint($tablet, $no-query: true) {
+            margin: .25em 0 1em; font: 1.125em/1 "ProximaNovaRegular", Arial, Helvetica, sans-serif;
+        }
+        @include breakpoint($desktop, $no-query: true) {
+            font-size: 1.5em;
+        }
+    
+    }
 
 
 // Content
 //==================================================================*/
-.content-container {}
+.main-container {
 
-	article {}
-	aside {}
+    @include breakpoint($desktop, $no-query: true) { padding-top: 30px; }
 
-.main-container {}
-	.main { padding: 6.25%; }
+}
+
+	.main {
+    
+        padding: 6.25%;
+
+        @include breakpoint($tablet, $no-query: true) { padding: 4% 6.25%; }
+
+    }
 	
-	.entry-header {}
-	.entry-header .entry-figure { padding: 0 10%; margin: 0 0 1em; text-align: center; }
-	.entry-header .entry-title { margin: 0; font-size: 1.75em; line-height: 1; text-align: center; }
-	.entry-header .entry-subtitle { margin: 0 0 1em; color: #718a94; font: normal 1.25em/1.25 "ProximaNovaRegular", Arial, Helvetica, sans-serif; text-align: center; }	
+	.entry-header {
+    
+        @include breakpoint($tablet, $no-query: true) { overflow: hidden; }
+    
+    }
 
-/* Main (base)
-	-----------------------------------------------------------------------------*/
-	.main { padding: 4% 6.25%; }
-	
-	.entry-header { overflow: hidden; }
-	.entry-header .entry-figure { float: left; width: 33.646%; padding: 0; margin: 0 0 1em; }
-	.entry-header .entry-title { float: right; width: 54.167%; font-size: 2.25em; text-align: left; }
-	.entry-header .entry-subtitle { float: right; width: 54.167%; font-size: 1.25em; text-align: left; }
+	.entry-header .entry-figure {
+        
+        padding: 0 10%; margin: 0 0 1em; text-align: center;
+        
+        @include breakpoint($tablet, $no-query: true) {
+            float: left; width: 33.646%; padding: 0; margin: 0 0 1em;
+        }
+    
+    }
 
+	.entry-header .entry-title {
+        
+        margin: 0; font-size: 1.75em; line-height: 1; text-align: center;
+    
+        @include breakpoint($tablet, $no-query: true) {
+            float: right; width: 54.167%; font-size: 2.25em; text-align: left;
+        }
+        @include breakpoint($desktop, $no-query: true) {
+            font-size: 3.75em;
+        }
+    
+    }
 
-/* Main (desktop)
-	-----------------------------------------------------------------------------*/
-	.main-container { padding-top: 30px; }
-	
-	.entry-header {}
-	.entry-header .entry-figure {  }
-	.entry-header .entry-title { font-size: 3.75em; }
-	.entry-header .entry-subtitle { font-size: 1.5em; }
-	
+	.entry-header .entry-subtitle {
+        
+        margin: 0 0 1em; color: #718a94; font: normal 1.25em/1.25 "ProximaNovaRegular", Arial, Helvetica, sans-serif; text-align: center;
+    
+        @include breakpoint($tablet, $no-query: true) {
+            float: right; width: 54.167%; font-size: 1.25em; text-align: left;
+        }
+        @include breakpoint($desktop, $no-query: true) {
+            font-size: 1.5em;
+        }
+    
+    }	
 
 
 // Footer
