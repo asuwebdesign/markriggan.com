@@ -505,17 +505,17 @@ input:invalid, textarea:invalid {
     padding: 0;
     margin: 0 auto; } }
 
-/* line 27, sass/components/_layouts.scss */
+/* line 25, sass/components/_layouts.scss */
 .header-container {
   background: #151e21;
   border-bottom: .571em solid #e8edef;
   text-align: center; }
 
-/* line 31, sass/components/_layouts.scss */
+/* line 29, sass/components/_layouts.scss */
 .site-title {
   margin: -2.5em 0 1em; }
 
-/* line 32, sass/components/_layouts.scss */
+/* line 30, sass/components/_layouts.scss */
 .site-title a {
   position: relative;
   display: inline-block;
@@ -526,158 +526,162 @@ input:invalid, textarea:invalid {
   text-indent: -9000em;
   z-index: 1000; }
   @media (min-width: 481px) {
-    /* line 32, sass/components/_layouts.scss */
+    /* line 30, sass/components/_layouts.scss */
     .site-title a {
       width: 105px;
       height: 105px;
       background-size: 105px auto; } }
 
-/* line 42, sass/components/_layouts.scss */
+/* line 40, sass/components/_layouts.scss */
 .header-container h1 {
   padding: 0 10%;
   margin-top: .25em;
   line-height: 1;
   color: #fff; }
   @media (min-width: 481px) {
-    /* line 42, sass/components/_layouts.scss */
+    /* line 40, sass/components/_layouts.scss */
     .header-container h1 {
       margin-bottom: 0; } }
   @media (min-width: 1025px) {
-    /* line 42, sass/components/_layouts.scss */
+    /* line 40, sass/components/_layouts.scss */
     .header-container h1 {
       padding: 0;
       font-size: 3.75em; } }
 
-/* line 54, sass/components/_layouts.scss */
+/* line 52, sass/components/_layouts.scss */
 .header-container h2 {
   display: none; }
   @media (min-width: 481px) {
-    /* line 54, sass/components/_layouts.scss */
+    /* line 52, sass/components/_layouts.scss */
     .header-container h2 {
       margin: .25em 0 1em;
       font: 1.125em/1 "ProximaNovaRegular", Arial, Helvetica, sans-serif; } }
   @media (min-width: 1025px) {
-    /* line 54, sass/components/_layouts.scss */
+    /* line 52, sass/components/_layouts.scss */
     .header-container h2 {
       font-size: 1.5em; } }
 
 @media (min-width: 1025px) {
-  /* line 70, sass/components/_layouts.scss */
+  /* line 68, sass/components/_layouts.scss */
   .main-container {
     padding-top: 30px; } }
 
-/* line 76, sass/components/_layouts.scss */
+/* line 74, sass/components/_layouts.scss */
 .main {
   padding: 6.25%; }
   @media (min-width: 481px) {
-    /* line 76, sass/components/_layouts.scss */
+    /* line 74, sass/components/_layouts.scss */
     .main {
       padding: 4% 6.25%; } }
+  @media (min-width: 1025px) {
+    /* line 74, sass/components/_layouts.scss */
+    .main {
+      padding: 0; } }
 
 @media (min-width: 481px) {
-  /* line 84, sass/components/_layouts.scss */
+  /* line 83, sass/components/_layouts.scss */
   .entry-header {
     overflow: hidden; } }
 
-/* line 90, sass/components/_layouts.scss */
+/* line 89, sass/components/_layouts.scss */
 .entry-header .entry-figure {
   padding: 0 10%;
   margin: 0 0 1em;
   text-align: center; }
   @media (min-width: 481px) {
-    /* line 90, sass/components/_layouts.scss */
+    /* line 89, sass/components/_layouts.scss */
     .entry-header .entry-figure {
       float: left;
       width: 33.646%;
       padding: 0;
       margin: 0 0 1em; } }
 
-/* line 100, sass/components/_layouts.scss */
+/* line 99, sass/components/_layouts.scss */
 .entry-header .entry-title {
   margin: 0;
   font-size: 1.75em;
   line-height: 1;
   text-align: center; }
   @media (min-width: 481px) {
-    /* line 100, sass/components/_layouts.scss */
+    /* line 99, sass/components/_layouts.scss */
     .entry-header .entry-title {
       float: right;
       width: 54.167%;
       font-size: 2.25em;
       text-align: left; } }
   @media (min-width: 1025px) {
-    /* line 100, sass/components/_layouts.scss */
+    /* line 99, sass/components/_layouts.scss */
     .entry-header .entry-title {
       font-size: 3.75em; } }
 
-/* line 113, sass/components/_layouts.scss */
+/* line 112, sass/components/_layouts.scss */
 .entry-header .entry-subtitle {
   margin: 0 0 1em;
   color: #718a94;
   font: normal 1.25em/1.25 "ProximaNovaRegular", Arial, Helvetica, sans-serif;
   text-align: center; }
   @media (min-width: 481px) {
-    /* line 113, sass/components/_layouts.scss */
+    /* line 112, sass/components/_layouts.scss */
     .entry-header .entry-subtitle {
       float: right;
       width: 54.167%;
       font-size: 1.25em;
       text-align: left; } }
   @media (min-width: 1025px) {
-    /* line 113, sass/components/_layouts.scss */
+    /* line 112, sass/components/_layouts.scss */
     .entry-header .entry-subtitle {
       font-size: 1.5em; } }
 
-/* line 129, sass/components/_layouts.scss */
+/* line 128, sass/components/_layouts.scss */
 .footer-container {
   padding: 6.25%;
   text-align: center; }
 
 /* Contact Callout */
-/* line 133, sass/components/_layouts.scss */
+/* line 132, sass/components/_layouts.scss */
 .contact-callout {
   padding: 6.25% 0;
   margin: 0 0 1.875em;
   background: #151e21;
   border-top: .625em solid #e8edef; }
   @media (min-width: 481px) {
-    /* line 133, sass/components/_layouts.scss */
+    /* line 132, sass/components/_layouts.scss */
     .contact-callout {
       padding: 3% 0; } }
   @media (min-width: 1025px) {
-    /* line 133, sass/components/_layouts.scss */
+    /* line 132, sass/components/_layouts.scss */
     .contact-callout {
       padding: 1.5em 1.875em;
       overflow: hidden; } }
 
 @media (min-width: 1025px) {
-  /* line 141, sass/components/_layouts.scss */
+  /* line 140, sass/components/_layouts.scss */
   .contact-callout hgroup {
     float: left;
     width: 462px;
     text-align: left; } }
 
-/* line 146, sass/components/_layouts.scss */
+/* line 145, sass/components/_layouts.scss */
 .contact-callout h2 {
   margin: 0;
   color: #fff; }
   @media (min-width: 481px) {
-    /* line 146, sass/components/_layouts.scss */
+    /* line 145, sass/components/_layouts.scss */
     .contact-callout h2 {
       font-size: 2.25em; } }
 
-/* line 152, sass/components/_layouts.scss */
+/* line 151, sass/components/_layouts.scss */
 .contact-callout h3 {
   margin: 0 0 .5em;
   color: #718a94; }
 
-/* line 153, sass/components/_layouts.scss */
+/* line 152, sass/components/_layouts.scss */
 .contact-callout ul {
   padding: 0;
   margin: 0 0 .5em;
   list-style: none; }
 
-/* line 154, sass/components/_layouts.scss */
+/* line 153, sass/components/_layouts.scss */
 .contact-callout li {
   display: inline-block;
   width: 48px;
@@ -690,50 +694,50 @@ input:invalid, textarea:invalid {
   -webkit-transition: .25s linear background-color;
   transition: .25s linear background-color; }
 
-/* line 159, sass/components/_layouts.scss */
+/* line 158, sass/components/_layouts.scss */
 .contact-callout li.facebook {
   background-position: 0 0; }
 
-/* line 160, sass/components/_layouts.scss */
+/* line 159, sass/components/_layouts.scss */
 .contact-callout li.twitter {
   background-position: 0 -48px; }
 
-/* line 161, sass/components/_layouts.scss */
+/* line 160, sass/components/_layouts.scss */
 .contact-callout li.dribbble {
   background-position: 0 -96px; }
 
-/* line 162, sass/components/_layouts.scss */
+/* line 161, sass/components/_layouts.scss */
 .contact-callout li.linkedin {
   background-position: 0 -144px; }
 
-/* line 164, sass/components/_layouts.scss */
+/* line 163, sass/components/_layouts.scss */
 .contact-callout li.facebook:hover {
   background-color: #3a589c; }
 
-/* line 165, sass/components/_layouts.scss */
+/* line 164, sass/components/_layouts.scss */
 .contact-callout li.twitter:hover {
   background-color: #39bce8; }
 
-/* line 166, sass/components/_layouts.scss */
+/* line 165, sass/components/_layouts.scss */
 .contact-callout li.dribbble:hover {
   background-color: #ff55b1; }
 
-/* line 167, sass/components/_layouts.scss */
+/* line 166, sass/components/_layouts.scss */
 .contact-callout li.linkedin:hover {
   background-color: #3392c5; }
 
-/* line 169, sass/components/_layouts.scss */
+/* line 168, sass/components/_layouts.scss */
 .contact-callout li:hover {
   background-color: #718a94; }
 
-/* line 171, sass/components/_layouts.scss */
+/* line 170, sass/components/_layouts.scss */
 .contact-callout li a {
   display: block;
   width: 100%;
   height: 100%;
   text-indent: -9000em; }
 
-/* line 172, sass/components/_layouts.scss */
+/* line 171, sass/components/_layouts.scss */
 .contact-callout .button {
   display: inline-block;
   width: 71.429%;
@@ -754,30 +758,30 @@ input:invalid, textarea:invalid {
   -webkit-transition: .25s linear background-color;
   transition: .25s linear background-color; }
 
-/* line 177, sass/components/_layouts.scss */
+/* line 176, sass/components/_layouts.scss */
 .contact-callout .button:hover {
   background-color: #df3952; }
 
-/* line 179, sass/components/_layouts.scss */
+/* line 178, sass/components/_layouts.scss */
 .footer-container q {
   margin: 0 0 2.875em;
   color: #35454c;
   font: 1.2em/1.222 "ProximaNovaThin", Arial, Helvetica, sans-serif; }
 
-/* line 180, sass/components/_layouts.scss */
+/* line 179, sass/components/_layouts.scss */
 .footer-container q + p {
   margin-top: .5em; }
 
-/* line 181, sass/components/_layouts.scss */
+/* line 180, sass/components/_layouts.scss */
 .footer-container small {
   color: #ccc;
   font-size: .875em; }
 
-/* line 182, sass/components/_layouts.scss */
+/* line 181, sass/components/_layouts.scss */
 .footer-container .logo {
   text-align: center; }
 
-/* line 183, sass/components/_layouts.scss */
+/* line 182, sass/components/_layouts.scss */
 .footer-container .logo a {
   display: inline-block;
   width: 51px;
@@ -788,39 +792,39 @@ input:invalid, textarea:invalid {
 /* Footer (tablet)
 	-----------------------------------------------------------------------------*/
 /* Contact Callout */
-/* line 190, sass/components/_layouts.scss */
+/* line 189, sass/components/_layouts.scss */
 .contact-callout h3 {
   font-size: 1.5em; }
 
-/* line 191, sass/components/_layouts.scss */
+/* line 190, sass/components/_layouts.scss */
 .contact-callout ul {
   display: inline-block;
   width: 45%; }
 
-/* line 192, sass/components/_layouts.scss */
+/* line 191, sass/components/_layouts.scss */
 .contact-callout .button {
   position: relative;
   top: .75em;
   width: 35%; }
 
-/* line 194, sass/components/_layouts.scss */
+/* line 193, sass/components/_layouts.scss */
 .footer-container q {
   font-size: 1.5em; }
 
 /* Footer (desktop)
 	-----------------------------------------------------------------------------*/
-/* line 199, sass/components/_layouts.scss */
+/* line 198, sass/components/_layouts.scss */
 .footer-container {
   padding: 2em 0; }
 
 /* Contact Callout */
-/* line 203, sass/components/_layouts.scss */
+/* line 202, sass/components/_layouts.scss */
 .contact-callout ul {
   float: left;
   width: auto;
   margin: 1.25em 2em 0 0; }
 
-/* line 204, sass/components/_layouts.scss */
+/* line 203, sass/components/_layouts.scss */
 .contact-callout .button {
   top: .438em;
   float: left;
@@ -831,36 +835,36 @@ input:invalid, textarea:invalid {
 /* Media Queries
 =================================================================================================== */
 @media all and (-webkit-min-device-pixel-ratio: 2) {
-  /* line 213, sass/components/_layouts.scss */
+  /* line 212, sass/components/_layouts.scss */
   .site-title a {
     background: url("../img/l_logo2x.png"); }
 
-  /* line 214, sass/components/_layouts.scss */
+  /* line 213, sass/components/_layouts.scss */
   .header-container nav li {
     background-image: url("../img/sp_main-nav2x.png");
     background-size: 25px auto; }
 
-  /* line 215, sass/components/_layouts.scss */
+  /* line 214, sass/components/_layouts.scss */
   #nav-toggle {
     background-image: url("../img/i_menu-toggle2x.png");
     background-size: 19px auto; }
 
-  /* line 216, sass/components/_layouts.scss */
+  /* line 215, sass/components/_layouts.scss */
   .contact-callout li {
     background-image: url("../img/sp_social-media2x.png");
     background-size: 48px auto; }
 
-  /* line 217, sass/components/_layouts.scss */
+  /* line 216, sass/components/_layouts.scss */
   .contact-callout .button {
     background-image: url("../img/bg_contact-arrow2x.png");
     background-size: 25px auto; }
 
-  /* line 218, sass/components/_layouts.scss */
+  /* line 217, sass/components/_layouts.scss */
   .creative-process a, .about-me a {
     background-image: url("../img/i_right-arrow2x.png");
     background-size: 25px auto; }
 
-  /* line 220, sass/components/_layouts.scss */
+  /* line 219, sass/components/_layouts.scss */
   .footer-container .logo a {
     background-image: url("../img/l_logo-footer2x.png");
     background-size: 51px auto; } }
@@ -1223,7 +1227,7 @@ img[src*="googleadservices.com"] {
  * Styles for the Home Page
  * (c) Atlantic BT. All Rights Reserved.
  *==================================================================*/
-/* Home Page
+/* Home Page (base)
 =================================================================================================== */
 /* line 10, sass/components/_page-home.scss */
 .home .site-title {
@@ -1235,76 +1239,207 @@ img[src*="googleadservices.com"] {
   line-height: 1;
   text-transform: uppercase;
   text-align: center; }
+  @media (min-width: 481px) {
+    /* line 11, sass/components/_page-home.scss */
+    .main section h2 {
+      text-align: left; } }
 
-/* Portfolio
------------------------------------------------------------------------------*/
-/* line 16, sass/components/_page-home.scss */
+/* line 22, sass/components/_page-home.scss */
 .featured-projects {
   padding: 0 0 2em;
   margin: 0 0 2em;
   border-bottom: .071em solid #f1f3f4; }
+  @media (min-width: 481px) {
+    /* line 22, sass/components/_page-home.scss */
+    .featured-projects {
+      padding: 0;
+      margin: 0;
+      border-bottom: 0; } }
+  @media (min-width: 1025px) {
+    /* line 22, sass/components/_page-home.scss */
+    .featured-projects {
+      margin-bottom: 4em; } }
+  /* line 29, sass/components/_page-home.scss */
+  .featured-projects ul {
+    width: 94%;
+    padding: 0 3%;
+    margin: 0;
+    list-style: none; }
+    @media (min-width: 481px) {
+      /* line 29, sass/components/_page-home.scss */
+      .featured-projects ul {
+        letter-spacing: -4px; } }
+    @media (min-width: 1025px) {
+      /* line 29, sass/components/_page-home.scss */
+      .featured-projects ul {
+        width: 100%;
+        padding: 0; } }
+  /* line 37, sass/components/_page-home.scss */
+  .featured-projects li {
+    margin: 0 0 1em;
+    border: .063em solid #f4f4f4; }
+    @media (min-width: 481px) {
+      /* line 37, sass/components/_page-home.scss */
+      .featured-projects li {
+        position: relative;
+        top: 0;
+        display: inline-block;
+        width: 47.5%;
+        margin: 0 4.5% 5% 0; } }
+    @media (min-width: 1025px) {
+      /* line 37, sass/components/_page-home.scss */
+      .featured-projects li {
+        width: 231px;
+        margin: 0 11px 11px 0; } }
+  @media (min-width: 481px) {
+    /* line 45, sass/components/_page-home.scss */
+    .featured-projects li:nth-child(2n) {
+      margin-right: 0; } }
+  @media (min-width: 1025px) {
+    /* line 45, sass/components/_page-home.scss */
+    .featured-projects li:nth-child(2n) {
+      margin-right: 12px; } }
+  @media (min-width: 1025px) {
+    /* line 51, sass/components/_page-home.scss */
+    .featured-projects li:nth-child(4n) {
+      margin-right: 0; } }
+  /* line 56, sass/components/_page-home.scss */
+  .featured-projects article {
+    background: #f1f3f4;
+    font-size: 1em; }
+  /* line 57, sass/components/_page-home.scss */
+  .featured-projects article a {
+    display: block;
+    color: #718a94;
+    text-decoration: none; }
+    @media (min-width: 481px) {
+      /* line 57, sass/components/_page-home.scss */
+      .featured-projects article a {
+        letter-spacing: normal; } }
+  /* line 64, sass/components/_page-home.scss */
+  .featured-projects article figure {
+    width: 100%;
+    background: #35454C;
+    /*border-bottom: .188em solid #fff;*/ }
+  /* line 65, sass/components/_page-home.scss */
+  .featured-projects article h3 {
+    padding: 1.25em .938em;
+    padding-bottom: 0;
+    margin: 0 0 .438em;
+    border-top: .375em solid #e2e5e9;
+    font-size: 1em;
+    line-height: 1; }
+  /* line 66, sass/components/_page-home.scss */
+  .featured-projects article h3 + p {
+    padding: 1.25em 1.071em;
+    padding-top: 0;
+    margin: 0;
+    font-size: .875em;
+    line-height: 1; }
+  @media (min-width: 481px) {
+    /* line 70, sass/components/_page-home.scss */
+    .featured-projects li,
+    .featured-projects li article,
+    .featured-projects li article figure img,
+    .featured-projects li article h3 {
+      -moz-transition: 0.25s linear all;
+      -o-transition: 0.25s linear all;
+      -webkit-transition: 0.25s linear all;
+      transition: 0.25s linear all; }
+    /* line 74, sass/components/_page-home.scss */
+    .featured-projects li:hover article {
+      background: #151e21; }
+    /* line 75, sass/components/_page-home.scss */
+    .featured-projects li:hover article figure img {
+      opacity: .75; }
+    /* line 76, sass/components/_page-home.scss */
+    .featured-projects li:hover article h3 {
+      border-top-color: #35454C;
+      color: #fff; } }
 
-/* line 17, sass/components/_page-home.scss */
-.featured-projects ul {
-  width: 94%;
-  padding: 0 3%;
-  margin: 0;
-  list-style: none; }
+@media (min-width: 1025px) {
+  /* line 84, sass/components/_page-home.scss */
+  #portfolio-toggle {
+    margin: 2em 0 0;
+    border-top: 1px solid #f1f3f4;
+    text-align: center; }
+    /* line 88, sass/components/_page-home.scss */
+    #portfolio-toggle span {
+      position: relative;
+      top: -26px;
+      display: inline-block;
+      padding: .95em 3em .75em;
+      background: #151e21 url("../img/sp_portfolio-toggle.png") no-repeat 95% 11px;
+      color: #fff;
+      font: 1.125em/1 "ProximaNovaBold", Arial, Helvetica, sans-serif;
+      text-align: left;
+      text-transform: uppercase;
+      text-indent: -35px;
+      cursor: pointer;
+      -moz-border-radius: 5px;
+      -webkit-border-radius: 5px;
+      border-radius: 5px;
+      -moz-transition: 0.25s linear background-color;
+      -o-transition: 0.25s linear background-color;
+      -webkit-transition: 0.25s linear background-color;
+      transition: 0.25s linear background-color; }
+    /* line 95, sass/components/_page-home.scss */
+    #portfolio-toggle span:hover {
+      background-color: #DF3952;
+      background-position: 95% -139px; }
+    /* line 96, sass/components/_page-home.scss */
+    #portfolio-toggle.active span {
+      background-position: 95% -64px; }
+    /* line 97, sass/components/_page-home.scss */
+    #portfolio-toggle.active span:hover {
+      background-position: 95% -214px; } }
+@media (min-width: 481px) {
+  /* line 105, sass/components/_page-home.scss */
+  .main .skillset h2 {
+    text-align: center; } }
 
-/* line 18, sass/components/_page-home.scss */
-.featured-projects li {
-  margin: 0 0 1em;
-  border: .063em solid #f4f4f4;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box; }
-
-/* line 21, sass/components/_page-home.scss */
-.featured-projects article {
-  background: #f1f3f4;
-  font-size: 1em; }
-
-/* line 22, sass/components/_page-home.scss */
-.featured-projects article a {
-  display: block;
-  color: #718a94;
-  text-decoration: none; }
-
-/* line 23, sass/components/_page-home.scss */
-.featured-projects article figure {
-  width: 100%;
-  background: #35454C;
-  /*border-bottom: .188em solid #fff;*/
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box; }
-
-/* line 26, sass/components/_page-home.scss */
-.featured-projects article h3 {
-  padding: 1.25em .938em;
-  padding-bottom: 0;
-  margin: 0 0 .438em;
-  border-top: .375em solid #e2e5e9;
-  font-size: 1em;
-  line-height: 1; }
-
-/* line 27, sass/components/_page-home.scss */
-.featured-projects article h3 + p {
-  padding: 1.25em 1.071em;
-  padding-top: 0;
-  margin: 0;
-  font-size: .875em;
-  line-height: 1; }
-
-/* Skills
------------------------------------------------------------------------------*/
-/* line 32, sass/components/_page-home.scss */
+/* line 110, sass/components/_page-home.scss */
 .skillset {
   padding: 0 0 2em;
   margin: 0 0 2em;
   border-bottom: .071em solid #f1f3f4; }
+  @media (min-width: 481px) {
+    /* line 110, sass/components/_page-home.scss */
+    .skillset {
+      overflow: hidden; } }
+  @media (min-width: 1025px) {
+    /* line 110, sass/components/_page-home.scss */
+    .skillset {
+      position: relative;
+      left: 324px;
+      float: left;
+      width: 312px;
+      margin-right: 12px;
+      border: 0; } }
 
-/* line 33, sass/components/_page-home.scss */
+@media (min-width: 481px) {
+  /* line 118, sass/components/_page-home.scss */
+  .skillset figure {
+    float: left;
+    width: 48%; } }
+@media (min-width: 1025px) {
+  /* line 118, sass/components/_page-home.scss */
+  .skillset figure {
+    float: none;
+    width: 100%; } }
+
+@media (min-width: 481px) {
+  /* line 124, sass/components/_page-home.scss */
+  .skillset h2 {
+    float: right;
+    width: 48%; } }
+@media (min-width: 1025px) {
+  /* line 124, sass/components/_page-home.scss */
+  .skillset h2 {
+    float: none;
+    width: 100%; } }
+
+/* line 130, sass/components/_page-home.scss */
 .skillset ul {
   width: 100%;
   padding: 0;
@@ -1315,12 +1450,19 @@ img[src*="googleadservices.com"] {
   text-align: center;
   -moz-border-radius: 10px;
   -webkit-border-radius: 10px;
-  border-radius: 10px;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box; }
+  border-radius: 10px; }
+  @media (min-width: 481px) {
+    /* line 130, sass/components/_page-home.scss */
+    .skillset ul {
+      float: right;
+      width: 48%; } }
+  @media (min-width: 1025px) {
+    /* line 130, sass/components/_page-home.scss */
+    .skillset ul {
+      float: none;
+      width: 100%; } }
 
-/* line 37, sass/components/_page-home.scss */
+/* line 139, sass/components/_page-home.scss */
 .skillset li {
   display: inline-block;
   width: 50%;
@@ -1329,24 +1471,38 @@ img[src*="googleadservices.com"] {
   color: #222d31;
   font-size: .875em;
   line-height: 1;
-  text-transform: uppercase;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box; }
+  text-transform: uppercase; }
 
-/* line 40, sass/components/_page-home.scss */
+/* line 141, sass/components/_page-home.scss */
 .skillset li span {
   display: block; }
 
-/* Process
------------------------------------------------------------------------------*/
-/* line 45, sass/components/_page-home.scss */
+/* line 146, sass/components/_page-home.scss */
 .creative-process {
   padding: 0 0 2em;
   margin: 0 0 2em;
   border-bottom: .071em solid #f1f3f4; }
+  @media (min-width: 481px) {
+    /* line 146, sass/components/_page-home.scss */
+    .creative-process {
+      float: left;
+      width: 48%;
+      padding: 0;
+      margin: 0;
+      border-bottom: 0; } }
+  @media (min-width: 1025px) {
+    /* line 146, sass/components/_page-home.scss */
+    .creative-process {
+      position: relative;
+      top: -15px;
+      left: -324px;
+      float: left;
+      width: 312px;
+      padding: 0;
+      margin: 0 12px 0 0;
+      border-bottom: 0; } }
 
-/* line 46, sass/components/_page-home.scss */
+/* line 154, sass/components/_page-home.scss */
 .creative-process a {
   display: inline-block;
   padding: 5px 30px 0 0;
@@ -1355,14 +1511,29 @@ img[src*="googleadservices.com"] {
   font: 1.125em/1.389 "ProximaNovaBold", Arial, Helvetica, sans-serif;
   text-transform: uppercase; }
 
-/* line 47, sass/components/_page-home.scss */
+/* line 155, sass/components/_page-home.scss */
 .creative-process a:hover {
   color: #DF3952;
   text-decoration: none; }
 
-/* Location
------------------------------------------------------------------------------*/
-/* line 53, sass/components/_page-home.scss */
+@media (min-width: 481px) {
+  /* line 160, sass/components/_page-home.scss */
+  .about-me {
+    float: right;
+    width: 48%;
+    padding: 0;
+    margin: 0;
+    border-bottom: 0; } }
+@media (min-width: 1025px) {
+  /* line 160, sass/components/_page-home.scss */
+  .about-me {
+    float: right;
+    width: 312px;
+    padding: 0;
+    margin: 0;
+    border-bottom: 0; } }
+
+/* line 166, sass/components/_page-home.scss */
 .about-me a {
   display: inline-block;
   padding: 5px 30px 0 0;
@@ -1371,241 +1542,10 @@ img[src*="googleadservices.com"] {
   font: 1.125em/1.389 "ProximaNovaBold", Arial, Helvetica, sans-serif;
   text-transform: uppercase; }
 
-/* line 54, sass/components/_page-home.scss */
+/* line 167, sass/components/_page-home.scss */
 .about-me a:hover {
   color: #DF3952;
   text-decoration: none; }
-
-/* Home Page
-=================================================================================================== */
-/* line 61, sass/components/_page-home.scss */
-.main section h2 {
-  text-align: left; }
-
-/* Portfolio
------------------------------------------------------------------------------*/
-/* line 66, sass/components/_page-home.scss */
-.featured-projects {
-  padding: 0;
-  margin: 0;
-  border-bottom: 0; }
-
-/* line 67, sass/components/_page-home.scss */
-.featured-projects ul {
-  letter-spacing: -4px; }
-
-/* line 68, sass/components/_page-home.scss */
-.featured-projects li {
-  position: relative;
-  top: 0;
-  display: inline-block;
-  width: 47.5%;
-  margin: 0 4.5% 5% 0;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box; }
-
-/* line 71, sass/components/_page-home.scss */
-.featured-projects li:nth-child(2n) {
-  margin-right: 0; }
-
-/* line 72, sass/components/_page-home.scss */
-.featured-projects article a {
-  letter-spacing: normal; }
-
-/* Hover */
-/* line 75, sass/components/_page-home.scss */
-.featured-projects li,
-.featured-projects li article,
-.featured-projects li article figure img,
-.featured-projects li article h3 {
-  -moz-transition: .25s linear all;
-  -webkit-transition: .25s linear all;
-  -o-transition: .25s linear all;
-  transition: .25s linear all; }
-
-/* line 80, sass/components/_page-home.scss */
-.featured-projects li:hover article {
-  background: #151e21; }
-
-/* line 81, sass/components/_page-home.scss */
-.featured-projects li:hover article figure img {
-  opacity: .75; }
-
-/* line 82, sass/components/_page-home.scss */
-.featured-projects li:hover article h3 {
-  border-top-color: #35454C;
-  color: #fff; }
-
-/* Skills
------------------------------------------------------------------------------*/
-/* line 87, sass/components/_page-home.scss */
-.main .skillset h2 {
-  text-align: center; }
-
-/* line 88, sass/components/_page-home.scss */
-.skillset {
-  overflow: hidden; }
-
-/* line 89, sass/components/_page-home.scss */
-.skillset figure {
-  float: left;
-  width: 48%; }
-
-/* line 90, sass/components/_page-home.scss */
-.skillset h2 {
-  float: right;
-  width: 48%; }
-
-/* line 91, sass/components/_page-home.scss */
-.skillset ul {
-  float: right;
-  width: 48%; }
-
-/* Process
------------------------------------------------------------------------------*/
-/* line 96, sass/components/_page-home.scss */
-.creative-process {
-  float: left;
-  width: 48%;
-  padding: 0;
-  margin: 0;
-  border-bottom: 0;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box; }
-
-/* Location
------------------------------------------------------------------------------*/
-/* line 103, sass/components/_page-home.scss */
-.about-me {
-  float: right;
-  width: 48%;
-  padding: 0;
-  margin: 0;
-  border-bottom: 0;
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box; }
-
-/* Home Page
-=================================================================================================== */
-/* Portfolio
------------------------------------------------------------------------------*/
-/* line 115, sass/components/_page-home.scss */
-.featured-projects {
-  margin-bottom: 4em; }
-
-/* line 116, sass/components/_page-home.scss */
-.featured-projects ul {
-  width: 100%;
-  padding: 0; }
-
-/* line 117, sass/components/_page-home.scss */
-.featured-projects li {
-  width: 231px;
-  margin: 0 11px 11px 0; }
-
-/* line 118, sass/components/_page-home.scss */
-.featured-projects li:nth-child(2n) {
-  margin-right: 12px; }
-
-/* line 119, sass/components/_page-home.scss */
-.featured-projects li:nth-child(4n) {
-  margin-right: 0; }
-
-/* Toggle Projects */
-/* line 122, sass/components/_page-home.scss */
-#portfolio-toggle {
-  margin: 2em 0 0;
-  border-top: 1px solid #f1f3f4;
-  text-align: center; }
-
-/* line 123, sass/components/_page-home.scss */
-#portfolio-toggle span {
-  position: relative;
-  top: -26px;
-  display: inline-block;
-  padding: .95em 3em .75em;
-  background: #151e21 url("../img/sp_portfolio-toggle.png") no-repeat 95% 11px;
-  color: #fff;
-  font: 1.125em/1 "ProximaNovaBold", Arial, Helvetica, sans-serif;
-  text-align: left;
-  text-transform: uppercase;
-  text-indent: -35px;
-  cursor: pointer;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
-  -moz-transition: .25s linear background-color;
-  -webkit-transition: .25s linear background-color;
-  transition: .25s linear background-color; }
-
-/* Hover & Active */
-/* line 130, sass/components/_page-home.scss */
-#portfolio-toggle span:hover {
-  background-color: #DF3952;
-  background-position: 95% -139px; }
-
-/* line 131, sass/components/_page-home.scss */
-#portfolio-toggle.active span {
-  background-position: 95% -64px; }
-
-/* line 132, sass/components/_page-home.scss */
-#portfolio-toggle.active span:hover {
-  background-position: 95% -214px; }
-
-/* Skills
------------------------------------------------------------------------------*/
-/* line 137, sass/components/_page-home.scss */
-.skillset {
-  position: relative;
-  left: 324px;
-  float: left;
-  width: 312px;
-  margin-right: 12px;
-  border: 0; }
-
-/* line 138, sass/components/_page-home.scss */
-.skillset figure {
-  float: none;
-  width: 100%; }
-
-/* line 139, sass/components/_page-home.scss */
-.skillset h2 {
-  float: none;
-  width: 100%; }
-
-/* line 140, sass/components/_page-home.scss */
-.skillset ul {
-  float: none;
-  width: 100%; }
-
-/* Process
------------------------------------------------------------------------------*/
-/* line 145, sass/components/_page-home.scss */
-.creative-process {
-  position: relative;
-  top: -15px;
-  left: -324px;
-  float: left;
-  width: 312px;
-  padding: 0;
-  margin: 0 12px 0 0;
-  border-bottom: 0; }
-
-/* Location
------------------------------------------------------------------------------*/
-/* line 150, sass/components/_page-home.scss */
-.about-me {
-  float: right;
-  width: 312px;
-  padding: 0;
-  margin: 0;
-  border-bottom: 0; }
 
 /*==================================================================
  * Process Page Partial

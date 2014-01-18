@@ -15,9 +15,7 @@ body {}
 
 .wrapper {
     
-    @include breakpoint($desktop, $no-query: true) {
-        max-width: $container_max_width; padding: 0; margin: 0 auto;   
-    }
+    @include breakpoint($desktop, $no-query: true) { max-width: $container_max_width; padding: 0; margin: 0 auto; }
 
 }
 
@@ -78,6 +76,7 @@ body {}
         padding: 6.25%;
 
         @include breakpoint($tablet, $no-query: true) { padding: 4% 6.25%; }
+        @include breakpoint($desktop, $no-query: true) { padding: 0; }
 
     }
 	
