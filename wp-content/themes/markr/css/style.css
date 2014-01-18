@@ -282,6 +282,10 @@ table {
   src: url("../fonts/ProximaNova-Bold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/ProximaNova-Bold-webfont.woff") format("woff"), url("../fonts/ProximaNova-Bold-webfont.ttf") format("truetype"), url("../fonts/ProximaNova-Bold-webfont.svg#ProximaNovaBold") format("svg");
   font-weight: normal;
   font-style: normal; }
+/* line 73, sass/components/_typography.scss */
+html, body {
+  font-family: "ProximaNovaRegular", Arial, Helvetica, sans-serif; }
+
 /* line 79, sass/components/_typography.scss */
 h1, h2, h3, h4, h5, h6 {
   color: #35454c;
@@ -498,24 +502,30 @@ input:invalid, textarea:invalid {
  * Styles for various layouts and wrappers for content.
  * (c) Atlantic BT. All Rights Reserved.
  *==================================================================*/
+/* line 11, sass/components/_layouts.scss */
+.header-container,
+.content-container,
+.footer-container {
+  clear: both; }
+
 @media (min-width: 1025px) {
-  /* line 16, sass/components/_layouts.scss */
+  /* line 14, sass/components/_layouts.scss */
   .wrapper {
     max-width: 960px;
     padding: 0;
     margin: 0 auto; } }
 
-/* line 25, sass/components/_layouts.scss */
+/* line 23, sass/components/_layouts.scss */
 .header-container {
   background: #151e21;
   border-bottom: .571em solid #e8edef;
   text-align: center; }
 
-/* line 29, sass/components/_layouts.scss */
+/* line 27, sass/components/_layouts.scss */
 .site-title {
   margin: -2.5em 0 1em; }
 
-/* line 30, sass/components/_layouts.scss */
+/* line 28, sass/components/_layouts.scss */
 .site-title a {
   position: relative;
   display: inline-block;
@@ -526,345 +536,315 @@ input:invalid, textarea:invalid {
   text-indent: -9000em;
   z-index: 1000; }
   @media (min-width: 481px) {
-    /* line 30, sass/components/_layouts.scss */
+    /* line 28, sass/components/_layouts.scss */
     .site-title a {
       width: 105px;
       height: 105px;
       background-size: 105px auto; } }
 
-/* line 40, sass/components/_layouts.scss */
+/* line 38, sass/components/_layouts.scss */
 .header-container h1 {
   padding: 0 10%;
   margin-top: .25em;
   line-height: 1;
   color: #fff; }
   @media (min-width: 481px) {
-    /* line 40, sass/components/_layouts.scss */
+    /* line 38, sass/components/_layouts.scss */
     .header-container h1 {
       margin-bottom: 0; } }
   @media (min-width: 1025px) {
-    /* line 40, sass/components/_layouts.scss */
+    /* line 38, sass/components/_layouts.scss */
     .header-container h1 {
       padding: 0;
       font-size: 3.75em; } }
 
-/* line 52, sass/components/_layouts.scss */
+/* line 50, sass/components/_layouts.scss */
 .header-container h2 {
   display: none; }
   @media (min-width: 481px) {
-    /* line 52, sass/components/_layouts.scss */
+    /* line 50, sass/components/_layouts.scss */
     .header-container h2 {
+      display: block;
       margin: .25em 0 1em;
       font: 1.125em/1 "ProximaNovaRegular", Arial, Helvetica, sans-serif; } }
   @media (min-width: 1025px) {
-    /* line 52, sass/components/_layouts.scss */
+    /* line 50, sass/components/_layouts.scss */
     .header-container h2 {
       font-size: 1.5em; } }
 
 @media (min-width: 1025px) {
-  /* line 68, sass/components/_layouts.scss */
+  /* line 66, sass/components/_layouts.scss */
   .main-container {
     padding-top: 30px; } }
 
-/* line 74, sass/components/_layouts.scss */
+/* line 72, sass/components/_layouts.scss */
 .main {
   padding: 6.25%; }
   @media (min-width: 481px) {
-    /* line 74, sass/components/_layouts.scss */
+    /* line 72, sass/components/_layouts.scss */
     .main {
       padding: 4% 6.25%; } }
   @media (min-width: 1025px) {
-    /* line 74, sass/components/_layouts.scss */
+    /* line 72, sass/components/_layouts.scss */
     .main {
       padding: 0; } }
 
 @media (min-width: 481px) {
-  /* line 83, sass/components/_layouts.scss */
+  /* line 81, sass/components/_layouts.scss */
   .entry-header {
     overflow: hidden; } }
 
-/* line 89, sass/components/_layouts.scss */
+/* line 87, sass/components/_layouts.scss */
 .entry-header .entry-figure {
   padding: 0 10%;
   margin: 0 0 1em;
   text-align: center; }
   @media (min-width: 481px) {
-    /* line 89, sass/components/_layouts.scss */
+    /* line 87, sass/components/_layouts.scss */
     .entry-header .entry-figure {
       float: left;
       width: 33.646%;
       padding: 0;
       margin: 0 0 1em; } }
 
-/* line 99, sass/components/_layouts.scss */
+/* line 95, sass/components/_layouts.scss */
 .entry-header .entry-title {
   margin: 0;
   font-size: 1.75em;
   line-height: 1;
   text-align: center; }
   @media (min-width: 481px) {
-    /* line 99, sass/components/_layouts.scss */
+    /* line 95, sass/components/_layouts.scss */
     .entry-header .entry-title {
       float: right;
       width: 54.167%;
       font-size: 2.25em;
       text-align: left; } }
   @media (min-width: 1025px) {
-    /* line 99, sass/components/_layouts.scss */
+    /* line 95, sass/components/_layouts.scss */
     .entry-header .entry-title {
       font-size: 3.75em; } }
 
-/* line 112, sass/components/_layouts.scss */
+/* line 104, sass/components/_layouts.scss */
 .entry-header .entry-subtitle {
   margin: 0 0 1em;
   color: #718a94;
   font: normal 1.25em/1.25 "ProximaNovaRegular", Arial, Helvetica, sans-serif;
   text-align: center; }
   @media (min-width: 481px) {
-    /* line 112, sass/components/_layouts.scss */
+    /* line 104, sass/components/_layouts.scss */
     .entry-header .entry-subtitle {
       float: right;
       width: 54.167%;
       font-size: 1.25em;
       text-align: left; } }
   @media (min-width: 1025px) {
-    /* line 112, sass/components/_layouts.scss */
+    /* line 104, sass/components/_layouts.scss */
     .entry-header .entry-subtitle {
       font-size: 1.5em; } }
 
-/* line 128, sass/components/_layouts.scss */
+/* line 116, sass/components/_layouts.scss */
 .footer-container {
   padding: 6.25%;
   text-align: center; }
-
-/* Contact Callout */
-/* line 132, sass/components/_layouts.scss */
-.contact-callout {
-  padding: 6.25% 0;
-  margin: 0 0 1.875em;
-  background: #151e21;
-  border-top: .625em solid #e8edef; }
-  @media (min-width: 481px) {
-    /* line 132, sass/components/_layouts.scss */
-    .contact-callout {
-      padding: 3% 0; } }
   @media (min-width: 1025px) {
-    /* line 132, sass/components/_layouts.scss */
-    .contact-callout {
-      padding: 1.5em 1.875em;
-      overflow: hidden; } }
-
-@media (min-width: 1025px) {
-  /* line 140, sass/components/_layouts.scss */
-  .contact-callout hgroup {
-    float: left;
-    width: 462px;
-    text-align: left; } }
-
-/* line 145, sass/components/_layouts.scss */
-.contact-callout h2 {
-  margin: 0;
-  color: #fff; }
-  @media (min-width: 481px) {
-    /* line 145, sass/components/_layouts.scss */
-    .contact-callout h2 {
-      font-size: 2.25em; } }
-
-/* line 151, sass/components/_layouts.scss */
-.contact-callout h3 {
-  margin: 0 0 .5em;
-  color: #718a94; }
-
-/* line 152, sass/components/_layouts.scss */
-.contact-callout ul {
-  padding: 0;
-  margin: 0 0 .5em;
-  list-style: none; }
-
-/* line 153, sass/components/_layouts.scss */
-.contact-callout li {
-  display: inline-block;
-  width: 48px;
-  height: 48px;
-  background: #0e1618 url(../img/sp_social-media.png) no-repeat;
-  -moz-border-radius: 5px;
-  -webkit-border-radius: 5px;
-  border-radius: 5px;
-  -moz-transition: .25s linear background-color;
-  -webkit-transition: .25s linear background-color;
-  transition: .25s linear background-color; }
-
-/* line 158, sass/components/_layouts.scss */
-.contact-callout li.facebook {
-  background-position: 0 0; }
-
-/* line 159, sass/components/_layouts.scss */
-.contact-callout li.twitter {
-  background-position: 0 -48px; }
-
-/* line 160, sass/components/_layouts.scss */
-.contact-callout li.dribbble {
-  background-position: 0 -96px; }
-
-/* line 161, sass/components/_layouts.scss */
-.contact-callout li.linkedin {
-  background-position: 0 -144px; }
-
-/* line 163, sass/components/_layouts.scss */
-.contact-callout li.facebook:hover {
-  background-color: #3a589c; }
-
-/* line 164, sass/components/_layouts.scss */
-.contact-callout li.twitter:hover {
-  background-color: #39bce8; }
-
-/* line 165, sass/components/_layouts.scss */
-.contact-callout li.dribbble:hover {
-  background-color: #ff55b1; }
-
-/* line 166, sass/components/_layouts.scss */
-.contact-callout li.linkedin:hover {
-  background-color: #3392c5; }
-
-/* line 168, sass/components/_layouts.scss */
-.contact-callout li:hover {
-  background-color: #718a94; }
-
-/* line 170, sass/components/_layouts.scss */
-.contact-callout li a {
-  display: block;
-  width: 100%;
-  height: 100%;
-  text-indent: -9000em; }
-
-/* line 171, sass/components/_layouts.scss */
-.contact-callout .button {
-  display: inline-block;
-  width: 71.429%;
-  padding: .95em 2em .75em;
-  background: #718a94 url("../img/bg_contact-arrow.png") no-repeat 95% 50%;
-  color: #fff;
-  font: 1.125em/1 "ProximaNovaBold", Arial, Helvetica, sans-serif;
-  text-align: left;
-  text-transform: uppercase;
-  text-decoration: none;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
-  -moz-transition: .25s linear background-color;
-  -webkit-transition: .25s linear background-color;
-  transition: .25s linear background-color; }
-
-/* line 176, sass/components/_layouts.scss */
-.contact-callout .button:hover {
-  background-color: #df3952; }
-
-/* line 178, sass/components/_layouts.scss */
-.footer-container q {
-  margin: 0 0 2.875em;
-  color: #35454c;
-  font: 1.2em/1.222 "ProximaNovaThin", Arial, Helvetica, sans-serif; }
-
-/* line 179, sass/components/_layouts.scss */
-.footer-container q + p {
-  margin-top: .5em; }
-
-/* line 180, sass/components/_layouts.scss */
-.footer-container small {
-  color: #ccc;
-  font-size: .875em; }
-
-/* line 181, sass/components/_layouts.scss */
-.footer-container .logo {
-  text-align: center; }
-
-/* line 182, sass/components/_layouts.scss */
-.footer-container .logo a {
-  display: inline-block;
-  width: 51px;
-  height: 50px;
-  background: url("../img/l_logo-footer.png") no-repeat 0 0;
-  text-indent: -9000em; }
-
-/* Footer (tablet)
-	-----------------------------------------------------------------------------*/
-/* Contact Callout */
-/* line 189, sass/components/_layouts.scss */
-.contact-callout h3 {
-  font-size: 1.5em; }
-
-/* line 190, sass/components/_layouts.scss */
-.contact-callout ul {
-  display: inline-block;
-  width: 45%; }
-
-/* line 191, sass/components/_layouts.scss */
-.contact-callout .button {
-  position: relative;
-  top: .75em;
-  width: 35%; }
-
-/* line 193, sass/components/_layouts.scss */
-.footer-container q {
-  font-size: 1.5em; }
-
-/* Footer (desktop)
-	-----------------------------------------------------------------------------*/
-/* line 198, sass/components/_layouts.scss */
-.footer-container {
-  padding: 2em 0; }
-
-/* Contact Callout */
-/* line 202, sass/components/_layouts.scss */
-.contact-callout ul {
-  float: left;
-  width: auto;
-  margin: 1.25em 2em 0 0; }
-
-/* line 203, sass/components/_layouts.scss */
-.contact-callout .button {
-  top: .438em;
-  float: left;
-  width: 200px;
-  margin-top: .75em;
-  clear: none; }
+    /* line 116, sass/components/_layouts.scss */
+    .footer-container {
+      padding: 2em 0; } }
+  /* line 121, sass/components/_layouts.scss */
+  .footer-container q {
+    margin: 0 0 2.875em;
+    color: #35454c;
+    font: 1.2em/1.222 "ProximaNovaThin", Arial, Helvetica, sans-serif; }
+    @media (min-width: 481px) {
+      /* line 121, sass/components/_layouts.scss */
+      .footer-container q {
+        font-size: 1.5em; } }
+  /* line 128, sass/components/_layouts.scss */
+  .footer-container q + p {
+    margin-top: .5em; }
+  /* line 129, sass/components/_layouts.scss */
+  .footer-container small {
+    color: #ccc;
+    font-size: .875em; }
+  /* line 130, sass/components/_layouts.scss */
+  .footer-container .logo {
+    text-align: center; }
+  /* line 131, sass/components/_layouts.scss */
+  .footer-container .logo a {
+    display: inline-block;
+    width: 51px;
+    height: 50px;
+    background: url("../img/l_logo-footer.png") no-repeat 0 0;
+    text-indent: -9000em; }
+  /* line 135, sass/components/_layouts.scss */
+  .footer-container .contact-callout {
+    padding: 6.25% 0;
+    margin: 0 0 1.875em;
+    background: #151e21;
+    border-top: .625em solid #e8edef; }
+    @media (min-width: 481px) {
+      /* line 135, sass/components/_layouts.scss */
+      .footer-container .contact-callout {
+        padding: 3% 0; } }
+    @media (min-width: 1025px) {
+      /* line 135, sass/components/_layouts.scss */
+      .footer-container .contact-callout {
+        padding: 1.5em 1.875em;
+        overflow: hidden; } }
+    @media (min-width: 1025px) {
+      /* line 142, sass/components/_layouts.scss */
+      .footer-container .contact-callout hgroup {
+        float: left;
+        width: 462px;
+        text-align: left; } }
+    /* line 147, sass/components/_layouts.scss */
+    .footer-container .contact-callout h2 {
+      margin: 0;
+      color: #fff; }
+      @media (min-width: 481px) {
+        /* line 147, sass/components/_layouts.scss */
+        .footer-container .contact-callout h2 {
+          font-size: 2.25em; } }
+    /* line 154, sass/components/_layouts.scss */
+    .footer-container .contact-callout h3 {
+      margin: 0 0 .5em;
+      color: #718a94; }
+      @media (min-width: 481px) {
+        /* line 154, sass/components/_layouts.scss */
+        .footer-container .contact-callout h3 {
+          font-size: 1.5em; } }
+    /* line 161, sass/components/_layouts.scss */
+    .footer-container .contact-callout ul {
+      padding: 0;
+      margin: 0 0 .5em;
+      list-style: none; }
+      @media (min-width: 481px) {
+        /* line 161, sass/components/_layouts.scss */
+        .footer-container .contact-callout ul {
+          display: inline-block;
+          width: 45%; } }
+      @media (min-width: 1025px) {
+        /* line 161, sass/components/_layouts.scss */
+        .footer-container .contact-callout ul {
+          float: left;
+          width: auto;
+          margin: 1.25em 2em 0 0; } }
+    /* line 169, sass/components/_layouts.scss */
+    .footer-container .contact-callout li {
+      display: inline-block;
+      width: 48px;
+      height: 48px;
+      background: #0e1618 url(../img/sp_social-media.png) no-repeat;
+      -moz-border-radius: 5px;
+      -webkit-border-radius: 5px;
+      border-radius: 5px;
+      -moz-transition: 0.25s linear background-color;
+      -o-transition: 0.25s linear background-color;
+      -webkit-transition: 0.25s linear background-color;
+      transition: 0.25s linear background-color; }
+    /* line 176, sass/components/_layouts.scss */
+    .footer-container .contact-callout li.facebook {
+      background-position: 0 0; }
+    /* line 177, sass/components/_layouts.scss */
+    .footer-container .contact-callout li.twitter {
+      background-position: 0 -48px; }
+    /* line 178, sass/components/_layouts.scss */
+    .footer-container .contact-callout li.dribbble {
+      background-position: 0 -96px; }
+    /* line 179, sass/components/_layouts.scss */
+    .footer-container .contact-callout li.linkedin {
+      background-position: 0 -144px; }
+    /* line 180, sass/components/_layouts.scss */
+    .footer-container .contact-callout li a {
+      display: block;
+      width: 100%;
+      height: 100%;
+      text-indent: -9000em; }
+    /* line 181, sass/components/_layouts.scss */
+    .footer-container .contact-callout .button {
+      display: inline-block;
+      width: 71.429%;
+      padding: .95em 2em .75em;
+      background: #718a94 url("../img/bg_contact-arrow.png") no-repeat 95% 50%;
+      color: #fff;
+      font: 1.125em/1 "ProximaNovaBold", Arial, Helvetica, sans-serif;
+      text-align: left;
+      text-transform: uppercase;
+      text-decoration: none;
+      -moz-border-radius: 5px;
+      -webkit-border-radius: 5px;
+      border-radius: 5px;
+      -moz-transition: 0.25s linear background-color;
+      -o-transition: 0.25s linear background-color;
+      -webkit-transition: 0.25s linear background-color;
+      transition: 0.25s linear background-color; }
+      @media (min-width: 481px) {
+        /* line 181, sass/components/_layouts.scss */
+        .footer-container .contact-callout .button {
+          position: relative;
+          top: .75em;
+          width: 35%; } }
+      @media (min-width: 1025px) {
+        /* line 181, sass/components/_layouts.scss */
+        .footer-container .contact-callout .button {
+          top: .438em;
+          float: left;
+          width: 200px;
+          margin-top: .75em;
+          clear: none; } }
+    /* line 193, sass/components/_layouts.scss */
+    .footer-container .contact-callout li:hover {
+      background-color: #718a94; }
+    /* line 194, sass/components/_layouts.scss */
+    .footer-container .contact-callout li.facebook:hover {
+      background-color: #3a589c; }
+    /* line 195, sass/components/_layouts.scss */
+    .footer-container .contact-callout li.twitter:hover {
+      background-color: #39bce8; }
+    /* line 196, sass/components/_layouts.scss */
+    .footer-container .contact-callout li.dribbble:hover {
+      background-color: #ff55b1; }
+    /* line 197, sass/components/_layouts.scss */
+    .footer-container .contact-callout li.linkedin:hover {
+      background-color: #3392c5; }
+    /* line 198, sass/components/_layouts.scss */
+    .footer-container .contact-callout .button:hover {
+      background-color: #df3952; }
 
 /* Media Queries
 =================================================================================================== */
 @media all and (-webkit-min-device-pixel-ratio: 2) {
-  /* line 212, sass/components/_layouts.scss */
+  /* line 210, sass/components/_layouts.scss */
   .site-title a {
     background: url("../img/l_logo2x.png"); }
 
-  /* line 213, sass/components/_layouts.scss */
+  /* line 211, sass/components/_layouts.scss */
   .header-container nav li {
     background-image: url("../img/sp_main-nav2x.png");
     background-size: 25px auto; }
 
-  /* line 214, sass/components/_layouts.scss */
+  /* line 212, sass/components/_layouts.scss */
   #nav-toggle {
     background-image: url("../img/i_menu-toggle2x.png");
     background-size: 19px auto; }
 
-  /* line 215, sass/components/_layouts.scss */
+  /* line 213, sass/components/_layouts.scss */
   .contact-callout li {
     background-image: url("../img/sp_social-media2x.png");
     background-size: 48px auto; }
 
-  /* line 216, sass/components/_layouts.scss */
+  /* line 214, sass/components/_layouts.scss */
   .contact-callout .button {
     background-image: url("../img/bg_contact-arrow2x.png");
     background-size: 25px auto; }
 
-  /* line 217, sass/components/_layouts.scss */
+  /* line 215, sass/components/_layouts.scss */
   .creative-process a, .about-me a {
     background-image: url("../img/i_right-arrow2x.png");
     background-size: 25px auto; }
 
-  /* line 219, sass/components/_layouts.scss */
+  /* line 217, sass/components/_layouts.scss */
   .footer-container .logo a {
     background-image: url("../img/l_logo-footer2x.png");
     background-size: 51px auto; } }

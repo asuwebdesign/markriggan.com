@@ -8,11 +8,9 @@
 // Global Layout
 //==================================================================*/
 body {}
-
 .header-container,
 .content-container,
-.footer-container {}
-
+.footer-container { clear: both; }
 .wrapper {
     
     @include breakpoint($desktop, $no-query: true) { max-width: $container_max_width; padding: 0; margin: 0 auto; }
@@ -54,7 +52,7 @@ body {}
         display: none;
     
         @include breakpoint($tablet, $no-query: true) {
-            margin: .25em 0 1em; font: 1.125em/1 "ProximaNovaRegular", Arial, Helvetica, sans-serif;
+            display: block; margin: .25em 0 1em; font: 1.125em/1 "ProximaNovaRegular", Arial, Helvetica, sans-serif;
         }
         @include breakpoint($desktop, $no-query: true) {
             font-size: 1.5em;
@@ -90,9 +88,7 @@ body {}
         
         padding: 0 10%; margin: 0 0 1em; text-align: center;
         
-        @include breakpoint($tablet, $no-query: true) {
-            float: left; width: 33.646%; padding: 0; margin: 0 0 1em;
-        }
+        @include breakpoint($tablet, $no-query: true) { float: left; width: 33.646%; padding: 0; margin: 0 0 1em; }
     
     }
 
@@ -100,12 +96,8 @@ body {}
         
         margin: 0; font-size: 1.75em; line-height: 1; text-align: center;
     
-        @include breakpoint($tablet, $no-query: true) {
-            float: right; width: 54.167%; font-size: 2.25em; text-align: left;
-        }
-        @include breakpoint($desktop, $no-query: true) {
-            font-size: 3.75em;
-        }
+        @include breakpoint($tablet, $no-query: true) { float: right; width: 54.167%; font-size: 2.25em; text-align: left; }
+        @include breakpoint($desktop, $no-query: true) { font-size: 3.75em; }
     
     }
 
@@ -113,95 +105,101 @@ body {}
         
         margin: 0 0 1em; color: #718a94; font: normal 1.25em/1.25 "ProximaNovaRegular", Arial, Helvetica, sans-serif; text-align: center;
     
-        @include breakpoint($tablet, $no-query: true) {
-            float: right; width: 54.167%; font-size: 1.25em; text-align: left;
-        }
-        @include breakpoint($desktop, $no-query: true) {
-            font-size: 1.5em;
-        }
+        @include breakpoint($tablet, $no-query: true) { float: right; width: 54.167%; font-size: 1.25em; text-align: left; }
+        @include breakpoint($desktop, $no-query: true) { font-size: 1.5em; }
     
     }	
 
 
 // Footer
 //==================================================================*/
-.footer-container { padding: 6.25%; text-align: center; }
-	.footer-container footer {}
-	
-		/* Contact Callout */
-		.contact-callout {
+.footer-container {
+    padding: 6.25%; text-align: center;
+
+    @include breakpoint($desktop, $no-query: true) { padding: 2em 0; }
+    
+    q {
         
-            padding: 6.25% 0; margin: 0 0 1.875em; background: #151e21; border-top: .625em solid #e8edef;
+        margin: 0 0 2.875em; color: #35454c; font: 1.2em/1.222 "ProximaNovaThin", Arial, Helvetica, sans-serif;
+    
+        @include breakpoint($tablet, $no-query: true) { font-size: 1.5em; }
+    
+    }
+	q + p { margin-top: .5em; }
+	small { color: #ccc; font-size: .875em; }
+	.logo { text-align: center; }
+	.logo a { display: inline-block; width: 51px; height: 50px; background: url('../img/l_logo-footer.png') no-repeat 0 0; text-indent: -9000em; }
+    
+    // Contact Callout
+	//--------------------------------------------------------------*/
+    .contact-callout {
+        
+        padding: 6.25% 0; margin: 0 0 1.875em; background: #151e21; border-top: .625em solid #e8edef;
             
-            @include breakpoint($tablet, $no-query: true) { padding: 3% 0; }
-            @include breakpoint($desktop, $no-query: true) { padding: 1.5em 1.875em; overflow: hidden; }
+        @include breakpoint($tablet, $no-query: true) { padding: 3% 0; }
+        @include breakpoint($desktop, $no-query: true) { padding: 1.5em 1.875em; overflow: hidden; }
 
+        hgroup {
+            
+            @include breakpoint($desktop, $no-query: true) { float: left; width: 462px; text-align: left; }
+        
         }
-			.contact-callout hgroup {
-                
-                @include breakpoint($desktop, $no-query: true) { float: left; width: 462px; text-align: left; }
+        h2 {
             
-            }
-            .contact-callout h2 {
-                
-                margin: 0; color: #fff;
+            margin: 0; color: #fff;
 
-                @include breakpoint($tablet, $no-query: true) { font-size: 2.25em; }
-            }
-			.contact-callout h3 { margin: 0 0 .5em; color: #718a94; }
-			.contact-callout ul { padding: 0; margin: 0 0 .5em; list-style: none; }
-				.contact-callout li { display: inline-block; width: 48px; height: 48px; background: #0e1618 url(../img/sp_social-media.png) no-repeat;
-					-moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px;
-					-moz-transition: .25s linear background-color; -webkit-transition: .25s linear background-color; transition: .25s linear background-color;
-				}
-				
-					.contact-callout li.facebook { background-position: 0 0; }
-					.contact-callout li.twitter { background-position: 0 -48px; }
-					.contact-callout li.dribbble { background-position: 0 -96px; }
-					.contact-callout li.linkedin { background-position: 0 -144px; }
-					
-					.contact-callout li.facebook:hover { background-color: #3a589c; }
-					.contact-callout li.twitter:hover { background-color: #39bce8; }
-					.contact-callout li.dribbble:hover { background-color: #ff55b1; }
-					.contact-callout li.linkedin:hover { background-color: #3392c5; }
-					
-				.contact-callout li:hover { background-color: #718a94; }
-				
-				.contact-callout li a { display: block; width: 100%; height: 100%; text-indent: -9000em; }
-			.contact-callout .button { display: inline-block; width: 71.429%; padding: .95em 2em .75em; background: #718a94 url('../img/bg_contact-arrow.png') no-repeat 95% 50%; color: #fff; font: 1.125em/1 "ProximaNovaBold", Arial, Helvetica, sans-serif; text-align: left; text-transform: uppercase; text-decoration: none;
-				-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;
-				-webkit-border-radius: 5px; -moz-border-radius: 5px; border-radius: 5px;
-				-moz-transition: .25s linear background-color; -webkit-transition: .25s linear background-color; transition: .25s linear background-color;
-			}
-			.contact-callout .button:hover { background-color: #df3952; }
+            @include breakpoint($tablet, $no-query: true) { font-size: 2.25em; }
+        
+        }
+        h3 {
+            
+            margin: 0 0 .5em; color: #718a94;
+        
+            @include breakpoint($tablet, $no-query: true) { font-size: 1.5em; }
+        
+        }
+        ul {
+            
+            padding: 0; margin: 0 0 .5em; list-style: none;
+        
+            @include breakpoint($tablet, $no-query: true) { display: inline-block; width: 45%; }
+            @include breakpoint($desktop, $no-query: true) { float: left; width: auto; margin: 1.25em 2em 0 0; }
+        
+        }
+        li {
+            
+            display: inline-block; width: 48px; height: 48px; background: #0e1618 url(../img/sp_social-media.png) no-repeat;
+            @include border-radius(5px);
+            @include transition(.25s linear background-color);
+        
+        }
+        li.facebook { background-position: 0 0; }
+        li.twitter { background-position: 0 -48px; }
+        li.dribbble { background-position: 0 -96px; }
+        li.linkedin { background-position: 0 -144px; }
+        li a { display: block; width: 100%; height: 100%; text-indent: -9000em; }
+        .button {
+            
+            display: inline-block; width: 71.429%; padding: .95em 2em .75em; background: #718a94 url('../img/bg_contact-arrow.png') no-repeat 95% 50%; color: #fff; font: 1.125em/1 "ProximaNovaBold", Arial, Helvetica, sans-serif; text-align: left; text-transform: uppercase; text-decoration: none;
+            @include border-radius(5px);
+            @include transition(.25s linear background-color);
+            
+            @include breakpoint($tablet, $no-query: true) { position: relative; top: .75em; width: 35%; }
+            @include breakpoint($desktop, $no-query: true) { top: .438em; float: left; width: 200px; margin-top: .75em; clear: none; }
 		
-	.footer-container q { margin: 0 0 2.875em; color: #35454c; font: 1.2em/1.222 "ProximaNovaThin", Arial, Helvetica, sans-serif; }
-	.footer-container q + p { margin-top: .5em; }
-	.footer-container small { color: #ccc; font-size: .875em; }
-	.footer-container .logo { text-align: center; }
-	.footer-container .logo a { display: inline-block; width: 51px; height: 50px; background: url('../img/l_logo-footer.png') no-repeat 0 0; text-indent: -9000em; }
+        }
+        
+        // Hover
+        li:hover { background-color: #718a94; }
+        li.facebook:hover { background-color: #3a589c; }
+        li.twitter:hover { background-color: #39bce8; }
+        li.dribbble:hover { background-color: #ff55b1; }
+        li.linkedin:hover { background-color: #3392c5; }
+        .button:hover { background-color: #df3952; }
+    
+    }
 
-
-/* Footer (tablet)
-	-----------------------------------------------------------------------------*/
-	
-		/* Contact Callout */
-			.contact-callout h3 { font-size: 1.5em; }
-		.contact-callout ul { display: inline-block; width: 45%; }
-		.contact-callout .button { position: relative; top: .75em; width: 35%; }
-		
-	.footer-container q { font-size: 1.5em; }
-
-
-/* Footer (desktop)
-	-----------------------------------------------------------------------------*/
-	.footer-container { padding: 2em 0; }
-	
-		/* Contact Callout */
-			.contact-callout h3 {}
-		.contact-callout ul { float: left; width: auto; margin: 1.25em 2em 0 0; }
-		.contact-callout .button { top: .438em; float: left; width: 200px; margin-top: .75em; clear: none; }
-
+}
 
 
 /* Media Queries
