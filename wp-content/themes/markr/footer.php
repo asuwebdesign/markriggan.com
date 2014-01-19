@@ -34,7 +34,7 @@
         </section>
         <?php endif; ?>
 
-        <q>&#8220;<?php echo $featured_quote; ?>&#8221;</q>
+        <q><?php echo $featured_quote; ?></q>
         <p><small><?php echo $copyright_information; ?></small></p>
 
         <div class="logo"><a href="/" title="Back to the Home Page">Back to Home</a></div>

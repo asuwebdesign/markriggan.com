@@ -1534,204 +1534,186 @@ img[src*="googleadservices.com"] {
  *==================================================================*/
 /* Process Page
 =================================================================================================== */
-/* line 10, sass/components/_page-process.scss */
+@media (min-width: 481px) {
+  /* line 11, sass/components/_page-process.scss */
+  .page-process .entry-figure {
+    width: 45%;
+    margin-right: .5em; } }
+@media (min-width: 1025px) {
+  /* line 11, sass/components/_page-process.scss */
+  .page-process .entry-figure {
+    width: 411px;
+    margin-bottom: 2em; } }
+/* line 17, sass/components/_page-process.scss */
 .page-process .entry-title {
   margin: 0; }
-
-/* line 11, sass/components/_page-process.scss */
+  @media (min-width: 481px) {
+    /* line 17, sass/components/_page-process.scss */
+    .page-process .entry-title {
+      width: 45%;
+      margin-top: 2.5em; } }
+  @media (min-width: 1025px) {
+    /* line 17, sass/components/_page-process.scss */
+    .page-process .entry-title {
+      width: 50%;
+      margin-top: 2em; } }
+/* line 25, sass/components/_page-process.scss */
 .page-process .entry-subtitle {
   margin: 0 0 2em;
   color: #718a94;
   font: 1.5em/1 "ProximaNovaRegular", Arial, Helvetica, sans-serif;
   text-align: center; }
-
-/* line 13, sass/components/_page-process.scss */
-.my-process {
+  @media (min-width: 481px) {
+    /* line 25, sass/components/_page-process.scss */
+    .page-process .entry-subtitle {
+      width: 45%; } }
+  @media (min-width: 1025px) {
+    /* line 25, sass/components/_page-process.scss */
+    .page-process .entry-subtitle {
+      width: 50%; } }
+/* line 36, sass/components/_page-process.scss */
+.page-process .my-process {
   padding: 0;
   margin: 0;
   list-style: none; }
-
-/* line 14, sass/components/_page-process.scss */
-.my-process li {
+  @media (min-width: 481px) {
+    /* line 36, sass/components/_page-process.scss */
+    .page-process .my-process {
+      letter-spacing: -4px; } }
+  @media (min-width: 1025px) {
+    /* line 36, sass/components/_page-process.scss */
+    .page-process .my-process {
+      margin-left: 81px; } }
+/* line 44, sass/components/_page-process.scss */
+.page-process .my-process li {
   padding: 10%;
   margin: 1em 0 0;
   background: #f5f8f9;
   -moz-border-radius: 5px;
   -webkit-border-radius: 5px;
   border-radius: 5px; }
-
-/* line 17, sass/components/_page-process.scss */
-.my-process li h2 {
+  @media (min-width: 481px) {
+    /* line 44, sass/components/_page-process.scss */
+    .page-process .my-process li {
+      float: left;
+      width: 47.5%;
+      padding: 5%;
+      margin-left: 5%;
+      letter-spacing: normal; } }
+  @media (min-width: 1025px) {
+    /* line 44, sass/components/_page-process.scss */
+    .page-process .my-process li {
+      width: 393px;
+      padding: 40px;
+      margin-left: 12px; } }
+@media (min-width: 481px) {
+  /* line 53, sass/components/_page-process.scss */
+  .page-process .my-process li:nth-child(2n+1) {
+    margin-left: 0;
+    clear: left; } }
+/* line 58, sass/components/_page-process.scss */
+.page-process .my-process li h2 {
   padding: 0;
   margin: 0;
   line-height: 2; }
-
-/* line 19, sass/components/_page-process.scss */
-.my-process li.discover h2 {
+  @media (min-width: 481px) {
+    /* line 58, sass/components/_page-process.scss */
+    .page-process .my-process li h2 {
+      margin: 0 0 1em; } }
+/* line 65, sass/components/_page-process.scss */
+.page-process .my-process li.discover h2 {
   padding-top: 128px;
   background: url("../img/bg_discover.jpg") no-repeat 50% 0; }
-
-/* line 20, sass/components/_page-process.scss */
-.my-process li.plan h2 {
+  @media (min-width: 1025px) {
+    /* line 65, sass/components/_page-process.scss */
+    .page-process .my-process li.discover h2 {
+      padding: 0 0 0 141px;
+      background-position: -10px 0;
+      line-height: 118px; } }
+/* line 72, sass/components/_page-process.scss */
+.page-process .my-process li.plan h2 {
   padding-top: 122px;
   background: url("../img/bg_strategize.jpg") no-repeat 50% 0; }
-
-/* line 21, sass/components/_page-process.scss */
-.my-process li.create h2 {
+  @media (min-width: 1025px) {
+    /* line 72, sass/components/_page-process.scss */
+    .page-process .my-process li.plan h2 {
+      padding: 0 0 0 156px;
+      background-position: 0 0;
+      line-height: 112px; } }
+/* line 79, sass/components/_page-process.scss */
+.page-process .my-process li.create h2 {
   padding-top: 115px;
   background: url("../img/bg_create.jpg") no-repeat 50% 0; }
-
-/* line 22, sass/components/_page-process.scss */
-.my-process li.implement h2 {
+  @media (min-width: 1025px) {
+    /* line 79, sass/components/_page-process.scss */
+    .page-process .my-process li.create h2 {
+      padding: 0 0 0 152px;
+      background-position: 0 0;
+      line-height: 105px; } }
+/* line 86, sass/components/_page-process.scss */
+.page-process .my-process li.implement h2 {
   padding-top: 122px;
   background: url("../img/bg_construct.jpg") no-repeat 50% 0; }
-
-/* line 23, sass/components/_page-process.scss */
-.my-process li.measure h2 {
+  @media (min-width: 1025px) {
+    /* line 86, sass/components/_page-process.scss */
+    .page-process .my-process li.implement h2 {
+      padding: 0 0 0 163px;
+      background-position: 0 0;
+      line-height: 112px; } }
+/* line 93, sass/components/_page-process.scss */
+.page-process .my-process li.measure h2 {
   padding-top: 95px;
   background: url("../img/bg_measure.jpg") no-repeat 50% 0; }
-
-/* line 24, sass/components/_page-process.scss */
-.my-process li.evolve h2 {
+  @media (min-width: 1025px) {
+    /* line 93, sass/components/_page-process.scss */
+    .page-process .my-process li.measure h2 {
+      padding: 0 0 0 165px;
+      background-position: 0 0;
+      line-height: 85px; } }
+/* line 100, sass/components/_page-process.scss */
+.page-process .my-process li.evolve h2 {
   padding-top: 128px;
   background: url("../img/bg_evolve.jpg") no-repeat 50% 0; }
-
-/* line 26, sass/components/_page-process.scss */
-.my-process li p {
+  @media (min-width: 1025px) {
+    /* line 100, sass/components/_page-process.scss */
+    .page-process .my-process li.evolve h2 {
+      padding: 0 0 0 111px;
+      background-position: 0 0;
+      line-height: 118px; } }
+/* line 107, sass/components/_page-process.scss */
+.page-process .my-process li p {
   padding: 0;
   margin: 0; }
-
-/* Process Page
-=================================================================================================== */
-/* line 33, sass/components/_page-process.scss */
-.page-process .entry-figure {
-  width: 45%;
-  margin-right: .5em; }
-
-/* line 34, sass/components/_page-process.scss */
-.page-process .entry-title {
-  width: 45%;
-  margin-top: 2.5em; }
-
-/* line 35, sass/components/_page-process.scss */
-.page-process .entry-subtitle {
-  width: 45%; }
-
-@media all and (min-width: 767px) {
-  /* line 38, sass/components/_page-process.scss */
-  .my-process {
-    letter-spacing: -4px; }
-
-  /* line 39, sass/components/_page-process.scss */
-  .my-process li {
-    float: left;
-    width: 47.5%;
-    padding: 5%;
-    margin-left: 5%;
-    letter-spacing: normal;
-    -moz-box-sizing: border-box;
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box; }
-
-  /* line 42, sass/components/_page-process.scss */
-  .my-process li:nth-child(2n+1) {
-    margin-left: 0;
-    clear: left; } }
-/* Process Page
-=================================================================================================== */
-/* line 51, sass/components/_page-process.scss */
-.page-process .entry-figure {
-  width: 411px;
-  margin-bottom: 2em; }
-
-/* line 52, sass/components/_page-process.scss */
-.page-process .entry-title {
-  width: 50%;
-  margin-top: 2em; }
-
-/* line 53, sass/components/_page-process.scss */
-.page-process .entry-subtitle {
-  width: 50%; }
-
-/* line 55, sass/components/_page-process.scss */
-.my-process {
-  margin-left: 81px; }
-
-/* line 56, sass/components/_page-process.scss */
-.my-process li {
-  width: 393px;
-  padding: 40px;
-  margin-left: 12px; }
-
-/* line 58, sass/components/_page-process.scss */
-.my-process li h2 {
-  margin: 0 0 1em; }
-
-/* line 60, sass/components/_page-process.scss */
-.my-process li.discover h2 {
-  padding: 0 0 0 141px;
-  background-position: -10px 0;
-  line-height: 118px; }
-
-/* line 61, sass/components/_page-process.scss */
-.my-process li.plan h2 {
-  padding: 0 0 0 156px;
-  background-position: 0 0;
-  line-height: 112px; }
-
-/* line 62, sass/components/_page-process.scss */
-.my-process li.create h2 {
-  padding: 0 0 0 152px;
-  background-position: 0 0;
-  line-height: 105px; }
-
-/* line 63, sass/components/_page-process.scss */
-.my-process li.implement h2 {
-  padding: 0 0 0 163px;
-  background-position: 0 0;
-  line-height: 112px; }
-
-/* line 64, sass/components/_page-process.scss */
-.my-process li.measure h2 {
-  padding: 0 0 0 165px;
-  background-position: 0 0;
-  line-height: 85px; }
-
-/* line 65, sass/components/_page-process.scss */
-.my-process li.evolve h2 {
-  padding: 0 0 0 111px;
-  background-position: 0 0;
-  line-height: 118px; }
 
 /* Media Queries
 =================================================================================================== */
 @media all and (-webkit-min-device-pixel-ratio: 2) {
-  /* line 74, sass/components/_page-process.scss */
+  /* line 116, sass/components/_page-process.scss */
   .my-process li.discover h2 {
     background-image: url("../img/bg_discover2x.jpg");
     background-size: 131px auto; }
 
-  /* line 75, sass/components/_page-process.scss */
+  /* line 117, sass/components/_page-process.scss */
   .my-process li.plan h2 {
     background-image: url("../img/bg_strategize2x.jpg");
     background-size: 136px auto; }
 
-  /* line 76, sass/components/_page-process.scss */
+  /* line 118, sass/components/_page-process.scss */
   .my-process li.create h2 {
     background-image: url("../img/bg_create2x.jpg");
     background-size: 132px auto; }
 
-  /* line 77, sass/components/_page-process.scss */
+  /* line 119, sass/components/_page-process.scss */
   .my-process li.implement h2 {
     background-image: url("../img/bg_construct2x.jpg");
     background-size: 143px auto; }
 
-  /* line 78, sass/components/_page-process.scss */
+  /* line 120, sass/components/_page-process.scss */
   .my-process li.measure h2 {
     background-image: url("../img/bg_measure2x.jpg");
     background-size: 145px auto; }
 
-  /* line 79, sass/components/_page-process.scss */
+  /* line 121, sass/components/_page-process.scss */
   .my-process li.evolve h2 {
     background-image: url("../img/bg_evolve2x.jpg");
     background-size: 91px auto; } }
