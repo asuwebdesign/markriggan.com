@@ -6,14 +6,14 @@
 
 /* Contact Page
 =================================================================================================== */
-
-.page-contact {}
-.page-contact input[type="submit"] { -moz-border-radius: 5px; -webkit-border-radius: 5px; border-radius: 5px; }
-
-
-	/* Contact 7 Plugin
-	-----------------------------------------------------------------------------*/
-	.wpcf7 { padding: 10% 5% 5%; background: #e5eaec url('../img/bg_contact-form.png') repeat-x 50% 0; }
+.page-contact {
+    
+    input[type="submit"] { @include border-radius(5px); }
+    
+    
+    // Contact 7 Plugin
+	//--------------------------------------------------------------*/
+    .wpcf7 { padding: 10% 5% 5%; background: #e5eaec url('../img/bg_contact-form.png') repeat-x 50% 0; }
 	.wpcf7 br { display: none; }
 	
 	.wpcf7-not-valid-tip-no-ajax,
@@ -23,11 +23,11 @@
 		/* Warning	*/	.wpcf7-response-output.wpcf7-validation-errors { background: #ffb61a; }	
 		/* Error	*/	.wpcf7-not-valid-tip-no-ajax { margin-top: 0; background: #d93d23; text-align: left; }		
 		/* Success	*/	.wpcf7-response-output.wpcf7-mail-sent-ok { background: #39b54a; }
-
-
-	/* Social Media
-	-----------------------------------------------------------------------------*/
-	.social-follow { text-align: center; }
+    
+    
+    // Social Media
+	//--------------------------------------------------------------*/
+    .social-follow { text-align: center; }
 	.social-follow h3 { padding: 0 5%; color: #718a94; font-family: "ProximaNovaRegular", Arial, Helvetica, sans-serif; }
 	.social-follow ul { padding: 0; margin: 0; list-style: none; }
 	.social-follow li { margin: 0 0 1em; }
@@ -41,10 +41,13 @@
 		.social-follow .twitter em { background-position: 50% -125px; }
 		.social-follow .dribbble em { background-position: 50% -245px; }
 		.social-follow .linkedin em { background-position: 50% -365px; }
+    
+}
 
 
 
-/* Contact Page
+
+/* Contact Page - tablet
 =================================================================================================== */
 
 .page-contact {}
@@ -75,7 +78,7 @@
 	.social-follow li em { position: absolute; top: 0; left: 0; margin-left: 0; }
 
 
-/* Contact Page
+/* Contact Page - desktop
 =================================================================================================== */
 
 .page-contact .main.wrapper { width: 798px; }

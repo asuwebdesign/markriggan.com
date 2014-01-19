@@ -56,6 +56,8 @@
 
 			<?php else : ?>
 			<?php endif; ?>
+            
+            <?php get_template_part( 'latest', 'projects'); ?>
 						
 		</div>
 	</div>	

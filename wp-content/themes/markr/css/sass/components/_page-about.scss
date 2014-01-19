@@ -6,72 +6,77 @@
 
 /* About Page
 =================================================================================================== */
+.page-about {
+    
+    .entry-figure {
+    
+        @include breakpoint($desktop, $no-query: true) { width: 393px; }
+    
+    }
+    .entry-title {
+        
+        @include breakpoint($desktop, $no-query: true) { margin: 1.25em 0 .1em; }
+        
+    }
+    .entry-content {
+        
+        @include breakpoint($desktop, $no-query: true) { float: left; width: 474px; }
+        
+    }
+    .entry-content h2 { text-transform: none; }
+    .entry-subcontent {
+        
+        @include breakpoint($desktop, $no-query: true) { float: right; width: 393px; }
+    
+    }
+    
+    
+    // Focused Skills
+	//--------------------------------------------------------------*/
+    .skills {
+        
+        margin: 0 0 1em; background: #f4f8f9;
+    
+        @include breakpoint($tablet, $no-query: true) { float: left; width: 47.5%; margin: 0 0 2em; }
+        @include breakpoint($desktop, $no-query: true) { float: none; width: 100%; }
+    
+        h2 { padding: 1em 0; margin: 0; background: #3f5056; border-top: 6px solid #222d31; color: #fff; font: normal 1.125em/1 "ProximaNovaSemibold", Arial, Helvetica, sans-serif; text-transform: uppercase; text-align: center; }        
+        h3 { margin-bottom: 0; }
+        p { margin-top: 0; }
+        ul { padding: 1em; margin: 0; list-style: none; }
+        li { padding-left: 70px; }
+        .design { background: url('../img/i_visual-design.png') no-repeat 0 0; }
+		.development { background: url('../img/i_development.png') no-repeat 5px 0; }
+		.ux { background: url('../img/i_userexperience.png') no-repeat 3px 0; }
+		.mobile { background: url('../img/i_mobile.png') no-repeat 9px 0; }
+        
+    }
+    
+    
+    // Selected Awards
+	//--------------------------------------------------------------*/
+    .awards {
+        
+        margin: 0 0 3em; background: #f4f8f9;
+        
+        @include breakpoint($tablet, $no-query: true) { float: right; width: 47.5%; margin: 0 0 2em; }
+        @include breakpoint($desktop, $no-query: true) { float: none; width: 100%; }
+        
+        h2 { padding: 1em 0; margin: 0; background: #fd7400; border-top: 6px solid #fc5400; color: #fff; font: normal 1.125em/1 "ProximaNovaSemibold", Arial, Helvetica, sans-serif; text-transform: uppercase; text-align: center; }
+        ul { padding: 1em; margin: 0; list-style: none; text-align: center; }
+        li {
+            
+            margin-top: 1em;
+        
+            @include breakpoint($desktop, $no-query: true) { float: left; width: 50%; margin-top: 1em; }
+        
+        }
+        li:first-child { margin: 0; }
+        figure { padding: 5% 10%; }
+        
+    }
 
-.page-about .entry-content h2 { text-transform: none; }
-
-	/* Focused Skills
-	-----------------------------------------------------------------------------*/
-	.page-about .skills { margin: 0 0 1em; background: #f4f8f9; }
-	.page-about .skills h2 { padding: 1em 0; margin: 0; background: #3f5056; border-top: 6px solid #222d31; color: #fff; font: normal 1.125em/1 "ProximaNovaSemibold", Arial, Helvetica, sans-serif; text-transform: uppercase; text-align: center; }
-	.page-about .skills h3 { margin-bottom: 0; }
-	.page-about .skills p { margin-top: 0; }
-	.page-about .skills ul { padding: 1em; margin: 0; list-style: none; }
-	.page-about .skills li { padding-left: 70px; }
-		.page-about .skills .design { background: url('../img/i_visual-design.png') no-repeat 0 0; }
-		.page-about .skills .development { background: url('../img/i_development.png') no-repeat 5px 0; }
-		.page-about .skills .ux { background: url('../img/i_userexperience.png') no-repeat 3px 0; }
-		.page-about .skills .mobile { background: url('../img/i_mobile.png') no-repeat 9px 0; }
-
-	/* Selected Awards
-	-----------------------------------------------------------------------------*/
-	.page-about .awards { margin: 0 0 3em; background: #f4f8f9; }
-	.page-about .awards h2 { padding: 1em 0; margin: 0; background: #fd7400; border-top: 6px solid #fc5400; color: #fff; font: normal 1.125em/1 "ProximaNovaSemibold", Arial, Helvetica, sans-serif; text-transform: uppercase; text-align: center; }
-	.page-about .awards ul { padding: 1em; margin: 0; list-style: none; text-align: center; }
-	.page-about .awards li { margin-top: 1em; }
-	.page-about .awards li:first-child { margin: 0; }
-	.page-about .awards figure { padding: 5% 10%; }
-
-
-/* About Page
-=================================================================================================== */
-
-	@media all and (min-width: 767px) {
-	
-		.page-about .skills { float: left; width: 47.5%; margin: 0 0 2em; }
-		.page-about .awards { float: right; width: 47.5%; margin: 0 0 2em; }
-	
-	}
-
-
-
-/* About Page
-=================================================================================================== */
-
-.page-about .entry-figure { width: 393px; }
-.page-about .entry-title { margin: 1.25em 0 .1em; }
-.page-about .entry-subtitle {}
-.page-about .entry-content { float: left; width: 474px; }
-.page-about .entry-subcontent { float: right; width: 393px; }
-
-	/* Focused Skills
-	-----------------------------------------------------------------------------*/
-	.page-about .skills { float: none; width: 100%; }
-	.page-about .skills h2 { padding: 1em 0; margin: 0; background: #3f5056; border-top: 6px solid #222d31; color: #fff; font: normal 1.125em/1 "ProximaNovaSemibold", Arial, Helvetica, sans-serif; text-transform: uppercase; text-align: center; }
-	.page-about .skills h3 { margin-bottom: 0; }
-	.page-about .skills p { margin-top: 0; }
-	.page-about .skills ul { padding: 1em; margin: 0; list-style: none; }
-	.page-about .skills li { padding-left: 70px; }
-		.page-about .skills .design { background: url('../img/i_visual-design.png') no-repeat 0 0; }
-		.page-about .skills .development { background: url('../img/i_development.png') no-repeat 5px 0; }
-		.page-about .skills .ux { background: url('../img/i_userexperience.png') no-repeat 3px 0; }
-		.page-about .skills .mobile { background: url('../img/i_mobile.png') no-repeat 9px 0; }
-
-	/* Selected Awards
-	-----------------------------------------------------------------------------*/
-	.page-about .awards { float: none; width: 100%; }
-	.page-about .awards li { float: left; width: 50%; margin-top: 1em; }
-	
-
+}
 
 
 /* Media Queries
