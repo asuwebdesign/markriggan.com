@@ -7,19 +7,14 @@
 <!--<![endif]-->
 
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
-    <title><?php wp_title(''); ?></title>
+	<title><?php wp_title(''); ?></title>
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-    <!-- Stylesheets -->
-    <?php /*<link rel="stylesheet" href="<?php bloginfo( 'template_directory' ); ?>/css/base.css" media="screen, handheld">
-    <link rel="stylesheet" href="<?php bloginfo( 'template_directory' ); ?>/css/mobile.css" media="only screen and (min-width: 481px)">
-    <link rel="stylesheet" href="<?php bloginfo( 'template_directory' ); ?>/css/desktop.css" media="only screen and (min-width: 1025px)"> */?>
-
-    <!--[if !IE 8]><!-->
+	<!--[if !IE 8]><!-->
 	<link rel="stylesheet" href="<?php bloginfo( 'template_directory' ); ?>/css/style.css">
 	<!--<![endif]-->
 
@@ -34,59 +29,62 @@
 
 	<link rel="stylesheet" href="css/print.css" media="print" />
 
-    <link rel="apple-touch-icon-precomposed" href="<?php bloginfo( 'template_directory' ); ?>/touch-icon-iphone.png" />
+	<link rel="apple-touch-icon-precomposed" href="<?php bloginfo( 'template_directory' ); ?>/touch-icon-iphone.png" />
 	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php bloginfo( 'template_directory' ); ?>/touch-icon-ipad.png" />
 	<link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php bloginfo( 'template_directory' ); ?>/touch-icon-iphone-retina.png" />
 	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="<?php bloginfo( 'template_directory' ); ?>/touch-icon-ipad-retina.png" />
 	<link rel="shortcut icon" href="<?php bloginfo( 'template_directory' ); ?>/favicon.png">
-    
+	
 	<script>document.cookie='resolution='+Math.max(screen.width,screen.height)+'; path=/';</script>
 	<!--<script>document.cookie='resolution='+Math.max(screen.width,screen.height)+("devicePixelRatio" in window ? ","+devicePixelRatio : ",1")+'; path=/';</script>-->
-    
-    <script src="<?php bloginfo( 'template_directory' ); ?>/js/vendors/modernizr.custom.js"></script>
+	
+	<script src="<?php bloginfo( 'template_directory' ); ?>/js/vendors/modernizr.custom.js"></script>
 
-    <script type="text/javascript">
-        var _gaq = _gaq || [];
-        	  _gaq.push(['_setAccount', 'UA-34177245-1']);
-        	  _gaq.push(['_trackPageview']);
-        	
-        	  (function() {
-        	    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-        	    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-        	    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-        	  })();
-    </script>
-    <?php wp_head(); ?>
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+			  _gaq.push(['_setAccount', 'UA-34177245-1']);
+			  _gaq.push(['_trackPageview']);
+			
+			  (function() {
+				var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+				ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+				var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+			  })();
+	</script>
+	<?php wp_head(); ?>
 </head>
 
+<?php
+	// stuff
+?>
+
 <body <?php body_class(); ?>>
-    <!--[if lte IE 9]>
-    <p class="chromeframe">Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p>
-    <![endif]-->
+	<!--[if lte IE 9]>
+	<p class="chromeframe">Your browser is <em>ancient!</em> <a href="http://browsehappy.com/">Upgrade to a different browser</a> or <a href="http://www.google.com/chromeframe/?redirect=true">install Google Chrome Frame</a> to experience this site.</p>
+	<![endif]-->
 
-    <div class="header-container">
-        <header class="wrapper clearfix">
-            <?php
-                $walker = new My_Walker; wp_nav_menu( array(
-                    'theme_location'  => 'global-menu',
-                    'container'       => 'nav',
-                    'container_class' => 'primary',
-                    'items_wrap'      => '<ul>%3$s</ul>',
-                    'walker'          => $walker
-                ));
-            ?>
+	<div class="header-container">
+		<header class="wrapper group">
+			<?php
+				/*$walker = new My_Walker; wp_nav_menu( array(
+					'theme_location'  => 'global-menu',
+					'container'       => 'nav',
+					'container_class' => 'primary',
+					'items_wrap'      => '<ul>%3$s</ul>',
+					'walker'          => $walker
+				));*/
+			?>
 
-            <div class="site-title"><a href="/"><?php bloginfo( 'name' ); ?></a></div>
+			<h1><a href="/"><?php bloginfo('name'); ?></a></h1>
+			<?php bloginfo('description'); ?>
 
-            <?php if ( is_front_page() ) : ?>
-                <?php
-                    $site_title     = ot_get_option( 'site_title' );
-                    $site_subtitle  = ot_get_option( 'site_subtitle' );
-                ?>
-                <hgroup>
-                    <h1><?php echo $site_title; ?></h1>
-                    <h2><?php echo $site_subtitle; ?></h2>
-                </hgroup>
-            <?php endif; ?>
-        </header>
-    </div>
+			<?php if( is_front_page() && have_posts() ) : ?>
+				<section>
+				<?php while ( have_posts() ) : the_post(); ?>
+					<?php the_content(); ?>
+				<?php endwhile; ?>
+				</section>
+			<?php else : ?>
+			<?php endif; ?>
+		</header>
+	</div>

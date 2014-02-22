@@ -1,66 +1,67 @@
+<?php /*
+	Template Name: Home Page
+	Customized Homepage Template
+*/ ?>
+
 <?php
-
-	/* Template Name: Home Page
-	   Customized Homepage Template */
-
+	$project_title      = types_render_field("recent-work-title", array( ));
+	$project_sub_title  = types_render_field("recent-work-sub-title", array( ));
+	
+	$services_title     = types_render_field("creative-services-title", array( ));
+	$services_sub_title = types_render_field("creative-services-sub-title", array( ));
+	$services_label_a   = types_render_field("creative-services-service-a-label", array( ));
+	$services_label_b   = types_render_field("creative-services-service-b-label", array( ));
+	$services_label_c   = types_render_field("creative-services-service-c-label", array( ));
+	$services_content_a = types_render_field("creative-services-service-a-content", array( ));
+	$services_content_b = types_render_field("creative-services-service-b-content", array( ));
+	$services_content_c = types_render_field("creative-services-service-c-content", array( ));
+	
+	$about_title        = types_render_field("about-me-title", array( ));
+	$about_sub_title    = types_render_field("about-me-sub-title", array( ));
+	$about_content      = types_render_field("about-me-content", array( ));
 ?>
 
 <?php get_header(); ?>
 
-	<div class="main-container">
-		<div class="main wrapper clearfix">			
-			<section id="featured-projects" class="featured-projects">
-				<h2 class="visuallyhidden">Featured Projects</h2>
-				<div id="portfolio">
-					<ul>
-						<?php
-							query_posts( array(
-								'post_type' => 'portfolio',
-								'posts_per_page' => -1
-							));
-							if ( have_posts() ) : while ( have_posts() ) : the_post();
-						?>
-						<li>
-							<article>
-								<a href="<?php the_permalink(); ?>">
-									<figure><?php echo(types_render_field("photo_grid_thumb", array(
-										"width"=>"400",
-										"height"=>"400",
-										"alt"=>"",
-										"title"=>"",
-										"proportional"=>"true"
-									))); ?>
-									</figure>
-									<h3><?php echo(types_render_field("photo_grid_label", array())); ?></h3>
-									<p><?php echo(types_render_field("photo_grid_cat", array())); ?></p>									
-								</a>
-							</article>
-						</li>
-						<?php endwhile; endif; wp_reset_query(); ?>
-					</ul>
-				</div>
-			</section>
-			
-			<section class="skillset">
-				<figure><?php echo(types_render_field("block_1_graphic", array())); ?></figure>
-				<h2><?php echo(types_render_field("block_1_title", array())); ?></h2>
-				<?php echo(types_render_field("block_1_content", array())); ?>
-			</section>
-			
-			<section class="creative-process">
-				<figure><?php echo(types_render_field("block_2_graphic", array())); ?></figure>
-				<h2><?php echo(types_render_field("block_2_title", array())); ?></h2>
-				<?php echo(types_render_field("block_2_content", array())); ?>
-				<a href="<?php echo(types_render_field("block_2_link_url", array( "raw" => 'true' ))); ?>"><?php echo(types_render_field("block_2_link_text", array())); ?></a>
-			</section>			
-			
-			<section class="about-me">				
-				<figure><?php echo(types_render_field("block_3_graphic", array())); ?></figure>
-				<h2><?php echo(types_render_field("block_3_title", array())); ?></h2>
-				<?php echo(types_render_field("block_3_content", array())); ?>
-				<a href="<?php echo(types_render_field("block_3_link_url", array( "raw" => 'true' ))); ?>"><?php echo(types_render_field("block_3_link_text", array())); ?></a>
-			</section>			
-		</div>
+	<div class="content-container">
+		<section class="projects">
+			<div class="wrapper group">
+				<h1><?php echo $project_title; ?></h1>
+				<h2><?php echo $project_sub_title; ?></h2>
+			</div>
+		</section>
+		<section class="services">
+			<div class="wrapper group">
+				<h1><?php echo $services_title; ?></h1>
+				<h2><?php echo $services_sub_title; ?></h2>
+
+				<ul>
+					<li><?php echo $services_label_a; ?></li>
+					<li><?php echo $services_label_b; ?></li>
+					<li><?php echo $services_label_c; ?></li>
+				</ul>
+
+				<section>
+					<?php echo $services_content_a; ?>
+				</section>
+
+				<section>
+					<?php echo $services_content_b; ?>
+				</section>
+
+				<section>
+					<?php echo $services_content_c; ?>
+				</section>
+
+			</div>
+		</section>
+		<section class="about">
+			<div class="wrapper group">
+				<h1><?php echo $about_title; ?></h1>
+				<h2><?php echo $about_sub_title; ?></h2>
+				<?php echo $about_content; ?>
+			</div>
+		</section>
 	</div>
 	
 <?php get_footer(); ?>
