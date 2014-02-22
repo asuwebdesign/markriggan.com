@@ -1,0 +1,22 @@
+{
+    "title": "Mark Riggan",
+    "description": "Creative UX + UI Designer, Developer",
+    "author": "Mark Riggan",
+    "email": "info@markriggan.com",
+    "url": "http://www.markriggan.com",
+    "copyright": "2014",
+    "version": "2.0.0",
+    "license": "CC BY-NC-ND",
+    "devDependencies": {
+        "grunt": "~0.4.1",
+        "grunt-contrib-compass": "*",
+        "grunt-contrib-watch": "*",
+        "grunt-contrib-concat": "*",
+        "grunt-contrib-uglify": "*",
+        "grunt-contrib-cssmin": "*",
+        "grunt-contrib-imagemin": "~0.4.0",
+        "grunt-autoprefixer": "~0.4.2",
+        "matchdep": "*",
+        "grunt-bower-task": "~0.3.4"
+    }
+}
