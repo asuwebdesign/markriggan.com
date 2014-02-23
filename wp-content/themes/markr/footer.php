@@ -10,13 +10,16 @@
 <div class="footer-container">
 	<footer class="wrapper group">
 		<h1><?php echo $section_title; ?></h1>		
+		<section id="talk">
+			...form...
+		</section>
 		<section class="social-media">
 			<h1><?php echo $social_media_title; ?></h1>
 			<ul>
-				<li><a href="<?php echo $twitter_url; ?>"><i class="icon"></i> <span class="visuallyhidden">Twitter</span></a></li>
-				<li><a href="<?php echo $google_url; ?>"><i class="icon"></i> <span class="visuallyhidden">Google+</span></a></li>
-				<li><a href="<?php echo $linkedin_url; ?>"><i class="icon"></i> <span class="visuallyhidden">LinkedIn</span></a></li>
-				<li><a href="<?php echo $dribbble_url; ?>"><i class="icon"></i> <span class="visuallyhidden">Dribbble</span></a></li>
+				<li><a href="<?php echo $twitter_url; ?>"><i class="icon-twitter"></i> <span class="visuallyhidden">Twitter</span></a></li>
+				<li><a href="<?php echo $google_url; ?>"><i class="icon-gplus"></i> <span class="visuallyhidden">Google+</span></a></li>
+				<li><a href="<?php echo $linkedin_url; ?>"><i class="icon-linkedin"></i> <span class="visuallyhidden">LinkedIn</span></a></li>
+				<li><a href="<?php echo $dribbble_url; ?>"><i class="icon-dribbble"></i> <span class="visuallyhidden">Dribbble</span></a></li>
 			</ul>
 		</section>
 		<p><small><?php echo $copyright_information; ?></small></p>
@@ -24,13 +27,6 @@
 </div>
 
 <script src="<?php echo get_template_directory_uri(); ?>/js/scripts.min.js"></script>
-
-<script>
-	var _gaq=[['_setAccount','UA-XXXXX-X'],['_trackPageview']];
-		(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-		g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-		s.parentNode.insertBefore(g,s)}(document,'script'));
-</script>
 </body>
 
 </html>

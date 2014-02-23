@@ -24,13 +24,13 @@
 <?php get_header(); ?>
 
 	<div class="content-container">
-		<section class="projects">
+		<section id="projects" class="projects">
 			<div class="wrapper group">
 				<h1><?php echo $project_title; ?></h1>
 				<h2><?php echo $project_sub_title; ?></h2>
 			</div>
 		</section>
-		<section class="services">
+		<section id="services" class="services">
 			<div class="wrapper group">
 				<h1><?php echo $services_title; ?></h1>
 				<h2><?php echo $services_sub_title; ?></h2>
@@ -55,7 +55,7 @@
 
 			</div>
 		</section>
-		<section class="about">
+		<section id="about" class="about">
 			<div class="wrapper group">
 				<h1><?php echo $about_title; ?></h1>
 				<h2><?php echo $about_sub_title; ?></h2>

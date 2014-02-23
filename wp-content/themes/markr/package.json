@@ -17,6 +17,7 @@
     "grunt-contrib-imagemin": "~0.5.0",
     "grunt-autoprefixer": "~0.7.1",
     "matchdep": "~0.3.0",
-    "grunt-bower-task": "~0.3.4"
+    "grunt-bower-task": "~0.3.4",
+    "grunt-fontello": "~0.1.2"
   }
 }

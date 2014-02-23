@@ -6,34 +6,47 @@
 
 // Figures & Images
 //==================================================================*/
+
 figure {
 
-	a {}
-	a > img {}
-	a:hover > img {}
+    a {}
 
+    a > img {}
+
+    a:hover > img {}
 }
 
-img { max-width: 100%; border: 0; -ms-interpolation-mode: bicubic; vertical-align: middle; }	
-svg:not(:root) { overflow: hidden; }	
-figure { margin: 0; }
+img {
+    max-width: 100%;
+    border: 0;
+    -ms-interpolation-mode: bicubic;
+    vertical-align: middle;
+}
 
+svg:not(:root) {
+    overflow: hidden;
+}
+
+figure {
+    margin: 0;
+}
 
 // Videos
 //==================================================================*/
-video {}
 
+video {}
 
 // iFrames
 //==================================================================*/
-iframe {}
 
+iframe {}
 
 // Fresco - Customization
 //==================================================================*/
-.fr-close {}
 
+.fr-close {}
 
 // Google Maps
 //==================================================================*/
+
 .google-map img {}

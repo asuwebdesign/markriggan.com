@@ -10,25 +10,16 @@
 
 	// Media Queries
 	//--------------------------------------------------------------*/
-	$phone: 320px;						// min-width 320px
-	$tablet: 481px;						// min-width 640px
-	$desktop: 1025px;					// min-width 960px
+	$phone: 320px;
+	$tablet: 640px;
+	$desktop: 1024px;
 
 	$container_min_width: $phone;
 	$container_max_width: 960px;
 
-
-	// Grids
-	//--------------------------------------------------------------*/
-	//$columns: 12;
-	//$column_width: 60px;
-	//$gutter_width: 20px;
-
-
 	// Border Radius
 	//--------------------------------------------------------------*/
-	//$border_radius: 3px;					// set to 0 for none
-
+	$border_radius: 4px;
 
 
 // Color Settings
@@ -36,24 +27,25 @@
 
 	// Brand Specific
 	//--------------------------------------------------------------*/
-	$brand_primary: #151e21;
+	$brand_primary: #25282b;
 	$brand_secondary: #fc4349;
-	$brand_tertiary: #6dbcdb;
-
+	$brand_tertiary: #b8c1c6;
+	$brand_ui_design: #ed7032;
+	$brand_ix_design: #3cbbdc;
+	$brand_web_dev: #96c855;
+	$brand_background: #ecf0f1;
 
 	// Information and Validation
 	//--------------------------------------------------------------*/
-	$brand_info: #428bca;
+	$brand_info: $brand_ix_design;
 	$brand_error: #d9534f;
-	$brand_success: #5cb85c;
-
+	$brand_success: $brand_web_dev;
 
 	// Text and Links
 	//--------------------------------------------------------------*/
-	$text_color: #333;
+	$text_color: #1a1a1a;
 	$link_color: $brand_info;
 	$link_color_hover: darken($link_color, 15%);
-
 
 
 // Typography Settings
@@ -61,9 +53,12 @@
 
 	// Base Size (must use px value)
 	//--------------------------------------------------------------*/
+	$base_font_family: "Open Sans", Helvetica, Arial, sans-serif;
 	$base_font_size: 16px;
 	$base_line_height: 1.5;
-
+	$base_weight_reg: 400;
+	$base_weight_semibold: 600;
+	$base_weight_bold: 700;
 
 	// Headings
 	//--------------------------------------------------------------*/
@@ -82,7 +77,6 @@
 	$h5_font_size: 18px;
 	$h6_font_size: 16px;
 
-
 	// Paragraphs
 	//--------------------------------------------------------------*/
 	$paragraph_font_family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
@@ -92,17 +86,14 @@
 	$paragraph_margin_bottom: 20px;
 	$paragraph_text_rendering: optimizeLegibility;
 
-
 	// Links
 	//--------------------------------------------------------------*/
 	$link_text_decoration: none;
-
 
 	// Blockquotes
 	//--------------------------------------------------------------*/
 	$blockquote_padding: 10px 20px;
 	$blockquote_margin: 0 0 20px;
-
 
 
 // Alerts Settings
@@ -112,7 +103,6 @@
 	$alertbox_margin: 16px;
 
 
-
 // Media Settings
 //==================================================================*/
 
@@ -120,7 +110,6 @@
 	$figure_margin: 0 0 16px;
 	$figure_opacity: .9;
 	$figure_opacity_hover: 1;
-
 
 
 // Forms Settings
@@ -133,14 +122,12 @@
 	$input_focus_background: lighten($brand_tertiary, 35%);
 
 
-
 // Buttons Settings
 //==================================================================*/
 
 	$button_padding: 10px 20px;
 	$button_background: $brand_primary;
 	$button_text_color: #fff;
-
 
 
 // Table Settings
@@ -151,17 +138,14 @@
 	$table_cell_border_style: solid;
 	$table_cell_border_color: #fff;
 
-
 	// Header
 	//--------------------------------------------------------------*/
 	$table_header_background: $brand_primary;
 	$table_header_color: #fff;
 
-
 	// Zebra Stripes
 	//--------------------------------------------------------------*/
 	$table_alt_row_background: lighten($brand_primary, 70%);
-
 
 	// Footer
 	//--------------------------------------------------------------*/

@@ -20,15 +20,6 @@
 	@import "components/normalize";
 
 
-	// Import Vendors
-	//--------------------------------------------------------------*/
-	//@import "vendors/fresco";
-	//@import "vendors/footable";
-	//@import "vendors/jquery.ui.core";
-	//@import "vendors/owl.carousel";
-	//@import "vendors/owl.theme";
-
-
 	// Import Core Components
 	//--------------------------------------------------------------*/
 	@import "components/typography";
@@ -45,6 +36,15 @@
 	@import "components/panels";
 
 
+	// Import Vendors
+	//--------------------------------------------------------------*/
+	@import "vendors/fontello";
+	//@import "vendors/footable";
+	//@import "vendors/jquery.ui.core";
+	//@import "vendors/owl.carousel";
+	//@import "vendors/owl.theme";
+
+
 	// Import Animation Components
 	//--------------------------------------------------------------*/
 	@import "components/animations";
@@ -54,6 +54,3 @@
 	//--------------------------------------------------------------*/
     @import "components/type-portfolio";    
     @import "components/page-home";
-    @import "components/page-process";
-    @import "components/page-about";
-    @import "components/page-contact";
