@@ -27,7 +27,7 @@
 	<link rel="stylesheet" href="<?php bloginfo( 'template_directory' ); ?>/css/lte-ie8.css">
 	<![endif]-->
 
-	<link rel="stylesheet" href="css/print.css" media="print" />
+	<link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/print.min.css" media="print" />
 
 	<link rel="apple-touch-icon-precomposed" href="<?php bloginfo( 'template_directory' ); ?>/touch-icon-iphone.png" />
 	<link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php bloginfo( 'template_directory' ); ?>/touch-icon-ipad.png" />
@@ -35,10 +35,10 @@
 	<link rel="apple-touch-icon-precomposed" sizes="144x144" href="<?php bloginfo( 'template_directory' ); ?>/touch-icon-ipad-retina.png" />
 	<link rel="shortcut icon" href="<?php bloginfo( 'template_directory' ); ?>/favicon.png">
 	
-	<script>document.cookie='resolution='+Math.max(screen.width,screen.height)+'; path=/';</script>
-	<!--<script>document.cookie='resolution='+Math.max(screen.width,screen.height)+("devicePixelRatio" in window ? ","+devicePixelRatio : ",1")+'; path=/';</script>-->
+	<script src="<?php bloginfo( 'template_directory' ); ?>/js/modernizr.min.js"></script>
 	
-	<script src="<?php bloginfo( 'template_directory' ); ?>/js/vendors/modernizr.custom.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+	<script>window.jQuery || document.write('<script src="/wp-content/themes/markr/libs/jquery/jquery.min.js"><\/script>')</script>
 
 	<script type="text/javascript">
 		var _gaq = _gaq || [];

@@ -11,7 +11,8 @@ module.exports = function(grunt) {
             sass: ['css/sass'],
             images: ['img'],
             fonts: ['fonts'],
-            js: ['js']
+            js: ['js'],
+            libs: ['libs']
         },
 
         /**
@@ -110,6 +111,8 @@ module.exports = function(grunt) {
             },
             dist: {
                 files: {
+                    '<%= project.js %>/modernizr.min.js': ['<%= project.libs %>/modernizr/modernizr.js'],
+                    '<%= project.js %>/jquery.min.js': ['<%= project.libs %>/jquery/jquery.js'],
                     '<%= project.js %>/scripts.min.js': ['<%= project.js %>/vendors/*', '<%= project.js %>/scripts.js']
                 }
             }

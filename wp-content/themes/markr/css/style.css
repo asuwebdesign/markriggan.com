@@ -239,53 +239,6 @@ table {
  * Styles for overall typography and misc. content components.
  * (c) Atlantic BT. All Rights Reserved.
  *==================================================================*/
-/*
- * Web Fonts from fontspring.com
- *
- * All OpenType features and all extended glyphs have been removed.
- * Fully installable fonts can be purchased at http://www.fontspring.com
- *
- * The fonts included in this stylesheet are subject to the End User License you purchased
- * from Fontspring. The fonts are protected under domestic and international trademark and 
- * copyright law. You are prohibited from modifying, reverse engineering, duplicating, or
- * distributing this font software.
- *
- * (c) 2010-2011 Fontspring
- *
- * The fonts included are copyrighted by the vendor listed below.
- *
- * Vendor:      Mark Simonson Studio
- * License URL: http://www.fontspring.com/fflicense/mark-simonson-studio
- *
- */
-@font-face {
-  font-family: 'ProximaNovaThin';
-  src: url("../fonts/ProximaNova-Thin-webfont.eot");
-  src: url("../fonts/ProximaNova-Thin-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/ProximaNova-Thin-webfont.woff") format("woff"), url("../fonts/ProximaNova-Thin-webfont.ttf") format("truetype"), url("../fonts/ProximaNova-Thin-webfont.svg#ProximaNovaThin") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'ProximaNovaRegular';
-  src: url("../fonts/ProximaNova-Reg-webfont.eot");
-  src: url("../fonts/ProximaNova-Reg-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/ProximaNova-Reg-webfont.woff") format("woff"), url("../fonts/ProximaNova-Reg-webfont.ttf") format("truetype"), url("../fonts/ProximaNova-Reg-webfont.svg#ProximaNovaRegular") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'ProximaNovaSemibold';
-  src: url("../fonts/ProximaNova-Sbold-webfont.eot");
-  src: url("../fonts/ProximaNova-Sbold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/ProximaNova-Sbold-webfont.woff") format("woff"), url("../fonts/ProximaNova-Sbold-webfont.ttf") format("truetype"), url("../fonts/ProximaNova-Sbold-webfont.svg#ProximaNovaSemibold") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'ProximaNovaBold';
-  src: url("../fonts/ProximaNova-Bold-webfont.eot");
-  src: url("../fonts/ProximaNova-Bold-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/ProximaNova-Bold-webfont.woff") format("woff"), url("../fonts/ProximaNova-Bold-webfont.ttf") format("truetype"), url("../fonts/ProximaNova-Bold-webfont.svg#ProximaNovaBold") format("svg");
-  font-weight: normal;
-  font-style: normal;
-}
 html, body {
   font-family: "ProximaNovaRegular", Arial, Helvetica, sans-serif;
 }

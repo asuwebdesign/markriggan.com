@@ -20,4 +20,11 @@ function admin_icon_fix() {
   </style>';
 }
 
+/* Remove Pre-installed jQuery
+-----------------------------------------------*/
+if (!is_admin()) add_action("wp_enqueue_scripts", "remove_jquery", 11);
+function remove_jquery() {
+	wp_deregister_script('jquery');
+}
+
 ?>
