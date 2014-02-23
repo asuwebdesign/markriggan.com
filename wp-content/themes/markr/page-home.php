@@ -28,6 +28,21 @@
 			<div class="wrapper group">
 				<h1><?php echo $project_title; ?></h1>
 				<h2><?php echo $project_sub_title; ?></h2>
+
+				<?php
+					$args = array(
+						'posts_per_page' => 8,
+						'post_type'      => 'projects'
+					);
+					$myposts = get_posts( $args );
+					foreach ( $myposts as $post ) : setup_postdata( $post );
+				?>
+					<li>
+						<a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+					</li>
+				<?php
+					endforeach; wp_reset_postdata();
+				?>
 			</div>
 		</section>
 		<section id="services" class="services">

@@ -27,4 +27,16 @@ function remove_jquery() {
 	wp_deregister_script('jquery');
 }
 
+/* Remove Contact Form 7 Styles
+-----------------------------------------------*/
+add_action( 'wp_enqueue_scripts', 'wap8_wpcf7_css', 10 );
+
+function wap8_wpcf7_css() {
+	if ( !is_admin() ) {
+		if ( class_exists( 'WPCF7_ContactForm' ) ) {
+			wp_deregister_style( 'contact-form-7' );
+		}
+	}
+}
+
 ?>

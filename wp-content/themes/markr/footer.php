@@ -11,7 +11,7 @@
 	<footer class="wrapper group">
 		<h1><?php echo $section_title; ?></h1>		
 		<section id="talk">
-			...form...
+			<?php echo do_shortcode('[contact-form-7 id="4" title="General"]'); ?>
 		</section>
 		<section class="social-media">
 			<h1><?php echo $social_media_title; ?></h1>
