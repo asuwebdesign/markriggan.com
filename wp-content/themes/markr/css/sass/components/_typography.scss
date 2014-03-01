@@ -10,13 +10,13 @@
 
 // Global
 //==================================================================*/
-html, body { font-family: $base_font_family; font-weight: $base_weight_reg; }
+html, body { font-family: $base_font_family; font-weight: $base_weight_reg; -webkit-font-smoothing: antialiased; }
 hr {}
 
 
 // Headings
 //==================================================================*/
-h1, h2, h3, h4, h5, h6 { color: #35454c; font: 700 1em/1.286 "Open Sans", Arial, Helvetica, sans-serif; }
+h1, h2, h3, h4, h5, h6 { color: #1a1a1a; font: 700 1em/1.286 "Open Sans", Arial, Helvetica, sans-serif; }
 
 
 // Paragraphs

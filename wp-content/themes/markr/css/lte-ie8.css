@@ -245,10 +245,11 @@ table {
 html, body {
   font-family: "Open Sans", Helvetica, Arial, sans-serif;
   font-weight: 400;
+  -webkit-font-smoothing: antialiased;
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: #35454c;
+  color: #1a1a1a;
   font: 700 1em/1.286 "Open Sans", Arial, Helvetica, sans-serif;
 }
 
@@ -320,6 +321,46 @@ figure {
   padding: 0.2em 0;
 }
 
+.wpcf7-mail-sent-ok,
+.wpcf7-not-valid-tip,
+.wpcf7-validation-errors {
+  display: block;
+  padding: 10px;
+  padding: 0.625rem;
+}
+
+.wpcf7-mail-sent-ok {
+  background: #96c855;
+  color: #fff;
+  margin-top: 10px;
+  margin-top: 0.625rem;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+}
+
+.wpcf7-not-valid-tip {
+  color: #d9534f;
+  padding: 5px 0;
+  padding: 0.3125rem 0;
+}
+
+.wpcf7-validation-errors {
+  background: #d9534f;
+  color: #fff;
+  margin-top: 10px;
+  margin-top: 0.625rem;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+}
+
+.wpcf7-not-valid {
+  -moz-box-shadow: 0 0 0 2px #d9534f;
+  -webkit-box-shadow: 0 0 0 2px #d9534f;
+  box-shadow: 0 0 0 2px #d9534f;
+}
+
 /*==================================================================
  * Forms Partial
  * Styles for various forms and form elements.
@@ -328,6 +369,10 @@ figure {
 .field {
   margin: 0 0 10px;
   margin: 0 0 0.625rem;
+}
+
+.wpcf7-form-control-wrap {
+  display: block;
 }
 
 label {
@@ -350,6 +395,11 @@ input, textarea {
   -o-transition: all 0.25s ease-in-out;
   -webkit-transition: all 0.25s ease-in-out;
   transition: all 0.25s ease-in-out;
+}
+input:focus, textarea:focus {
+  -moz-box-shadow: 0 0 0 2px #3cbbdc;
+  -webkit-box-shadow: 0 0 0 2px #3cbbdc;
+  box-shadow: 0 0 0 2px #3cbbdc;
 }
 
 input[type="submit"] {
@@ -394,6 +444,9 @@ html, body {
 .wrapper {
   padding: 0 20px;
   padding: 0 1.25rem;
+  width: 960px;
+  padding: 0;
+  margin: 0 auto;
 }
 
 .footer-container {
@@ -401,14 +454,16 @@ html, body {
   color: #fff;
   text-align: center;
 }
-.footer-container .social-media h1 {
-  margin-bottom: 0;
+.footer-container h1 {
   color: #fff;
-  font-weight: 400;
   font-size: 24px;
   font-size: 1.5rem;
   font-size: 30px;
   font-size: 1.875rem;
+}
+.footer-container .social-media h1 {
+  margin-bottom: 0;
+  font-weight: 400;
 }
 .footer-container .social-media ul {
   padding: 0;
@@ -443,8 +498,9 @@ html, body {
 .footer-container .social-media ul .dribbble:hover a {
   color: #ea4c89;
 }
-.footer-container small {
+.footer-container .copyright {
   color: #586066;
+  line-height: 1.2;
 }
 
 /*==================================================================
@@ -608,4 +664,10 @@ img[src*="googleadservices.com"] {
 .services {
   background: #373b3f;
   color: #959595;
+}
+
+/* Section - About Me
+=================================================================================================== */
+.about {
+  background: url("../img/bg_mark-riggan.jpg") no-repeat 50% 100%;
 }

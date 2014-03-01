@@ -9,6 +9,7 @@
 .field {
 	@include rem(margin, 0 0 10px);
 }
+.wpcf7-form-control-wrap { display: block; }
 
 
 // Labels
@@ -23,6 +24,10 @@ input, textarea {
 	@include rem(padding, 16px 20px);
 	@include border-radius($border_radius);
 	@include transition(all .25s ease-in-out);
+
+	&:focus {
+		@include box-shadow(0 0 0 2px $brand_info);
+	}
 }
 input[type="submit"] {
 	background: $brand_info; text-transform: uppercase;

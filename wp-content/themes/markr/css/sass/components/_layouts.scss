@@ -14,7 +14,11 @@ html, body { background: $brand_background; }
 .footer-container { float: left; width: 100%; clear: both; }
 
 .wrapper {
-    @include rem(padding, 0 20px);
+	@include rem(padding, 0 20px);
+
+	@include breakpoint($desktop, $no-query: true) {
+		width: $container_max_width; padding: 0; margin: 0 auto;
+	}
 }
 
 
@@ -30,43 +34,50 @@ html, body { background: $brand_background; }
 //==================================================================*/
 .footer-container {
 
-    background: $brand_primary; color: #fff; text-align: center;
+	background: $brand_primary; color: #fff; text-align: center;
 
-    // Social Media
-    //--------------------------------------------------------------*/
-    .social-media {
+	h1 {
+		color: #fff;
+		@include rem(font-size, 24px);
 
-        h1 {
-            margin-bottom: 0; color: #fff; font-weight: 400;
-            @include rem(font-size, 24px);
-        
-            @include breakpoint($tablet, $no-query: true) {
-                @include rem(font-size, 30px);
-            }
-        }
-        ul {
-            padding: 0; margin: 0; list-style: none;
+		@include breakpoint($tablet, $no-query: true) {
+			@include rem(font-size, 30px);
+		}
+	}
+	
+	// Let's Talk
+	//--------------------------------------------------------------*/
+	.lets-talk {}
 
-            li {
-                @include inline-block;
-                @include rem(font-size, 32px);
-            }
-            a {
-                color: $brand_background;
-                @include transition(color .25s ease-in-out);
-            }
 
-            // Hover
-            .twitter:hover a { color: #55acee; }
-            .google:hover a { color: #dd4b39; }
-            .linkedin:hover a { color: #0e76a8; }
-            .dribbble:hover a { color: #ea4c89; }
-        }
+	// Social Media
+	//--------------------------------------------------------------*/
+	.social-media {
 
-    }
+		h1 { margin-bottom: 0; font-weight: 400; }
+		ul {
+			padding: 0; margin: 0; list-style: none;
 
-    // Copyright
-    //--------------------------------------------------------------*/
-    small { color: #586066; }
+			li {
+				@include inline-block;
+				@include rem(font-size, 32px);
+			}
+			a {
+				color: $brand_background;
+				@include transition(color .25s ease-in-out);
+			}
+
+			// Hover
+			.twitter:hover a { color: #55acee; }
+			.google:hover a { color: #dd4b39; }
+			.linkedin:hover a { color: #0e76a8; }
+			.dribbble:hover a { color: #ea4c89; }
+		}
+
+	}
+
+	// Copyright
+	//--------------------------------------------------------------*/
+	.copyright { color: #586066; line-height: 1.2; }
 
 }

@@ -10,7 +10,7 @@
 <div class="footer-container">
 	<footer class="wrapper group">
 		<h1><?php echo $section_title; ?></h1>		
-		<section id="talk">
+		<section class="talk">
 			<?php echo do_shortcode('[contact-form-7 id="4" title="General"]'); ?>
 		</section>
 		<section class="social-media">
@@ -22,7 +22,7 @@
 				<li class="dribbble"><a href="<?php echo $dribbble_url; ?>"><i class="icon-dribbble"></i> <span class="visuallyhidden">Dribbble</span></a></li>
 			</ul>
 		</section>
-		<p><small><?php echo $copyright_information; ?></small></p>
+		<p class="copyright"><small><?php echo $copyright_information; ?></small></p>
 	</footer>
 </div>
 
