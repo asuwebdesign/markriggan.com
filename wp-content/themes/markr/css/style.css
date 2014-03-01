@@ -250,19 +250,51 @@ html, body {
 
 h1, h2, h3, h4, h5, h6 {
   color: #1a1a1a;
-  font: 700 1em/1.286 "Open Sans", Arial, Helvetica, sans-serif;
+  font: 700 12.30769px "Open Sans", Helvetica, Arial, sans-serif;
+  text-rendering: optimizeLegibility;
+  margin: 5px 20px;
+  margin: 0.3125rem 1.25rem;
+  letter-spacing: -1px;
+  letter-spacing: -0.0625rem;
+}
+
+h1 {
+  font-size: 36px;
+  font-size: 2.25rem;
+}
+
+h2 {
+  font-weight: 400;
+  font-size: 24px;
+  font-size: 1.5rem;
+}
+
+h3 {
+  font-weight: 400;
+  font-size: 24px;
+  font-size: 1.5rem;
+}
+
+h4 {
+  font-size: 18px;
+  font-size: 1.125rem;
+}
+
+h5 {
+  font-size: 16px;
+  font-size: 1rem;
 }
 
 a {
-  color: #00e;
-}
-
-a:visited {
-  color: #551a8b;
+  color: #33383c;
+  -moz-transition: color 0.25s ease-in-out;
+  -o-transition: color 0.25s ease-in-out;
+  -webkit-transition: color 0.25s ease-in-out;
+  transition: color 0.25s ease-in-out;
 }
 
 a:hover {
-  color: #06e;
+  color: #3f454a;
 }
 
 a:focus {
@@ -402,6 +434,11 @@ input:focus, textarea:focus {
   box-shadow: 0 0 0 2px #3cbbdc;
 }
 
+textarea {
+  height: 108px;
+  height: 6.75rem;
+}
+
 input[type="submit"] {
   background: #3cbbdc;
   text-transform: uppercase;
@@ -412,6 +449,11 @@ input[type="submit"] {
 }
 input[type="submit"]:hover {
   background: #52c3e0;
+}
+
+.buttons {
+  margin: 40px 0 0;
+  margin: 2.5rem 0 0;
 }
 
 /*==================================================================
@@ -453,6 +495,19 @@ html, body {
   }
 }
 
+.header-container .site-title a {
+  color: #33383c;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 24px;
+  font-size: 1.5rem;
+  -moz-transition: color 0.25s ease-in-out;
+  -o-transition: color 0.25s ease-in-out;
+  -webkit-transition: color 0.25s ease-in-out;
+  transition: color 0.25s ease-in-out;
+}
+
 .footer-container {
   background: #25282b;
   color: #fff;
@@ -467,6 +522,43 @@ html, body {
   .footer-container h1 {
     font-size: 30px;
     font-size: 1.875rem;
+  }
+}
+.footer-container .lets-talk {
+  display: block;
+  width: 102.43902%;
+  margin: 0 -1.21951%;
+  *zoom: 1;
+}
+.footer-container .lets-talk:before, .footer-container .lets-talk:after {
+  content: "";
+  display: table;
+}
+.footer-container .lets-talk:after {
+  clear: both;
+}
+.footer-container .lets-talk .wpcf7 {
+  display: inline;
+  float: left;
+  width: 97.56098%;
+  margin: 0 1.21951%;
+}
+@media (min-width: 640px) {
+  .footer-container .lets-talk .wpcf7 {
+    display: inline;
+    float: left;
+    width: 72.56098%;
+    margin: 0 1.21951%;
+    margin-left: 13.71951%;
+  }
+}
+@media (min-width: 1024px) {
+  .footer-container .lets-talk .wpcf7 {
+    display: inline;
+    float: left;
+    width: 47.56098%;
+    margin: 0 1.21951%;
+    margin-left: 26.21951%;
   }
 }
 .footer-container .social-media h1 {
@@ -516,6 +608,16 @@ html, body {
  * Styles for various types of navigation componenets.
  * (c) Atlantic BT. All Rights Reserved.
  *==================================================================*/
+nav.primary {
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-size: 0.875rem;
+}
+nav.primary a {
+  text-decoration: none;
+}
+
 /*==================================================================
  * Helpers Partial
  * Various classes that will help clean up layouts and styles
@@ -662,11 +764,37 @@ img[src*="googleadservices.com"] {
  * Styles for portfolio content.
  * (c) Atlantic BT. All Rights Reserved.
  *==================================================================*/
+/* Projects
+=================================================================================================== */
+.projects h1, .projects h2 {
+  text-align: center;
+}
+
 /*==================================================================
  * Home Page Partial
  * Styles for the Home Page
  * (c) Atlantic BT. All Rights Reserved.
  *==================================================================*/
+/* Section - Hello
+=================================================================================================== */
+.hello {
+  background: #25282b;
+  color: #fff;
+  text-align: center;
+}
+.hello h1 {
+  color: #fff;
+  font-weight: 600;
+  font-size: 60px;
+  font-size: 3.75rem;
+}
+.hello h2 {
+  color: #b8c1c6;
+  font-weight: 400;
+  font-size: 36px;
+  font-size: 2.25rem;
+}
+
 /* Section - Creative Services
 =================================================================================================== */
 .services {

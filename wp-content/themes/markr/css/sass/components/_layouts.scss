@@ -24,6 +24,22 @@ html, body { background: $brand_background; }
 
 // Header
 //==================================================================*/
+.header-container {
+
+	// Site Title
+	//--------------------------------------------------------------*/
+	.site-title {
+
+		a {
+			color: #33383c; font-weight: 700; text-decoration: none; text-transform: uppercase;
+			@include rem(font-size, 24px);
+			@include transition(color .25s ease-in-out);
+		}
+		small {}
+
+	}
+
+}
 
 
 // Content
@@ -47,7 +63,22 @@ html, body { background: $brand_background; }
 	
 	// Let's Talk
 	//--------------------------------------------------------------*/
-	.lets-talk {}
+	.lets-talk {
+		@include row-size(12);
+
+		.wpcf7 {
+			@include column-size(12);
+
+			@include breakpoint($tablet, $no-query: true) {
+				@include column-size(9,12);
+				@include push-size(1.5);
+			}
+			@include breakpoint($desktop, $no-query: true) {
+				@include column-size(6,12);
+				@include push-size(3);
+			}
+		}
+	}
 
 
 	// Social Media

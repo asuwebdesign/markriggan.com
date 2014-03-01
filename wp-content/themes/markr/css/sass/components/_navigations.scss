@@ -7,3 +7,11 @@
 
 // Primary Navigation
 //==================================================================*/
+nav.primary {
+
+    font-weight: 600; text-transform: uppercase;
+    @include rem(font-size, 14px);
+
+    a { text-decoration: none; }
+
+}

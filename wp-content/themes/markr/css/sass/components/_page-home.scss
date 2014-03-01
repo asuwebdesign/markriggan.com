@@ -4,6 +4,25 @@
  * (c) Atlantic BT. All Rights Reserved.
  *==================================================================*/
 
+/* Section - Hello
+=================================================================================================== */
+.hello {
+
+    background: $brand_primary; color: #fff; text-align: center;
+
+    h1 {
+        color: #fff; font-weight: 600;
+        @include rem(font-size, 60px);
+    }
+    h2 {
+        color: $brand_tertiary; font-weight: 400;
+        @include rem(font-size, 36px);
+    }
+
+}
+
+
+
 /* Section - Creative Services
 =================================================================================================== */
 .services {

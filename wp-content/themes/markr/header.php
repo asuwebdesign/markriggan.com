@@ -45,24 +45,30 @@
 	<![endif]-->
 
 	<div class="header-container">
-		<header class="wrapper group">
-			<h1><a href="/"><?php bloginfo('name'); ?></a></h1>
-			<?php bloginfo('description'); ?>
-
-			<nav class="primary">
-				<ul>
-					<li><a href="#hello">Hello!</a></li>
-					<li><a href="#projects">Work</a></li>
-					<li><a href="#services">Services</a></li>
-					<li><a href="#about">About</a></li>
-					<li><a href="#talk">Let's Talk</a></li>
-				</ul>
-			</nav>
-
+		<header>
+			<div class="primary-container">
+				<div class="wrapper group">
+					<h1 class="site-title">
+						<a href="/"><?php bloginfo('name'); ?></a>
+						<small><?php bloginfo('description'); ?></small>
+					</h1>
+					<nav class="primary">
+						<ul>
+							<li><a href="#hello">Hello!</a></li>
+							<li><a href="#projects">Work</a></li>
+							<li><a href="#services">Services</a></li>
+							<li><a href="#about">About</a></li>
+							<li><a href="#talk">Let's Talk</a></li>
+						</ul>
+					</nav>
+				</div>
+			</div>
 			<?php if( is_front_page() && have_posts() ) : ?>
-				<section id="hello">
+				<section class="hello">
 					<?php while ( have_posts() ) : the_post(); ?>
-						<?php the_content(); ?>
+						<div class="wrapper group">
+							<?php the_content(); ?>
+						</div>
 					<?php endwhile; ?>
 				</section>
 			<?php else : ?>

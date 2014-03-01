@@ -10,7 +10,7 @@
 <div class="footer-container">
 	<footer class="wrapper group">
 		<h1><?php echo $section_title; ?></h1>		
-		<section class="talk">
+		<section class="lets-talk">
 			<?php echo do_shortcode('[contact-form-7 id="4" title="General"]'); ?>
 		</section>
 		<section class="social-media">

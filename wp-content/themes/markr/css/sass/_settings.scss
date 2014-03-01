@@ -17,6 +17,12 @@
 	$container_min_width: $phone;
 	$container_max_width: 960px;
 
+	// Grids
+	//--------------------------------------------------------------*/
+	$columns: 12;
+	$column_width: 58px;
+	$gutter_width: 24px;
+
 	// Border Radius
 	//--------------------------------------------------------------*/
 	$border_radius: 4px;
@@ -47,8 +53,8 @@
 	// Text and Links
 	//--------------------------------------------------------------*/
 	$text_color: #1a1a1a;
-	$link_color: $brand_info;
-	$link_color_hover: darken($link_color, 15%);
+	$link_color: #33383c;
+	$link_color_hover: lighten($link_color, 5%);
 
 
 // Typography Settings
@@ -73,11 +79,11 @@
 	$header_bottom_margin: 20px;
 	$header_text_rendering: optimizeLegibility;
 
-	$h1_font_size: 44px;
-	$h2_font_size: 37px;
-	$h3_font_size: 27px;
-	$h4_font_size: 23px;
-	$h5_font_size: 18px;
+	$h1_font_size: 36px;
+	$h2_font_size: 24px;
+	$h3_font_size: 24px;
+	$h4_font_size: 18px;
+	$h5_font_size: 16px;
 	$h6_font_size: 16px;
 
 	// Paragraphs
