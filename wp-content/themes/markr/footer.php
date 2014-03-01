@@ -16,10 +16,10 @@
 		<section class="social-media">
 			<h1><?php echo $social_media_title; ?></h1>
 			<ul>
-				<li><a href="<?php echo $twitter_url; ?>"><i class="icon-twitter"></i> <span class="visuallyhidden">Twitter</span></a></li>
-				<li><a href="<?php echo $google_url; ?>"><i class="icon-gplus"></i> <span class="visuallyhidden">Google+</span></a></li>
-				<li><a href="<?php echo $linkedin_url; ?>"><i class="icon-linkedin"></i> <span class="visuallyhidden">LinkedIn</span></a></li>
-				<li><a href="<?php echo $dribbble_url; ?>"><i class="icon-dribbble"></i> <span class="visuallyhidden">Dribbble</span></a></li>
+				<li class="twitter"><a href="<?php echo $twitter_url; ?>"><i class="icon-twitter"></i> <span class="visuallyhidden">Twitter</span></a></li>
+				<li class="google"><a href="<?php echo $google_url; ?>"><i class="icon-gplus"></i> <span class="visuallyhidden">Google+</span></a></li>
+				<li class="linkedin"><a href="<?php echo $linkedin_url; ?>"><i class="icon-linkedin"></i> <span class="visuallyhidden">LinkedIn</span></a></li>
+				<li class="dribbble"><a href="<?php echo $dribbble_url; ?>"><i class="icon-dribbble"></i> <span class="visuallyhidden">Dribbble</span></a></li>
 			</ul>
 		</section>
 		<p><small><?php echo $copyright_information; ?></small></p>

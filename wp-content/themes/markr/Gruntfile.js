@@ -168,7 +168,7 @@ module.exports = function(grunt) {
 				tasks: ['uglify']
 			},
 			css: {
-				files: '<%= project.sass %>/*',
+				files: '<%= project.sass %>/**/*',
 				tasks: ['compass', 'cssmin']
 			},
 			images: {

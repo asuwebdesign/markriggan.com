@@ -181,6 +181,7 @@ button, input, select, textarea {
   font-family: inherit;
   font-size: 100%;
   margin: 0;
+  width: 100%;
 }
 
 button, input {
@@ -324,6 +325,45 @@ figure {
  * Styles for various forms and form elements.
  * (c) Atlantic BT. All Rights Reserved.
  *==================================================================*/
+.field {
+  margin: 0 0 10px;
+  margin: 0 0 0.625rem;
+}
+
+label {
+  display: block;
+  height: 0;
+  font-size: 0;
+  line-height: 0;
+}
+
+input, textarea {
+  background: #373b3f;
+  border: 0;
+  color: #fff;
+  padding: 16px 20px;
+  padding: 1rem 1.25rem;
+  -moz-border-radius: 4px;
+  -webkit-border-radius: 4px;
+  border-radius: 4px;
+  -moz-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+}
+
+input[type="submit"] {
+  background: #3cbbdc;
+  text-transform: uppercase;
+  -moz-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+}
+input[type="submit"]:hover {
+  background: #52c3e0;
+}
+
 /*==================================================================
  * Buttons Partial
  * Styles for various traditional actions.
@@ -343,10 +383,72 @@ html, body {
   background: #ecf0f1;
 }
 
+.header-container,
+.content-container,
+.footer-container {
+  float: left;
+  width: 100%;
+  clear: both;
+}
+
+.wrapper {
+  padding: 0 20px;
+  padding: 0 1.25rem;
+}
+
 .footer-container {
   background: #25282b;
   color: #fff;
   text-align: center;
+}
+.footer-container .social-media h1 {
+  margin-bottom: 0;
+  color: #fff;
+  font-weight: 400;
+  font-size: 24px;
+  font-size: 1.5rem;
+}
+@media (min-width: 640px) {
+  .footer-container .social-media h1 {
+    font-size: 30px;
+    font-size: 1.875rem;
+  }
+}
+.footer-container .social-media ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.footer-container .social-media ul li {
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  font-size: 32px;
+  font-size: 2rem;
+}
+.footer-container .social-media ul a {
+  color: #ecf0f1;
+  -moz-transition: color 0.25s ease-in-out;
+  -o-transition: color 0.25s ease-in-out;
+  -webkit-transition: color 0.25s ease-in-out;
+  transition: color 0.25s ease-in-out;
+}
+.footer-container .social-media ul .twitter:hover a {
+  color: #55acee;
+}
+.footer-container .social-media ul .google:hover a {
+  color: #dd4b39;
+}
+.footer-container .social-media ul .linkedin:hover a {
+  color: #0e76a8;
+}
+.footer-container .social-media ul .dribbble:hover a {
+  color: #ea4c89;
+}
+.footer-container small {
+  color: #586066;
 }
 
 /*==================================================================

@@ -9,6 +9,14 @@
 //==================================================================*/
 html, body { background: $brand_background; }
 
+.header-container,
+.content-container,
+.footer-container { float: left; width: 100%; clear: both; }
+
+.wrapper {
+    @include rem(padding, 0 20px);
+}
+
 
 // Header
 //==================================================================*/
@@ -23,5 +31,42 @@ html, body { background: $brand_background; }
 .footer-container {
 
     background: $brand_primary; color: #fff; text-align: center;
+
+    // Social Media
+    //--------------------------------------------------------------*/
+    .social-media {
+
+        h1 {
+            margin-bottom: 0; color: #fff; font-weight: 400;
+            @include rem(font-size, 24px);
+        
+            @include breakpoint($tablet, $no-query: true) {
+                @include rem(font-size, 30px);
+            }
+        }
+        ul {
+            padding: 0; margin: 0; list-style: none;
+
+            li {
+                @include inline-block;
+                @include rem(font-size, 32px);
+            }
+            a {
+                color: $brand_background;
+                @include transition(color .25s ease-in-out);
+            }
+
+            // Hover
+            .twitter:hover a { color: #55acee; }
+            .google:hover a { color: #dd4b39; }
+            .linkedin:hover a { color: #0e76a8; }
+            .dribbble:hover a { color: #ea4c89; }
+        }
+
+    }
+
+    // Copyright
+    //--------------------------------------------------------------*/
+    small { color: #586066; }
 
 }

@@ -6,3 +6,27 @@
 
 // Wrappers
 //==================================================================*/
+.field {
+	@include rem(margin, 0 0 10px);
+}
+
+
+// Labels
+//==================================================================*/
+label { display: block; height: 0; font-size: 0; line-height: 0; }
+
+
+// Fields
+//==================================================================*/
+input, textarea {
+	background: #373b3f; border: 0; color: #fff;
+	@include rem(padding, 16px 20px);
+	@include border-radius($border_radius);
+	@include transition(all .25s ease-in-out);
+}
+input[type="submit"] {
+	background: $brand_info; text-transform: uppercase;
+	@include transition(all .25s ease-in-out);
+
+	&:hover { background: lighten($brand_info, 5%); }
+}
