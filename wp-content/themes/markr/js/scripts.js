@@ -38,6 +38,24 @@
 	}
 
 
+	/* Ajax in Projects
+	-------------------------------------------------------------*/
+	function ajaxProjects() {
+
+		$('#projects li a').click(function() {
+			var postID = $(this).attr('data-post-id');
+			var postURL = $(this).attr('href');
+			var container = $('#active-project');			
+
+			// Load Project
+			container.load(postURL + " #post-" + postID);
+		
+			return false;
+		});
+
+	}
+
+
 
 /* Document Ready Scripts
 ======================================================================================================= */
@@ -47,7 +65,7 @@ $(document).ready(function() {
 	
 	/* All Devices
 	======================================================================================================= */
-	
+	ajaxProjects();
 		
 			
 			

@@ -10,14 +10,14 @@
 
 // Global
 //==================================================================*/
-html, body { font-family: $base_font_family; font-weight: $base_weight_reg; -webkit-font-smoothing: antialiased; }
+html, body { font-family: $base_font_family; font-weight: $base_weight_reg; line-height: $paragraph_line_height; -webkit-font-smoothing: antialiased; }
 hr {}
 
 
 // Headings
 //==================================================================*/
 h1, h2, h3, h4, h5, h6 { color: #1a1a1a; font: $header_font_weight $h6_font_size/$header_line_height $header_font_family; text-rendering: $header_text_rendering;
-	@include rem(margin, $header_top_margin $header_bottom_margin);
+	@include rem(margin, $header_top_margin 0 $header_bottom_margin);
 	@include rem(letter-spacing, -1px);
 }
 h1 {

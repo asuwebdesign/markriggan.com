@@ -51,6 +51,7 @@ html, body { background: $brand_background; }
 .footer-container {
 
 	background: $brand_primary; color: #fff; text-align: center;
+	@include rem(padding, 20px 0);
 
 	h1 {
 		color: #fff;
