@@ -28,13 +28,13 @@ audio:not([controls]) {
 ====================================================================*/
 
 ::-moz-selection {
-    background: #DF3952;
+    background: rgba($brand_info, .9);
     color: #fff;
     text-shadow: none;
 }
 
 ::selection {
-    background: #DF3952;
+    background: rgba($brand_info, .9);
     color: #fff;
     text-shadow: none;
 }

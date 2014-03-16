@@ -37,13 +37,13 @@ audio:not([controls]) {
 /* Browser Highlighting
 ====================================================================*/
 ::-moz-selection {
-  background: #DF3952;
+  background: rgba(60, 187, 220, 0.9);
   color: #fff;
   text-shadow: none;
 }
 
 ::selection {
-  background: #DF3952;
+  background: rgba(60, 187, 220, 0.9);
   color: #fff;
   text-shadow: none;
 }
@@ -492,25 +492,46 @@ html, body {
   margin: 0 auto;
 }
 
+.header-container {
+  background: #fff;
+  border-bottom: 1px solid rgba(192, 192, 192, 0.5);
+  border-width: 1px;
+  border-width: 0.0625rem;
+}
+.header-container .wrapper {
+  padding: 0;
+}
+.header-container .site-title {
+  margin: 0;
+  font-weight: 700;
+  padding: 15px 20px;
+  padding: 0.9375rem 1.25rem;
+  font-size: 18px;
+  font-size: 1.125rem;
+}
 .header-container .site-title a {
   color: #33383c;
-  font-weight: 700;
   text-decoration: none;
   text-transform: uppercase;
-  font-size: 24px;
-  font-size: 1.5rem;
   -moz-transition: color 0.25s ease-in-out;
   -o-transition: color 0.25s ease-in-out;
   -webkit-transition: color 0.25s ease-in-out;
   transition: color 0.25s ease-in-out;
+}
+.header-container .site-title small {
+  display: block;
+  color: #b8c1c6;
+  font-weight: 400;
+  font-size: 12px;
+  font-size: 0.75rem;
 }
 
 .footer-container {
   background: #25282b;
   color: #fff;
   text-align: center;
-  padding: 20px 0;
-  padding: 1.25rem 0;
+  padding: 40px 0 20px;
+  padding: 2.5rem 0 1.25rem;
 }
 .footer-container h1 {
   color: #fff;
@@ -601,8 +622,20 @@ nav.primary {
   font-size: 14px;
   font-size: 0.875rem;
 }
+nav.primary li {
+  border-top: 1px solid #c0c0c0;
+  border-width: 1px;
+  border-width: 0.0625rem;
+}
 nav.primary a {
+  display: block;
   text-decoration: none;
+  padding: 15px 20px;
+  padding: 0.9375rem 1.25rem;
+}
+
+.js nav.primary {
+  display: none;
 }
 
 /*==================================================================
@@ -753,9 +786,12 @@ img[src*="googleadservices.com"] {
  *==================================================================*/
 /* Projects
 =================================================================================================== */
+.projects {
+  padding: 40px 0;
+  padding: 2.5rem 0;
+}
 .projects h1 {
   color: #1a1a1a;
-  font-weight: 600;
   text-align: center;
   margin: 0 0 10px;
   margin: 0 0 0.625rem;
@@ -765,10 +801,9 @@ img[src*="googleadservices.com"] {
 .projects h2 {
   margin: 0;
   color: #b8c1c6;
-  font-weight: 400;
   text-align: center;
-  font-size: 18px;
-  font-size: 1.125rem;
+  font-size: 22px;
+  font-size: 1.375rem;
 }
 
 /*==================================================================
@@ -782,23 +817,22 @@ img[src*="googleadservices.com"] {
   background: #25282b;
   color: #fff;
   text-align: center;
-  padding: 40px 0;
-  padding: 2.5rem 0;
+  padding: 120px 0;
+  padding: 7.5rem 0;
 }
 .hello h1 {
   color: #fff;
   font-weight: 600;
   margin: 0 0 10px;
   margin: 0 0 0.625rem;
-  font-size: 28px;
-  font-size: 1.75rem;
+  font-size: 36px;
+  font-size: 2.25rem;
 }
 .hello h2 {
   margin: 0;
   color: #b8c1c6;
-  font-weight: 400;
-  font-size: 22px;
-  font-size: 1.375rem;
+  font-size: 24px;
+  font-size: 1.5rem;
 }
 .hello h2 span {
   color: #3cbbdc;
@@ -810,14 +844,23 @@ img[src*="googleadservices.com"] {
 .services {
   background: #373b3f;
   color: #959595;
+  padding: 40px 0;
+  padding: 2.5rem 0;
 }
 .services h1 {
-  color: #1a1a1a;
-  font-weight: 600;
+  color: #fff;
+  text-align: center;
   margin: 0 0 10px;
   margin: 0 0 0.625rem;
   font-size: 28px;
   font-size: 1.75rem;
+}
+.services h2 {
+  margin: 0;
+  color: #9ca6ae;
+  text-align: center;
+  font-size: 22px;
+  font-size: 1.375rem;
 }
 
 /* Section - About Me
@@ -827,12 +870,11 @@ img[src*="googleadservices.com"] {
   background: url("../img/bg_mark-riggan.jpg") no-repeat 50% 100%;
   background-size: 100% auto;
   color: #85939c;
-  padding-top: 20px;
-  padding-top: 1.25rem;
+  padding-top: 40px;
+  padding-top: 2.5rem;
 }
 .about h1 {
   color: #1a1a1a;
-  font-weight: 600;
   text-align: center;
   margin: 0 0 10px;
   margin: 0 0 0.625rem;
@@ -842,7 +884,6 @@ img[src*="googleadservices.com"] {
 .about h2 {
   margin: 0;
   color: #b8c1c6;
-  font-weight: 400;
   text-align: center;
   font-size: 22px;
   font-size: 1.375rem;

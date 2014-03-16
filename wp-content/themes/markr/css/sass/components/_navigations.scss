@@ -12,6 +12,15 @@ nav.primary {
     font-weight: 600; text-transform: uppercase;
     @include rem(font-size, 14px);
 
-    a { text-decoration: none; }
+    li {
+        border-top: 1px solid #c0c0c0;
+        @include rem(border-width, 1px);
+    }
+    a {
+        display: block; text-decoration: none;
+        @include rem(padding, 15px 20px);
+    }
 
 }
+
+.js nav.primary { display: none; }

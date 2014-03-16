@@ -9,16 +9,16 @@
 .hello {
 
     background: $brand_primary; color: #fff; text-align: center;
-    @include rem(padding, 40px 0);
+    @include rem(padding, 120px 0);
 
     h1 {
         color: #fff; font-weight: 600;
         @include rem(margin, 0 0 10px);
-        @include rem(font-size, 28px);
+        @include rem(font-size, 36px);
     }
     h2 {
-        margin: 0; color: $brand_tertiary; font-weight: 400;
-        @include rem(font-size, 22px);
+        margin: 0; color: $brand_tertiary;
+        @include rem(font-size, 24px);
     
         span {
             color: $brand_info; font-family: "Handlee";
@@ -33,11 +33,16 @@
 .services {
 
     background: $brand_secondary; color: $services_text;
+    @include rem(padding, 40px 0);
 
     h1 {
-        color: $text_color; font-weight: 600;
+        color: #fff; text-align: center;
         @include rem(margin, 0 0 10px);
         @include rem(font-size, 28px);
+    }
+    h2 {
+        margin: 0; color: #9ca6ae; text-align: center;
+        @include rem(font-size, 22px);
     }
 
 }
@@ -48,15 +53,15 @@
 .about {
 
     padding-bottom: percentage(434 / 550); background: url('../img/bg_mark-riggan.jpg') no-repeat 50% 100%; background-size: 100% auto; color: #85939c;
-    @include rem(padding-top, 20px);
+    @include rem(padding-top, 40px);
 
     h1 {
-        color: $text_color; font-weight: 600; text-align: center;
+        color: $text_color; text-align: center;
         @include rem(margin, 0 0 10px);
         @include rem(font-size, 28px);
     }
     h2 {
-        margin: 0; color: $brand_tertiary; font-weight: 400; text-align: center;
+        margin: 0; color: $brand_tertiary; text-align: center;
         @include rem(font-size, 22px);
     }
 
