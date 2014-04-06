@@ -11,13 +11,30 @@
     @include rem(padding, 40px 0);
 
     h1 {
-        color: $text_color; text-align: center;
-        @include rem(margin, 0 0 10px);
+        margin: 0; color: $text_color; text-align: center;
         @include rem(font-size, 28px);
     }
     h2 {
-        margin: 0; color: $brand_tertiary; text-align: center;
+        color: $brand_tertiary; text-align: center;
+        @include rem(margin, 0 0 20px);
         @include rem(font-size, 22px);
+    }
+    ul {
+        padding: 0; margin: 0; font-size: 0; line-height: 0; list-style: none;
+    
+        li {
+            width: 50%; margin: 0;
+            @include inline-block;
+        
+            @include breakpoint($tablet, $no-query: true) {
+                width: percentage(1/3);
+            }
+            @include breakpoint($desktop, $no-query: true) {
+                width: percentage(1/4);
+            }
+
+        }
+
     }
 
 }

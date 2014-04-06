@@ -53,12 +53,13 @@
 						<small><?php bloginfo('description'); ?></small>
 					</h1>
 					<nav class="primary">
+						<h1><i class="icon-menu"></i> Menu</h1>
 						<ul>
-							<li><a href="#hello">Hello!</a></li>
-							<li><a href="#projects">Work</a></li>
-							<li><a href="#services">Services</a></li>
-							<li><a href="#about">About</a></li>
-							<li><a href="#talk">Let's Talk</a></li>
+							<li><a href="#hello">Hello! <i class="icon-right-open"></i></a></li>
+							<li><a href="#projects">Work <i class="icon-right-open"></i></a></li>
+							<li><a href="#services">Services <i class="icon-right-open"></i></a></li>
+							<li><a href="#about">About <i class="icon-right-open"></i></a></li>
+							<li><a href="#talk">Let's Talk <i class="icon-right-open"></i></a></li>
 						</ul>
 					</nav>
 				</div>

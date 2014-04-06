@@ -1,42 +1,47 @@
 /* Functions
 ======================================================================================================= */
 
-	/* Detect if Apple device
+	/* Setup Mobile Menu
 	-------------------------------------------------------------*/
-	function isApple() {
-		var deviceAgent = navigator.userAgent.toLowerCase();
-	    var agentID = deviceAgent.match(/(iphone|ipod|ipad)/);
-	
-	    if (agentID) {
-			return true;	
-		}
-		else{
-			return false;	
-		}
-	}
-	
-	
-	/* Detect if Android device
-	-------------------------------------------------------------*/
-	function isDroid() {
-		var ua = navigator.userAgent.toLowerCase();
-		var isAndroid = ua.indexOf("android") > -1; //&& ua.indexOf("mobile");
-	
-		if(isAndroid) {
-			return true;	
-		}
-		else{
-			return false;	
-		}
-	}
-	
-	
-	/* Hide iOS Address Bar
-	-------------------------------------------------------------*/
-	function hideURLbar() {
-	    setTimeout(scrollTo, 0, 0, 1);
+	function initMobileMenu() {
+
+		var toggle = $('nav.primary h1');
+		var menu   = $('nav.primary ul');
+
+		toggle.click(function() {
+			toggle.toggleClass('active');
+			menu.slideToggle(250);
+		});
+
 	}
 
+	/* Destroy Mobile Menu
+	-------------------------------------------------------------*/
+	function destroyMobileMenu() {
+
+		var toggle = $('nav.primary h1');
+
+		toggle.unbind('click');
+
+	}
+
+	/* Setup Animated Scroll for Menu
+	-------------------------------------------------------------*/
+	function initAnimateScroll() {
+
+		var link = $('nav.primary li');
+
+		link.click(function() {
+
+			var ID     = $(this).find('a').attr('href');
+			var toggle = $('nav.primary h1');
+
+			$('html, body').animate({ scrollTop: $(ID).offset().top }, 1000);
+			toggle.trigger('click');		
+
+		});
+
+	}
 
 	/* Ajax in Projects
 	-------------------------------------------------------------*/
@@ -62,59 +67,15 @@
 
 $(document).ready(function() {
 	
-	
-	/* All Devices
-	======================================================================================================= */
+	initAnimateScroll();
 	ajaxProjects();
-		
-			
-			
 	
-	/* iPhone & Other Smartphones
-	======================================================================================================= */
-	Responder.query("only screen and (max-width: 480px)", function() {
-				
-		
-		
-	
-	
+	Responder.query("only screen and (max-width: 639px)", function() {
+		initMobileMenu();
 	}, true);
-	
-	
-	Responder.query("only screen and (min-width: 481px)", function() {
-	}, true);
-	
-	
-	/* iPad & Other Tablets
-	======================================================================================================= */
-	Responder.query("only screen and (min-width: 481px)", function() {
-			
-		
-		
-		
-	
+
+	Responder.query("only screen and (min-width: 1024px)", function() {
+		destroyMobileMenu();
 	}, false);
-	
-	
-	Responder.query("only screen and (max-width: 1024px)", function() {
-			
-		
-		
-		
-	
-	}, false);
-	
-	
-	
-	/* Desktop
-	======================================================================================================= */
-	Responder.query("only screen and (min-width: 1025px)", function() {
-			
-		
-		
-		
-	
-	}, true);
-	
 	
 });

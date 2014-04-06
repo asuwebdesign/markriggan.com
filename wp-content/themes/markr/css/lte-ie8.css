@@ -493,10 +493,14 @@ html, body {
 }
 
 .header-container {
+  position: relative;
   background: #fff;
+  border-top: 4px solid #3cbbdc;
   border-bottom: 1px solid rgba(192, 192, 192, 0.5);
-  border-width: 1px;
-  border-width: 0.0625rem;
+  border-top-width: 4px;
+  border-top-width: 0.25rem;
+  border-bottom-width: 1px;
+  border-bottom-width: 0.0625rem;
 }
 .header-container .wrapper {
   padding: 0;
@@ -508,6 +512,10 @@ html, body {
   padding: 0.9375rem 1.25rem;
   font-size: 18px;
   font-size: 1.125rem;
+  float: left;
+  padding: 0;
+  font-size: 24px;
+  font-size: 1.5rem;
 }
 .header-container .site-title a {
   color: #33383c;
@@ -524,6 +532,13 @@ html, body {
   font-weight: 400;
   font-size: 12px;
   font-size: 0.75rem;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  font-size: 14px;
+  font-size: 0.875rem;
 }
 
 .footer-container {
@@ -621,21 +636,59 @@ nav.primary {
   text-transform: uppercase;
   font-size: 14px;
   font-size: 0.875rem;
+  float: right;
+}
+nav.primary h1 {
+  position: absolute;
+  margin: 0;
+  border: 1px solid #d4dadd;
+  font-weight: 600;
+  line-height: 1;
+  cursor: pointer;
+  top: 18px;
+  top: 1.125rem;
+  right: 20px;
+  right: 1.25rem;
+  padding: 10px;
+  padding: 0.625rem;
+  border-width: 1px;
+  border-width: 0.0625rem;
+  font-size: 16px;
+  font-size: 1rem;
+  -moz-transition: all 0.25s ease-in-out;
+  -o-transition: all 0.25s ease-in-out;
+  -webkit-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+  display: none;
+}
+nav.primary h1:hover {
+  background: #f1f2f3;
 }
 nav.primary li {
   border-top: 1px solid #c0c0c0;
   border-width: 1px;
   border-width: 0.0625rem;
+  border: 0;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
 }
-nav.primary a {
+nav.primary li a {
   display: block;
   text-decoration: none;
   padding: 15px 20px;
   padding: 0.9375rem 1.25rem;
 }
+nav.primary li i {
+  float: right;
+  color: #d4dadd;
+}
 
-.js nav.primary {
+.js nav.primary ul {
   display: none;
+  display: block;
 }
 
 /*==================================================================
@@ -714,8 +767,8 @@ img[src*="googleadservices.com"] {
  *==================================================================*/
 @font-face {
   font-family: 'fontello';
-  src: url("../font/fontello.eot?80791532");
-  src: url("../font/fontello.eot?80791532#iefix") format("embedded-opentype"), url("../font/fontello.woff?80791532") format("woff"), url("../font/fontello.ttf?80791532") format("truetype"), url("../font/fontello.svg?80791532#fontello") format("svg");
+  src: url("../font/fontello.eot?45721331");
+  src: url("../font/fontello.eot?45721331#iefix") format("embedded-opentype"), url("../font/fontello.woff?45721331") format("woff"), url("../font/fontello.ttf?45721331") format("truetype"), url("../font/fontello.svg?45721331#fontello") format("svg");
   font-weight: normal;
   font-style: normal;
 }
@@ -725,7 +778,7 @@ img[src*="googleadservices.com"] {
 @media screen and (-webkit-min-device-pixel-ratio:0) {
   @font-face {
     font-family: 'fontello';
-    src: url('../font/fontello.svg?80791532#fontello') format('svg');
+    src: url('../font/fontello.svg?45721331#fontello') format('svg');
   }
 }
 */
@@ -754,6 +807,51 @@ img[src*="googleadservices.com"] {
   /* text-shadow: 1px 1px 1px rgba(127, 127, 127, 0.3); */
 }
 
+.icon-cancel:before {
+  content: '\e808';
+}
+
+/* '' */
+.icon-twitter:before {
+  content: '\e800';
+}
+
+/* '' */
+.icon-pencil:before {
+  content: '\e80c';
+}
+
+/* '' */
+.icon-menu:before {
+  content: '\e804';
+}
+
+/* '' */
+.icon-left-circled2:before {
+  content: '\e806';
+}
+
+/* '' */
+.icon-right-circled2:before {
+  content: '\e807';
+}
+
+/* '' */
+.icon-code:before {
+  content: '\e80b';
+}
+
+/* '' */
+.icon-arrows-cw:before {
+  content: '\e809';
+}
+
+/* '' */
+.icon-mobile:before {
+  content: '\e80d';
+}
+
+/* '' */
 .icon-dribbble:before {
   content: '\e803';
 }
@@ -769,11 +867,11 @@ img[src*="googleadservices.com"] {
 }
 
 /* '' */
-.icon-twitter:before {
-  content: '\e800';
+.icon-right-open:before {
+  content: '\e805';
 }
 
-/* '' */
+/* '' */
 /*==================================================================
  * Animations Partial
  * Custom keyframed animations to be used in the site/application
@@ -791,19 +889,37 @@ img[src*="googleadservices.com"] {
   padding: 2.5rem 0;
 }
 .projects h1 {
+  margin: 0;
   color: #1a1a1a;
   text-align: center;
-  margin: 0 0 10px;
-  margin: 0 0 0.625rem;
   font-size: 28px;
   font-size: 1.75rem;
 }
 .projects h2 {
-  margin: 0;
   color: #b8c1c6;
   text-align: center;
+  margin: 0 0 20px;
+  margin: 0 0 1.25rem;
   font-size: 22px;
   font-size: 1.375rem;
+}
+.projects ul {
+  padding: 0;
+  margin: 0;
+  font-size: 0;
+  line-height: 0;
+  list-style: none;
+}
+.projects ul li {
+  width: 50%;
+  margin: 0;
+  display: inline-block;
+  vertical-align: middle;
+  *vertical-align: auto;
+  *zoom: 1;
+  *display: inline;
+  width: 33.33333%;
+  width: 25%;
 }
 
 /*==================================================================
@@ -848,10 +964,9 @@ img[src*="googleadservices.com"] {
   padding: 2.5rem 0;
 }
 .services h1 {
+  margin: 0;
   color: #fff;
   text-align: center;
-  margin: 0 0 10px;
-  margin: 0 0 0.625rem;
   font-size: 28px;
   font-size: 1.75rem;
 }
@@ -861,6 +976,34 @@ img[src*="googleadservices.com"] {
   text-align: center;
   font-size: 22px;
   font-size: 1.375rem;
+}
+.services section h3 {
+  color: #fff;
+  margin: 20px 0 10px;
+  margin: 1.25rem 0 0.625rem;
+  font-size: 24px;
+  font-size: 1.5rem;
+}
+.services section p {
+  margin: 0 0 10px;
+  margin: 0 0 0.625rem;
+}
+.services section ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.services section ul li {
+  background: #586066;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  padding: 0.625rem;
+  margin: 5px 0 0;
+  margin: 0.3125rem 0 0;
+}
+.services section ul li:first-child {
+  margin: 0;
 }
 
 /* Section - About Me
@@ -872,12 +1015,12 @@ img[src*="googleadservices.com"] {
   color: #85939c;
   padding-top: 40px;
   padding-top: 2.5rem;
+  background-size: auto auto;
 }
 .about h1 {
+  margin: 0;
   color: #1a1a1a;
   text-align: center;
-  margin: 0 0 10px;
-  margin: 0 0 0.625rem;
   font-size: 28px;
   font-size: 1.75rem;
 }

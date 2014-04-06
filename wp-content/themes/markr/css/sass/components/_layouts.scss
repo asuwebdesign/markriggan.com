@@ -25,8 +25,9 @@ html, body { background: $brand_background; }
 // Header
 //==================================================================*/
 .header-container {
-	background: #fff; border-bottom: 1px solid rgba(#c0c0c0, .5);
-	@include rem(border-width, 1px);
+	position: relative; background: #fff; border-top: 4px solid $brand_info; border-bottom: 1px solid rgba(#c0c0c0, .5);
+	@include rem(border-top-width, 4px);
+	@include rem(border-bottom-width, 1px);
 
 	.wrapper {
 		padding: 0;
@@ -39,6 +40,11 @@ html, body { background: $brand_background; }
 		@include rem(padding, 15px 20px);
 		@include rem(font-size, 18px);
 
+		@include breakpoint($desktop, $no-query: true) {
+			float: left; padding: 0;
+			@include rem(font-size, 24px);
+		}
+
 		a {
 			color: #33383c; text-decoration: none; text-transform: uppercase;	
 			@include transition(color .25s ease-in-out);
@@ -46,6 +52,11 @@ html, body { background: $brand_background; }
 		small {
 			display: block; color: $brand_tertiary; font-weight: 400;
 			@include rem(font-size, 12px);			
+		
+			@include breakpoint($desktop, $no-query: true) {
+				@include inline-block;
+				@include rem(font-size, 14px);
+			}
 		}
 
 	}
