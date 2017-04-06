@@ -1,0 +1,61 @@
+{% extends "_layout" %}
+
+{% block content %}
+<article itemid="{{ entry.url }}" itemscope itemtype="http://schema.org/Article">
+  {% if entry.featuredImage | length %}
+    {% set asset = entry.featuredImage.first() %}
+    <img src="{{ asset.url }}" />
+  {% endif %}
+  <div class="wrapper">
+    <h1>{{ entry.title }}</h1>
+    <p>{{ entry.postDate.format('F d, Y') }}</p>
+
+    {% set hash = '822A7624F2F41A5398D27CDE791AA519' %}
+    <img src="https://www.gravatar.com/avatar/{{ hash }}" />
+
+    {{ entry.body }}
+
+    {% include '_partials/_social-share' with {'topic': 'article'} %}
+  </div>
+</article>
+
+<!-- <aside>
+  <div class="wrapper">
+    <hr />
+
+    {# Set parameters for prev/next elements list #}
+    {% set params = craft.entries.section('articles').order('title asc') %}
+
+    {# Get the prev/next elements #}
+    {% set prevEntry = entry.getPrev(params) %}
+    {% set nextEntry = entry.getNext(params) %}
+
+    {# And make sure to only output the links if the element exists #}
+    {% if prevEntry %}
+    <article>
+      {% if prevEntry.featuredImage | length %}
+      {% set asset = prevEntry.featuredImage.first() %}
+        <figure style="background-image: url('{{ asset.url }}');">
+          <img class="visuallyhidden" src="{{ asset.url }}" />
+        </figure>
+      {% endif %}
+      <h3><a href="{{ prevEntry.url }}" data-underline>{{ prevEntry.title }}</a></h3>
+      <p>{{ prevEntry.postDate.format('F d, Y') }}</p>
+    </article>
+    {% endif %}
+
+    {% if nextEntry %}
+    <article>
+      {% if nextEntry.featuredImage | length %}
+      {% set asset = nextEntry.featuredImage.first() %}
+        <figure style="background-image: url('{{ asset.url }}');">
+          <img class="visuallyhidden" src="{{ asset.url }}" />
+        </figure>
+      {% endif %}
+      <h3><a href="{{ nextEntry.url }}" data-underline>{{ nextEntry.title }}</a></h3>
+      <p>{{ nextEntry.postDate.format('F d, Y') }}</p>
+    </article>
+    {% endif %}
+  </div>
+</aside> -->
+{% endblock %}

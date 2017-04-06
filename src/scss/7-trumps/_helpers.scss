@@ -1,0 +1,17 @@
+%group {
+  *zoom: 1;
+  &:before,
+  &:after {
+    display: table;
+    content: "";
+  }
+  &:after {
+    clear: both;
+  }
+}
+%clear {
+  clear: both;
+}
+%clip {
+  overflow: hidden !important;
+}

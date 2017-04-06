@@ -1,0 +1,55 @@
+body {}
+
+// =============================================================================
+// App Header
+// =============================================================================
+.app__header {
+  //display: none;
+  //border-bottom: rem(1) solid #ccc;
+
+  @include media('>=laptop') {
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: rem(20) rem(40);
+  }
+}
+.headroom {
+  will-change: transform;
+  transition: transform 200ms linear;
+}
+.headroom--pinned {
+  transform: translateY(0%);
+}
+.headroom--unpinned {
+  transform: translateY(-100%);
+}
+
+// =============================================================================
+// App Footer
+// =============================================================================
+.app__footer {
+  background-color: color(black);
+  color: color(white);
+
+  @include media('>=laptop') {
+    display: flex;
+    justify-content: space-between;
+    padding: rem(20) rem(40);
+    font-size: rem(14);
+    line-height: 1;
+  }
+}
+
+// =============================================================================
+// Wrappers
+// =============================================================================
+.wrapper {
+  @include media('>=laptop') {
+    max-width: rem(1140);
+    margin: 0 auto;
+  }
+}

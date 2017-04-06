@@ -1,0 +1,13 @@
+.projects {
+  @include media('>=laptop') {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .project {
+    @include media('>=laptop') {
+      width: percentage(1/3);
+    }
+  }
+
+}

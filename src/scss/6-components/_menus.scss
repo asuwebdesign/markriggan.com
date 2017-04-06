@@ -1,0 +1,37 @@
+// -----------------------------------------------------------------------------
+// Primary menu
+// -----------------------------------------------------------------------------
+.menu {
+  text-transform: uppercase;
+  font-size: rem(14);
+  line-height: 1;
+
+  // Menu title
+  &__title {
+    @include hide-off-screen;
+  }
+
+  // Menu items
+  &__items {
+    @include reset-list;
+
+    @include media('>=laptop') {
+      display: flex;
+    }
+  }
+
+  // Menu item
+  &__item {
+    @include media('>=laptop') {
+      margin: rem(10);
+    }
+
+    // active state
+    &--active {
+      @include media('>=laptop') {
+        border-bottom: rem(1) solid;
+      }
+    }
+  }
+
+}

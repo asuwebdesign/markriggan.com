@@ -1,0 +1,77 @@
+{% extends "_layout" %}
+
+{% block content %}
+<article class="project" itemscope itemtype="http://schema.org/CreativeWork">
+
+  {% include '_partials/_hero' %}
+
+  <section class="project__intro" itemprop="about">
+    <div class="wrapper">
+      <h2 class="visuallyhidden">Overview</h2>
+      {{ entry.projectSummary }}
+    </div>
+  </section>
+
+  {% set tags = entry.tags %}
+  {% if tags | length %}
+
+  <h3>Some great tags</h3>
+  {% for tag in tags %}
+  <div>
+    {{tag}}
+  </div>
+  {% endfor %}
+
+  {% endif %}
+
+  <section class="project__synopsis">
+    <div class="wrapper">
+      <div class="flex-container">
+        <div class="project__challenge">
+          <h2>Background</h2>
+          {{ entry.projectChallenge }}
+        </div>
+        <div class="project__solution">
+          <h2>Our Strategy</h2>
+          {{ entry.projectSolution }}
+        </div>
+        <!-- <div class="project__results">
+          <h2>Results</h2>
+          {{ entry.projectResults }}
+        </div> -->
+      </div>
+    </div>
+  </section>
+
+  <section class="project__assets">
+    <div class="wrapper">
+      <h3 class="visuallyhidden">Artwork</h3>
+      {% for block in entry.projectImages %}
+
+      {% for image in block.projectImageSrc %}
+      <figure>
+        <img src="{{ image.getUrl }}" alt="{{ image.altDescription }}" draggable="false" />
+      </figure>
+      {% endfor %}
+
+      {% endfor %}
+    </div>
+  </section>
+
+  <hr />
+
+  <div class="row center-xs" data-padding="xs">
+    <div class="wrapper">
+      <h3>Share this project</h3>
+      <ul class="social">
+        <li class="social-link facebook"><a href="http://www.facebook.com/sharer.php?u={{ entry.getUrl }}" title="Share this project on Facebook"><span>Share</span></a></li>
+        <li class="social-link twitter"><a href="https://twitter.com/share?url={{ entry.getUrl }}" title="Tweet this project on Twitter"><span>Tweet</span></a></li>
+        <li class="social-link google"><a href="https://plus.google.com/share?url={{ entry.getUrl }}" title="Share this project on Google Plus"><span>Share</span></a></li>
+        <li class="social-link linkedin"><a href="http://www.linkedin.com/shareArticle?url={{ entry.getUrl }}" title="Share this project on LinkedIn"><span>Share</span></a></li>
+      </ul>
+    </div>
+  </div>
+
+
+</article>
+{% endblock %}

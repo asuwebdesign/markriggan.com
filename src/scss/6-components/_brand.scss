@@ -1,0 +1,15 @@
+.brand {
+  width: rem(64);
+  height: rem(64);
+  margin: 0;
+  background-color: #ccc;
+  border-radius: 50%;
+  font-size: 0;
+  line-height: 0;
+
+  a {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+}

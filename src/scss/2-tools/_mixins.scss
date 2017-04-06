@@ -1,0 +1,635 @@
+// Hide Off Screen
+//
+// Position an element off-screen for screen-readers.
+//
+// Markup:
+// //
+// // Mixin: Hide Off Screen
+// // @include hide-off-screen();
+// //
+// // no parameters available
+// //
+// .element { @include hide-off-screen; }
+//
+// Styleguide Functions - Hide Off Screen
+
+@mixin hide-off-screen {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+
+// Absolute Center
+//
+// Position an element vertically and horizontally centered.
+//
+// Markup:
+// //
+// // Mixin: Absolute Center
+// // @include absolute-center();
+// //
+// // no parameters available
+// // Note: parent element should use position: relative;
+// //
+// .element { @include absolute-center; }
+//
+// Styleguide Functions - Absolute Center
+
+@mixin absolute-center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(-50%);
+}
+
+
+// Vertical Center
+//
+// Position an element vertically centered.
+//
+// Markup:
+// //
+// // Mixin: Vertical Center
+// // @include vertical-center();
+// //
+// // no parameters available
+// // Note: parent element should use position: relative;
+// //
+// .element { @include vertical-center; }
+//
+// Styleguide Functions - Vertical Center
+
+@mixin vertical-center {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+
+// Horizontal Center
+//
+// Position an element vertically centered.
+//
+// Markup:
+// //
+// // Mixin: Horizontal Center
+// // @include horizontal-center();
+// //
+// // no parameters available
+// // Note: parent element should use position: relative;
+// //
+// .element { @include horizontal-center; }
+//
+// Styleguide Functions - Horizontal Center
+
+@mixin horizontal-center {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+
+// Reset Button
+//
+// Zero out button properties.
+//
+// Markup:
+// //
+// // Mixin: Reset Button
+// // @include reset-button();
+// //
+// // no parameters available
+// //
+// .element { @include reset-button; }
+//
+// Styleguide Functions - Reset Button
+
+@mixin reset-button {
+  padding: 0;
+  background: none;
+  border-radius: 0;
+
+  &:hover {
+    background: none;
+    box-shadow: none;
+    color: inherit;
+  }
+}
+
+
+// Reset List
+//
+// Zero out list properties.
+//
+// Markup:
+// //
+// // Mixin: Reset List
+// // @include reset-list();
+// //
+// // no parameters available
+// //
+// .element { @include reset-list; }
+//
+// Styleguide Functions - Reset List
+
+@mixin reset-list {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+
+// Reset Column
+//
+// Resets a column's gutter margin.
+//
+// Markup:
+// //
+// // Mixin: Reset Column
+// // @include reset-column();
+// //
+// // no parameters available
+// //
+// .element { @include reset-column; }
+//
+// Styleguide Functions - Reset Column
+
+@mixin reset-column {
+  margin-left: 0;
+}
+
+
+// Span Column
+//
+// Grid size for specific columns.
+//
+// Markup:
+// //
+// // Mixin: Span Column
+// // @include span-column( $span, $total );
+// //
+// // $span:   'number'  required. how many columns?
+// // $total:  'number'  optional. defaults to 12.
+// //
+// .element { @include span-column(6); }
+//
+// Styleguide Functions - Span Column
+
+@mixin span-column($span, $total: 12) {
+
+  // Base settings
+  $column-base  : 62; // in pixels
+  $gutter-base  : 36; // in pixels
+
+  // Calculated sizes
+  $span-size  : ($column-base * $span) + ($gutter-base * ($span - 1));
+  $total-size : ($column-base * $total) + ($gutter-base * ($total - 1));
+
+  width: percentage($span-size / $total-size);
+  margin-left: percentage(($gutter-base) / $total-size);
+
+}
+
+
+// Shift Column
+//
+// Offset element by columns.
+//
+// Markup:
+// //
+// // Mixin: Shift Column
+// // @include shift-column( $span, $total, $direction);
+// //
+// // $span:      'number'  required. how many columns?
+// // $total:     'number'  optional. defaults to 12.
+// // $direction: 'string'  optional. defaults to left
+// //
+// .element { @include shift-column(1, 12, left); }
+//
+// Styleguide Functions - Shift Column
+
+@mixin shift-column($span, $total: 12, $direction: 'left') {
+
+  // Base settings
+  $column-base  : 62; // in pixels
+  $gutter-base  : 36; // in pixels
+
+  // Calculated sizes
+  $span-size  : ($column-base * $span) + ($gutter-base * ($span - 1));
+  $total-size : ($column-base * $total) + ($gutter-base * ($total - 1));
+  $gutter-orig: percentage($gutter-base / $total-size);
+
+  @if $direction == 'right' {
+    margin-right: $gutter-orig + percentage($span-size / $total-size);
+  } @else {
+    margin-left: ($gutter-orig * 2) + percentage($span-size / $total-size);
+
+    &:first-child {
+      margin-left: $gutter-orig + percentage($span-size / $total-size);
+    }
+  }
+
+}
+
+
+// Material Icons
+//
+// Offset element by columns.
+//
+// Markup:
+// //
+// // Mixin: Material Icons
+// // @include material-icon( $icon );
+// //
+// // $icon:  'string'  required. name of Google Material Icon
+// // Note: for full list, reference: https://material.io/icons/
+// //
+// .element { @include material-icon(play); }
+//
+// Styleguide Functions - Material Icons
+
+@mixin material-icon($icon: null) {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  // Preferred icon size
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  @if $icon {
+    content: $icon;
+  }
+
+  // Support for all WebKit browsers.
+  -webkit-font-smoothing: antialiased;
+  // Support for Safari and Chrome.
+  text-rendering: optimizeLegibility;
+
+  // Support for Firefox.
+  -moz-osx-font-smoothing: grayscale;
+
+  // Support for IE.
+  font-feature-settings: 'liga';
+}
+
+
+// Various animation mixins
+// Refer to Animate.css https://daneden.github.io/animate.css/
+// Setup:    @include animated;
+// Usage:    @include bounce; --replace with desired animation
+// Optional: @include infinite;
+@mixin animated {
+  -webkit-animation-duration: $base-animation-speed;
+  animation-duration: $base-animation-speed;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+@mixin infinite {
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+}
+@mixin bounce {
+  -webkit-animation-name: bounce;
+  animation-name: bounce;
+  -webkit-transform-origin: center bottom;
+  transform-origin: center bottom;
+}
+@mixin flash {
+  -webkit-animation-name: flash;
+  animation-name: flash;
+}
+@mixin pulse {
+  -webkit-animation-name: pulse;
+  animation-name: pulse;
+}
+@mixin rubberBand {
+  -webkit-animation-name: rubberBand;
+  animation-name: rubberBand;
+}
+@mixin shake {
+  -webkit-animation-name: shake;
+  animation-name: shake;
+}
+@mixin headShake {
+  -webkit-animation-timing-function: ease-in-out;
+  animation-timing-function: ease-in-out;
+  -webkit-animation-name: headShake;
+  animation-name: headShake;
+}
+@mixin swing {
+  -webkit-transform-origin: top center;
+  transform-origin: top center;
+  -webkit-animation-name: swing;
+  animation-name: swing;
+}
+@mixin tada {
+  -webkit-animation-name: tada;
+  animation-name: tada;
+}
+@mixin wobble {
+  -webkit-animation-name: wobble;
+  animation-name: wobble;
+}
+@mixin jello {
+  -webkit-animation-name: jello;
+  animation-name: jello;
+  -webkit-transform-origin: center;
+  transform-origin: center;
+}
+@mixin bounceIn {
+  -webkit-animation-name: bounceIn;
+  animation-name: bounceIn;
+  -webkit-animation-duration: .75s;
+  animation-duration: .75s;
+}
+@mixin bounceInDown {
+  -webkit-animation-name: bounceInDown;
+  animation-name: bounceInDown;
+}
+@mixin bounceInLeft {
+  -webkit-animation-name: bounceInLeft;
+  animation-name: bounceInLeft;
+}
+@mixin bounceInRight {
+  -webkit-animation-name: bounceInRight;
+  animation-name: bounceInRight;
+}
+@mixin bounceInUp {
+  -webkit-animation-name: bounceInUp;
+  animation-name: bounceInUp;
+}
+@mixin bounceOut {
+  -webkit-animation-name: bounceOut;
+  animation-name: bounceOut;
+  -webkit-animation-duration: .75s;
+  animation-duration: .75s;
+}
+@mixin bounceOutDown {
+  -webkit-animation-name: bounceOutDown;
+  animation-name: bounceOutDown;
+}
+@mixin bounceOutLeft {
+  -webkit-animation-name: bounceOutLeft;
+  animation-name: bounceOutLeft;
+}
+@mixin bounceOutRight {
+  -webkit-animation-name: bounceOutRight;
+  animation-name: bounceOutRight;
+}
+@mixin bounceOutUp {
+  -webkit-animation-name: bounceOutUp;
+  animation-name: bounceOutUp;
+}
+@mixin fadeIn {
+  -webkit-animation-name: fadeIn;
+  animation-name: fadeIn;
+}
+@mixin fadeInDown {
+  -webkit-animation-name: fadeInDown;
+  animation-name: fadeInDown;
+}
+@mixin fadeInDownBig {
+  -webkit-animation-name: fadeInDownBig;
+  animation-name: fadeInDownBig;
+}
+@mixin fadeInLeft {
+  -webkit-animation-name: fadeInLeft;
+  animation-name: fadeInLeft;
+}
+@mixin fadeInLeftBig {
+  -webkit-animation-name: fadeInLeftBig;
+  animation-name: fadeInLeftBig;
+}
+@mixin fadeInRight {
+  -webkit-animation-name: fadeInRight;
+  animation-name: fadeInRight;
+}
+@mixin fadeInRightBig {
+  -webkit-animation-name: fadeInRightBig;
+  animation-name: fadeInRightBig;
+}
+@mixin fadeInUp {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+}
+@mixin fadeInUpBig {
+  -webkit-animation-name: fadeInUpBig;
+  animation-name: fadeInUpBig;
+}
+@mixin fadeOut {
+  -webkit-animation-name: fadeOut;
+  animation-name: fadeOut;
+}
+@mixin fadeOutDown {
+  -webkit-animation-name: fadeOutDown;
+  animation-name: fadeOutDown;
+}
+@mixin fadeOutDownBig {
+  -webkit-animation-name: fadeOutDownBig;
+  animation-name: fadeOutDownBig;
+}
+@mixin fadeOutLeft {
+  -webkit-animation-name: fadeOutLeft;
+  animation-name: fadeOutLeft;
+}
+@mixin fadeOutLeftBig {
+  -webkit-animation-name: fadeOutLeftBig;
+  animation-name: fadeOutLeftBig;
+}
+@mixin fadeOutRight {
+  -webkit-animation-name: fadeOutRight;
+  animation-name: fadeOutRight;
+}
+@mixin fadeOutRightBig {
+  -webkit-animation-name: fadeOutRightBig;
+  animation-name: fadeOutRightBig;
+}
+@mixin fadeOutUp {
+  -webkit-animation-name: fadeOutUp;
+  animation-name: fadeOutUp;
+}
+@mixin fadeOutUpBig {
+  -webkit-animation-name: fadeOutUpBig;
+  animation-name: fadeOutUpBig;
+}
+@mixin flip {
+  -webkit-backface-visibility: visible;
+  backface-visibility: visible;
+  -webkit-animation-name: flip;
+  animation-name: flip;
+}
+@mixin flipInX {
+  -webkit-backface-visibility: visible !important;
+  backface-visibility: visible !important;
+  -webkit-animation-name: flipInX;
+  animation-name: flipInX;
+}
+@mixin flipInY {
+  -webkit-backface-visibility: visible !important;
+  backface-visibility: visible !important;
+  -webkit-animation-name: flipInY;
+  animation-name: flipInY;
+}
+@mixin flipOutX {
+  -webkit-animation-name: flipOutX;
+  animation-name: flipOutX;
+  -webkit-backface-visibility: visible !important;
+  backface-visibility: visible !important;
+  -webkit-animation-duration: .75s;
+  animation-duration: .75s;
+}
+@mixin flipOutY {
+  -webkit-backface-visibility: visible !important;
+  backface-visibility: visible !important;
+  -webkit-animation-name: flipOutY;
+  animation-name: flipOutY;
+  -webkit-animation-duration: .75s;
+  animation-duration: .75s;
+}
+@mixin lightSpeedIn {
+  -webkit-animation-name: lightSpeedIn;
+  animation-name: lightSpeedIn;
+  -webkit-animation-timing-function: ease-out;
+  animation-timing-function: ease-out;
+}
+@mixin lightSpeedOut {
+  -webkit-animation-name: lightSpeedOut;
+  animation-name: lightSpeedOut;
+  -webkit-animation-timing-function: ease-in;
+  animation-timing-function: ease-in;
+}
+@mixin rotateIn {
+  -webkit-animation-name: rotateIn;
+  animation-name: rotateIn;
+}
+@mixin rotateInDownLeft {
+  -webkit-animation-name: rotateInDownLeft;
+  animation-name: rotateInDownLeft;
+}
+@mixin rotateInDownRight {
+  -webkit-animation-name: rotateInDownRight;
+  animation-name: rotateInDownRight;
+}
+@mixin rotateInUpLeft {
+  -webkit-animation-name: rotateInUpLeft;
+  animation-name: rotateInUpLeft;
+}
+@mixin rotateInUpRight {
+  -webkit-animation-name: rotateInUpRight;
+  animation-name: rotateInUpRight;
+}
+@mixin rotateOut {
+  -webkit-animation-name: rotateOut;
+  animation-name: rotateOut;
+}
+@mixin rotateOutDownLeft {
+  -webkit-animation-name: rotateOutDownLeft;
+  animation-name: rotateOutDownLeft;
+}
+@mixin rotateOutDownRight {
+  -webkit-animation-name: rotateOutDownRight;
+  animation-name: rotateOutDownRight;
+}
+@mixin rotateOutUpLeft {
+  -webkit-animation-name: rotateOutUpLeft;
+  animation-name: rotateOutUpLeft;
+}
+@mixin rotateOutUpRight {
+  -webkit-animation-name: rotateOutUpRight;
+  animation-name: rotateOutUpRight;
+}
+@mixin hinge {
+  -webkit-animation-name: hinge;
+  animation-name: hinge;
+  -webkit-animation-duration: 2s;
+  animation-duration: 2s;
+}
+@mixin rollIn {
+  -webkit-animation-name: rollIn;
+  animation-name: rollIn;
+}
+@mixin rollOut {
+  -webkit-animation-name: rollOut;
+  animation-name: rollOut;
+}
+@mixin zoomIn {
+  -webkit-animation-name: zoomIn;
+  animation-name: zoomIn;
+}
+@mixin zoomInDown {
+  -webkit-animation-name: zoomInDown;
+  animation-name: zoomInDown;
+}
+@mixin zoomInLeft {
+  -webkit-animation-name: zoomInLeft;
+  animation-name: zoomInLeft;
+}
+@mixin zoomInRight {
+  -webkit-animation-name: zoomInRight;
+  animation-name: zoomInRight;
+}
+@mixin zoomInUp {
+  -webkit-animation-name: zoomInUp;
+  animation-name: zoomInUp;
+}
+@mixin zoomOut {
+  -webkit-animation-name: zoomOut;
+  animation-name: zoomOut;
+}
+@mixin zoomOutDown {
+  -webkit-animation-name: zoomOutDown;
+  animation-name: zoomOutDown;
+}
+@mixin zoomOutLeft {
+  -webkit-animation-name: zoomOutLeft;
+  animation-name: zoomOutLeft;
+}
+@mixin zoomOutRight {
+  -webkit-animation-name: zoomOutRight;
+  animation-name: zoomOutRight;
+}
+@mixin zoomOutUp {
+  -webkit-animation-name: zoomOutUp;
+  animation-name: zoomOutUp;
+}
+@mixin slideInDown {
+  -webkit-animation-name: slideInDown;
+  animation-name: slideInDown;
+}
+@mixin slideInLeft {
+  -webkit-animation-name: slideInLeft;
+  animation-name: slideInLeft;
+}
+@mixin slideInRight {
+  -webkit-animation-name: slideInRight;
+  animation-name: slideInRight;
+}
+@mixin slideInUp {
+  -webkit-animation-name: slideInUp;
+  animation-name: slideInUp;
+}
+@mixin slideOutDown {
+  -webkit-animation-name: slideOutDown;
+  animation-name: slideOutDown;
+}
+@mixin slideOutLeft {
+  -webkit-animation-name: slideOutLeft;
+  animation-name: slideOutLeft;
+}
+@mixin slideOutRight {
+  -webkit-animation-name: slideOutRight;
+  animation-name: slideOutRight;
+}
+@mixin slideOutUp {
+  -webkit-animation-name: slideOutUp;
+  animation-name: slideOutUp;
+}

@@ -1,0 +1,44 @@
+{% extends "_layout" %}
+{% set title = "Work" %}
+
+{% block content %}
+<article>
+
+<div class="projects">
+{% for entry in craft.entries.section('projects').find() %}
+  <div class="project">
+    {% include '_partials/_project-thumb' %}
+  </div>
+{% endfor %}
+</div>
+
+    <section>
+      <div class="wrapper">
+        <h2>Work in Progress</h2>
+        <ul class="shots"></ul>
+      </div>
+    </section>
+
+</article>
+
+{% endblock %}
+
+{% block scripts %}
+<!-- <script src="{{ siteUrl }}js/dribbble.js"></script>
+<script>
+$.jribbble.setToken('21e6d63a0005cdec7cd62f3a450845523b7c59151bad82d32544f470037961be');
+$.jribbble.users('markr').shots().then(function(res) {
+  var html = [];
+  res.forEach(function(shot) {
+    html.push('<li>');
+    html.push('<a href="' + shot.html_url + '" target="_blank">');
+    html.push('<img src="' + shot.images.normal + '" draggable="false">');
+    html.push('</a></li>');
+  });
+  $('.shots').html(html.join(''));
+}).then(function() {
+  var api = $('#app-wrapper').data('jsp');
+  api.reinitialise();
+});
+</script> -->
+{% endblock %}
