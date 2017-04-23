@@ -3,24 +3,23 @@
 // =============================================================================
 
 // Gulp Library
-var gulp = require('gulp');
+var gulp         = require('gulp');
 
 // Gulp Plugins
 var autoprefixer = require('gulp-autoprefixer');
-var sass = require('gulp-sass');
-var concat = require('gulp-concat');
-var notify = require('gulp-notify');
-var livereload = require('gulp-livereload');
-var rename = require('gulp-rename');
-var imagemin = require('gulp-imagemin');
-var uglify = require('gulp-uglify');
-var newer = require('gulp-newer');
-var kss = require('gulp-kss');
-var fileinclude = require('gulp-file-include');
-var sourcemaps = require('gulp-sourcemaps');
-var del = require('del');
-var runSequence = require('run-sequence');
-var csscomb = require('gulp-csscomb');
+var sass         = require('gulp-sass');
+var concat       = require('gulp-concat');
+var notify       = require('gulp-notify');
+var livereload   = require('gulp-livereload');
+var rename       = require('gulp-rename');
+var imagemin     = require('gulp-imagemin');
+var uglify       = require('gulp-uglify');
+var newer        = require('gulp-newer');
+var fileinclude  = require('gulp-file-include');
+var sourcemaps   = require('gulp-sourcemaps');
+var del          = require('del');
+var runSequence  = require('run-sequence');
+var csscomb      = require('gulp-csscomb');
 
 
 // =============================================================================
@@ -30,26 +29,22 @@ var csscomb = require('gulp-csscomb');
 // To help clean up paths, lets predefine
 // any major paths we'll want to use
 var srcPaths = {
-  css: 'src/scss/',
-  js: 'src/js/',
-  img: 'src/img/',
-  styleguide: 'src/styleguide/dist/',
-  templates: 'src/templates/'
+  css:        'src/scss/',
+  js:         'src/js/',
+  img:        'src/img/'
 };
 var distPaths = {
-  css: 'public_html/css/',
-  js: 'public_html/js/',
-  img: 'public_html/img/',
-  styleguide: 'public_html/styleguide/',
-  templates: 'public_html/styleguide/templates/'
+  css:        'public_html/css/',
+  js:         'public_html/js/',
+  img:        'public_html/img/'
 };
 
 var onError = function(err) {
   notify.onError({
-    title: "Gulp",
+    title:    "Gulp",
     subtitle: "Failure!",
-    message: "Error: <%= error.message %>",
-    sound: "Funk"
+    message:  "Error: <%= error.message %>",
+    sound:    "Funk"
   })(err);
 
   this.emit('end');
@@ -62,6 +57,7 @@ var onError = function(err) {
 
 //
 // TASK: SASS
+// -----------------------------------------------------------------------------
 // Compile our sass into css for site/application
 // Be sure to switch between sass outputStyles below
 //
@@ -87,6 +83,7 @@ gulp.task('sass', function() {
 
 //
 // TASK: IMAGES
+// -----------------------------------------------------------------------------
 // We'll look for any new images in the project and
 // optimize them. Supports .png, .jpg, .gif, and .svg
 //
@@ -100,6 +97,7 @@ gulp.task('images', function() {
 
 //
 // TASK: SCRIPTS
+// -----------------------------------------------------------------------------
 // Compile global script files in the project
 //
 gulp.task('js-global', function() {

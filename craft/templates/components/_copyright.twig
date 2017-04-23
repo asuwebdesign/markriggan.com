@@ -1,0 +1,10 @@
+<div class="copyright">
+  &copy; Copyright {{ now.year }}. All rights reserved.
+</div>
+<ul>
+{% nav node in craft.menus.getNodes('legalMenu') %}
+  <li>
+    <a href="{{node.link}}">{{ node.title }}</a>
+  </li>
+{% endnav %}
+</ul>

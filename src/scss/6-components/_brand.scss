@@ -1,15 +1,17 @@
 .brand {
-  width: rem(64);
-  height: rem(64);
+  width: rem(48);
+  height: rem(48);
+  padding: 0;
   margin: 0;
-  background-color: #ccc;
-  border-radius: 50%;
-  font-size: 0;
-  line-height: 0;
+  //background-color: #ccc;
 
   a {
+    position: relative;
     display: block;
     width: 100%;
     height: 100%;
+  }
+  svg {
+    @include absolute-center;
   }
 }

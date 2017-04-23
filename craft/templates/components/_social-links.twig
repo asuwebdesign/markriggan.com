@@ -1,0 +1,7 @@
+<ul class="social">
+{% nav node in craft.menus.getNodes('socialMenu') %}
+  <li>
+    <a href="{{node.link}}">{{ node.title }}</a>
+  </li>
+{% endnav %}
+</ul>

@@ -14,14 +14,22 @@ label { display: block; }
 input {
   width: 100%;
   padding: rem(10);
-  border: rem(1) solid #ccc;
-  border-radius: rem(3);
+  border: 0;
+  border-bottom: rem(1) solid color(black);
   font-size: rem(14);
   font-weight: 300;
 
   &:focus {
     border-color: #999;
     outline: 0;
+  }
+
+  &[type='submit'] {
+    background-color: color(black);
+    border: 0;
+    color: color(white);
+    font-weight: 500;
+    text-transform: uppercase;
   }
 }
 

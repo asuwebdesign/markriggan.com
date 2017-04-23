@@ -1,0 +1,25 @@
+{% if entry.featuredImage | length %}
+{% set hero = entry.featuredImage.first() %}
+<header class="hero">
+  <figure class="hero__image">
+    <img src="{{ hero.getUrl }}" alt="{{ hero.altDescription }}" draggable="false" />
+  </figure>
+  <div class="hero__summary">
+    <div class="wrapper">
+      {% if entry.clientName | length %}
+      <div class="badge" itemprop="publisher">
+        {{ entry.clientName }}
+      </div>
+      {% endif %}
+
+      {% if entry.featuredTitle | length %}
+      <h1 class="primary" itemprop="name">{{ entry.featuredTitle }}</h1>
+      {% endif %}
+
+      {% if entry.featuredSubtitle | length %}
+      <p>{{ entry.featuredSubtitle }}</p>
+      {% endif %}
+    </div>
+  </div>
+</header>
+{% endif %}
