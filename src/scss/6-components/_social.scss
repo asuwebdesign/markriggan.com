@@ -1,0 +1,17 @@
+.social {
+  @include media('>=laptop') {
+    display: flex;
+  }
+
+  li {
+    @include media('>=laptop') {
+      margin-left: rem(15);
+    }
+
+    &:first-child {
+      @include media('>=laptop') {
+        margin-left: 0;
+      }
+    }
+  }
+}

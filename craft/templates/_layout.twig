@@ -31,8 +31,7 @@
 	<header id="app__header" class="app__header" role="banner">
 		<h1 class="brand">
 			<a href="{{ siteUrl }}" title="Home page for Mark Riggan" rel="home">
-				<span class="ui-hidden">{{ siteName }}</span>
-				<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 88.82"><defs><style>.cls-1{fill:#1e1e23;}</style></defs><path class="cls-1" d="M125.24.62a5.21,5.21,0,0,0-5.36.26L64,38.13,8.12.88A5.22,5.22,0,0,0,0,5.23V83.59a5.22,5.22,0,0,0,8.12,4.35L64,50.69h0l9.42-6.28h0L117.55,15V73.83L82.84,50.69,73.42,57l46.46,31A5.22,5.22,0,0,0,128,83.59V5.23A5.21,5.21,0,0,0,125.24.62ZM10.45,73.83V15L54.58,44.41Z"/></svg>
+				<span>{{ siteName }}</span>
 			</a>
 		</h1>
 		{% include 'components/_navigation' %}
@@ -40,7 +39,7 @@
 
 
 	{# App Content #}
-	<main id="barba-wrapper" class="app-content" role="main">
+	<main id="barba-wrapper" class="app__content" role="main">
     <div class="barba-container">
 
   		{% block content %}
@@ -66,10 +65,12 @@
 
 	{# App Footer #}
 	<footer class="app__footer" role="contentinfo">
-		{% include 'components/_cta' %}
-		{% include 'components/_tagline' %}
-		{% include 'components/_social-links' %}
-		{% include 'components/_copyright' %}
+		<div class="wrapper">
+			{% include 'components/_cta' %}
+			{% include 'components/_tagline' %}
+			{% include 'components/_social-links' %}
+			{% include 'components/_copyright' %}
+		</div>
 	</footer>
 
 
@@ -84,10 +85,21 @@
     Barba.Prefetch.init();
 
 		// Init HeadRoom.js
-		// var header = document.getElementById('app__header');
-		// var headroom = new Headroom(header);
-		//
-		// headroom.init();
+		var header = document.getElementById('app__header');
+		var headroom = new Headroom(header, {
+			offset: 75,
+			classes: {
+				initial:   'app__header--init',
+				pinned:    'app__header--pinned',
+				unpinned:  'app__header--unpinned',
+				top:       'app__header--top',
+				notTop:    'app__header--not-top',
+				bottom:    'app__header--bottom',
+				notBottom: 'app__header--not-bottom'
+			}
+		});
+
+		headroom.init();
   </script>
 
 

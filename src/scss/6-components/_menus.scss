@@ -1,37 +1,29 @@
-// -----------------------------------------------------------------------------
-// Primary menu
-// -----------------------------------------------------------------------------
 .menu {
-  text-transform: uppercase;
-  font-size: rem(14);
-  line-height: 1;
+  display: none;
 
-  // Menu title
-  &__title {
-    @include hide-off-screen;
+  @include media('>=laptop') {
+    float: right;
+    display: block;
+    height: 100%;
+    margin-right: rem(30);
+    font-weight: 500;
+    font-size: rem(16);
   }
 
-  // Menu items
-  &__items {
-    @include reset-list;
-
-    @include media('>=laptop') {
-      display: flex;
-    }
+  h1 {
+    @extend %ui-hidden;
   }
 
-  // Menu item
-  &__item {
-    @include media('>=laptop') {
-      margin: rem(10);
-    }
+  ul {
+    display: flex;
+    align-items: center;
+    height: 100%;
+  }
+  li {
+    margin-left: rem(15);
 
-    // active state
-    &--active {
-      @include media('>=laptop') {
-        border-bottom: rem(1) solid;
-      }
+    &:first-child {
+      margin-left: 0;
     }
   }
-
 }

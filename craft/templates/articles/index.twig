@@ -2,16 +2,20 @@
 {% set title = "Articles" %}
 
 {% block content %}
-<h1>Articles</h1>
+  <section>
+    <div class="wrapper">
+      <h1>Articles</h1>
 
-<div class="articles">
-{% for entry in craft.entries.section('articles').find() %}
-  <article class="article">
-    <h1><a href="{{ entry.url }}" data-underline>{{ entry.title }}</a></h1>
-    <p>Posted on {{ entry.postDate.format('F d, Y') }}</p>
-    {{ entry.body.getPage(1) | striptags | slice(0, 155) }}[&hellip;]
-    <p><a href="{{ entry.url }}">Continue reading</a></p>
-  </article>
-{% endfor %}
-</div>
+      <div class="articles">
+      {% for entry in craft.entries.section('articles').find() %}
+        <article class="article">
+          <h1><a href="{{ entry.url }}" data-underline>{{ entry.title }}</a></h1>
+          <p>Posted on {{ entry.postDate.format('F d, Y') }}</p>
+          {{ entry.body.getPage(1) | striptags | slice(0, 155) }}[&hellip;]
+          <p><a href="{{ entry.url }}">Continue reading</a></p>
+        </article>
+      {% endfor %}
+      </div>
+    </div>
+  </section>
 {% endblock %}

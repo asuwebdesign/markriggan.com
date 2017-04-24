@@ -1,12 +1,16 @@
-<div>
-  <nav class="menu">
-    <h1 class="ui-hidden"><span>Site Menu</span></h1>
-    <ul class="menu__items">
-    {% nav node in craft.menus.getNodes('mainMenu') %}
-      <li class="menu__item" role="presentation">
-        <a href="{{node.link}}">{{ node.title }}</a>
-      </li>
-    {% endnav %}
-    </ul>
-  </nav>
-</div>
+<button class="hamburger" type="button">
+  <span class="hamburger-box">
+    <span class="hamburger-inner"></span>
+  </span>
+</button>
+
+<nav class="menu">
+  <h1 class="menu__title"><span>Site Menu</span></h1>
+  <ul class="menu__items">
+  {% nav node in craft.menus.getNodes('mainMenu') %}
+    <li class="menu__item" role="presentation">
+      <a href="{{node.link}}">{{ node.title }}</a>
+    </li>
+  {% endnav %}
+  </ul>
+</nav>
