@@ -6,7 +6,7 @@
     {% set asset = entry.featuredImage.first() %}
     <img src="{{ asset.url }}" />
   {% endif %}
-  <div class="wrapper">
+  <div class="wrapper wrapper--condensed">
     <h1>{{ entry.title }}</h1>
     <p>{{ entry.postDate.format('F d, Y') }}</p>
 

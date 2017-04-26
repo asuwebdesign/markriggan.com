@@ -3,8 +3,14 @@
   &--footer {
     display: block;
     padding: rem(60) rem(30);
+    border-bottom: rem(1) solid rgba(#fff, .05);
+    color: swatch(white);
     font-size: rem(36);
     text-align: center;
+
+    strong {
+      font-family: $heading-font;
+    }
   }
 
 }

@@ -2,23 +2,45 @@
 // Typography
 // =============================================================================
 body {
-  font: 300 18px/1.5 'effra', Helvetica, Arial, sans-serif;
-  color: color(black);
+  font: 100 19px/1.5 $base-font;
+  color: swatch(gray);
 }
 
 // -----------------------------------------------------------------------------
 // Headings
 // -----------------------------------------------------------------------------
 h1, h2, h3, h4, h5, h6 {
-  font-family: 'effra', Helvetica, Arial, sans-serif;
-  font-weight: 500;
+  font-family: $heading-font;
+  line-height: 1.25;
+  color: swatch(black);
+  -webkit-font-smoothing: antialiased;
 }
-h1 {}
-h2 {}
-h3 {}
-h4 {}
-h5 {}
-h6 {}
+h1 {
+  font-weight: 100;
+  font-size: rem(62);
+  line-height: 1.13;
+}
+h2 {
+  font-weight: 400;
+  font-size: rem(48);
+  line-height: 1.13;
+}
+h3 {
+  font-weight: 700;
+  font-size: rem(32);
+}
+h4 {
+  font-weight: 100;
+  font-size: rem(28);
+}
+h5 {
+  font-weight: 400;
+  font-size: rem(24);
+}
+h6 {
+  font-weight: 700;
+  font-size: rem(21);
+}
 
 // -----------------------------------------------------------------------------
 // Links
