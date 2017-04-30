@@ -25,7 +25,7 @@
 	<link rel="stylesheet" href="{{ siteUrl }}/css/style.css" media="screen">
 	<link rel="shortcut icon" href="{{ siteUrl }}/favicons/favicon.png">
 </head>
-<body>
+<body class="app">
 
 	{# App Header #}
 	<header id="app__header" class="app__header" role="banner">
@@ -65,7 +65,7 @@
 
 	{# App Footer #}
 	<footer class="app__footer" role="contentinfo">
-		{% include 'components/_cta' %}
+		{% include 'callouts/_cta' %}
 		<div class="wrapper">
 			{% include 'components/_tagline' %}
 			{% include 'components/_social-links' %}

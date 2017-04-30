@@ -1,0 +1,33 @@
+.related {
+  display: flex;
+
+  &__block {
+    width: 100%;
+
+    a {
+      position: relative;
+      display: block;
+      padding-top: percentage(3/4); // widescreen format
+      color: swatch(white);
+    }
+    h2 {
+      position: absolute;
+      bottom: rem(30);
+      left: rem(30);
+      margin: 0;
+    }
+
+    &--apps {
+      background: url('https://unsplash.it/1920/1080/?random') no-repeat 50% 50% / cover;
+    }
+    &--branding {
+      background: url('https://unsplash.it/1920/1080/?random') no-repeat 50% 50% / cover;
+    }
+    &--strategy {
+      background: url('https://unsplash.it/1920/1080/?random') no-repeat 50% 50% / cover;
+    }
+    &--websites {
+      background: url('https://unsplash.it/1920/1080/?random') no-repeat 50% 50% / cover;
+    }
+  }
+}

@@ -26,4 +26,14 @@
       margin-left: 0;
     }
   }
+  a {
+    position: relative;
+    display: inline-block;
+    line-height: 1;
+    color: swatch(white);
+
+    &:hover {
+      color: rgba(swatch(white), .75);
+    }
+  }
 }

@@ -1,0 +1,18 @@
+{% extends "_layout" %}
+
+{% block content %}
+
+<article itemscope="" itemtype="http://schema.org/WebPage">
+  <div class="wrapper">
+    <h1>{{ entry.title }}</h1>
+    {{ entry.body }}
+    <h2><a href="/expertise/branding">Branding</a></h2>
+    <h2><a href="/expertise/strategy">Strategy</a></h2>
+    <h2><a href="/expertise/websites">Websites</a></h2>
+    <h2><a href="/expertise/apps">Apps</a></h2>
+  </div>
+</article>
+
+{% endblock %}
+
+{% block scripts %}{% endblock %}

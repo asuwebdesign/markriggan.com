@@ -2,7 +2,7 @@
 // Typography
 // =============================================================================
 body {
-  font: 100 19px/1.5 $base-font;
+  font: 100 19px/2 $base-font;
   color: swatch(gray);
 }
 
@@ -10,9 +10,8 @@ body {
 // Headings
 // -----------------------------------------------------------------------------
 h1, h2, h3, h4, h5, h6 {
-  font-family: $heading-font;
+  font-family: $base-font;
   line-height: 1.25;
-  color: swatch(black);
   -webkit-font-smoothing: antialiased;
 }
 h1 {
@@ -46,6 +45,11 @@ h6 {
 // Links
 // -----------------------------------------------------------------------------
 a {
-  color: #1EAAF1;
+  color: swatch(pink);
   text-decoration: none;
+  transition: color $base-animation-speed $base-animation-easing;
+
+  &:hover {
+    color: lighten(swatch(pink), 10%);
+  }
 }

@@ -1,0 +1,9 @@
+.button, button {
+  padding: rem(19) rem(57);
+  background-color: swatch(pink);
+  border: 0;
+  border-radius: rem(500);
+  line-height: 1;
+  color: swatch(white);
+  white-space: nowrap;
+}

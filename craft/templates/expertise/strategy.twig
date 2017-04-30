@@ -1,0 +1,42 @@
+{% extends "_layout" %}
+
+{% block content %}
+
+<article>
+  <div class="wrapper">
+    <h1>{{ entry.title }}</h1>
+    {{ entry.body }}
+
+    <p>Superior mobile experiences for productivity, brand engagement, eCommerce and entertainment. Highly engaging UI and UX, natively developed across core mobile platforms to connect with users at their fingertips.</p>
+
+    <hr />
+
+    <button>Start a project</button>
+
+    <div>
+      Explore other expertise
+    </div>
+  </div>
+
+  <div class="related">
+    <div class="related__block related__block--branding">
+      <a href="/expertise/branding">
+        <h2>Branding</h2>
+      </a>
+    </div>
+    <div class="related__block related__block--websites">
+      <a href="/expertise/websites">
+        <h2>Websites</h2>
+      </a>
+    </div>
+    <div class="related__block related__block--apps">
+      <a href="/expertise/apps">
+        <h2>Apps</h2>
+      </a>
+    </div>
+  </div>
+</article>
+
+{% endblock %}
+
+{% block scripts %}{% endblock %}
