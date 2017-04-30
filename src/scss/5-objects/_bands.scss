@@ -1,0 +1,9 @@
+.band {
+  overflow: auto;
+
+  &[data-theme='light'] {
+    background-color: swatch(white);
+    color: swatch(black);
+  }
+
+}

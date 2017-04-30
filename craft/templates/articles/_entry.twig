@@ -2,24 +2,27 @@
 
 {% block content %}
 <article itemid="{{ entry.url }}" itemscope itemtype="http://schema.org/Article">
+  <div class="band" data-theme="light">
 
-  {% if entry.featuredImage | length %}
-    {% set asset = entry.featuredImage.first() %}
-    <img src="{{ asset.url }}" />
-  {% endif %}
+    {% if entry.featuredImage | length %}
+      {% set asset = entry.featuredImage.first() %}
+      <img src="{{ asset.url }}" />
+    {% endif %}
 
-  <img src="https://unsplash.it/1920/1080/?random" />
+    <img src="https://unsplash.it/1920/1080/?random" />
 
-  <div class="wrapper wrapper--condensed">
-    <h1>{{ entry.title }}</h1>
-    <p>{{ entry.postDate.format('F d, Y') }}</p>
+    <div class="wrapper wrapper--condensed">
+      <h1>{{ entry.title }}</h1>
+      <p>{{ entry.postDate.format('F d, Y') }}</p>
 
-    {% set hash = '822A7624F2F41A5398D27CDE791AA519' %}
-    <img src="https://www.gravatar.com/avatar/{{ hash }}" />
+      {% set hash = '822A7624F2F41A5398D27CDE791AA519' %}
+      <img src="https://www.gravatar.com/avatar/{{ hash }}" />
 
-    {{ entry.body }}
+      {{ entry.body }}
 
-    {% include 'components/_social-share' with {'topic': 'article'} %}
+      {% include 'components/_social-share' with {'topic': 'article'} %}
+    </div>
+
   </div>
 </article>
 

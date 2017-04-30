@@ -2,11 +2,11 @@
 {% set title = "Articles" %}
 
 {% block content %}
-  <section>
-    <div class="wrapper">
-      <h1>Articles</h1>
+<article>
+  <div class="band" data-theme="light">
+    <h1>Articles</h1>
 
-      <div class="articles">
+    <div class="articles">
       {% for entry in craft.entries.section('articles').find() %}
         <article class="article">
           <h1><a href="{{ entry.url }}" data-underline>{{ entry.title }}</a></h1>
@@ -15,7 +15,7 @@
           <p><a href="{{ entry.url }}">Continue reading</a></p>
         </article>
       {% endfor %}
-      </div>
     </div>
-  </section>
+  </div>
+</article>
 {% endblock %}
