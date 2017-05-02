@@ -3,45 +3,50 @@
 
 {% block content %}
 <article>
-  <h1>Work</h1>
-  <section>
-    {% for entry in craft.entries.section('projects').find() %}{% endfor %}
+  <div class="wrapper">
+    <h1>Work</h1>
+    <p>A showcase of our most recent, interesting and awarded projects.</p>
 
-    <div class="related">
-      <div class="related__block related__block--branding">
-        <a href="/expertise/branding">
-          <h2>Branding</h2>
-        </a>
+
+    <section>
+      {% for entry in craft.entries.section('projects').find() %}{% endfor %}
+
+      <div class="related">
+        <div class="related__block related__block--branding">
+          <a href="/expertise/branding">
+            <h2>Branding</h2>
+          </a>
+        </div>
+        <div class="related__block related__block--strategy">
+          <a href="/expertise/websites">
+            <h2>Strategy</h2>
+          </a>
+        </div>
+        <div class="related__block related__block--apps">
+          <a href="/expertise/apps">
+            <h2>Apps</h2>
+          </a>
+        </div>
       </div>
-      <div class="related__block related__block--strategy">
-        <a href="/expertise/websites">
-          <h2>Strategy</h2>
-        </a>
+      <div class="related">
+        <div class="related__block related__block--branding">
+          <a href="/expertise/branding">
+            <h2>Branding</h2>
+          </a>
+        </div>
+        <div class="related__block related__block--strategy">
+          <a href="/expertise/websites">
+            <h2>Strategy</h2>
+          </a>
+        </div>
+        <div class="related__block related__block--apps">
+          <a href="/expertise/apps">
+            <h2>Apps</h2>
+          </a>
+        </div>
       </div>
-      <div class="related__block related__block--apps">
-        <a href="/expertise/apps">
-          <h2>Apps</h2>
-        </a>
-      </div>
-    </div>
-    <div class="related">
-      <div class="related__block related__block--branding">
-        <a href="/expertise/branding">
-          <h2>Branding</h2>
-        </a>
-      </div>
-      <div class="related__block related__block--strategy">
-        <a href="/expertise/websites">
-          <h2>Strategy</h2>
-        </a>
-      </div>
-      <div class="related__block related__block--apps">
-        <a href="/expertise/apps">
-          <h2>Apps</h2>
-        </a>
-      </div>
-    </div>
-  </section>
+    </section>
+  </div>
 
   <section>
     <div class="wrapper">

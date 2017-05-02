@@ -1,0 +1,38 @@
+.partners {
+  display: flex;
+  flex-wrap: wrap;
+
+  li {
+    position: relative;
+    width: 20%;
+    border: rem(1) solid lighten(swatch(black), 10%);
+    border-width: 0 0 rem(1) rem(1);
+
+    &:before {
+      content: '';
+      display: block;
+      top: 0;
+      left: 0;
+      width: 100%;
+      padding: 0 0 100%;
+    }
+
+    span {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &:nth-child(5n+1) {
+      border-left: none;
+    }
+    &:nth-last-child(-n+5) {
+      border-bottom: none;
+    }
+  }
+}

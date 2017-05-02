@@ -16,16 +16,15 @@
     width: 100%;
     height: rem(75);
     padding: 0;
-    background-color: rgba(swatch(black), .9);
     transition: transform $base-animation-speed * 4 $base-animation-easing;
     z-index: 500;
 
-    &--pinned {
-      transform: translate3d(0, 0, 0);
-    }
-    &--unpinned {
-      transform: translate3d(0, -100%, 0);
-    }
+    // &--pinned {
+    //   transform: translate3d(0, 0, 0);
+    // }
+    // &--unpinned {
+    //   transform: translate3d(0, -100%, 0);
+    // }
   }
 
   // ---------------------------------------------------------------------------

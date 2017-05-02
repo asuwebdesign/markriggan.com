@@ -1,6 +1,20 @@
 .band {
+  padding: rem(120) 0;
   overflow: auto;
 
+  // Band padding
+  &[data-padding=''] {}
+
+  // Band alignment
+  &[data-align='center'] {
+    text-align: center;
+  }
+
+  // Band themes
+  &[data-theme='dark'] {
+    background-color: swatch(black);
+    color: swatch(white);
+  }
   &[data-theme='light'] {
     background-color: swatch(white);
     color: swatch(black);
