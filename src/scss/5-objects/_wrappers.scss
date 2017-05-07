@@ -11,7 +11,7 @@
     padding: 0;
   }
 
-  &--condensed {
+  &[data-size='condensed'] {
     max-width: rem(640);
   }
 }

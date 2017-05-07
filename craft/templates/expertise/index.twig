@@ -3,14 +3,14 @@
 {% block content %}
 
 <article itemscope="" itemtype="http://schema.org/WebPage">
-  <div class="band" data-align="center">
-    <div class="wrapper">
+  <div class="band" data-topic="expertise" data-hero="true" data-align="center">
+    <div class="wrapper" data-size="condensed">
       <h1>{{ entry.title }}</h1>
       <p>Digital isn't the word of the moment, it's the way forward. We're an award-winning independent agency, building better connections between brands and people through purposeful design, experience and technology.</p>
       {{ entry.body }}
     </div>
   </div>
-  <section class="band">
+  <section class="band" data-align="center">
     <div class="wrapper">
       <ul class="services">
         <li>
@@ -28,7 +28,7 @@
       </ul>
     </div>
   </section>
-  <section class="band">
+  <section class="band" data-align="center">
     <div class="wrapper">
       <h2>Partners</h2>
       <p>We work with the best; startups to enterprise.</p>
@@ -70,7 +70,7 @@
     <div class="wrapper">
       <h2>Process</h2>
       <p>People and their relationship with technology is the only reason we're here. We take a people-first approach across the board, because it's more important to speak for humans than for search engines. Your users are our users, and giving them an awesome experience is our goal.</p>
-    </div>    
+    </div>
   </section>
 </article>
 

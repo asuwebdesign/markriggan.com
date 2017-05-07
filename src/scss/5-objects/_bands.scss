@@ -1,6 +1,8 @@
 .band {
   padding: rem(120) 0;
-  overflow: auto;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
 
   // Band padding
   &[data-padding=''] {}
@@ -18,6 +20,16 @@
   &[data-theme='light'] {
     background-color: swatch(white);
     color: swatch(black);
+  }
+
+  // Band sizes
+  &[data-hero='true'] {
+    height: 50vh;
+  }
+
+  // Unique topics
+  &[data-topic='expertise'] {
+    background-image: url('https://theultralinx.com/.image/t_share/MTI5MDIzNjQxMjQ0NDEyNTQ3/darkgon.png');
   }
 
 }

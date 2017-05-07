@@ -1,16 +1,20 @@
-.cta {
+.project-cta {
+  display: block;
+  font-size: rem(36);
+  text-align: center;
+  transition: background $base-animation-speed $base-animation-easing;
 
-  &--footer {
+  a {
     display: block;
     padding: rem(60) rem(30);
-    border-bottom: rem(1) solid rgba(#fff, .05);
     color: swatch(white);
-    font-size: rem(36);
-    text-align: center;
-
-    strong {
-      font-family: $heading-font;
-    }
+  }
+  strong {
+    font-family: $heading-font;
   }
 
+  // hover state
+  &:hover {
+    background-color: lighten(swatch(black), 5%);
+  }
 }

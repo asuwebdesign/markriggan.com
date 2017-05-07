@@ -1,6 +1,7 @@
 .social {
   @include media('>=laptop') {
     display: flex;
+    justify-content: center;
   }
 
   li {

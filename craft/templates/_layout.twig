@@ -68,8 +68,8 @@
 
 	{# App Footer #}
 	<footer class="app__footer" role="contentinfo">
+		{% include 'callouts/_cta' %}
 		<div class="wrapper">
-			{% include 'callouts/_cta' %}
 			{% include 'components/_tagline' %}
 			{% include 'components/_social-links' %}
 			{% include 'components/_copyright' %}
@@ -95,7 +95,7 @@
 				* this.newContainerLoading is a Promise for the loading of the new container
 				* (Barba.js also comes with an handy Promise polyfill!)
 				*/
-				
+
 				// As soon the loading is finished and the old page is faded out, let's fade the new page
 				Promise
 				.all([this.newContainerLoading, this.fadeOut()])
