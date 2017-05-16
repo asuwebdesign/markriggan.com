@@ -64,6 +64,9 @@ typings/
 # dotenv environment variables file
 .env
 
+.DS_STORE
+.vagrant
+
 
 ### Sass ###
 .sass-cache/

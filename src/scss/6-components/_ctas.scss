@@ -1,5 +1,8 @@
 .project-cta {
   display: block;
+  margin: 0 0 rem(64);
+  border-top: rem(1) solid lighten(swatch(black), 10%);
+  border-bottom: rem(1) solid lighten(swatch(black), 10%);
   font-size: rem(36);
   text-align: center;
   transition: background $base-animation-speed $base-animation-easing;
