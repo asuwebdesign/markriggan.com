@@ -34,9 +34,9 @@ var srcPaths = {
   img:        'src/img/'
 };
 var distPaths = {
-  css:        'public_html/css/',
-  js:         'public_html/js/',
-  img:        'public_html/img/'
+  css:        'public/css/',
+  js:         'public/js/',
+  img:        'public/img/'
 };
 
 var onError = function(err) {
