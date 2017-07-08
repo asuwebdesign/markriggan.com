@@ -169,7 +169,4 @@ gulp.task('watch', function() {
 
 // Lets setup a series of tasks that can
 // run during a single-instance command
-gulp.task('default', [
-  'sass',
-  'global-scripts',
-  'scripts-dribbble', 'js-module-menu', 'js-module-pjax', 'js-module-parallax', 'images']);
+gulp.task('default', ['sass']);
