@@ -45,11 +45,11 @@ h6 {
 // Links
 // -----------------------------------------------------------------------------
 a {
-  color: swatch(pink);
+  //color: swatch(pink);
   text-decoration: none;
-  transition: color $base-animation-speed $base-animation-easing;
+  //transition: color $base-animation-speed $base-animation-easing;
 
   &:hover {
-    color: lighten(swatch(pink), 10%);
+    //color: lighten(swatch(pink), 10%);
   }
 }

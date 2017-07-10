@@ -26,8 +26,7 @@ var csscomb      = require('gulp-csscomb');
 // PATHS & ERROR HANDLING
 // =============================================================================
 
-// To help clean up paths, lets predefine
-// any major paths we'll want to use
+// To help clean up paths, lets predefine any major paths we'll want to use
 var srcPaths = {
   css:        'src/scss/',
   js:         'src/js/',

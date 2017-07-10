@@ -68,6 +68,7 @@ class MyshortcodesPlugin extends BasePlugin
 	{
     $classes = $attributes['class'];
 		$href    = $attributes['href'];
+		$content;
 
 		return '<a class="button ' . $classes . '" href="' . $href . '">' . $content . '</a>';
 	}

@@ -1,8 +1,9 @@
 .related {
   display: flex;
+  flex-wrap: wrap;
 
   &__block {
-    width: 100%;
+    width: percentage(1/3);
 
     a {
       position: relative;

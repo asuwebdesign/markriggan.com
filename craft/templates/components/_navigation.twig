@@ -8,12 +8,6 @@
   {% endnav %}
   </ul>
 
-  <button class="hamburger">
-    <span class="hamburger-box">
-      <span class="hamburger-inner"></span>
-    </span>
-  </button>
-
   {% nav node in craft.menus.getNodes('actionMenu') %}
     <a href="{{node.link}}">{{ node.title }}</a>
   {% endnav %}

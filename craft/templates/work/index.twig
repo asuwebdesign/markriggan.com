@@ -1,53 +1,27 @@
 {% extends "_layout" %}
 {% set title = "Work" %}
+{% set bodyClass = 'theme-dark' %}
 
 {% block content %}
 <article>
   <div class="band" data-topic="expertise" data-hero="true" data-align="center">
     <div class="wrapper wrapper--condensed">
-      <h1>{{ entry.title }}</h1>
-      <p>A showcase of our most recent, interesting and awarded projects.</p>
+      <h1>Entry Title</h1>
+      <p>Entry Subtitle</p>
       {{ entry.body }}
     </div>
   </div>
 
   <div class="wrapper">
     <section>
-      {% for entry in craft.entries.section('projects').find() %}{% endfor %}
-
       <div class="related">
+      {% for entry in craft.entries.section('projects').find() %}
         <div class="related__block related__block--branding">
-          <a href="/expertise/branding">
-            <h2>Project Name</h2>
+          <a href="{{ entry.url }}">
+            <h2>{{ entry.title }}</h2>
           </a>
         </div>
-        <div class="related__block related__block--strategy">
-          <a href="/expertise/websites">
-            <h2>Project Name</h2>
-          </a>
-        </div>
-        <div class="related__block related__block--apps">
-          <a href="/expertise/apps">
-            <h2>Project Name</h2>
-          </a>
-        </div>
-      </div>
-      <div class="related">
-        <div class="related__block related__block--branding">
-          <a href="/expertise/branding">
-            <h2>Project Name</h2>
-          </a>
-        </div>
-        <div class="related__block related__block--strategy">
-          <a href="/expertise/websites">
-            <h2>Project Name</h2>
-          </a>
-        </div>
-        <div class="related__block related__block--apps">
-          <a href="/expertise/apps">
-            <h2>Project Name</h2>
-          </a>
-        </div>
+      {% endfor %}
       </div>
     </section>
   </div>

@@ -25,7 +25,7 @@
 	<link rel="stylesheet" href="{{ siteUrl }}/css/style.css" media="screen">
 	<link rel="shortcut icon" href="{{ siteUrl }}/favicons/favicon.png">
 </head>
-<body class="app {{ bodyClass }}">
+<body class="{{ bodyClass }}">
 
 	{# App Header #}
 	<header id="app__header" class="app__header" role="banner">
@@ -40,18 +40,14 @@
 		</div>
 	</header>
 
-
 	{# App Content #}
 	<main id="barba-wrapper" class="app__content" role="main">
     <div class="barba-container">
-
   		{% block content %}
 				{# Placeholder for content per template #}
   		{% endblock %}
-
     </div>
 	</main>
-
 
 	{# App Menu #}
 	<div id="app__menu" class="app__menu">
@@ -65,17 +61,13 @@
 		</ul>
 	</div>
 
-
 	{# App Footer #}
 	<footer class="app__footer" role="contentinfo">
 		{% include 'callouts/_cta' %}
 		<div class="wrapper">
-			{% include 'components/_tagline' %}
-			{% include 'components/_social-links' %}
-			{% include 'components/_copyright' %}
+			{% include 'components/_social-links' %} {# social links locked in bottom-left #}
 		</div>
 	</footer>
-
 
 	{# Global Scripts #}
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
@@ -88,18 +80,19 @@
     Barba.Pjax.start();
     Barba.Prefetch.init();
 
+		// var originalFn = Barba.Pjax.Dom.parseResponse;
+		// Barba.Pjax.Dom.parseResponse = function(response) {
+		//  response = response.replace(/(<\/?)body( .+?)?>/gi, '$1notbody$2>', response);
+		//  var bodyClasses = $(response).filter('notbody').attr('class');
+		//  $('body').attr('class', bodyClasses);
+		//  return originalFn.apply(Barba.Pjax.Dom, arguments);
+		// };
 
-
-		var originalFn = Barba.Pjax.Dom.parseResponse;
-
-		Barba.Pjax.Dom.parseResponse = function(response) {
-		 // do your stuff with the response
-		 console.log(response);
-
-		 return originalFn.apply(Barba.Pjax.Dom, arguments);
-		};
-
-
+		Barba.Dispatcher.on('newPageReady', function(currentStatus, oldStatus, container, newPageRawHTML) {
+		  var response = newPageRawHTML.replace(/(<\/?)body( .+?)?>/gi, '$1notbody$2>', newPageRawHTML)
+		  var bodyClasses = $(response).filter('notbody').attr('class')
+		  $('body').attr('class', bodyClasses)
+		})
 
 		var FadeTransition = Barba.BaseTransition.extend({
 			start: function() {
@@ -140,7 +133,13 @@
 					opacity : 0
 				});
 
-				$el.animate({ opacity: 1 }, 400, function() {
+				// testing only
+				//var data_class = $el.find('[data-body-class]').data('body-class');
+				//console.log(data_class);
+				//$('body').removeAttr('class').addClass(data_class);
+				// testing only
+
+				$el.animate({ opacity: 1 }, 300, function() {
 					/**
 					* Do not forget to call .done() as soon your transition is finished!
 					* .done() will automatically remove from the DOM the old Container
