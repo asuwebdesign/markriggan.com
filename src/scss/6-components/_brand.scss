@@ -11,6 +11,7 @@
     width: 100%;
     height: 100%;
     background: url('../img/l_markriggan.svg') no-repeat 50% 50% / 50% auto;
+    transition: opacity ($base-animation-speed * 2) $base-animation-easing;
   }
   svg {
     @include absolute-center;
@@ -19,15 +20,22 @@
     height: auto;
   }
   path {
-    fill: swatch(white);
+    fill: swatch(black);
+    transition: fill ($base-animation-speed * 2) $base-animation-easing;
   }
   span {
     @extend %ui-hidden;
   }
 
-  @at-root .app__header--inverted {
+  // hover state
+  a:hover {
+    opacity: .5;
+  }
+
+  // alternate style for dark theme
+  @at-root .theme-dark .brand {
     path {
-      fill: swatch(black);
+      fill: swatch(white);
     }
   }
 }

@@ -18,27 +18,39 @@ h1 {
   font-weight: 100;
   font-size: rem(62);
   line-height: 1.13;
+
+  @include media('>=tablet') {}
 }
 h2 {
   font-weight: 400;
   font-size: rem(48);
   line-height: 1.13;
+
+  @include media('>=tablet') {}
 }
 h3 {
   font-weight: 700;
   font-size: rem(32);
+
+  @include media('>=tablet') {}
 }
 h4 {
   font-weight: 100;
   font-size: rem(28);
+
+  @include media('>=tablet') {}
 }
 h5 {
   font-weight: 400;
   font-size: rem(24);
+
+  @include media('>=tablet') {}
 }
 h6 {
   font-weight: 700;
   font-size: rem(21);
+
+  @include media('>=tablet') {}
 }
 
 // -----------------------------------------------------------------------------
