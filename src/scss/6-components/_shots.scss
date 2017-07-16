@@ -1,0 +1,6 @@
+.shots {
+  @extend %flex-grid;
+}
+.shot {
+  @extend %flex-item;
+}

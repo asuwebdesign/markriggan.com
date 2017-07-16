@@ -1,11 +1,22 @@
 .band {
-  padding: rem(120) 0;
+  padding: 0;
   background-repeat: no-repeat;
   background-position: 50% 50%;
   background-size: cover;
 
   // Band padding
-  &[data-padding=''] {}
+  &[data-padding='tiny'] {
+    padding: rem(30) 0;
+  }
+  &[data-padding='average'] {
+    padding: rem(60) 0;
+  }
+  &[data-padding='big'] {
+    padding: rem(120) 0;
+  }
+  &[data-padding='giant'] {
+    padding: rem(240) 0;
+  }
 
   // Band alignment
   &[data-align='center'] {

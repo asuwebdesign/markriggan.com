@@ -1,7 +1,14 @@
 {% extends "_layout" %}
 
 {% block content %}
-<article>
+<article itemscope="" itemtype="http://schema.org/WebPage">
+  <header class="band" data-padding="giant" data-align="center">
+    <div class="title">
+      <h1>{{ entry.featuredTitle }}</h1>
+      <p>{{ entry.featuredSubtitle }}</p>
+    </div>
+  </header>
+
   <div class="band" data-theme="light">
     <div class="wrapper" data-size="condensed">
       <h1>Say hello</h1>

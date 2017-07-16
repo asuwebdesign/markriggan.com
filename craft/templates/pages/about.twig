@@ -2,13 +2,13 @@
 {% set bodyClass = 'theme-dark' %}
 
 {% block content %}
-<article>
-  <div class="band" data-topic="expertise" data-hero="true" data-align="center">
-    <div class="wrapper wrapper--condensed">
+<article itemscope="" itemtype="http://schema.org/WebPage">
+  <header class="band" data-padding="giant" data-align="center">
+    <div class="title">
       <h1>{{ entry.featuredTitle }}</h1>
       <p>{{ entry.featuredSubtitle }}</p>
     </div>
-  </div>
+  </header>
   {{ entry.body }}
 </article>
 

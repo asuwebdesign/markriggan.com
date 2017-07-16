@@ -3,35 +3,44 @@
 
 {% block content %}
 
-<article itemscope="" itemtype="http://schema.org/WebPage" data-body-class="black">
-  <div class="band" data-topic="expertise" data-hero="true" data-align="center">
-    <div class="wrapper" data-size="condensed">
+<article itemscope="" itemtype="http://schema.org/WebPage">
+  <header class="band" data-padding="giant" data-align="center">
+    <div class="title">
       <h1>{{ entry.featuredTitle }}</h1>
       <p>{{ entry.featuredSubtitle }}</p>
     </div>
-  </div>
+  </header>
+
   <section class="band" data-align="center">
     <div class="wrapper">
-      <ul class="services">
-        <li>
-          <img src="https://i.ytimg.com/vi/qxM9pMEnJQ0/maxresdefault.jpg" />
-          <h2><a href="/expertise/branding">Branding</a></h2>
-          <p>Digital isn't the word of the moment, it's the way forward.</p>
+      <ul class="services" data-size="4">
+        <li class="service">
+          <a href="/expertise/branding">
+            <img src="https://i.ytimg.com/vi/qxM9pMEnJQ0/maxresdefault.jpg" />
+            <h2>Branding</h2>
+            <p>Digital isn't the word of the moment, it's the way forward.</p>
+          </a>
         </li>
-        <li>
-          <img src="https://i.ytimg.com/vi/qxM9pMEnJQ0/maxresdefault.jpg" />
-          <h2><a href="/expertise/strategy">Strategy</a></h2>
-          <p>Digital isn't the word of the moment, it's the way forward.</p>
+        <li class="service">
+          <a href="/expertise/strategy">
+            <img src="https://i.ytimg.com/vi/qxM9pMEnJQ0/maxresdefault.jpg" />
+            <h2>Strategy</h2>
+            <p>Digital isn't the word of the moment, it's the way forward.</p>
+          </a>
         </li>
-        <li>
-          <img src="https://i.ytimg.com/vi/qxM9pMEnJQ0/maxresdefault.jpg" />
-          <h2><a href="/expertise/websites">Websites</a></h2>
-          <p>Digital isn't the word of the moment, it's the way forward.</p>
+        <li class="service">
+          <a href="/expertise/websites">
+            <img src="https://i.ytimg.com/vi/qxM9pMEnJQ0/maxresdefault.jpg" />
+            <h2>Websites</h2>
+            <p>Digital isn't the word of the moment, it's the way forward.</p>
+          </a>
         </li>
-        <li>
-          <img src="https://i.ytimg.com/vi/qxM9pMEnJQ0/maxresdefault.jpg" />
-          <h2><a href="/expertise/apps">Apps</a></h2>
-          <p>Digital isn't the word of the moment, it's the way forward.</p>
+        <li class="service">
+          <a href="/expertise/apps">
+            <img src="https://i.ytimg.com/vi/qxM9pMEnJQ0/maxresdefault.jpg" />
+            <h2>Apps</h2>
+            <p>Digital isn't the word of the moment, it's the way forward.</p>
+          </a>
         </li>
       </ul>
     </div>

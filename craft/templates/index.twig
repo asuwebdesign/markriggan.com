@@ -3,9 +3,14 @@
 {% set bodyClass = 'theme-dark' %}
 
 {% block content %}
-<img src="img/bg_hero.jpg" />
-{{ entry.title }}
-{{ entry.body | shortcodes }}
+<section class="hero">
+  <div class="hero__content">
+    <h1>{{ entry.featuredTitle }}</h1>
+    <p>{{ entry.featuredSubtitle }}</p>
+    <p>{{ entry.body | shortcodes }}</p>
+  </div>
+  <img src="img/bg_hero.jpg" />
+</section>
 {% endblock %}
 
 {% block scripts %}

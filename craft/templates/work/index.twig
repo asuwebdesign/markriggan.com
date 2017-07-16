@@ -3,33 +3,40 @@
 {% set bodyClass = 'theme-dark' %}
 
 {% block content %}
-<article>
-  <div class="band" data-topic="expertise" data-hero="true" data-align="center">
-    <div class="wrapper wrapper--condensed">
+<article itemscope="" itemtype="http://schema.org/WebPage">
+  <header class="band" data-padding="giant" data-align="center">
+    <div class="title">
       <h1>{{ entry.featuredTitle }}</h1>
       <p>{{ entry.featuredSubtitle }}</p>
     </div>
-  </div>
+  </header>
 
-  <div class="wrapper">
-    <section>
-      <div class="projects" data-size="3">
-      {% for entry in craft.entries.section('projects').find() %}
-        <div class="project">
-          <a href="{{ entry.url }}">
-            <h2>{{ entry.title }}</h2>
-            <img src="https://cdn.dribbble.com/users/63407/screenshots/3659995/dribbble_prison_cellular.png" />
-          </a>
-        </div>
-      {% endfor %}
-      </div>
-    </section>
-  </div>
-
-  <section>
+  <section class="band" data-align="center">
     <div class="wrapper">
-      <h2>Work in Progress</h2>
-      <ul class="shots"></ul>
+      <h2 class="ui-hidden">Featured Projects</h2>
+      <div class="projects" data-size="3">
+        {% for entry in craft.entries.section('projects').find() %}
+          <div class="project">
+            <a href="{{ entry.url }}">
+              <h3>{{ entry.title }}</h3>
+              <img src="https://cdn.dribbble.com/users/63407/screenshots/3659995/dribbble_prison_cellular.png" />
+            </a>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <section class="band" data-align="center">
+    <div class="wrapper">
+      <div class="title">
+        <h2>{{ dribbble.featuredTitle }}</h2>
+        <p>{{ dribbble.featuredSubtitle }}</p>
+      </div>
+
+      {% cache %}
+      <div id="shots" class="shots" data-size="6"></div>
+      {% endcache %}
     </div>
   </section>
 </article>
@@ -42,12 +49,13 @@ $.jribbble.setToken('21e6d63a0005cdec7cd62f3a450845523b7c59151bad82d32544f470037
 $.jribbble.users('markr').shots().then(function(res) {
   var html = [];
   res.forEach(function(shot) {
-    html.push('<li>');
+    html.push('<div class="shot">');
     html.push('<a href="' + shot.html_url + '" target="_blank">');
     html.push('<img src="' + shot.images.normal + '" draggable="false">');
-    html.push('</a></li>');
+    html.push('</a>');
+    html.push('</div>')
   });
-  $('.shots').html(html.join(''));
+  $('#shots').html(html.join(''));
 }).then(function() {
   var api = $('#barba-wrapper').data('jsp');
   api.reinitialise();

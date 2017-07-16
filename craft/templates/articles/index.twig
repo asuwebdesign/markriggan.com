@@ -2,15 +2,15 @@
 {% set title = "Articles" %}
 
 {% block content %}
-<article>
-  <div class="band" data-topic="expertise" data-hero="true" data-align="center">
-    <div class="wrapper wrapper--condensed">
+<article itemscope="" itemtype="http://schema.org/WebPage">
+  <header class="band" data-padding="giant" data-align="center">
+    <div class="title">
       <h1>{{ articles.featuredTitle }}</h1>
       <p>{{ articles.featuredSubtitle }}</p>
     </div>
-  </div>
-  <div class="band" data-theme="light">
+  </header>
 
+  <div class="band" data-theme="light">
     <div class="wrapper" data-size="condensed">
       {% for entry in craft.entries.section('articles').find() %}
         <article class="article">

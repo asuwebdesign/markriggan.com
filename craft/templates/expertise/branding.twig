@@ -2,17 +2,15 @@
 {% set bodyClass = 'theme-dark' %}
 
 {% block content %}
-<article>
-  <div class="band" data-topic="expertise" data-hero="true" data-align="center">
-    <div class="wrapper" data-size="condensed">
-      <h1>{{ entry.title }}</h1>
-      <p>Digital isn't the word of the moment, it's the way forward. We're an award-winning independent agency, building better connections between brands and people through purposeful design, experience and technology.</p>
-      {{ entry.body }}
+<article itemscope="" itemtype="http://schema.org/WebPage">
+  <header class="band" data-padding="giant" data-align="center">
+    <div class="title">
+      <h1>{{ entry.featuredTitle }}</h1>
+      <p>{{ entry.featuredSubtitle }}</p>
     </div>
-  </div>
+  </header>
 
   <div class="wrapper">
-
     <div class="row">
       <div class="col-lg-4">
         <div class="box">

@@ -1,0 +1,6 @@
+.services {
+  @extend %flex-grid;
+}
+.service {
+  @extend %flex-item;
+}

@@ -1,0 +1,21 @@
+.title {
+  position: relative;
+
+  &:after {
+    content: '';
+    @include horizontal-center;
+    bottom: 0;
+    width: 8%;
+    height: rem(2);
+    background-color: swatch(white);
+  }
+
+  * { margin: 0; }
+  p { color: swatch(gray); }
+
+  // h1 titles
+  h1 + p { font-size: rem(36); }
+
+  // h2 titles
+  h2 + p {}
+}
