@@ -1,0 +1,11 @@
+body {
+  background-color: #fff;
+  transition:
+    background ($base-animation-speed * 2) $base-animation-easing,
+    color ($base-animation-speed * 2) $base-animation-easing;
+
+  &.theme-dark {
+    background-color: #1a1a1a;
+    color: #fff;
+  }
+}

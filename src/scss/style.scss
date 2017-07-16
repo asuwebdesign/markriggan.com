@@ -37,10 +37,11 @@
 // =============================================================================
 // Level 5 - Objects
 // =============================================================================
-@import '5-objects/app';
+@import '5-objects/containers';
 @import '5-objects/wrappers';
-@import '5-objects/bands';
+@import '5-objects/themes';
 @import '5-objects/grid';
+@import '5-objects/bands';
 
 
 // =============================================================================
@@ -50,9 +51,9 @@
 @import '6-components/menus';
 @import '6-components/brand';
 @import '6-components/social';
-@import '6-components/related';
 @import '6-components/buttons';
 @import '6-components/partners';
+@import '6-components/projects';
 
 
 // =============================================================================

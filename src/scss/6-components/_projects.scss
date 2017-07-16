@@ -1,0 +1,6 @@
+.projects {
+  @extend %flex-grid;
+}
+.project {
+  @extend %flex-item;
+}

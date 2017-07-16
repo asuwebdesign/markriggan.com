@@ -6,19 +6,19 @@
 <article>
   <div class="band" data-topic="expertise" data-hero="true" data-align="center">
     <div class="wrapper wrapper--condensed">
-      <h1>Entry Title</h1>
-      <p>Entry Subtitle</p>
-      {{ entry.body }}
+      <h1>{{ entry.featuredTitle }}</h1>
+      <p>{{ entry.featuredSubtitle }}</p>
     </div>
   </div>
 
   <div class="wrapper">
     <section>
-      <div class="related">
+      <div class="projects" data-size="3">
       {% for entry in craft.entries.section('projects').find() %}
-        <div class="related__block related__block--branding">
+        <div class="project">
           <a href="{{ entry.url }}">
             <h2>{{ entry.title }}</h2>
+            <img src="https://cdn.dribbble.com/users/63407/screenshots/3659995/dribbble_prison_cellular.png" />
           </a>
         </div>
       {% endfor %}

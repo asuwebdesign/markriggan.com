@@ -3,100 +3,13 @@
 
 {% block content %}
 <article>
-  <div class="wrapper">
-    <h1>I'm Kind of a Big Deal</h1>
-    {{ entry.body }}
-
-    <div class="row">
-      <div class="col-lg-6">
-        <div class="box">
-          <h1>When brands stand out, they stand for something.</h1>
-          <p>BASIC is a brand design agency that helps lifestyle inspired companies engage consumers and communicate brand culture. We use strategy and design to connect brands and people through the things they love… products, services and experiences that support their lifestyle and matter in culture.</p>
-          <p>We specialize in design-led brand communication and digital innovation and we’ve earned a reputation for doing great work across multiple categories. Our work is driven by our mission and our mission is this… we want to build brands people love.</p>
-        </div>
-      </div>
-      <div class="col-lg-6">
-        <div class="box">
-          <img src="http://placehold.it/800x800">
-        </div>
-      </div>
+  <div class="band" data-topic="expertise" data-hero="true" data-align="center">
+    <div class="wrapper wrapper--condensed">
+      <h1>{{ entry.featuredTitle }}</h1>
+      <p>{{ entry.featuredSubtitle }}</p>
     </div>
-
-
-
-    <div class="row center-xs">
-      <div class="col-lg-12">
-        <h1>My Standards</h1>
-        <p>
-          We partner with brands we believe in because great things come from being inspired.
-        </p>
-      </div>
-    </div>
-
-
-
-    <div class="row">
-      <div class="col-lg-6">
-        <h2>Make it Better</h2>
-        <p>
-          We developed "zones" within the site architecture and back-end infrastructure that had their own unique style sheets.
-        </p>
-      </div>
-      <div class="col-lg-6">
-        <h2>Keep it Real</h2>
-        <p>
-          We developed "zones" within the site architecture and back-end infrastructure that had their own unique style sheets.
-        </p>
-      </div>
-      <div class="col-lg-6">
-        <h2>People Over Profits</h2>
-        <p>
-          We developed "zones" within the site architecture and back-end infrastructure that had their own unique style sheets.
-        </p>
-      </div>
-      <div class="col-lg-6">
-        <h2>Keep it Simple</h2>
-        <p>
-          We developed "zones" within the site architecture and back-end infrastructure that had their own unique style sheets.
-        </p>
-      </div>
-      <div class="col-lg-6">
-        <h2>Never Stop Learning</h2>
-        <p>
-          We developed "zones" within the site architecture and back-end infrastructure that had their own unique style sheets.
-        </p>
-      </div>
-      <div class="col-lg-6">
-        <h2>Quality Over Quantity</h2>
-        <p>
-          We developed "zones" within the site architecture and back-end infrastructure that had their own unique style sheets.
-        </p>
-      </div>
-      <div class="col-lg-6">
-        <h2>Work to Live</h2>
-        <p>
-          We developed "zones" within the site architecture and back-end infrastructure that had their own unique style sheets.
-        </p>
-      </div>
-      <div class="col-lg-6">
-        <h2>Ask More Questions</h2>
-        <p>
-          We developed "zones" within the site architecture and back-end infrastructure that had their own unique style sheets.
-        </p>
-      </div>
-      <div class="col-lg-6">
-        <h2>Craft isn't Enough</h2>
-        <p>
-          We developed "zones" within the site architecture and back-end infrastructure that had their own unique style sheets.
-        </p>
-      </div>
-    </div>
-
-
-
-
   </div>
-
+  {{ entry.body }}
 </article>
 
 {% endblock %}

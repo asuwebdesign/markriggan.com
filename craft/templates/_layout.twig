@@ -1,47 +1,21 @@
-{#
-# Layout template
-# ---------------
-#
-# This template defines your site’s global layout. It can be
-# “extended” by other templates to fill in the gaps.
-#
-# See Twig’s Template Inheritance documentation for more details:
-# http://twig.sensiolabs.org/doc/templates.html#template-inheritance
-#}
-
 <!DOCTYPE html>
 <html lang="en-US">
 <head>
-	<script src="https://use.typekit.net/ysg6zwt.js"></script>
-	<script>try{Typekit.load({ async: true });}catch(e){}</script>
-
-	<meta charset="utf-8" />
-	<meta http-equiv="cleartype" content="on">
-	<meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1">
-	<meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=1, user-scalable=no">
-
-	<link rel="apple-touch-icon" sizes="180x180" href="{{ siteUrl }}/img/favicons/apple-touch-icon.png">
-	<link rel="icon" type="image/png" sizes="32x32" href="{{ siteUrl }}/img/favicons/favicon-32x32.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="{{ siteUrl }}/img/favicons/favicon-16x16.png">
-	<link rel="manifest" href="{{ siteUrl }}/img/favicons/manifest.json">
-	<link rel="mask-icon" href="{{ siteUrl }}/img/favicons/safari-pinned-tab.svg" color="#1da1f2">
-	<link rel="shortcut icon" href="{{ siteUrl }}/img/favicons/favicon.ico">
-	<meta name="msapplication-config" content="{{ siteUrl }}/img/favicons/browserconfig.xml">
-	<meta name="theme-color" content="#ffffff">
-
+	{% include 'head/_meta' %}
+	{% include 'head/_favicons' %}
+	{% include 'head/_styles' %}
+	{% include 'head/_scripts' %}
 	{% hook 'seomaticRender' %}
-
-	<link rel="stylesheet" href="{{ siteUrl }}/css/style.css" media="screen">
 </head>
 <body class="{{ bodyClass }}">
 
 	{# App Header #}
-	<header id="app__header" class="app__header" role="banner">
+	<header id="header" class="container" role="banner">
 		<div class="wrapper">
 			<h1 class="brand">
 				<a href="{{ siteUrl }}" title="Home page for Mark Riggan" rel="home">
-					<img class="svg" src="{{ siteUrl }}/img/l_markriggan.svg" />
 					<span>{{ siteName }}</span>
+					<img class="svg" src="{{ siteUrl }}/img/l_markriggan.svg" />
 				</a>
 			</h1>
 			{% include 'components/_navigation' %}
@@ -49,7 +23,7 @@
 	</header>
 
 	{# App Content #}
-	<main id="barba-wrapper" class="app__content" role="main">
+	<main id="barba-wrapper" class="container" role="main">
     <div class="barba-container">
   		{% block content %}
 				{# Placeholder for content per template #}
@@ -57,20 +31,8 @@
     </div>
 	</main>
 
-	{# App Menu #}
-	<div id="app__menu" class="app__menu">
-		<h2>Navigate</h2>
-		<ul>
-			{% nav node in craft.menus.getNodes('mainMenu') %}
-				<li class="menu__item" role="presentation">
-					<a href="{{node.link}}">{{ node.title }}</a>
-				</li>
-			{% endnav %}
-		</ul>
-	</div>
-
 	{# App Footer #}
-	<footer class="app__footer" role="contentinfo">
+	<footer class="container" role="contentinfo">
 		{% include 'callouts/_cta' %}
 		<div class="wrapper">
 			{% include 'components/_social-links' %} {# social links locked in bottom-left #}
@@ -172,17 +134,17 @@
 		};
 
 		// Init HeadRoom.js
-		var header = document.getElementById('app__header');
+		var header = document.getElementById('header');
 		var headroom = new Headroom(header, {
 			offset: 75,
 			classes: {
-				initial:   'app__header--init',
-				pinned:    'app__header--pinned',
-				unpinned:  'app__header--unpinned',
-				top:       'app__header--top',
-				notTop:    'app__header--not-top',
-				bottom:    'app__header--bottom',
-				notBottom: 'app__header--not-bottom'
+				initial:   'header--init',
+				pinned:    'header--pinned',
+				unpinned:  'header--unpinned',
+				top:       'header--top',
+				notTop:    'header--not-top',
+				bottom:    'header--bottom',
+				notBottom: 'header--not-bottom'
 			}
 		});
 		headroom.init();

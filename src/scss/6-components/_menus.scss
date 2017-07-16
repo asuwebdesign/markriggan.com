@@ -10,27 +10,47 @@
     font-size: rem(16);
   }
 
-  h1 {
+  // Menu Title
+  &__title {
     @extend %ui-hidden;
   }
 
-  ul {
+  // Menu Items
+  &__items {
     display: flex;
     align-items: center;
     height: 100%;
-  }
-  li {
-    margin-left: rem(15);
 
-    &:first-child {
-      margin-left: 0;
+    li {
+      margin-left: rem(15);
+
+      &:first-child {
+        margin-left: 0;
+      }
+    }
+    a {
+      position: relative;
+      display: inline-block;
+      line-height: 1;
+      color: swatch(black);
+      transition: color ($base-animation-speed * 2) $base-animation-easing;
     }
   }
-  a {
-    position: relative;
+
+  // Menu Actions
+  &__actions {
     display: inline-block;
-    line-height: 1;
-    //color: swatch(white);
+    border: 1px solid #000;
+  }
+
+  // alternate style for dark theme
+  @at-root .theme-dark .menu {
+
+    &__items {
+      a {
+        color: swatch(white);
+      }
+    }
 
   }
 }
