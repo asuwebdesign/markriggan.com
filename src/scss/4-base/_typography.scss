@@ -64,4 +64,8 @@ a {
   &:hover {
     //color: lighten(swatch(pink), 10%);
   }
+  &:focus {
+    background-color: #fc0;
+    outline: rem(3) solid #fc0;
+  }
 }

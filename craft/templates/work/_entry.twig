@@ -2,16 +2,16 @@
 
 {% block content %}
 <article class="project" itemscope itemtype="http://schema.org/CreativeWork">
-
-  {% include 'components/_hero' %}
-
-  <section class="project__intro" itemprop="about">
-    <div class="wrapper wrapper--condensed">
-      <h1>{{ entry.title }}</h1>
-      <h2 class="visuallyhidden">Overview</h2>
-      {{ entry.projectSummary }}
+  <header class="band" data-align="center">
+    {% if entry.featuredImage | length %}
+      {% set asset = entry.featuredImage.first() %}
+      <img src="{{ asset.url }}" />
+    {% endif %}
+    <div class="title">
+      <h1>{{ entry.featuredTitle }}</h1>
+      <p>{{ entry.featuredSubtitle }}</p>
     </div>
-  </section>
+  </header>
 
   {% set tags = entry.tags %}
   {% if tags | length %}
@@ -24,25 +24,6 @@
   {% endfor %}
 
   {% endif %}
-
-  <section class="project__synopsis">
-    <div class="wrapper wrapper--condensed">
-      <div class="flex-container">
-        <div class="project__challenge">
-          <h2>Background</h2>
-          {{ entry.projectChallenge }}
-        </div>
-        <div class="project__solution">
-          <h2>Our Strategy</h2>
-          {{ entry.projectSolution }}
-        </div>
-        <!-- <div class="project__results">
-          <h2>Results</h2>
-          {{ entry.projectResults }}
-        </div> -->
-      </div>
-    </div>
-  </section>
 
   <section class="project__assets">
     <div class="wrapper">

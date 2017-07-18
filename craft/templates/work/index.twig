@@ -11,15 +11,17 @@
     </div>
   </header>
 
-  <section class="band" data-align="center">
+  <section class="band" data-padding="bottom-big" data-align="center">
     <div class="wrapper">
       <h2 class="ui-hidden">Featured Projects</h2>
       <div class="projects" data-size="3">
         {% for entry in craft.entries.section('projects').find() %}
+          {% if entry.featuredImage | length %}
+            {% set thumbnail = entry.featuredImage.first() %}
+          {% endif %}
           <div class="project">
-            <a href="{{ entry.url }}">
-              <h3>{{ entry.title }}</h3>
-              <img src="https://cdn.dribbble.com/users/63407/screenshots/3659995/dribbble_prison_cellular.png" />
+            <a class="project__link" href="{{ entry.url }}" style="background-image: url({{ thumbnail.url }});">
+              <h3 class="project__title">{{ entry.title }}</h3>
             </a>
           </div>
         {% endfor %}
@@ -33,10 +35,7 @@
         <h2>{{ dribbble.featuredTitle }}</h2>
         <p>{{ dribbble.featuredSubtitle }}</p>
       </div>
-
-      {% cache %}
       <div id="shots" class="shots" data-size="6"></div>
-      {% endcache %}
     </div>
   </section>
 </article>

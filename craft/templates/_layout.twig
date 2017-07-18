@@ -59,10 +59,10 @@
 		// };
 
 		Barba.Dispatcher.on('newPageReady', function(currentStatus, oldStatus, container, newPageRawHTML) {
-		  var response = newPageRawHTML.replace(/(<\/?)body( .+?)?>/gi, '$1notbody$2>', newPageRawHTML)
-		  var bodyClasses = $(response).filter('notbody').attr('class')
-		  $('body').attr('class', bodyClasses)
-		})
+		  var response = newPageRawHTML.replace(/(<\/?)body( .+?)?>/gi, '$1notbody$2>', newPageRawHTML);
+		  var bodyClasses = $(response).filter('notbody').attr('class');
+		  $('body').attr('class', bodyClasses);
+		});
 
 		var FadeTransition = Barba.BaseTransition.extend({
 			start: function() {
@@ -97,6 +97,8 @@
 				var $el = $(this.newContainer);
 
 				$(this.oldContainer).hide();
+
+				window.scrollTo(0, 0);
 
 				$el.css({
 					visibility : 'visible',

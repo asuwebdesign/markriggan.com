@@ -13,7 +13,11 @@
   <div class="band" data-theme="light">
     <div class="wrapper" data-size="condensed">
       {% for entry in craft.entries.section('articles').find() %}
-        <article class="article">
+        <article class="article" data-format="list-item">
+          {% if entry.featuredImage | length %}
+            {% set thumbnail = entry.featuredImage.first() %}
+            <img src="{{ thumbnail.url }}" />
+          {% endif %}
           <h1><a href="{{ entry.url }}" data-underline>{{ entry.title }}</a></h1>
           <p>Posted on {{ entry.postDate.format('F d, Y') }}</p>
           {{ entry.body.getPage(1) | striptags | slice(0, 155) }}[&hellip;]

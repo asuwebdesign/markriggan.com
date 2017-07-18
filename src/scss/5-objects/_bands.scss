@@ -18,6 +18,32 @@
     padding: rem(240) 0;
   }
 
+  &[data-padding='top-tiny'] {
+    padding-top: rem(30);
+  }
+  &[data-padding='top-average'] {
+    padding-top: rem(60);
+  }
+  &[data-padding='top-big'] {
+    padding-top: rem(120);
+  }
+  &[data-padding='top-giant'] {
+    padding-top: rem(240);
+  }
+
+  &[data-padding='bottom-tiny'] {
+    padding-bottom: rem(30);
+  }
+  &[data-padding='bottom-average'] {
+    padding-bottom: rem(60);
+  }
+  &[data-padding='bottom-big'] {
+    padding-bottom: rem(120);
+  }
+  &[data-padding='bottom-giant'] {
+    padding-bottom: rem(240);
+  }
+
   // Band alignment
   &[data-align='center'] {
     text-align: center;

@@ -7,15 +7,35 @@
     bottom: 0;
     width: 8%;
     height: rem(2);
-    background-color: swatch(white);
+    background-color: swatch(black);
+    transition: background ($base-animation-speed * 2) $base-animation-easing;
   }
 
   * { margin: 0; }
+  h1, h2 { color: swatch(black); }
   p { color: swatch(gray); }
 
   // h1 titles
-  h1 + p { font-size: rem(36); }
+  h1 + p {
+    padding-bottom: rem(36);
+    font-size: rem(36);
+  }
 
   // h2 titles
-  h2 + p {}
+  h2 + p {
+    padding-bottom: rem(19);
+    margin-bottom: rem(38);
+    font-size: rem(19);
+  }
+
+  // alternate style for dark theme
+  @at-root {
+    .theme-dark .title,
+    .article[data-format='single'] .title {
+      &:after {
+        background-color: swatch(white);
+      }
+      h1, h2 { color: swatch(white); }
+    }
+  } 
 }

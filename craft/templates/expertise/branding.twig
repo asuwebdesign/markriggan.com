@@ -3,7 +3,11 @@
 
 {% block content %}
 <article itemscope="" itemtype="http://schema.org/WebPage">
-  <header class="band" data-padding="giant" data-align="center">
+  <header class="band" data-align="center">
+    {% if entry.featuredImage | length %}
+      {% set asset = entry.featuredImage.first() %}
+      <img src="{{ asset.url }}" />
+    {% endif %}
     <div class="title">
       <h1>{{ entry.featuredTitle }}</h1>
       <p>{{ entry.featuredSubtitle }}</p>

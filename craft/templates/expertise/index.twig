@@ -47,8 +47,11 @@
   </section>
   <section class="band" data-align="center">
     <div class="wrapper">
-      <h2>{{ clients.featuredTitle }}</h2>
-      <p>{{ clients.featuredSubtitle }}</p>
+      <div class="title">
+        <h2>{{ clients.featuredTitle }}</h2>
+        <p>{{ clients.featuredSubtitle }}</p>
+      </div>
+
       <ul class="partners">
         {% for block in clients.clients %}
           {% set image = block.clientLogo.first() %}
@@ -64,8 +67,11 @@
   </section>
   <section class="band" data-align="center">
     <div class="wrapper">
-      <h2>Process</h2>
-      <p>People and their relationship with technology is the only reason we're here. We take a people-first approach across the board, because it's more important to speak for humans than for search engines. Your users are our users, and giving them an awesome experience is our goal.</p>
+      <div class="title">
+        <h2>Process</h2>
+        <p>People and their relationship with technology is the only reason we're here. We take a people-first approach across the board, because it's more important to speak for humans than for search engines. Your users are our users, and giving them an awesome experience is our goal.</p>
+      </div>
+
 
       <h3>1. First, we think</h3>
       <p>We research a brand and its consumers to identify key values, providing a foundation for forward-thinking strategies that achieve brand goals.</p>
@@ -91,8 +97,11 @@
   </section>
   <section class="band" data-align="center">
     <div class="wrapper">
-      <h2>{{ awards.featuredTitle }}</h2>
-      <p>{{ awards.featuredSubtitle }}</p>
+      <div class="title">
+        <h2>{{ awards.featuredTitle }}</h2>
+        <p>{{ awards.featuredSubtitle }}</p>
+      </div>
+
       <ul class="partners">
         {% for block in awards.awards %}
           {% set image = block.awardLogo.first() %}

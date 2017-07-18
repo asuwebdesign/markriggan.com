@@ -3,4 +3,21 @@
 }
 .project {
   @extend %flex-item;
+
+  &__link {
+    padding-top: 100%;
+    background-size: cover;
+    background-position: 50% 50%;
+  }
+  &__title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+  }
+
+  // hover state
+  &__link:hover {
+    opacity: .5;
+  }
 }

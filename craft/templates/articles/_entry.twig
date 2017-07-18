@@ -1,22 +1,29 @@
 {% extends "_layout" %}
 
 {% block content %}
-<article itemid="{{ entry.url }}" itemscope itemtype="http://schema.org/Article">
-  <div class="band" data-theme="light">
-
+<article class="article" data-format="single" itemid="{{ entry.url }}" itemscope itemtype="http://schema.org/Article">
+  <header class="band" data-align="center">
     {% if entry.featuredImage | length %}
       {% set asset = entry.featuredImage.first() %}
       <img src="{{ asset.url }}" />
     {% endif %}
+    <div class="title">
+      <h1>{{ entry.title }}</h1>
+      <p>Here's a pretty good short description for the article title.</p>
+    </div>
+  </header>
 
-    <img src="https://unsplash.it/1920/1080/?random" />
+  <div class="band" data-theme="light">
+
+
 
     <div class="wrapper" data-size="condensed">
-      <h1>{{ entry.title }}</h1>
       <p>{{ entry.postDate.format('F d, Y') }}</p>
 
-      {% set hash = '822A7624F2F41A5398D27CDE791AA519' %}
-      <img src="https://www.gravatar.com/avatar/{{ hash }}" />
+      {% if social.avatar | length %}
+        {% set avatar = social.avatar.first() %}
+        <img src="{{ avatar.getUrl('avatar') }}" alt="{{ avatar.title }}" />
+      {% endif %}
 
       {{ entry.body }}
 
