@@ -3,46 +3,28 @@
 
 {% block content %}
 <article itemscope="" itemtype="http://schema.org/WebPage">
-  <header class="band" data-padding="giant" data-align="center">
-    <div class="title">
-      <h1>{{ entry.featuredTitle }}</h1>
-      <p>{{ entry.featuredSubtitle }}</p>
+  <header class="band" data-align="center">
+    {% if entry.featuredImage | length %}
+      {% set asset = entry.featuredImage.first() %}
+      <img src="{{ asset.url }}" />
+    {% endif %}
+
+    <div class="wrapper">
+      <div class="title">
+        <h1>{{ entry.featuredTitle }}</h1>
+        <p>{{ entry.featuredSubtitle }}</p>
+      </div>
     </div>
+
+
   </header>
-
-  <div class="wrapper">
-
-
-    <p>Superior mobile experiences for productivity, brand engagement, eCommerce and entertainment. Highly engaging UI and UX, natively developed across core mobile platforms to connect with users at their fingertips.</p>
-
-    <hr />
-
-    <button>Start a project</button>
-
-    <div>
-      Explore other expertise
+  <section class="band">
+    <div class="wrapper" data-size="condensed">
+      {{ entry.body }}
     </div>
-
-    <div class="related">
-      <div class="related__block related__block--branding">
-        <a href="/expertise/branding">
-          <h2>Branding</h2>
-        </a>
-      </div>
-      <div class="related__block related__block--strategy">
-        <a href="/expertise/websites">
-          <h2>Strategy</h2>
-        </a>
-      </div>
-      <div class="related__block related__block--apps">
-        <a href="/expertise/apps">
-          <h2>Apps</h2>
-        </a>
-      </div>
-    </div>
-  </div>
+  </section>
 </article>
+
 {% endblock %}
 
-{% block scripts %}
-{% endblock %}
+{% block scripts %}{% endblock %}

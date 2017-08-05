@@ -6,21 +6,27 @@ form { margin: 0; }
 // -----------------------------------------------------------------------------
 // Labels
 // -----------------------------------------------------------------------------
-label { display: block; }
+label {
+  display: block;
+  cursor: pointer;
+}
 
 // -----------------------------------------------------------------------------
 // Inputs
 // -----------------------------------------------------------------------------
 input {
   width: 100%;
-  padding: rem(10);
+  padding: rem(16);
+  background-color: swatch(off-white);
+  box-shadow: 0 0 0 0 swatch(cyan);
   border: 0;
-  border-bottom: rem(1) solid color(black);
-  font-size: rem(14);
-  font-weight: 300;
+  transition:
+    background $base-animation-speed * 2 $base-animation-easing,
+    box-shadow $base-animation-speed * 2 $base-animation-easing;
 
   &:focus {
-    border-color: #999;
+    background-color: swatch(white);
+    box-shadow: 0 0 0 rem(2) swatch(cyan);
     outline: 0;
   }
 
@@ -34,15 +40,5 @@ input {
 }
 
 textarea {
-  width: 100%;
-  padding: rem(10);
-  border: rem(1) solid #ccc;
-  border-radius: rem(3);
-  font-size: rem(14);
-  font-weight: 300;
-
-  &:focus {
-    border-color: #999;
-    outline: 0;
-  }
+  @extend input;
 }

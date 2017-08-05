@@ -22,7 +22,7 @@
     height: 100%;
 
     li {
-      margin-left: rem(15);
+      margin-left: rem(32);
 
       &:first-child {
         margin-left: 0;
@@ -34,6 +34,15 @@
       line-height: 1;
       color: swatch(black);
       transition: color ($base-animation-speed * 2) $base-animation-easing;
+    }
+
+    // last item
+    li:last-child {
+      a {
+        padding: rem(16) rem(48);
+        border: 1px solid swatch(black);
+        border-radius: rem(4);
+      }
     }
   }
 
@@ -49,6 +58,12 @@
     &__items {
       a {
         color: swatch(white);
+      }
+
+      li:last-child {
+        a {
+          border-color: swatch(white);
+        }
       }
     }
 

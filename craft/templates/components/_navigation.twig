@@ -7,9 +7,4 @@
     </li>
   {% endnav %}
   </ul>
-  <div class="menu__actions">
-    {% nav node in craft.menus.getNodes('actionMenu') %}
-      <a href="{{node.link}}">{{ node.title }}</a>
-    {% endnav %}
-  </div>
 </nav>

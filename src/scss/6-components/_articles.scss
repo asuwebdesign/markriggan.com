@@ -1,7 +1,10 @@
 .article {
 
   // articles inside lists
-  &[data-format='list-item'] {}
+  &[data-format='list-item'] {
+
+
+  }
 
   // articles isolated
   &[data-format='single'] {

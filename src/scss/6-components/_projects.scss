@@ -2,22 +2,116 @@
   @extend %flex-grid;
 }
 .project {
-  @extend %flex-item;
 
-  &__link {
-    padding-top: 100%;
-    background-size: cover;
-    background-position: 50% 50%;
-  }
-  &__title {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
+  // projects inside lists
+  &[data-format='list-item'] {
+    @extend %flex-item;
+
+    .project__link {
+      position: relative;
+      padding-top: 100%;
+      background-size: 100% auto;
+      background-position: 50% 50%;
+      overflow: hidden;
+      transition: background $base-animation-speed * 4 $base-animation-easing;
+
+      &:after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        display: block;
+        width: 100%;
+        height: 0;
+        background-color: rgba(swatch(cyan), .5);
+        opacity: 0;
+        transition:
+          height $base-animation-speed * 4 $base-animation-easing,
+          opacity $base-animation-speed * 4 $base-animation-easing,
+          box-shadow $base-animation-speed * 4 $base-animation-easing;
+        z-index: 1;
+      }
+    }
+    .project__title {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      transform: scale(2);
+      opacity: 0;
+      transition:
+        transform $base-animation-speed * 4 $base-animation-easing,
+        opacity $base-animation-speed * 4 $base-animation-easing;
+      z-index: 2;
+    }
+    .project__thumbnail {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition:
+        transform $base-animation-speed * 4 $base-animation-easing,
+        filter $base-animation-speed * 4 $base-animation-easing;
+    }
+
+    // hover state
+    .project__link:hover {
+      background-color: swatch(cyan);
+
+      &:after {
+        height: 100%;
+        opacity: 1;
+      }
+      .project__title {
+        transform: scale(1);
+        opacity: 1;
+      }
+      .project__thumbnail {
+
+        transform: scale(1.05);
+        filter: blur(8px);
+      }
+
+    }
   }
 
-  // hover state
-  &__link:hover {
-    opacity: .5;
+  // projects isolated
+  &[data-format='single'] {
+
+    header {
+      position: relative;
+      //height: 75vh;
+      overflow: hidden;
+
+      .title {
+        @include absolute-center;
+        z-index: 2;
+      }
+      img {
+        position: relative;
+        width: 100%;
+        height: 75vh;
+        object-fit: cover;
+        object-position: center;
+        z-index: 1;
+      }
+    }
+
+    .project__highlights {
+      @extend %flex-grid;
+      justify-content: space-between;
+    }
+    .project__highlights > div {
+      width: 30%;
+    }
+
   }
+
 }

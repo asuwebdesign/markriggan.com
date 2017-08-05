@@ -1,8 +1,9 @@
 {% extends "_layout" %}
+{% set bodyClass = '' %}
 
 {% block content %}
-<article class="project" itemscope itemtype="http://schema.org/CreativeWork">
-  <header class="band" data-align="center">
+<article class="project" data-format="single" itemscope itemtype="http://schema.org/CreativeWork">
+  <header id="project__hero" class="band" data-align="center">
     {% if entry.featuredImage | length %}
       {% set asset = entry.featuredImage.first() %}
       <img src="{{ asset.url }}" />
@@ -12,48 +13,33 @@
       <p>{{ entry.featuredSubtitle }}</p>
     </div>
   </header>
-
-  {% set tags = entry.tags %}
-  {% if tags | length %}
-
-  <h3>Some great tags</h3>
-  {% for tag in tags %}
-  <div>
-    {{tag}}
-  </div>
-  {% endfor %}
-
-  {% endif %}
-
-  <section class="project__assets">
+  <section class="band" data-padding="top-big">
     <div class="wrapper">
-      <h3 class="visuallyhidden">Artwork</h3>
-      {% for block in entry.projectImages %}
-
-      {% for image in block.projectImageSrc %}
-      <figure>
-        <img src="{{ image.getUrl }}" alt="{{ image.altDescription }}" draggable="false" />
-      </figure>
-      {% endfor %}
-
-      {% endfor %}
+      <div class="project__highlights">
+        <div>
+          <h2>The Challenge</h2>
+          {{ entry.projectChallenge }}
+        </div>
+        <div>
+          <h2>The Solution</h2>
+          {{ entry.projectSolution }}
+        </div>
+        <div>
+          <h2>The Results</h2>
+          {{ entry.projectResults }}
+        </div>
+      </div>
     </div>
   </section>
-
-  <hr />
-
-  <div class="row center-xs" data-padding="xs">
-    <div class="wrapper">
-      <h3>Share this project</h3>
-      <ul class="social">
-        <li class="social-link facebook"><a href="http://www.facebook.com/sharer.php?u={{ entry.getUrl }}" title="Share this project on Facebook"><span>Share</span></a></li>
-        <li class="social-link twitter"><a href="https://twitter.com/share?url={{ entry.getUrl }}" title="Tweet this project on Twitter"><span>Tweet</span></a></li>
-        <li class="social-link google"><a href="https://plus.google.com/share?url={{ entry.getUrl }}" title="Share this project on Google Plus"><span>Share</span></a></li>
-        <li class="social-link linkedin"><a href="http://www.linkedin.com/shareArticle?url={{ entry.getUrl }}" title="Share this project on LinkedIn"><span>Share</span></a></li>
-      </ul>
+  <section class="band" data-padding="top-big">
+    <div class="wrapper" data-size="condensed">
+      <h2>Summary</h2>
+      {{ entry.body }}
     </div>
-  </div>
-
-
+  </section>
 </article>
+{% endblock %}
+
+{% block scripts %}
+
 {% endblock %}

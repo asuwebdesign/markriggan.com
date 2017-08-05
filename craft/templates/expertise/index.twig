@@ -102,14 +102,15 @@
         <p>{{ awards.featuredSubtitle }}</p>
       </div>
 
-      <ul class="partners">
+      <ul class="awards">
         {% for block in awards.awards %}
-          {% set image = block.awardLogo.first() %}
-          <li>
-            {% if image %}
-            <span><img src="{{ image.getUrl() }}" alt="{{ image.title }}" /></span>
-            {% endif %}
-            <span>{{ block.awardName }}</span>
+          {# set image = block.awardLogo.first() #}
+          <li class="award">
+            <div class="award__graphic">
+              <div class="medal"></div>
+              <div class="ribbon"></div>
+            </div>
+            <span class="award__title">{{ block.awardName }}</span>
           </li>
         {% endfor %}
       </ul>

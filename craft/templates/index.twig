@@ -3,13 +3,29 @@
 {% set bodyClass = 'theme-dark' %}
 
 {% block content %}
-<section class="hero">
+<section class="band hero" data-align="center">
   <div class="hero__content">
     <h1>{{ entry.featuredTitle }}</h1>
     <p>{{ entry.featuredSubtitle }}</p>
     <p>{{ entry.body | shortcodes }}</p>
   </div>
-  <img src="img/bg_hero.jpg" />
+  <img class="hero__background" src="img/hero-home.png" />
+</section>
+<section class="band">
+  <h2 class="ui-hidden">Featured Projects</h2>
+  <div class="projects" data-size="4">
+    {% for entry in craft.entries.section('projects').limit(4) %}
+      {% if entry.featuredImage | length %}
+        {% set thumbnail = entry.featuredImage.first() %}
+      {% endif %}
+      <div class="project" data-format="list-item">
+        <a class="project__link" href="{{ entry.url }}">
+          <h3 class="project__title">{{ entry.title }}</h3>
+          <img class="project__thumbnail" src="{{ thumbnail.url }}" alt="{{ thumbnail.title }}" />
+        </a>
+      </div>
+    {% endfor %}
+  </div>
 </section>
 {% endblock %}
 

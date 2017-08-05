@@ -18,7 +18,6 @@ h1 {
   font-weight: 100;
   font-size: rem(62);
   line-height: 1.13;
-
   @include media('>=tablet') {}
 }
 h2 {
@@ -57,15 +56,15 @@ h6 {
 // Links
 // -----------------------------------------------------------------------------
 a {
-  //color: swatch(pink);
+  color: swatch(cyan);
   text-decoration: none;
   //transition: color $base-animation-speed $base-animation-easing;
 
   &:hover {
-    //color: lighten(swatch(pink), 10%);
+    color: lighten(swatch(cyan), 15%);
   }
-  &:focus {
-    background-color: #fc0;
-    outline: rem(3) solid #fc0;
-  }
+  // &:focus {
+  //   background-color: lighten(swatch(cyan), 45%);
+  //   outline: rem(3) solid lighten(swatch(cyan), 45%);
+  // }
 }

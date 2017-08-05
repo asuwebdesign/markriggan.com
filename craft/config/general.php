@@ -8,6 +8,7 @@
  */
 
 return array(
-  'devMode' => false,
+  'cache' => false,
+  'devMode' => true,
   'phpMaxMemoryLimit' => '512M'
 );

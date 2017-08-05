@@ -19,9 +19,10 @@
           {% if entry.featuredImage | length %}
             {% set thumbnail = entry.featuredImage.first() %}
           {% endif %}
-          <div class="project">
-            <a class="project__link" href="{{ entry.url }}" style="background-image: url({{ thumbnail.url }});">
+          <div class="project" data-format="list-item">
+            <a class="project__link" href="{{ entry.url }}">
               <h3 class="project__title">{{ entry.title }}</h3>
+              <img class="project__thumbnail" src="{{ thumbnail.url }}" alt="{{ thumbnail.title }}" />
             </a>
           </div>
         {% endfor %}
