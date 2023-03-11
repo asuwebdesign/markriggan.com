@@ -1,4 +1,0 @@
-markriggan.com
-==============
-
-Personal website
