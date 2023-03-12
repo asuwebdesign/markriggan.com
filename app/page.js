@@ -1,12 +1,23 @@
 import Image from 'next/image'
 
+import IllustrationBranding from './illustrations/illustration--branding.svg'
+import IllustrationCreative from './illustrations/illustration--creative.svg'
+import IllustrationResearch from './illustrations/illustration--research.svg'
+import IllustrationWeb from './illustrations/illustration--web.svg'
+
+import LogoDribbble from './logos/logo--dribbble.svg'
+import LogoLinkedIn from './logos/logo--linkedin.svg'
+import LogoMedium from './logos/logo--medium.svg'
+import LogoTwitter from './logos/logo--twitter.svg'
+
 export default function Home() {
   return (
     <>
+    <a href="#main">Skip to main content</a>
     <header>
       <h1>Mark Riggan</h1>
     </header>
-    <main>
+    <main id="main">
       <section>
         <h1>Reimagine possible.</h1>
         <p>Connecting brands with people through handcrafted digital experiences.</p>
@@ -54,12 +65,12 @@ export default function Home() {
         <h1>Simplifying complexity. Delightfully.</h1>
         <p>Building identities and experiences to elevate and empower organizations of all shapes and sizes.</p>
 
-        <div>Branding Strategy &amp; Identity</div>
-        <div>Creative &amp; Experience Design</div>
-        <div>Research, Data &amp; Analysis</div>
-        <div>Websites &amp; Digital Platforms</div>
-        <div>Creative process Delightfully simple.</div>
-        <div>Personal manifesto Uncompromising design.</div>
+        <div><IllustrationBranding /> <h2>Branding Strategy &amp; Identity</h2></div>
+        <div><IllustrationCreative /> <h2>Creative &amp; Experience Design</h2></div>
+        <div><IllustrationResearch /> <h2>Research, Data &amp; Analysis</h2></div>
+        <div><IllustrationWeb /> <h2>Websites &amp; Digital Platforms</h2></div>
+        <div><h2>Creative process Delightfully simple.</h2></div>
+        <div><h2>Personal manifesto Uncompromising design.</h2></div>
       </section>
       <section>
         <h1>Hashtag: winning.</h1>
@@ -72,10 +83,36 @@ export default function Home() {
         <p>Building identities and experiences to elevate and empower organizations of all shapes and sizes.</p>
 
         {/* List of Medium articles */}
+        <article>
+          <h1>Don't make me squint: How to choose accessible brand colors for your audience.</h1>
+        </article>
+        <article>
+          <h1>4 reasons why being arrogant could actually be a positive thing</h1>
+        </article>
+        <article>
+          <h1>Four simple words that'll drive you to being a better creative person.</h1>
+        </article>
+        <article>
+          <h1>Reimagining digital strategy and how we document data architecture</h1>
+        </article>
+        <article>
+          <h1>How your brand's credibility starts with great visual design</h1>
+        </article>
       </section>
     </main>
     <footer>
       <small>Copyright</small>
+
+      <div>
+        <ul>
+          <li><a href="#"><LogoDribbble /> Dribbble</a></li>
+          <li><a href="#"><LogoMedium /> Medium</a></li>
+          <li><a href="#"><LogoLinkedIn /> LinkedIn</a></li>
+          <li><a href="#"><LogoTwitter /> Twitter</a></li>
+        </ul>
+      </div>
+
+      <button>Toggle audio</button>
     </footer>
     </>
   )
