@@ -84,19 +84,19 @@ export default function Home() {
 
         {/* List of Medium articles */}
         <article>
-          <h1>Don't make me squint: How to choose accessible brand colors for your audience.</h1>
+          <h1>{`Don't make me squint: How to choose accessible brand colors for your audience.`}</h1>
         </article>
         <article>
-          <h1>4 reasons why being arrogant could actually be a positive thing</h1>
+          <h1>{`4 reasons why being arrogant could actually be a positive thing`}</h1>
         </article>
         <article>
-          <h1>Four simple words that'll drive you to being a better creative person.</h1>
+          <h1>{`Four simple words that'll drive you to being a better creative person.`}</h1>
         </article>
         <article>
-          <h1>Reimagining digital strategy and how we document data architecture</h1>
+          <h1>{`Reimagining digital strategy and how we document data architecture`}</h1>
         </article>
         <article>
-          <h1>How your brand's credibility starts with great visual design</h1>
+          <h1>{`How your brand's credibility starts with great visual design`}</h1>
         </article>
       </section>
     </main>
