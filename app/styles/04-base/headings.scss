@@ -1,0 +1,32 @@
+h1, h2, h3, h4, h5, h6 {
+  margin: 1em 0 .5em;
+  line-height: 1.13;
+  // color: var(--color-carbon-900);
+  font-family: var(--font-stack-semibold);
+}
+
+h1 {
+  letter-spacing: -0.03em;
+  font-size: 48px;
+  font-family: var(--font-stack-extrabold);
+}
+
+h2 {
+  font-size: 32px;
+}
+
+h3 {
+  font-size: 28px;
+}
+
+h4 {
+  font-size: 24px;
+}
+
+h5 {
+  font-size: 21px;
+}
+
+h6 {
+  font-size: 19px;
+}
