@@ -1,0 +1,34 @@
+.social {
+  position: fixed;
+  bottom: 64px;
+  left: 64px;
+  padding: 4px;
+  background-color: var(--color-carbon-800);
+  border-radius: 100px;
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  &__list-item {
+    a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 56px;
+      height: 56px;
+    }
+
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+
+    path { fill: var(--color-crystal-white); }
+  }
+}

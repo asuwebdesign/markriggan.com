@@ -47,9 +47,12 @@
 @import '06-objects/footer';
 @import '06-objects/header';
 @import '06-objects/wrapper';
-@import '06-objects/bands';
+@import '06-objects/sections';
 
 
 // =============================================================================
 // Components
 // =============================================================================
+@import '07-components/social';
+@import '07-components/highlights';
+@import '07-components/skills';

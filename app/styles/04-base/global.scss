@@ -4,7 +4,10 @@
 }
 
 body {
-  background: black;
+  background: var(--color-carbon-900);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.5;
   color: white;
   text-rendering: optimizeLegibility;
 }

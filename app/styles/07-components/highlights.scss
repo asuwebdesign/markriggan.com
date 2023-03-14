@@ -1,0 +1,33 @@
+.highlights {
+  position: relative;
+  grid-area: 3 / 1 / 4 / 2;
+  align-self: end;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-column-gap: 24px;
+  z-index: 2;
+}
+
+.highlight {
+
+  &:before {
+    content: '';
+    display: block;
+    width: 48px;
+    height: 4px;
+    margin: 0 0 min(1.481vh, 16px);
+    background: linear-gradient(270deg, #FF007E 0%, #5708D3 100%);
+    border-radius: 4px;
+  }
+
+  &__title {
+    margin: 0;
+    font-weight: 600;
+    font-size: min(2.222vh, 24px);
+  }
+
+  &__description {
+    margin: min(1.481vh, 16px) 0 0;
+  }
+
+}
