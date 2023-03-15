@@ -1,5 +1,7 @@
 import Image from 'next/image'
 
+import { awards } from './data/awards'
+
 import IllustrationBranding from './illustrations/illustration--branding.svg'
 import IllustrationCreative from './illustrations/illustration--creative.svg'
 import IllustrationResearch from './illustrations/illustration--research.svg'
@@ -84,12 +86,35 @@ export default function Home() {
           </div>
 
           <div className="skills">
-            <div className="skill"><IllustrationBranding /> <h2>Branding Strategy &amp; Identity</h2></div>
-            <div className="skill"><IllustrationCreative /> <h2>Creative &amp; Experience Design</h2></div>
-            <div className="skill"><IllustrationResearch /> <h2>Research, Data &amp; Analysis</h2></div>
-            <div className="skill"><IllustrationWeb /> <h2>Websites &amp; Digital Platforms</h2></div>
-            <div className="skill"><h2>Creative process Delightfully simple.</h2></div>
-            <div className="skill"><h2>Personal manifesto Uncompromising design.</h2></div>
+            <div className="skill">
+              <IllustrationBranding />
+              <h2 className="skill__title">Branding Strategy &amp; Identity</h2>
+              <span className="dots dots--skill" aria-hidden="true"></span>
+            </div>
+            <div className="skill">
+              <IllustrationCreative />
+              <h2 className="skill__title">Creative &amp; Experience Design</h2>
+              <span className="dots dots--skill" aria-hidden="true"></span>
+            </div>
+            <div className="skill">
+              <IllustrationResearch />
+              <h2 className="skill__title">Research, Data &amp; Analysis</h2>
+              <span className="dots dots--skill" aria-hidden="true"></span>
+            </div>
+            <div className="skill">
+              <IllustrationWeb />
+              <h2 className="skill__title">Websites &amp; Digital Platforms</h2>
+              <span className="dots dots--skill" aria-hidden="true"></span>
+            </div>
+            <div className="skill">
+              <h2 className="skill__title">Creative process Delightfully simple.</h2>
+              <span className="dots dots--skill-ext" aria-hidden="true"></span>
+            </div>
+            <div className="skill">
+              <h2 className="skill__title">Personal manifesto Uncompromising design.</h2>
+              <span className="dots dots--skill-ext" aria-hidden="true"></span>
+            </div>
+            <span className="dots dots--section" aria-hidden="true"></span>
           </div>
         </div>
       </section>
@@ -101,6 +126,19 @@ export default function Home() {
           </div>
           
           {/* List of awards */}
+          <div className="awards">
+            {awards.map((award, key) => {
+              return (
+                <div key={key} className="award">
+                  <h2 className="award__title">{award.title}</h2>
+                  {award.subtitle}
+                  {award.organization}
+                  {award.date}
+                </div>
+              )
+            })}
+            <span className="dots dots--section" aria-hidden="true"></span>
+          </div>
         </div>
       </section>
       <section className="section">
@@ -109,21 +147,23 @@ export default function Home() {
           <p>Building identities and experiences to elevate and empower organizations of all shapes and sizes.</p>
 
           {/* List of Medium articles */}
-          <article>
-            <h1>{`Don't make me squint: How to choose accessible brand colors for your audience.`}</h1>
-          </article>
-          <article>
-            <h1>{`4 reasons why being arrogant could actually be a positive thing`}</h1>
-          </article>
-          <article>
-            <h1>{`Four simple words that'll drive you to being a better creative person.`}</h1>
-          </article>
-          <article>
-            <h1>{`Reimagining digital strategy and how we document data architecture`}</h1>
-          </article>
-          <article>
-            <h1>{`How your brand's credibility starts with great visual design`}</h1>
-          </article>
+          <div className="articles">
+            <article className="article">
+              <h1>{`Don't make me squint: How to choose accessible brand colors for your audience.`}</h1>
+            </article>
+            <article className="article">
+              <h1>{`4 reasons why being arrogant could actually be a positive thing`}</h1>
+            </article>
+            <article className="article">
+              <h1>{`Four simple words that'll drive you to being a better creative person.`}</h1>
+            </article>
+            <article className="article">
+              <h1>{`Reimagining digital strategy and how we document data architecture`}</h1>
+            </article>
+            <article className="article">
+              <h1>{`How your brand's credibility starts with great visual design`}</h1>
+            </article>
+          </div>
         </div>
       </section>
     </main>

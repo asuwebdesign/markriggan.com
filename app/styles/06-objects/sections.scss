@@ -2,7 +2,7 @@
   padding: 256px 0;
 
   &__wrapper {
-    width: 1440px;
+    width: min(75vw, 1440px);
     margin: 0 auto;
   }
 
