@@ -19,5 +19,18 @@
   padding: min(2.222vh, 24px);
   background-color: var(--color-carbon-800);
   border-radius: var(--border-radius);
+  color: var(--color-carbon-400);
   z-index: 2;
+
+  &__title {
+    color: var(--color-crystal-white);
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  &__subtitle {}
+
+  &__organization {}
+
+  &__date {}
 }

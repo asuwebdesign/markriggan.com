@@ -1,0 +1,11 @@
+.projects {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: min(1.250vw, 24px);
+}
+
+.project {
+  height: 456px;
+  background-color: #ccc;
+  border-radius: 8px;
+}

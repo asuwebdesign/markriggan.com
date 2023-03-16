@@ -1,4 +1,7 @@
+"use client"
+import { useState, useEffect } from 'react'
 import Image from 'next/image'
+const axios = require('axios')
 
 import { awards } from './data/awards'
 
@@ -15,6 +18,62 @@ import LogoTwitter from './logos/logo--twitter.svg'
 import ImageUnicorn from './images/image--unicorn.png'
 
 export default function Home() {
+
+  const SHOTS_PER_PAGE = 12
+  const [isLoading, setIsLoading] = useState(true)
+  const [isLoadingMore, setIsLoadingMore] = useState(false)
+  const [isError, setIsError] = useState(false)
+  const [postsFetched, setPostsFetched] = useState(false)
+  const [dribbblePage, setDribbblePage] = useState(1)
+  const [dribbblePosts, setDribbblePosts] = useState([])
+  const placeholderArr = Array.from({ length: SHOTS_PER_PAGE }, (v, i) => i)
+
+  useEffect(() => {
+    let didCancel = false
+    let dribbbleRes = {}
+
+    async function getDribbblePosts() {
+      try {
+        if (!postsFetched) {
+          dribbbleRes = await axios.get(`https://api.dribbble.com/v2/user/shots?access_token=5d8cb2b13590c1ca7f7c64ddce445aff8cc88695c6a8a6dc72e3c6ce46a6ba94&per_page=12`,)
+          setPostsFetched(true)
+        }
+
+        if (!didCancel) {
+          setDribbblePosts([...dribbblePosts, ...dribbbleRes.data])
+
+          if (isLoading) setIsLoading(false)
+          if (isLoadingMore) setIsLoadingMore(false)
+        }
+      } catch (error) {
+        console.warn(error)
+        if (!didCancel) {
+          if (isLoading) setIsLoading(false)
+          if (isLoadingMore) setIsLoadingMore(false)
+          setPostsFetched(true)
+          setIsError(true)
+        }
+      }
+    }
+
+    if (!postsFetched && !didCancel) {
+      getDribbblePosts()
+    }
+
+    return () => {
+      didCancel = true
+    }
+
+
+  }, [
+    dribbblePosts,
+    postsFetched,
+    dribbblePage,
+    isLoading,
+    isError,
+    isLoadingMore,
+  ])
+
   return (
     <>
     <a className="visually-hidden" href="#main">Skip to main content</a>
@@ -56,24 +115,45 @@ export default function Home() {
           
 
           {/* Featured projects */}
-          <div>1</div>
-          <div>2</div>
-          <div>3</div>
-          <div>4</div>
+          <section className="projects">
+            <h2 className="visually-hidden">Featured projects</h2>
+            <div className="project">
+              <h3 className="project__title">Project 1</h3>
+            </div>
+            <div className="project">
+              <h3 className="project__title">Project 2</h3>
+            </div>
+            <div className="project">
+              <h3 className="project__title">Project 3</h3>
+            </div>
+            <div className="project">
+              <h3 className="project__title">Project 4</h3>
+            </div>
+          </section>
 
-          {/* Latest Dribbble shots */}
-          <div>1</div>
-          <div>2</div>
-          <div>3</div>
-          <div>4</div>
-          <div>5</div>
-          <div>6</div>
-          <div>7</div>
-          <div>8</div>
-          <div>9</div>
-          <div>10</div>
-          <div>11</div>
-          <div>12</div>
+          <section className="shots">
+            <h2 className="visually-hidden">Dribbble shots</h2>
+            {!isLoading && dribbblePosts.map((post) => (
+              <article key={post.id} className="shot">
+                <a className="shot__link" href={post.html_url} target="_blank" rel="noreferrer">
+                  <figure className="shot__figure">
+                    <Image
+                      src={post.images.hidpi}
+                      width={220}
+                      height={165}
+                      alt={`screenshot of ${post.title}`}
+                      placeholder="blur"
+                      blurDataURL={post.images.teaser}
+                    />
+                  </figure>
+                  <div className="shot__overlay">
+                    <h3 className="shot__title">{post.title}</h3>
+                  </div>
+                </a>
+              </article>
+            ))}
+          </section>
+
 
           {/* Featured client logos */}
         </div>
@@ -131,9 +211,9 @@ export default function Home() {
               return (
                 <div key={key} className="award">
                   <h2 className="award__title">{award.title}</h2>
-                  {award.subtitle}
-                  {award.organization}
-                  {award.date}
+                  <div className="award__subtitle">{award.subtitle}</div>
+                  <div className="award__organization">{award.organization}</div>
+                  <div className="award__date">{award.date}</div>
                 </div>
               )
             })}
