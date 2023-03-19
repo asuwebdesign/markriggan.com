@@ -7,7 +7,7 @@ export const awards = [
   },
   {
     title: "Featured Site",
-    subtitle: "",
+    subtitle: "Winner",
     date: "2019",
     organization: "CSS Awards",
   },
@@ -139,13 +139,13 @@ export const awards = [
   },
   {
     title: "Outstanding Website",
-    subtitle: "",
+    subtitle: "Winner",
     date: "2011",
     organization: "WebAwards",
   },
   {
     title: "Outstanding Website",
-    subtitle: "",
+    subtitle: "Winner",
     date: "2011",
     organization: "WebAwards",
   },

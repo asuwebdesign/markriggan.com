@@ -3,5 +3,22 @@
   top: 0;
   left: 0;
   width: 100%;
+  padding: 64px;
   z-index: 1000;
+
+  &__logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    background-color: var(--color-carbon-800);
+    border-radius: 50%;
+
+    svg {
+      width: 24px;
+      height: 24px;
+    }
+    path { fill: var(--color-crystal-white); }
+  }
 }

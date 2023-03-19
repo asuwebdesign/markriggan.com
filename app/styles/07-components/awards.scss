@@ -2,6 +2,7 @@
   position: relative;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 384px 1fr;
   grid-column-gap: 24px;
   grid-row-gap: 24px;
 
@@ -23,6 +24,7 @@
   z-index: 2;
 
   &__title {
+    margin: 0;
     color: var(--color-crystal-white);
     font-size: 16px;
     font-weight: 600;
@@ -33,4 +35,58 @@
   &__organization {}
 
   &__date {}
+
+
+  // Featured awards
+  &:nth-child(1),
+  &:nth-child(2),
+  &:nth-child(3),
+  &:nth-child(4) {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    &:before {
+      content: '';
+      display: block;
+      width: 64px;
+      height: 64px;
+      border-radius: 8px;
+    }
+
+    .award__title {
+      margin-top: 8px;
+      font-size: 20px;
+    }
+
+    .award__date {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+  }
+
+  &:nth-child(1) {
+    &:before {
+      background-color: #1DCAFF;
+    }    
+  }
+
+  &:nth-child(2) {
+    &:before {
+      background-color: #FF007E;
+    }
+  }
+
+  &:nth-child(3) {
+    &:before {
+      background-color: #45D765;
+    }
+  }
+
+  &:nth-child(4) {
+    &:before {
+      background-color: #FFA51D;
+    }
+  }
 }

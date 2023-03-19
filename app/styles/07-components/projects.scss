@@ -1,11 +1,22 @@
 .projects {
+  position: relative;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   grid-column-gap: min(1.250vw, 24px);
+
+  .dots--section {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate3d(-50%, -50%, 0);
+    z-index: 1;
+  }
 }
 
 .project {
-  height: 456px;
-  background-color: #ccc;
+  position: relative;
+  height: 480px;
+  background-color: var(--color-carbon-800);
   border-radius: 8px;
+  z-index: 2;
 }
