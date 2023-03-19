@@ -329,7 +329,7 @@ export default function Home() {
             <article className="article">
               <a className="article__link" href="https://medium.com/swlh/guide-to-accessible-brand-colors-cda383d9f00e" target="_blank">
                 <div className="article__cover">
-                  <Image src={ImageAccessibleBrandColors} alt={'alt for picture'} />
+                  <Image src={ImageAccessibleBrandColors} alt={'alt for picture'} placeholder="blur" />
                 </div>
                 <div className="article__headline">
                   <h1 className="article__title">{`Don't make me squint: How to choose accessible brand colors for your audience.`}</h1>
@@ -343,7 +343,7 @@ export default function Home() {
             <article className="article">
               <a className="article__link" href="https://medium.com/swlh/4-reasons-why-being-arrogant-is-actually-a-positive-thing-d270fda3cba0" target="_blank">
                 <div className="article__cover">
-                  <Image src={ImageArrogance} alt={'alt for picture'} />
+                  <Image src={ImageArrogance} alt={'alt for picture'} placeholder="blur" />
                 </div>
                 <div className="article__headline">
                   <h1 className="article__title">{`4 reasons why being arrogant could actually be a positive thing`}</h1>
@@ -357,7 +357,7 @@ export default function Home() {
             <article className="article">
               <a className="article__link" href="https://medium.com/swlh/four-simple-words-thatll-drive-you-to-being-a-better-creative-person-82337b07ac57" target="_blank">
                 <div className="article__cover">
-                  <Image src={ImageSimpleWords} alt={'alt for picture'} />
+                  <Image src={ImageSimpleWords} alt={'alt for picture'} placeholder="blur" />
                 </div>
                 <div className="article__headline">
                   <h1 className="article__title">{`Four simple words that'll drive you to being a better creative person.`}</h1>
@@ -371,7 +371,7 @@ export default function Home() {
             <article className="article">
               <a className="article__link" href="https://medium.com/swlh/reimagining-digital-strategy-and-how-we-document-data-architecture-9c40f94454d8" target="_blank">
                 <div className="article__cover">
-                  <Image src={ImageDigitalStrategy} alt={'alt for picture'} />
+                  <Image src={ImageDigitalStrategy} alt={'alt for picture'} placeholder="blur" />
                 </div>
                 <div className="article__headline">
                   <h1 className="article__title">{`Reimagining digital strategy and how we document data architecture`}</h1>
@@ -385,7 +385,7 @@ export default function Home() {
             <article className="article">
               <a className="article__link" href="https://medium.com/swlh/how-good-design-shows-your-brand-is-credible-22d497e5a7ac" target="_blank">
                 <div className="article__cover">
-                  <Image src={ImageGoodDesign} alt={'alt for picture'} />
+                  <Image src={ImageGoodDesign} alt={'alt for picture'} placeholder="blur" />
                 </div>
                 <div className="article__headline">
                   <h1 className="article__title">{`How your brand's credibility starts with great visual design`}</h1>
