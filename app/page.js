@@ -13,6 +13,8 @@ import IllustrationCircle from './illustrations/illustration--circle.svg'
 import IllustrationSquare from './illustrations/illustration--square.svg'
 import IllustrationTriangle from './illustrations/illustration--triangle.svg'
 import IllustrationCross from './illustrations/illustration--cross.svg'
+import IllustrationProcess from './illustrations/illustration--process.svg'
+import IllustrationManifesto from './illustrations/illustration--manifesto.svg'
 
 import LogoMarkRiggan from './logos/logo--mark-riggan.svg'
 import LogoDribbble from './logos/logo--dribbble.svg'
@@ -113,32 +115,32 @@ export default function Home() {
       <section className="section section--intro">
         <div className="section__wrapper">
           <div className="section__header">
-            <h1 className="section__title">Reimagine possible<span>.</span></h1>
+            <h1 className="section__title">Reimagine possible<em className="statement">.</em></h1>
             <p className="section__description">Connecting brands with people through handcrafted digital experiences.</p>
           </div>          
 
           <div className="highlights">
             <div className="highlight">
-              <h2 className="highlight__title">Human-centered design.</h2>
+              <h2 className="highlight__title">Human-centered design<em className="statement">.</em></h2>
               <p className="highlight__description">Award-winning designs that are data-influenced and made for humans first.</p>
             </div>
             <div className="highlight">
-              <h2 className="highlight__title">Top notch code.</h2>
+              <h2 className="highlight__title">Top notch code<em className="statement">.</em></h2>
               <p className="highlight__description">Architected and built with the latest technologies for scalability and longevity.</p>
             </div>
             <div className="highlight">
-              <h2 className="highlight__title">Tailored to your business.</h2>
+              <h2 className="highlight__title">Tailored to your business<em className="statement">.</em></h2>
               <p className="highlight__description">Solutions that are tailored to the needs of your business. Nothing is cookie-cutter.</p>
             </div>
           </div>
 
-          <Image src={ImageUnicorn} alt="Portrait of the unicorn" priority />
+          <Image src={ImageUnicorn} alt="Portrait of the unicorn" placeholder="blur" priority />
         </div>
       </section>
       <section className="section">
         <div className="section__wrapper">
           <div className="section__header">
-            <h1 className="section__title">Viable to valuable.</h1>
+            <h1 className="section__title">Design makes everything possible<em className="statement">.</em></h1>
             <p className="section__description">Building identities and experiences to elevate and empower organizations of all shapes and sizes.</p>
             <IllustrationCircle />
           </div>          
@@ -254,7 +256,7 @@ export default function Home() {
       <section className="section">
         <div className="section__wrapper">
           <div className="section__header">
-            <h1 className="section__title">Simplifying complexity. Delightfully.</h1>
+            <h1 className="section__title">Simplifying complexity. Delightfully<em className="statement">.</em></h1>
             <p className="section__description">Building identities and experiences to elevate and empower organizations of all shapes and sizes.</p>
             <IllustrationSquare />
           </div>
@@ -281,11 +283,13 @@ export default function Home() {
               <span className="dots dots--skill" aria-hidden="true"></span>
             </div>
             <div className="skill">
-              <h2 className="skill__title">Creative process Delightfully simple.</h2>
+              <h2 className="skill__title"><span>Creative process</span> Delightfully simple<em className="statement">.</em></h2>
+              <IllustrationProcess />
               <span className="dots dots--skill-ext" aria-hidden="true"></span>
             </div>
             <div className="skill">
-              <h2 className="skill__title">Personal manifesto Uncompromising design.</h2>
+              <h2 className="skill__title"><span>Personal manifesto</span> Uncompromising design<em className="statement">.</em></h2>
+              <IllustrationManifesto />
               <span className="dots dots--skill-ext" aria-hidden="true"></span>
             </div>
             <span className="dots dots--section" aria-hidden="true"></span>
@@ -295,7 +299,7 @@ export default function Home() {
       <section className="section">
         <div className="section__wrapper">
           <div className="section__header">
-            <h1 className="section__title">Hashtag: winning.</h1>
+            <h1 className="section__title">Passionately dedicated<em className="statement">.</em> Humbly recognized<em className="statement">.</em></h1>
             <p className="section__description">Building identities and experiences to elevate and empower organizations of all shapes and sizes.</p>
             <IllustrationTriangle />
           </div>
@@ -320,8 +324,8 @@ export default function Home() {
       <section className="section">
         <div className="section__wrapper">
           <div className="section__header">
-            <h1 className="section__title">Some light reading.</h1>
-            <p className="section__description">Building identities and experiences to elevate and empower organizations of all shapes and sizes.</p>
+            <h1 className="section__title">Stories &amp; ideas<em className="statement">.</em></h1>
+            <p className="section__description">Thoughts and advice on users, experience, and everything design.</p>
             <IllustrationCross />
           </div>
           

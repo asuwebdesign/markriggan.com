@@ -35,6 +35,9 @@
   &__description {
     position: relative;
     margin: 8px 0 0;
+    font-size: min(1.667vh, 18px);
+    font-weight: 600;
+    color: var(--color-carbon-400);
     z-index: 2;
   }
 
