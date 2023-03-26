@@ -5,7 +5,8 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-column-gap: 24px;
-  z-index: 2;
+  margin-bottom: min(5.926vh, 64px);
+  z-index: 3;
 }
 
 .highlight {
@@ -16,7 +17,7 @@
     width: 48px;
     height: 4px;
     margin: 0 0 min(1.481vh, 16px);
-    background: linear-gradient(270deg, #FF007E 0%, #5708D3 100%);
+    background-color: var(--color-green);
     border-radius: 4px;
   }
 

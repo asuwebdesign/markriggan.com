@@ -1,10 +1,9 @@
 .shots {
   display: grid;
   grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
   grid-column-gap: min(1.250vw, 24px);
   grid-row-gap: min(1.250vw, 24px);
-  margin-top: min(5.926vh, 64px);
 }
 
 .shot {

@@ -1,10 +1,18 @@
+// Packages
+// ============================================================================
 "use client"
 import { useState, useEffect } from 'react'
 import Image from 'next/image'
 const axios = require('axios')
 
+
+// Data
+// ============================================================================
 import { awards } from './data/awards'
 
+
+// Illustrations
+// ============================================================================
 import IllustrationBranding from './illustrations/illustration--branding.svg'
 import IllustrationCreative from './illustrations/illustration--creative.svg'
 import IllustrationResearch from './illustrations/illustration--research.svg'
@@ -16,12 +24,14 @@ import IllustrationCross from './illustrations/illustration--cross.svg'
 import IllustrationProcess from './illustrations/illustration--process.svg'
 import IllustrationManifesto from './illustrations/illustration--manifesto.svg'
 
+
+// Logos
+// ============================================================================
 import LogoMarkRiggan from './logos/logo--mark-riggan.svg'
 import LogoDribbble from './logos/logo--dribbble.svg'
 import LogoLinkedIn from './logos/logo--linkedin.svg'
 import LogoMedium from './logos/logo--medium.svg'
 import LogoTwitter from './logos/logo--twitter.svg'
-
 import LogoABB from './logos/logo--abb.svg'
 import LogoBlueCross from './logos/logo--bcbsnc.svg'
 import LogoCampbell from './logos/logo--campbell.svg'
@@ -37,6 +47,9 @@ import LogoNVidia from './logos/logo--nvidia.svg'
 import LogoOracle from './logos/logo--oracle.svg'
 import LogoRedHat from './logos/logo--redhat.svg'
 
+
+// Images
+// ============================================================================
 import ImageUnicorn from './images/image--unicorn.png'
 import ImageAccessibleBrandColors from './images/image--accessible-brand-colors.webp'
 import ImageArrogance from './images/image--arrogance.webp'
@@ -45,9 +58,14 @@ import ImageGoodDesign from './images/image--good-design.webp'
 import ImageSimpleWords from './images/image--simple-words.webp'
 
 
+// Home page
+// ============================================================================
 export default function Home() {
 
-  const SHOTS_PER_PAGE = 12
+
+  // Dribbble shots
+  // --------------------------------------------------------------------------
+  const SHOTS_PER_PAGE = 18
   const [isLoading, setIsLoading] = useState(true)
   const [isLoadingMore, setIsLoadingMore] = useState(false)
   const [isError, setIsError] = useState(false)
@@ -56,6 +74,9 @@ export default function Home() {
   const [dribbblePosts, setDribbblePosts] = useState([])
   const placeholderArr = Array.from({ length: SHOTS_PER_PAGE }, (v, i) => i)
 
+
+  // Effects
+  // --------------------------------------------------------------------------
   useEffect(() => {
     let didCancel = false
     let dribbbleRes = {}
@@ -63,7 +84,7 @@ export default function Home() {
     async function getDribbblePosts() {
       try {
         if (!postsFetched) {
-          dribbbleRes = await axios.get(`https://api.dribbble.com/v2/user/shots?access_token=5d8cb2b13590c1ca7f7c64ddce445aff8cc88695c6a8a6dc72e3c6ce46a6ba94&per_page=12`,)
+          dribbbleRes = await axios.get(`https://api.dribbble.com/v2/user/shots?access_token=5d8cb2b13590c1ca7f7c64ddce445aff8cc88695c6a8a6dc72e3c6ce46a6ba94&per_page=18`,)
           setPostsFetched(true)
         }
 
@@ -102,6 +123,9 @@ export default function Home() {
     isLoadingMore,
   ])
 
+
+  // Output
+  // --------------------------------------------------------------------------
   return (
     <>
     <a className="visually-hidden" href="#main">Skip to main content</a>
@@ -112,6 +136,8 @@ export default function Home() {
       <h1 className="visually-hidden">Mark Riggan</h1>
     </header>
     <main id="main">
+
+      {/* Intro section */}
       <section className="section section--intro">
         <div className="section__wrapper">
           <div className="section__header">
@@ -136,36 +162,54 @@ export default function Home() {
 
           <Image src={ImageUnicorn} alt="Portrait of the unicorn" placeholder="blur" priority />
         </div>
+        <div className="dots dots--hero">
+          <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+          <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+        </div>
       </section>
-      <section className="section">
+
+      {/* Projects section */}
+      <section className="section section--projects">
+        <h2 className="visually-hidden">Featured projects</h2>
+        <div className="projects">          
+          <div className="project">
+            <h3 className="visually-hidden">Project 1</h3>
+            <Image src="https://cdn.dribbble.com/userupload/5596308/file/original-4af6f71bf2785b1c6ca663004e7f27ad.png?compress=1&resize=752x" alt="Project 1 photo" fill />
+          </div>
+          <div className="project">
+            <h3 className="visually-hidden">Project 2</h3>
+            <Image src="https://cdn.dribbble.com/userupload/5596308/file/original-4af6f71bf2785b1c6ca663004e7f27ad.png?compress=1&resize=752x" alt="Project 1 photo" fill />
+          </div>
+          <div className="project">
+            <h3 className="visually-hidden">Project 3</h3>
+            <Image src="https://cdn.dribbble.com/userupload/5596308/file/original-4af6f71bf2785b1c6ca663004e7f27ad.png?compress=1&resize=752x" alt="Project 1 photo" fill />
+          </div>
+          <div className="project">
+            <h3 className="visually-hidden">Project 4</h3>
+            <Image src="https://cdn.dribbble.com/userupload/5596308/file/original-4af6f71bf2785b1c6ca663004e7f27ad.png?compress=1&resize=752x" alt="Project 1 photo" fill />
+          </div>
+          <div className="project">
+            <h3 className="visually-hidden">Project 5</h3>
+            <Image src="https://cdn.dribbble.com/userupload/5596308/file/original-4af6f71bf2785b1c6ca663004e7f27ad.png?compress=1&resize=752x" alt="Project 1 photo" fill />
+          </div>
+          <div className="project">
+            <h3 className="visually-hidden">Project 6</h3>
+            <Image src="https://cdn.dribbble.com/userupload/5596308/file/original-4af6f71bf2785b1c6ca663004e7f27ad.png?compress=1&resize=752x" alt="Project 1 photo" fill />
+          </div>
+        </div>
+      </section>
+
+      {/* Dribbble shots section */}
+      <section className="section section--shots">
         <div className="section__wrapper">
-          <div className="section__header">
-            <h1 className="section__title">Design makes everything possible<em className="statement">.</em></h1>
-            <p className="section__description">Building identities and experiences to elevate and empower organizations of all shapes and sizes.</p>
-            <IllustrationCircle />
-          </div>          
-          
-
-          {/* Featured projects */}
-          <section className="projects">
-            <h2 className="visually-hidden">Featured projects</h2>
-            <div className="project">
-              <h3 className="project__title">Project 1</h3>
-            </div>
-            <div className="project">
-              <h3 className="project__title">Project 2</h3>
-            </div>
-            <div className="project">
-              <h3 className="project__title">Project 3</h3>
-            </div>
-            <div className="project">
-              <h3 className="project__title">Project 4</h3>
-            </div>
-            <span className="dots dots--section" aria-hidden="true"></span>
-          </section>
-
-          <section className="shots">
-            <h2 className="visually-hidden">Dribbble shots</h2>
+          <h2 className="visually-hidden">Dribbble shots</h2>
+          <div className="shots">
             {!isLoading && dribbblePosts.map((post) => (
               <article key={post.id} className="shot">
                 <a className="shot__link" href={post.html_url} target="_blank" rel="noreferrer">
@@ -185,11 +229,15 @@ export default function Home() {
                 </a>
               </article>
             ))}
-          </section>
-
-
-          <section className="clients">
-            <h2 className="visually-hidden">Featured clients</h2>
+          </div>
+        </div>
+      </section>
+      
+      {/* Clients section */}
+      <section className="section section--clients">
+        <div className="section__wrapper">
+          <h2 className="visually-hidden">Featured clients</h2>
+          <div className="clients">
             <div className="client">
               <LogoABB />
               <h3 className="visually-hidden">ABB</h3>
@@ -250,15 +298,16 @@ export default function Home() {
               <LogoDuke />
               <h3 className="visually-hidden">Duke University</h3>
             </div>
-          </section>
+          </div>
         </div>
       </section>
-      <section className="section">
+      
+      {/* Skills section */}
+      <section className="section section--skills">
         <div className="section__wrapper">
           <div className="section__header">
-            <h1 className="section__title">Simplifying complexity. Delightfully<em className="statement">.</em></h1>
+            <h1 className="section__title">Simplifying complexity<em className="statement">.</em> Delightfully<em className="statement">.</em></h1>
             <p className="section__description">Building identities and experiences to elevate and empower organizations of all shapes and sizes.</p>
-            <IllustrationSquare />
           </div>
 
           <div className="skills">
@@ -296,12 +345,13 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section className="section">
+
+      {/* Awards section */}
+      <section className="section section--awards">
         <div className="section__wrapper">
           <div className="section__header">
-            <h1 className="section__title">Passionately dedicated<em className="statement">.</em> Humbly recognized<em className="statement">.</em></h1>
+            <h1 className="section__title">Fueled by passion<em className="statement">.</em> Dedicated to excellence<em className="statement">.</em></h1>
             <p className="section__description">Building identities and experiences to elevate and empower organizations of all shapes and sizes.</p>
-            <IllustrationTriangle />
           </div>
           
           <div className="awards">
@@ -321,12 +371,13 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Articles section */}
       <section className="section">
         <div className="section__wrapper">
           <div className="section__header">
-            <h1 className="section__title">Stories &amp; ideas<em className="statement">.</em></h1>
+            <h1 className="section__title">Thoughts and ideas. Level up.</h1>
             <p className="section__description">Thoughts and advice on users, experience, and everything design.</p>
-            <IllustrationCross />
           </div>
           
           <div className="articles">
@@ -402,6 +453,7 @@ export default function Home() {
             </article>
             <span className="dots dots--section" aria-hidden="true"></span>
           </div>
+          <div className="callout">Go behind the scenes at Dribbble</div>
         </div>
       </section>
     </main>
@@ -437,7 +489,9 @@ export default function Home() {
         </ul>
       </div>
 
-      <button>Toggle audio</button>
+      <button className="music">
+        <span className="visually-hidden">Toggle music</span>
+      </button>
     </footer>
     </>
   )

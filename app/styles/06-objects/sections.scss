@@ -1,5 +1,5 @@
 .section {
-  padding: 256px 0;
+  padding: min(11.852vh, 128px) 0;
 
   &__wrapper {
     width: min(75vw, 1440px);
@@ -12,16 +12,17 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    min-height: min(23.704vh, 256px);
     margin: 0 0 min(11.852vh, 128px);
     text-align: center;
 
-    svg {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate3d(-50%, -50%, 0);
-      z-index: 1;
+    &:after {
+      content: '';
+      display: block;
+      width: 48px;
+      height: 4px;
+      margin-top: 32px;
+      background-color: var(--color-green);
+      border-radius: 2px;
     }
   }
 
@@ -47,30 +48,34 @@
   &--intro {
     position: relative;
     height: 100vh;
-    padding: 64px 0;
-
-    &:before {
-      content: '';
-      position: absolute;
-      top: 0;
-      left: 0;
-      display: block;
-      width: 100%;
-      height: 100%;
-      z-index: 1;
-    }
+    padding: 0;
 
     .section__wrapper {
       display: grid;
       grid-template-rows: repeat(3, 1fr);
       height: 100%;
+
+      &:before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to top, rgba(26, 26, 26, 1) 0%,rgba(26, 26, 26, 0) 100%);
+        z-index: 2;
+      }
     }
 
     .section__header {
       position: relative;
       grid-area: 2 / 1 / 3 / 2;
       align-self: center;
-      z-index: 2;
+      margin: 0;
+      z-index: 3;
+
+      &:after { display: none; }
     }
 
     .section__title {
@@ -80,11 +85,7 @@
     .section__description {
       font-size: min(2.222vh, 24px);
       font-weight: 600;
-      background: linear-gradient(270deg, #FF007E 0%, #5708D3 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
-      text-fill-color: transparent;
+      color: var(--color-green);
     }
 
     img {
@@ -98,5 +99,19 @@
       z-index: 1;
     }
   }
+
+  // Projects section
+  // ===============================================================
+  &--projects { padding-top: 0; }
+
+
+  // Shots section
+  // ===============================================================
+  &--shots { padding-top: 0; }
+
+
+  // Clients section
+  // ===============================================================
+  &--clients { padding-top: 0; }
 
 }
