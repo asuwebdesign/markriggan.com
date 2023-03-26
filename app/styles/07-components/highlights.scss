@@ -4,7 +4,7 @@
   align-self: end;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-column-gap: 24px;
+  grid-column-gap: min(1.667vw, 32px);
   margin-bottom: min(5.926vh, 64px);
   z-index: 3;
 }
@@ -16,7 +16,7 @@
     display: block;
     width: 48px;
     height: 4px;
-    margin: 0 0 min(1.481vh, 16px);
+    margin: 0 0 min(1.667vh, 32px);
     background-color: var(--color-green);
     border-radius: 4px;
   }

@@ -229,6 +229,15 @@ export default function Home() {
                 </a>
               </article>
             ))}
+            <div className="dots dots--section">
+              <span></span><span></span><span></span><span></span>
+              <span></span><span></span><span></span><span></span>
+              <span></span><span></span><span></span><span></span>
+              <span></span><span></span><span></span><span></span>
+            </div>
+          </div>
+          <div className="section__callout">
+            <a href="#">Go behind the scenes at <LogoDribbble /></a>
           </div>
         </div>
       </section>
@@ -313,7 +322,7 @@ export default function Home() {
           <div className="skills">
             <div className="skill">
               <IllustrationBranding />
-              <h2 className="skill__title">Branding Strategy &amp; Identity</h2>
+              <h2 className="skill__title">Branding Strategy<br /> &amp; Identity</h2>
               <span className="dots dots--skill" aria-hidden="true"></span>
             </div>
             <div className="skill">
@@ -323,12 +332,12 @@ export default function Home() {
             </div>
             <div className="skill">
               <IllustrationResearch />
-              <h2 className="skill__title">Research, Data &amp; Analysis</h2>
+              <h2 className="skill__title">Research, Data<br /> &amp; Analysis</h2>
               <span className="dots dots--skill" aria-hidden="true"></span>
             </div>
             <div className="skill">
               <IllustrationWeb />
-              <h2 className="skill__title">Websites &amp; Digital Platforms</h2>
+              <h2 className="skill__title">Websites &amp; <br />Digital Platforms</h2>
               <span className="dots dots--skill" aria-hidden="true"></span>
             </div>
             <div className="skill">
@@ -453,7 +462,9 @@ export default function Home() {
             </article>
             <span className="dots dots--section" aria-hidden="true"></span>
           </div>
-          <div className="callout">Go behind the scenes at Dribbble</div>
+          <div className="section__callout">
+            <a href="#">More thoughts and ideas at <LogoMedium /></a>
+          </div>
         </div>
       </section>
     </main>

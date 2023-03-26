@@ -1,14 +1,14 @@
 <svg viewBox="0 0 189.66 128" xmlns="http://www.w3.org/2000/svg">
-  <path d="m41.87.01.01.01V.01z" fill="#36e5ea"/>
+  <path d="m41.87.01.01.01V.01z" fill="var(--color-carbon-800)"/>
   <path d="m105.92 0-32 55.47 9.85 17.06L125.62 0zM64.05 0 53 19.22l9.85 17.06L83.75 0zm83.74 0-53 91.73L115.77 128 189.66 0z" fill="var(--color-green)"/>
-  <path d="M105.92 0H83.75v.01h22.17z" fill="#ff5c92"/>
-  <path d="m41.88 72.54 11.08 19.2 20.93-36.26-11.08-19.2z" fill="#1dcaff"/>
-  <path d="M83.75.01 62.81 36.28l11.08 19.2L105.92.01z" fill="#36e5ea"/>
-  <path d="m0 0 11.09 19.2L22.17 0z" fill="#1dcaff"/>
-  <path d="M64.05 0H41.88v.01h22.17z" fill="#ff5c92"/>
-  <path d="m20.94 36.27 11.09 19.2 20.93-36.25L41.88.02z" fill="#1dcaff"/>
-  <path d="M41.88.01v.01l11.08 19.2L64.05.01z" fill="#36e5ea"/>
-  <path d="M62.81 108.8 73.89 128l20.94-36.26-11.08-19.2z" fill="#1dcaff"/>
-  <path d="M125.62.01 83.75 72.54l11.08 19.2L147.79.01z" fill="#36e5ea"/>
-  <path d="M83.75 0 62.81 36.28l11.09 19.2L105.92 0zM41.88 0 53 19.22 64.05 0zm83.74 0L83.75 72.54l11.08 19.2L147.79 0z" fill="#1f0645"/>
+  <path d="M105.92 0H83.75v.01h22.17z" fill="var(--color-carbon-800)"/>
+  <path d="m41.88 72.54 11.08 19.2 20.93-36.26-11.08-19.2z" fill="var(--color-purple)"/>
+  <path d="M83.75.01 62.81 36.28l11.08 19.2L105.92.01z" fill="var(--color-carbon-800)"/>
+  <path d="m0 0 11.09 19.2L22.17 0z" fill="var(--color-purple)"/>
+  <path d="M64.05 0H41.88v.01h22.17z" fill="var(--color-carbon-800)"/>
+  <path d="m20.94 36.27 11.09 19.2 20.93-36.25L41.88.02z" fill="var(--color-purple)"/>
+  <path d="M41.88.01v.01l11.08 19.2L64.05.01z" fill="var(--color-carbon-800)"/>
+  <path d="M62.81 108.8 73.89 128l20.94-36.26-11.08-19.2z" fill="var(--color-purple)"/>
+  <path d="M125.62.01 83.75 72.54l11.08 19.2L147.79.01z" fill="var(--color-carbon-800)"/>
+  <path d="M83.75 0 62.81 36.28l11.09 19.2L105.92 0zM41.88 0 53 19.22 64.05 0zm83.74 0L83.75 72.54l11.08 19.2L147.79 0z" fill="var(--color-carbon-800)"/>
 </svg>
