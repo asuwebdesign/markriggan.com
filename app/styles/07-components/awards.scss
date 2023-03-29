@@ -24,17 +24,19 @@
   z-index: 2;
 
   &__title {
-    margin: 0;
+    margin: 0 0 24px;
     color: var(--color-crystal-white);
-    font-size: 16px;
+    font-size: 18px;
     font-weight: 600;
   }
 
-  &__subtitle {}
+  &__subtitle {
+    margin: 0 0 8px;
+  }
 
-  &__organization {}
-
-  &__date {}
+  &__organization {
+    margin: 0 0 4px;
+  }
 
 
   // Featured awards
@@ -67,27 +69,39 @@
     }
   }
 
-  // &:nth-child(1) {
-  //   &:before {
-  //     background-color: #1DCAFF;
-  //   }    
-  // }
+  &:nth-child(1) {
+    &:before {
+      background-image: url('/icons/icon--team.svg');
+      background-position: 50% 50%;
+      background-size: 32px auto;
+      background-repeat: no-repeat;
+    }    
+  }
 
-  // &:nth-child(2) {
-  //   &:before {
-  //     background-color: #FF007E;
-  //   }
-  // }
+  &:nth-child(2) {
+    &:before {
+      background-image: url('/icons/icon--star.svg');
+      background-position: 50% 50%;
+      background-size: 32px auto;
+      background-repeat: no-repeat;
+    }
+  }
 
-  // &:nth-child(3) {
-  //   &:before {
-  //     background-color: #45D765;
-  //   }
-  // }
+  &:nth-child(3) {
+    &:before {
+      background-image: url('/icons/icon--navigate.svg');
+      background-position: 50% 50%;
+      background-size: 32px auto;
+      background-repeat: no-repeat;
+    }
+  }
 
-  // &:nth-child(4) {
-  //   &:before {
-  //     background-color: #FFA51D;
-  //   }
-  // }
+  &:nth-child(4) {
+    &:before {
+      background-image: url('/icons/icon--experience.svg');
+      background-position: 50% 50%;
+      background-size: 32px auto;
+      background-repeat: no-repeat;
+    }
+  }
 }

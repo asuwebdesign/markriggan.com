@@ -5,9 +5,12 @@
   grid-template-rows: repeat(3, 1fr);
   grid-column-gap: min(1.250vw, 24px);
   grid-row-gap: min(1.250vw, 24px);
+  z-index: 2;
 }
 
 .shot {
+  position: relative;
+  z-index: 3;
 
   &__link {
     display: block;

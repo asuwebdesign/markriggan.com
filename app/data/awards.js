@@ -109,13 +109,13 @@ export const awards = [
   },
   {
     title: "Outstanding Website",
-    subtitle: "",
+    subtitle: "Winner",
     date: "2012",
     organization: "WebAwards",
   },
   {
     title: "Standard of Excellence",
-    subtitle: "",
+    subtitle: "Winner",
     date: "2012",
     organization: "WebAwards",
   },

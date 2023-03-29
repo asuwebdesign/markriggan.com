@@ -4,6 +4,7 @@
 import { useState, useEffect } from 'react'
 import Image from 'next/image'
 const axios = require('axios')
+import { motion } from 'framer-motion'
 
 
 // Data
@@ -56,6 +57,11 @@ import ImageArrogance from './images/image--arrogance.webp'
 import ImageDigitalStrategy from './images/image--digital-strategy.webp'
 import ImageGoodDesign from './images/image--good-design.webp'
 import ImageSimpleWords from './images/image--simple-words.webp'
+
+
+// Symbols
+// ============================================================================
+import SymbolCircle from './symbols/symbol--circle.svg'
 
 
 // Home page
@@ -130,9 +136,9 @@ export default function Home() {
     <>
     <a className="visually-hidden" href="#main">Skip to main content</a>
     <header className="header">
-      <div className="header__logo">
+      <motion.div className="header__logo" initial={{ x: -10, y: -10, opacity: 0 }} animate={{ x: 0, y: 0, opacity: 1 }}>
         <LogoMarkRiggan />
-      </div>
+      </motion.div>
       <h1 className="visually-hidden">Mark Riggan</h1>
     </header>
     <main id="main">
@@ -180,27 +186,63 @@ export default function Home() {
         <div className="projects">          
           <div className="project">
             <h3 className="visually-hidden">Project 1</h3>
-            <Image src="https://cdn.dribbble.com/userupload/5596308/file/original-4af6f71bf2785b1c6ca663004e7f27ad.png?compress=1&resize=752x" alt="Project 1 photo" fill />
+            <div className="project__symbols">
+              <span><SymbolCircle /></span>
+              <span><SymbolCircle /></span>
+              <span><SymbolCircle /></span>
+              <span><SymbolCircle /></span>
+            </div>
+            <Image className="project__cover" src="https://cdn.dribbble.com/userupload/5596308/file/original-4af6f71bf2785b1c6ca663004e7f27ad.png?compress=1&resize=752x" alt="Project 1 photo" fill />
           </div>
           <div className="project">
             <h3 className="visually-hidden">Project 2</h3>
-            <Image src="https://cdn.dribbble.com/userupload/5596308/file/original-4af6f71bf2785b1c6ca663004e7f27ad.png?compress=1&resize=752x" alt="Project 1 photo" fill />
+            <div className="project__symbols">
+              <span><SymbolCircle /></span>
+              <span><SymbolCircle /></span>
+              <span><SymbolCircle /></span>
+              <span><SymbolCircle /></span>
+            </div>
+            <Image className="project__cover" src="https://cdn.dribbble.com/userupload/5596308/file/original-4af6f71bf2785b1c6ca663004e7f27ad.png?compress=1&resize=752x" alt="Project 1 photo" fill />
           </div>
           <div className="project">
             <h3 className="visually-hidden">Project 3</h3>
-            <Image src="https://cdn.dribbble.com/userupload/5596308/file/original-4af6f71bf2785b1c6ca663004e7f27ad.png?compress=1&resize=752x" alt="Project 1 photo" fill />
+            <div className="project__symbols">
+              <span><SymbolCircle /></span>
+              <span><SymbolCircle /></span>
+              <span><SymbolCircle /></span>
+              <span><SymbolCircle /></span>
+            </div>
+            <Image className="project__cover" src="https://cdn.dribbble.com/userupload/5596308/file/original-4af6f71bf2785b1c6ca663004e7f27ad.png?compress=1&resize=752x" alt="Project 1 photo" fill />
           </div>
           <div className="project">
             <h3 className="visually-hidden">Project 4</h3>
-            <Image src="https://cdn.dribbble.com/userupload/5596308/file/original-4af6f71bf2785b1c6ca663004e7f27ad.png?compress=1&resize=752x" alt="Project 1 photo" fill />
+            <div className="project__symbols">
+              <span><SymbolCircle /></span>
+              <span><SymbolCircle /></span>
+              <span><SymbolCircle /></span>
+              <span><SymbolCircle /></span>
+            </div>
+            <Image className="project__cover" src="https://cdn.dribbble.com/userupload/5596308/file/original-4af6f71bf2785b1c6ca663004e7f27ad.png?compress=1&resize=752x" alt="Project 1 photo" fill />
           </div>
           <div className="project">
             <h3 className="visually-hidden">Project 5</h3>
-            <Image src="https://cdn.dribbble.com/userupload/5596308/file/original-4af6f71bf2785b1c6ca663004e7f27ad.png?compress=1&resize=752x" alt="Project 1 photo" fill />
+            <div className="project__symbols">
+              <span><SymbolCircle /></span>
+              <span><SymbolCircle /></span>
+              <span><SymbolCircle /></span>
+              <span><SymbolCircle /></span>
+            </div>
+            <Image className="project__cover" src="https://cdn.dribbble.com/userupload/5596308/file/original-4af6f71bf2785b1c6ca663004e7f27ad.png?compress=1&resize=752x" alt="Project 1 photo" fill />
           </div>
           <div className="project">
             <h3 className="visually-hidden">Project 6</h3>
-            <Image src="https://cdn.dribbble.com/userupload/5596308/file/original-4af6f71bf2785b1c6ca663004e7f27ad.png?compress=1&resize=752x" alt="Project 1 photo" fill />
+            <div className="project__symbols">
+              <span><SymbolCircle /></span>
+              <span><SymbolCircle /></span>
+              <span><SymbolCircle /></span>
+              <span><SymbolCircle /></span>
+            </div>
+            <Image className="project__cover" src="https://cdn.dribbble.com/userupload/5596308/file/original-4af6f71bf2785b1c6ca663004e7f27ad.png?compress=1&resize=752x" alt="Project 1 photo" fill />
           </div>
         </div>
       </section>
@@ -347,7 +389,6 @@ export default function Home() {
             </div>
             <div className="skill">
               <h2 className="skill__title"><span>Personal manifesto</span> Uncompromising design<em className="statement">.</em></h2>
-              <IllustrationManifesto />
               <span className="dots dots--skill-ext" aria-hidden="true"></span>
             </div>
             <span className="dots dots--section" aria-hidden="true"></span>
@@ -372,7 +413,7 @@ export default function Home() {
                     <h2 className="award__title">{award.title}</h2>
                   </div>
                   <div className="award__organization">{award.organization}</div>
-                  <div className="award__date">{award.date}</div>
+                  {/* <div className="award__date">{award.date}</div> */}
                 </div>
               )
             })}
@@ -471,7 +512,7 @@ export default function Home() {
     <footer>
       <small>Copyright</small>
 
-      <div className="social">
+      <motion.div className="social" initial={{ x: -10, y: 10, opacity: 0 }} animate={{ x: 0, y: 0, opacity: 1 }}>
         <ul className="social__list">
           <li className="social__list-item">
             <a href="https://dribbble.com/markr" target="_blank">
@@ -498,7 +539,7 @@ export default function Home() {
             </a>
           </li>
         </ul>
-      </div>
+      </motion.div>
 
       <button className="music">
         <span className="visually-hidden">Toggle music</span>
