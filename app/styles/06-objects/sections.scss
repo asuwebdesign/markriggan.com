@@ -1,5 +1,6 @@
 .section {
   padding: min(11.852vh, 128px) 0;
+  overflow-x: hidden;
 
   &__wrapper {
     width: min(75vw, 1440px);
@@ -156,7 +157,7 @@
 
   // Projects section
   // ===============================================================
-  &--projects { padding-top: 0; overflow-x: hidden; }
+  &--projects { padding-top: 0; }
 
 
   // Shots section

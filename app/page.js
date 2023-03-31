@@ -181,6 +181,14 @@ export default function Home() {
       </section>
 
       {/* Projects section */}
+      {/*
+        - Lexis+
+        - Red Hat PatternFly?)
+        - NC Gov
+        - Atlantic BT?
+        - Campbell?
+        - ColorShark
+      */}
       <section className="section section--projects">
         <h2 className="visually-hidden">Featured projects</h2>
         <div className="projects">          
@@ -501,7 +509,16 @@ export default function Home() {
                 </div>
               </a>              
             </article>
-            <span className="dots dots--section" aria-hidden="true"></span>
+            <div className="dots dots--articles">
+              <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+              <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+              <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+              <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+              <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+              <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+              <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+              <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+            </div>
           </div>
           <div className="section__callout">
             <a href="#">More thoughts and ideas at <LogoMedium /></a>
