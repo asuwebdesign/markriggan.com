@@ -2,10 +2,16 @@
   display: grid;
   align-items: center;
   justify-content: center;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(8, 128px);
+  grid-column-gap: 24px;
+  grid-row-gap: 24px;
 
   @include media('>=large') {
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(3, 128px);
+    grid-column-gap: 0;
+    grid-row-gap: 0;
   }
 }
 

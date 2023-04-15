@@ -1,12 +1,12 @@
 .skills {
   position: relative;
   display: grid;
+  grid-column-gap: 24px;
+  grid-row-gap: 24px;
 
   @include media('>=large') {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: 1fr auto;
-    grid-column-gap: 24px;
-    grid-row-gap: 24px;
   }
 
   .dots--section {

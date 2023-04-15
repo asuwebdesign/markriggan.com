@@ -1,13 +1,14 @@
 .articles {
   position: relative;
   display: grid;
+  grid-column-gap: 24px;
+  grid-row-gap: 24px;
 
   @include media('>=large') {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
     grid-template-rows: auto auto;
-    grid-column-gap: 24px;
-    grid-row-gap: 24px;
+    
   }
 
   @include media('>=large') {
@@ -16,8 +17,15 @@
     .article:nth-child(3) { grid-area: 2 / 1 / 3 / 2; }
     .article:nth-child(4) { grid-area: 2 / 2 / 3 / 3; }
     .article:nth-child(5) { grid-area: 2 / 3 / 3 / 4; }
-  
-    .dots { grid-area: 1 / 2 / 2 / 3; }
+  }
+
+  .dots {
+    display: none;
+
+    @include media('>=large') {
+      display: inherit;
+      grid-area: 1 / 2 / 2 / 3;
+    }    
   }
 }
 
