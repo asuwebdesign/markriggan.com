@@ -1,11 +1,14 @@
 .social {
-  position: fixed;
-  bottom: 64px;
-  left: 64px;
   padding: 4px;
   background-color: var(--color-carbon-800);
   border-radius: 100px;
   z-index: 1000;
+
+  @include media('>=large') {
+    position: fixed;
+    bottom: 64px;
+    left: 64px;
+  }
 
   &__list {
     display: flex;

@@ -1,11 +1,14 @@
 .shots {
   position: relative;
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  grid-column-gap: min(1.250vw, 24px);
-  grid-row-gap: min(1.250vw, 24px);
   z-index: 2;
+
+  @include media('>=large') {
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: min(1.250vw, 24px);
+    grid-row-gap: min(1.250vw, 24px);
+  }
 }
 
 .shot {

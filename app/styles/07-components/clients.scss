@@ -1,9 +1,12 @@
 .clients {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(3, 128px);
   align-items: center;
   justify-content: center;
+
+  @include media('>=large') {
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(3, 128px);
+  }
 }
 
 .client {

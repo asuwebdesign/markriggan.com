@@ -1,12 +1,15 @@
 .highlights {
   position: relative;
-  grid-area: 3 / 1 / 4 / 2;
   align-self: end;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-column-gap: min(1.667vw, 32px);
   margin-bottom: min(5.926vh, 64px);
   z-index: 3;
+
+  @include media('>=large') {
+    grid-area: 3 / 1 / 4 / 2;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: min(1.667vw, 32px);
+  }
 }
 
 .highlight {

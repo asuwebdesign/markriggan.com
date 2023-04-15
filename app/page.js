@@ -1,10 +1,10 @@
 // Packages
 // ============================================================================
 "use client"
-import { useState, useEffect } from 'react'
-import Image from 'next/image'
-const axios = require('axios')
 import { motion } from 'framer-motion'
+import Image from 'next/image'
+import { useEffect, useRef, useState } from 'react'
+const axios = require('axios')
 
 
 // Data
@@ -15,48 +15,53 @@ import { awards } from './data/awards'
 // Illustrations
 // ============================================================================
 import IllustrationBranding from './illustrations/illustration--branding.svg'
-import IllustrationCreative from './illustrations/illustration--creative.svg'
-import IllustrationResearch from './illustrations/illustration--research.svg'
-import IllustrationWeb from './illustrations/illustration--web.svg'
 import IllustrationCircle from './illustrations/illustration--circle.svg'
+import IllustrationCreative from './illustrations/illustration--creative.svg'
+import IllustrationCross from './illustrations/illustration--cross.svg'
+import IllustrationManifesto from './illustrations/illustration--manifesto.svg'
+import IllustrationProcess from './illustrations/illustration--process.svg'
+import IllustrationResearch from './illustrations/illustration--research.svg'
 import IllustrationSquare from './illustrations/illustration--square.svg'
 import IllustrationTriangle from './illustrations/illustration--triangle.svg'
-import IllustrationCross from './illustrations/illustration--cross.svg'
-import IllustrationProcess from './illustrations/illustration--process.svg'
-import IllustrationManifesto from './illustrations/illustration--manifesto.svg'
+import IllustrationWeb from './illustrations/illustration--web.svg'
 
 
 // Logos
 // ============================================================================
-import LogoMarkRiggan from './logos/logo--mark-riggan.svg'
-import LogoDribbble from './logos/logo--dribbble.svg'
-import LogoLinkedIn from './logos/logo--linkedin.svg'
-import LogoMedium from './logos/logo--medium.svg'
-import LogoTwitter from './logos/logo--twitter.svg'
 import LogoABB from './logos/logo--abb.svg'
 import LogoBlueCross from './logos/logo--bcbsnc.svg'
 import LogoCampbell from './logos/logo--campbell.svg'
 import LogoDisney from './logos/logo--disney.svg'
+import LogoDribbble from './logos/logo--dribbble.svg'
 import LogoDuke from './logos/logo--duke.svg'
-import LogoHwy55 from './logos/logo--hwy55.svg'
 import LogoHonda from './logos/logo--honda.svg'
+import LogoHwy55 from './logos/logo--hwy55.svg'
 import LogoLexisNexis from './logos/logo--lexisnexis.svg'
+import LogoLinkedIn from './logos/logo--linkedin.svg'
 import LogoLulu from './logos/logo--lulu.svg'
+import LogoMarkRiggan from './logos/logo--mark-riggan.svg'
+import LogoMedium from './logos/logo--medium.svg'
 import LogoNCGov from './logos/logo--ncgov.svg'
 import LogoNCState from './logos/logo--ncstate.svg'
 import LogoNVidia from './logos/logo--nvidia.svg'
 import LogoOracle from './logos/logo--oracle.svg'
 import LogoRedHat from './logos/logo--redhat.svg'
+import LogoTwitter from './logos/logo--twitter.svg'
 
 
 // Images
 // ============================================================================
-import ImageUnicorn from './images/image--unicorn.png'
 import ImageAccessibleBrandColors from './images/image--accessible-brand-colors.webp'
 import ImageArrogance from './images/image--arrogance.webp'
 import ImageDigitalStrategy from './images/image--digital-strategy.webp'
 import ImageGoodDesign from './images/image--good-design.webp'
 import ImageSimpleWords from './images/image--simple-words.webp'
+import ImageUnicorn from './images/image--unicorn.png'
+
+import ImageProjectLexisNexis from './images/image--proj--lexisnexis.jpg'
+import ImageProjectAtlanticBT from './images/image--proj--atlanticbt.jpg'
+import ImageProjectOpenTelco from './images/image--proj--opentelco.jpg'
+import ImageProjectWisconsin from './images/image--proj--wisconsin.jpg'
 
 
 // Symbols
@@ -64,11 +69,31 @@ import ImageSimpleWords from './images/image--simple-words.webp'
 import SymbolCircle from './symbols/symbol--circle.svg'
 
 
+// Icons
+// ============================================================================
+import IconABT from './icons/icon--abt.svg'
+import IconLexisNexis from './icons/icon--lexisnexis.svg'
+import IconNCGov from './icons/icon--ncgov.svg'
+import IconPatternFly from './icons/icon--patternfly.svg'
+import IconRedHat from './icons/icon--redhat.svg'
+import IconWisconsin from './icons/icon--wisconsin.svg'
+
+
 // Home page
 // ============================================================================
 export default function Home() {
 
 
+  // Section references
+  // --------------------------------------------------------------------------
+  const sectionProjects = useRef()
+  const sectionShots = useRef()
+  const sectionClients = useRef()
+  const sectionSkills = useRef()
+  const sectionAwards = useRef()
+  const sectionArticles = useRef()
+
+  
   // Dribbble shots
   // --------------------------------------------------------------------------
   const SHOTS_PER_PAGE = 18
@@ -189,13 +214,13 @@ export default function Home() {
         - Campbell?
         - ColorShark
       */}
-      <section className="section section--projects">
+      <section className="section section--projects" ref={sectionProjects}>
         <h2 className="visually-hidden">Featured projects</h2>
         <div className="projects">          
           <div className="project">
-            <h3 className="visually-hidden">Project 1</h3>
+            <h3 className="visually-hidden">NC Government</h3>
             <div className="project__symbols">
-              <span><SymbolCircle /></span>
+              <span><IconNCGov /></span>
               <span><SymbolCircle /></span>
               <span><SymbolCircle /></span>
               <span><SymbolCircle /></span>
@@ -203,9 +228,19 @@ export default function Home() {
             <Image className="project__cover" src="https://cdn.dribbble.com/userupload/5596308/file/original-4af6f71bf2785b1c6ca663004e7f27ad.png?compress=1&resize=752x" alt="Project 1 photo" fill />
           </div>
           <div className="project">
-            <h3 className="visually-hidden">Project 2</h3>
+            <h3 className="visually-hidden">Atlantic BT</h3>
             <div className="project__symbols">
+              <span><IconABT /></span>
               <span><SymbolCircle /></span>
+              <span><SymbolCircle /></span>
+              <span><SymbolCircle /></span>
+            </div>
+            <Image className="project__cover" src={ImageProjectAtlanticBT} alt="Project 1 photo" fill />
+          </div>
+          <div className="project">
+            <h3 className="visually-hidden">PatternFly</h3>
+            <div className="project__symbols">
+              <span><IconPatternFly /></span>
               <span><SymbolCircle /></span>
               <span><SymbolCircle /></span>
               <span><SymbolCircle /></span>
@@ -213,50 +248,40 @@ export default function Home() {
             <Image className="project__cover" src="https://cdn.dribbble.com/userupload/5596308/file/original-4af6f71bf2785b1c6ca663004e7f27ad.png?compress=1&resize=752x" alt="Project 1 photo" fill />
           </div>
           <div className="project">
-            <h3 className="visually-hidden">Project 3</h3>
+            <h3 className="visually-hidden">Red Hat</h3>
             <div className="project__symbols">
-              <span><SymbolCircle /></span>
+              <span><IconRedHat /></span>
               <span><SymbolCircle /></span>
               <span><SymbolCircle /></span>
               <span><SymbolCircle /></span>
             </div>
-            <Image className="project__cover" src="https://cdn.dribbble.com/userupload/5596308/file/original-4af6f71bf2785b1c6ca663004e7f27ad.png?compress=1&resize=752x" alt="Project 1 photo" fill />
+            <Image className="project__cover" src={ImageProjectOpenTelco} alt="Project 1 photo" fill />
           </div>
           <div className="project">
-            <h3 className="visually-hidden">Project 4</h3>
+            <h3 className="visually-hidden">LexisNexis</h3>
             <div className="project__symbols">
-              <span><SymbolCircle /></span>
+              <span><IconLexisNexis /></span>
               <span><SymbolCircle /></span>
               <span><SymbolCircle /></span>
               <span><SymbolCircle /></span>
             </div>
-            <Image className="project__cover" src="https://cdn.dribbble.com/userupload/5596308/file/original-4af6f71bf2785b1c6ca663004e7f27ad.png?compress=1&resize=752x" alt="Project 1 photo" fill />
+            <Image className="project__cover" src={ImageProjectLexisNexis} alt="Project 1 photo" fill />
           </div>
           <div className="project">
-            <h3 className="visually-hidden">Project 5</h3>
+            <h3 className="visually-hidden">University of Wisconsin</h3>
             <div className="project__symbols">
-              <span><SymbolCircle /></span>
+              <span><IconWisconsin /></span>
               <span><SymbolCircle /></span>
               <span><SymbolCircle /></span>
               <span><SymbolCircle /></span>
             </div>
-            <Image className="project__cover" src="https://cdn.dribbble.com/userupload/5596308/file/original-4af6f71bf2785b1c6ca663004e7f27ad.png?compress=1&resize=752x" alt="Project 1 photo" fill />
-          </div>
-          <div className="project">
-            <h3 className="visually-hidden">Project 6</h3>
-            <div className="project__symbols">
-              <span><SymbolCircle /></span>
-              <span><SymbolCircle /></span>
-              <span><SymbolCircle /></span>
-              <span><SymbolCircle /></span>
-            </div>
-            <Image className="project__cover" src="https://cdn.dribbble.com/userupload/5596308/file/original-4af6f71bf2785b1c6ca663004e7f27ad.png?compress=1&resize=752x" alt="Project 1 photo" fill />
+            <Image className="project__cover" src={ImageProjectWisconsin} alt="Project 1 photo" fill />
           </div>
         </div>
       </section>
 
       {/* Dribbble shots section */}
-      <section className="section section--shots">
+      <section className="section section--shots" ref={sectionShots}>
         <div className="section__wrapper">
           <h2 className="visually-hidden">Dribbble shots</h2>
           <div className="shots">
@@ -287,13 +312,13 @@ export default function Home() {
             </div>
           </div>
           <div className="section__callout">
-            <a href="#">Go behind the scenes at <LogoDribbble /></a>
+            <a href="https://dribbble.com/markr" target="_blank">Go behind the scenes at <LogoDribbble /></a>
           </div>
         </div>
       </section>
       
       {/* Clients section */}
-      <section className="section section--clients">
+      <section className="section section--clients" ref={sectionClients}>
         <div className="section__wrapper">
           <h2 className="visually-hidden">Featured clients</h2>
           <div className="clients">
@@ -362,7 +387,7 @@ export default function Home() {
       </section>
       
       {/* Skills section */}
-      <section className="section section--skills">
+      <section className="section section--skills" ref={sectionSkills}>
         <div className="section__wrapper">
           <div className="section__header">
             <h1 className="section__title">Simplifying complexity<em className="statement">.</em> Delightfully<em className="statement">.</em></h1>
@@ -405,7 +430,7 @@ export default function Home() {
       </section>
 
       {/* Awards section */}
-      <section className="section section--awards">
+      <section className="section section--awards" ref={sectionAwards}>
         <div className="section__wrapper">
           <div className="section__header">
             <h1 className="section__title">Fueled by passion<em className="statement">.</em> Dedicated to excellence<em className="statement">.</em></h1>
@@ -431,7 +456,7 @@ export default function Home() {
       </section>
 
       {/* Articles section */}
-      <section className="section">
+      <section className="section section--articles" ref={sectionArticles}>
         <div className="section__wrapper">
           <div className="section__header">
             <h1 className="section__title">Thoughts and ideas. Level up.</h1>
@@ -521,7 +546,7 @@ export default function Home() {
             </div>
           </div>
           <div className="section__callout">
-            <a href="#">More thoughts and ideas at <LogoMedium /></a>
+            <a href="https://medium.com/@Asuwebdesign" target="_blank">More thoughts and ideas at <LogoMedium /></a>
           </div>
         </div>
       </section>
