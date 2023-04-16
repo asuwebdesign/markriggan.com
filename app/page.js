@@ -47,6 +47,7 @@ import LogoNVidia from './logos/logo--nvidia.svg'
 import LogoOracle from './logos/logo--oracle.svg'
 import LogoRedHat from './logos/logo--redhat.svg'
 import LogoTwitter from './logos/logo--twitter.svg'
+import LogoWisconsin from './logos/logo--wisconsin.svg'
 
 
 // Images
@@ -62,6 +63,8 @@ import ImageProjectLexisNexis from './images/image--proj--lexisnexis.jpg'
 import ImageProjectAtlanticBT from './images/image--proj--atlanticbt.jpg'
 import ImageProjectOpenTelco from './images/image--proj--opentelco.jpg'
 import ImageProjectWisconsin from './images/image--proj--wisconsin.jpg'
+import ImageProjectPatternFly from './images/image--proj--patternfly.jpg'
+import ImageProjectNCGov from './images/image--proj--ncgov.jpg'
 
 
 // Symbols
@@ -225,7 +228,7 @@ export default function Home() {
               <span><SymbolCircle /></span>
               <span><SymbolCircle /></span>
             </div>
-            <Image className="project__cover" src="https://cdn.dribbble.com/userupload/5596308/file/original-4af6f71bf2785b1c6ca663004e7f27ad.png?compress=1&resize=752x" alt="Project 1 photo" fill />
+            <Image className="project__cover" src={ImageProjectNCGov} alt="Project 1 photo" fill />
           </div>
           <div className="project">
             <h3 className="visually-hidden">Atlantic BT</h3>
@@ -245,7 +248,7 @@ export default function Home() {
               <span><SymbolCircle /></span>
               <span><SymbolCircle /></span>
             </div>
-            <Image className="project__cover" src="https://cdn.dribbble.com/userupload/5596308/file/original-4af6f71bf2785b1c6ca663004e7f27ad.png?compress=1&resize=752x" alt="Project 1 photo" fill />
+            <Image className="project__cover" src={ImageProjectPatternFly} alt="Project 1 photo" fill />
           </div>
           <div className="project">
             <h3 className="visually-hidden">Red Hat</h3>
@@ -379,8 +382,8 @@ export default function Home() {
               <h3 className="visually-hidden">Red Hat</h3>
             </div>
             <div className="client">
-              <LogoDuke />
-              <h3 className="visually-hidden">Duke University</h3>
+              <LogoWisconsin />
+              <h3 className="visually-hidden">University of Wisconsin</h3>
             </div>
           </div>
         </div>
